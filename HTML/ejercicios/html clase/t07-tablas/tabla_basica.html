@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla primer ejemplo</title>
+    <style>
+        th[scope="col"] {
+            background-color: aquamarine;
+        }
+        th[scope="row"] {
+            font-style: italic;
+        }
+        [colspan], [rowspan]{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ejemplo inicial tabla tema 7</h1>
+
+    <table border="1">
+        <caption>Tabla básica ejercicio 1</caption>
+        <tr>
+            <th scope="col">Lorem, ipsum.</th>
+            <th scope="col">Eum, labore.</th>
+            <th scope="col">Sapiente, eaque?</th>
+            <th scope="col">Nihil, officiis?</th>
+            <th scope="col">Eius, vel!</th>   
+        </tr>
+        <tr>    <!-- segunda fila  -->
+            <th scope="row">Lorem, ipsum.</th>
+            <td>Dolorem, laboriosam.</td>
+            <td>Fugiat, dolores.</td>
+            <td colspan="2">Ratione, repudiandae. bal, bla...</td>
+            <!-- <td>Necessitatibus, molestias.</td>  -->
+        </tr>
+        <tr> <!-- tercera fila -->
+            <th rowspan="2" scope="row">Lorem, ipsum.</th>
+            <td>Exercitationem, magni.</td>
+            <td>Distinctio, autem!</td>
+            <td>Eius, dicta.</td>
+            <td>Eveniet, voluptate!</td>
+        </tr>
+        <tr>
+            <!-- <th>Lorem, ipsum.</th> -->
+            <td>Aliquid, voluptatibus?</td>
+            <td>Dolorem, autem.</td>
+            <td>Est, natus?</td>
+            <td>Beatae, aut.</td>
+        </tr>
+        <tr>
+            <th colspan="5">Lorem, ipsum.</th>
+<!--             <td>Cumque, iusto!</td>
+            <td>Beatae, ad.</td>
+            <td>Expedita, accusantium!</td>
+            <td>Debitis, ipsam!</td> -->
+        </tr>
+        <tr>  <!-- fila 6 -->
+            <th>Lorem, ipsum.</th>
+            <td>Aut, ut?</td>
+            <td rowspan="3">Minus, atque.</td>
+            <td colspan="2" rowspan="3">Laborum, autem.</td>
+            <!-- <td>Atque, asperiores!</td> -->
+        </tr>
+        <tr>
+            <th>Lorem, ipsum.</th>
+            <td>Eum, vitae?</td>
+            <!-- <td>Officiis, accusamus?</td> -->
+            <!-- <td>Voluptatem, qui.</td>
+            <td>Cupiditate, error!</td> -->
+        </tr>
+        <tr>
+            <th>Lorem, ipsum.</th>
+            <td>Iure, quidem!</td>
+            <!-- <td>Eaque, dolores.</td> -->
+<!--             <td>Quod, ullam?</td>
+            <td>Rem, voluptas?</td> -->
+        </tr>
+
+
+
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+
+
+
+  
+  
+  
+  Página ppal examen
+
+
+
+  
+    Zona de navegación de nuesta web.
+    
+      Página inicial
+      Nuestro blog
+      Resultados
+      Ayuda HTML
+    
+  
+
+  Encuesta alumando
+
+  
+    
+      Datos iniciales
+
+      Seleccione a continuación cuales son los temas de su interés:
+      
+        
+           HTML
+         
+        
+           Estilos CSS
+        
+         
+           El lenguaje JaVAsCRIPT
+        
+      
+      
+        
+        	indique la fecha de incorporación al curso (que debe ser posterior al 15 de septiembre de 2019) 
+        	
+        
+
+      
+
+      
+        Adjunta dos fotos, una tipo DNI y otra de cuerpo entero 
+        
+      
+      
+
+      
+        Vamos a pintar la clase: selecione el color preferido (por defeto rojo)
+        
+      
+      
+        
+          Indique si dispone de ella, su página web:
+          
+        
+      
+      
+        Indique su código de alumno: 
+        
+        Formato: tres mayusculas seguidas de 1 o 2 dígitos.
+      
+
+      
+        Seleccione zona donde víve 
+        Jerez
+        (* Valor por defecto)
+        
+        Pedanías: Cuartillos, Estella, etc.. 
+        Fuera de Jerez: El Puerto, Chipiona ,etc.. 
+      
+
+
+      
+        
+          
+          Acepto recibir noticaciones del estado de la encuesta (campo
+          obligatorio)
+        
+      
+    
+    
+      
+      
+    
+  
+
+

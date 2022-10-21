@@ -1,0 +1,90 @@
+/* ejemplo_layout_rwd-grid.css */
+
+/* Generales */
+aside, footer, header, nav, section {
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* decoración de listas => botonera vertical */ 
+nav ul {
+    list-style-type: none;
+    border: 1px solid black;
+    padding-left: 0;
+  }
+nav ul li {
+  border: 1px solid black;
+  text-align: center;
+  background-color: #d3f6eb;
+  padding: 0.5em;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* específica para barra navegación: 
+    entre 402 y 900 convierte botonera en horizontal */
+@media screen and (max-width: 900px) and (min-width:420px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* RWD  */
+/* Si no se espcifica nada, los bloques ocupan el 100%, luego 
+  aparecen apilados (stacked) */
+
+
+
+  
+/* primer punto de ruptura : si el ancho es 600 o más..*/
+@media screen and (min-width: 600px) {
+ body {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+ }
+ footer, header, nav {
+     grid-column: 1 / 3;;
+ }
+}
+
+/* si el ancho pasa de 900:
+   (nota: se aplican las de >600 y estas de >900)  */
+@media screen and (min-width: 900px) {
+    body {
+        grid-template-columns: 1fr 2fr 2fr ;
+    }
+    nav {
+        grid-column: 1;
+    }
+    footer, header {
+        grid-column: 1 / 4;
+    }
+}
+
+
+/* si pasamos de 1200: todas las anteriores más.. */
+@media screen and (min-width: 1200px) {
+    body {
+        grid-template-columns: 1fr  1fr 1fr ;
+    }
+    nav {
+        grid-column: 3;
+        grid-row-start: 1  ;
+    }
+    header {
+        grid-column: 1 / 3;
+        grid-row-start: 2;
+    }
+    footer {
+        grid-column: 3;
+        grid-row: 2 ;
+    }
+}
+
+

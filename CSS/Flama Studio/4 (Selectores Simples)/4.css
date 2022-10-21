@@ -1,0 +1,61 @@
+/* TODO */
+*{
+    font-size: 24px;
+}
+
+/* Solo h1 */
+
+h1{
+    color: Red;
+    text-align: center;
+    font-size: 2em;
+  }
+
+/* Selectores de Elementos */
+
+
+p {
+    color: orange;
+  }
+
+h2{
+    color: green;
+  }
+
+/* Selectores de Clases */
+
+.red{
+    color:red;
+  }
+
+.blue{
+    color: blue;
+  }
+
+.tach{
+    text-decoration: line-through;
+  }
+
+/* Selectores de ID */
+
+li{
+  list-style:none;
+}
+
+#alto{
+    background-color: #ff9999;
+    border-left: 6px solid #993333;
+    
+  }
+
+#prec{
+    background-color: #fdff99;
+    border-left: 6px solid #c0b843;
+    
+  }
+  
+#avanzar{
+    background-color: #a2ff99;
+    border-left: 6px solid #369933;
+    
+  }

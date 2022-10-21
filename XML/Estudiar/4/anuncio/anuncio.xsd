@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Esto hay que ponerlo siempre -->
+
+<!-- Tipos de elementos :
+
+    Elementos Simples ==>
+        Son elemenntos de sólo "texto", es decir NO atributos ni hijos
+        <xs:element name="xxx" type="yyy"/>
+        xxx nombre del elemento, yyy su tipo de datos.
+
+        Tipos de datos predefinidos. Los más usados son:
+            ○ xs:date (yy-mm-dd)
+            ○ xs:string
+                ● language
+                ● NMTOKEN
+                    ○ letras, dígitos, punto, guión, subrayado y dos puntos.
+                ● NMTOKENS
+                    ○ lista de NMTOKEN separados por espacio.
+                ● NCName
+                    ○ similar al tipp name, pero sin “dos puntos”, nombre no colonizado.
+                    ○ empezar con letra o subrayado y puede contener letras, atributos,, subrayado, guión y punto.
+                    ○ similar al tipp name, pero sin “dos puntos”
+                ● ID => NCName con restricciones:
+                    ○ Se aplica a atributos
+                    ○ valores únicos en la instancia XML
+                        ■ y alguna restrición más que nos vemos
+                ● IDREF,IDREFS…
+                    ○ se aplica a atributos
+                    ○ similar a su uso en DTDs
+            ○ xs:decimal
+            ○ xs:integer
+            ○ xs:boolean
+                ● Valores false/true
+            ○ xs:anyURI:
+                ● Para URL
+            ○ xs:time
+                ● "hh:mm:ss“ (todos necesarios)
+            ○ xs:duration (intervalo de tiempo)
+                ● Formato: "PnYnMnDTnHnMnS“
+                    ■ Ejemplos:
+                        ● <period>P5Y2M10D</period>
+                        ● <period>P5Y2M10DT15H</period>
+                        ● <period>PT15H</period>
+
+    Elementos Complejos ==>
+        Son aquellos elementos que contienen otros elementos y/o atributos
+        Los podemos clasificar en :
+            ○ Elementos que sólo contienen otros elementos, contenedores
+            ○ Elementos que sólo contienen texto y atributo
+            ○ Elementos vacíos
+            ○ Elementos que contiene otros elementos ytexto
+                ■ ¡Mixtos, evitar!
+
+-->
+
+    <xs:element name="tablon" type="Ttablon" />
+    <!-- Se define el elemento para posteriormente definir si es de tipo complejo o simple -->
+
+    <!-- Los elementos que tienen un tipo fuera de lo normal, este se define con T+nombre del elemento
+        Tras haber definido el tipo del elemento comenazamos a definir que contiene
+        En este caso, el tablón contiene anuncios asique hay que definir los anuncios
+    -->
+    <xs:complexType name="Ttablon">
+        <xs:sequence>
+            <xs:element name="anuncio" type="Tanuncio" minOccurs="1" maxOccurs="unbounded"/>
+            <!-- En la definición del elemento se define también cuanto es el mínimo o máximo de estos -->
+        </xs:sequence>
+            <!-- A los tipos complejos se les puede definir los atributos aquí -->
+            <xs:attribute name="fechaApertura" type="xs:date"/>
+            <xs:attribute name="categoria" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Tanuncio">
+    <xs:sequence>
+        <!-- El elemento anuncio esta compuesto de otros elementos pero no tiene atributos por tanto es simple -->
+        <xs:element name="fecha" type="xs:date"/>
+
+        <!-- Existen indicadores que definen el orden de los elementos
+        
+            ● De orden: definen el orden de los elementos.
+                ○ xs:all: los elementos pueden aparecer en cualquier orden, y cada uno debe aparecer una única vez.
+                    ● Se puede modificar número de ocurrencias, pero sólo 0 o 1 => solo permite minOccurs=0, maxOccurs=0 no tiene sentido, y 1 es el default.
+                ○ xs:choice: sólo uno de los que se enumeran.
+                ○ xs:sequence: en ese orden.
+            ● De ocurrencia: definen cuántas veces puede aparecer un elemento.
+                ○ maxOccurs y minOccurs 
+                    <xs:element name=“destino" type="xs:string" minOccurs=“1" maxOccurs="5“ />
+            ● De grupo: no los estudiamos, para agrupar elementos o atributos
+
+        -->
+
+        <xs:element name="asunto" type="Tasunto"/>
+        <xs:element name="estado" type="Testado"/>
+        <xs:element name="texto" type="Ttexto"/>
+
+        <xs:element name="peso" type="Tpeso"/>
+
+        <xs:element name="precio" type="TTprecio"/>
+        <xs:element name="contacto" type="xs:string"/>
+    </xs:sequence>
+        <xs:attribute name="categoria" type="xs:string" use="required"/>
+        <!-- Los atributos son opcionales por defecto pero puedes modificar :
+            1. obligatorio
+                use="required"
+            2. valor por defecto
+                default="valor"
+            3. valor fijo
+                fixed="valor"
+        -->
+    </xs:complexType>
+
+    <!-- Los atributos para los elementos complejos se ponen en complexType 
+        Pero para los elementos simples ==>
+
+        A pesar de ser tipo simple, la cosa es más difícil.
+        ● ¿Por qué? Los tipos simples no admiten atributos, un elemento con atributos se considera complejo
+        ● Para definir un elemento simple con atributo hay que definir el elemento como tipo complejo
+
+        ● Ejemplo: añadir atributo país al elemento fecha:
+            ○ Definimos un nuevo tipo como complexType (Tfecha)
+            ○ El contenido es simple: simpleContent.
+            ○ Definimos extensión/restricción del tipo base date dentro de simpleContent
+            ○ Dentro de la extensión se incluye el atributo
+
+            <xs:complexType name="Tfecha">
+                <xs:simpleContent>
+                    <xs:extension base="xs:date">
+                        <xs:attribute name="pais" type="xs:string"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+            <xs:complexType name="Tanuncio">
+                <xs:sequence>
+                    <xs:element name="fecha" type="Tfecha" type="xs:date"/>
+
+    -->
+
+    <xs:simpleType name="Tasunto">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="22" />
+            <xs:minLength value="8" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Si a un elemento simple con extensión le queremos añadir un atributo con alguna restricción, lo podemos hacer
+        creando un nuevo tipo simple con restricciones para que el atributo cumpla las restricciones que queremos-->
+
+    <xs:complexType name="Testado">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="estado" type="TTestado"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="TTestado">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="nuevo|semi-nuevo|viejo"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Ttexto">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="10" />
+            <xs:pattern value="([\w\s]){10,}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Elemento vacío con atributo 
+        Lo primero es crear el elemento vacío y el tipo
+        Ahora crearemos los atributos que puede llevar el elemento
+    -->
+    <xs:complexType name="Tpeso" >
+        <xs:attribute name="KG" type="xs:decimal" use="optional" />
+    </xs:complexType>
+
+    <!-- Para añadirle un atributo a un elemento simple ya creado con restricciones, tenemos que hacer un elemento complejo que 
+        tenga de extensión el elemento simple al que queremos añadirle el atributo-->
+
+    <xs:simpleType name="Tprecio">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2" />
+            <xs:minInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="TTprecio">
+        <xs:simpleContent>
+            <xs:extension base="Tprecio">
+                <xs:attribute name="moneda" type="xs:string" fixed="€"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

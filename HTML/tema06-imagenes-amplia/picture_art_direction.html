@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Art direction: picture</h1>
+    <p>Tomado de 
+        <a href="https://googlechrome.github.io/samples/picture-element/">
+            https://googlechrome.github.io/samples/picture-element/</a> 
+    </p>
+    <picture>
+        <source media="(min-width: 650px)" srcset="figuras/kitten-large.png">
+        <source media="(min-width: 465px)" srcset="figuras/kitten-medium.png">
+        <!-- img tag for browsers that do not support picture element -->
+        <img src="figuras/kitten-small.png" alt="a cute kitten">
+    </picture>
+    
+</body>
+</html>

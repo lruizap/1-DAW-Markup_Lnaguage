@@ -1,0 +1,26 @@
+h2,h3,h4,h5,h6{
+    text-align:center;
+    text-transform: uppercase;
+}
+
+section p{
+    background-color: orange;
+}
+
+/* hijo dirtecto */
+
+section > p{ 
+    text-decoration: line-through;
+}
+
+/* primer hermano */
+
+h1 + p{
+    color: white;
+}
+
+/* todos los hermanos */
+
+h1~p{
+    border: 2px solid #343434;
+}

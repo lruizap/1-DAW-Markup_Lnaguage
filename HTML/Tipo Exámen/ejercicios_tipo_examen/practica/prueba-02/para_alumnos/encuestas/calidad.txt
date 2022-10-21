@@ -1,0 +1,17 @@
+Datos asignatura 
+Asignatura 
+Clave 
+
+Datos alumno 
+Tipo alumno 
+   Nuevo Repetidor Parcial 
+Intereses 
+   Android 
+	 Redes 
+	 Sistemas 
+	 Web 
+Comentarios 
+
+Aceptar condiciones y envío 
+Acepta las condiciones 
+Desea recibir publicidad 

@@ -1,0 +1,50 @@
+/* grid-rwd.css */
+/* ¿Tomado de? https://www.quackit.com/css/grid/tutorial/ */
+
+/* Escenario con 2 puntos de ruptura, 3 layouts */
+
+
+/* layout A: hasta 580 px */
+header {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  background-color: cyan;
+}
+
+/* layout B: a partir de 580 */
+/* observe que se usa tambien los especificado en layout previo */
+@media (min-width: 580px) {
+  #contenedor {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 1em;
+    column-gap: 1em;
+  }
+  header {
+    grid-column: 1 / span 2;
+  }
+  aside, footer {
+    grid-column: 1 / span 2;
+  }
+  /* modifica propiedad de layout A:
+      igual de específicas, gana la última */
+  header {
+    background-color: red;
+  }
+}
+
+/* layout C: a partir de 992 */
+@media (min-width: 992px) {
+  #contenedor {
+    grid-template-columns: 1fr 3fr 2fr;
+  }
+  header, footer {
+    grid-column: 1 / span 3;
+  }
+  aside {
+    grid-column: 3;
+  }
+}
+
+

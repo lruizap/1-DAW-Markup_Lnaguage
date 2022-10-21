@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1Er documento</title>
+
+  <script type="text/javascript" src="http://www.ejemplo.com/js/inicializar.js"></script>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    window.onload = function () { alert("La página se ha cargado completamente"); }
+    //]]>
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/comun.css" />
+
+  <link rel="stylesheet" type="text/css" href="/css/comun.css" />
+  <link rel="stylesheet" type="text/css" href="/css/secciones.css" />
+
+  <link rel="stylesheet" type="text/css" href="/css/comun.css" media="screen, projection" />
+  <link rel="stylesheet" type="text/css" href="/css/impresora.css" media="print" />
+  <link rel="stylesheet" type="text/css" href="/css/movil.css" media="handheld" />
+
+  <link rel="shortcut icon" href="/Users/Usuario/Pictures/DraKoModz/miniatura/unnamed.png" type="image/ico" />
+
+  <link rel="alternate" type="application/rss+xml" title="Resumen de todos los artículos del blog" href="/feed.xml" />
+
+  <link rel="stylesheet" type="text/css" href="/css/impresora.css" media="print" />
+  <link rel="stylesheet" type="text/css" href="/css/movil.css" media="handheld" />
+  <style type="text/css" media="screen,projection">
+    @import '/css/main.css';
+  </style>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
+  <link rel="alternate" type="application/rss+xml" title="Resumen de todos los artículos del blog" href="/feed.xml" />
+
+  <title>English tutorial</title>
+  <link lang="es" xml:lang="es" title="El tutorial en español" type="text/html" rel="alternate" hreflang="es"
+    href="http://www.ejemplo.com/tutorial/espanol.html" />
+
+  <link media="print" title="El tutorial en PDF" type="application/pdf" rel="alternate"
+    href="http://www.ejemplo.com/tutorial/documento.pdf" />
+
+  <link rel="start" title="El índice del tutorial" type="text/html"
+    href="http://www.ejemplo.com/tutorial/indice.html" />
+
+</head>
+
+<body>
+
+
+  <h1 id="arribacojone">El primer documento HTML</h1>
+
+
+  <h1>html</h1>
+
+  <p>El lenguaje HTML es <strong>tan sencillo</strong> que
+    prácticamente se entiende sin estudiar el significado
+    de sus etiquetas principales.</p>
+
+  <h1>cancer</h1>
+
+  <h2>Ejemplo de atributos en las etiquetas</h2>
+
+  <p>
+    Los enlaces son muy fáciles de indicar:
+    <a>Soy un enlace incompleto, porque no tengo dirección de destino</a>.
+    <a href="http://www.google.com">Este otro enlace apunta a la página de Google</a>.
+  </p>
+
+  <p>El lenguaje HTML permite marcar algunos segmentos de texto
+    como <em>muy importantes</em> y otros segmentos como <strong>los
+      más importantes</strong>.</p>
+
+  <h3>Ejemplo de etiqueta ins y del</h3>
+
+  <p>El HTML, acrónimo inglés de Hyper Text Markup Language (lenguaje de <del datetime="2009-10-25"
+      cite="http://librosweb.es/xhtml/capitulo_3/marcado_basico_de_texto.html">marcado de hipertexto</del> <ins
+      datetime="2009-10-26" cite="http://librosweb.es/xhtml/capitulo_3.html"> marcas hipertextuales</ins>) es un
+    lenguaje de marcación diseñado para estructurar textos y presentarlos en forma de hipertexto.</p>
+
+  <p>Según el W3C, el valor del
+    atributo <em>cite</em> en las etiquetas <strong>blockquote</strong> tiene el
+    siguiente significado:</p>
+
+  <blockquote cite="http://www.w3.org/TR/html401/struct/text.html">"El valor de este atributo
+    es una dirección URL que indica el documento original de la cita."</blockquote>
+
+  <p>El lenguaje <abbr title="HyperText Markup Language">HTML</abbr> es estandarizado
+    por el <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+
+  <p>Con estos síntomas, podría tratarse de un caso de <dfn
+      title="Imagen o sensación subjetiva,propia de un sentido, determinada por otra sensación que afecta a un sentido diferente">sinestesia</dfn>
+  </p>
+
+  Como dijo <cite>Mahatma Gandhi</cite>:
+  <blockquote>Vive como si fueras a morir mañana y aprende como si fueras a vivir para siempre.</blockquote>
+
+  <strong>Importante</strong>: si quiere ponerse en contacto con la empresa <abbr
+    title="Aqui comemos mierda enlatada">ACME</abbr>, puede hacerlo en el teléfono <span class="telefono">900 555
+    555</span> o a través de la dirección de correo electrónico <span class="email">contacto@acme.org</span>
+
+  <p>Este primer párrafo no contiene saltos de línea ni otro tipo de espaciado.</p>
+
+  <p>Este segundo párrafo sí que contiene saltos
+    de
+    línea
+    y otro tipo de espaciado.</p>
+
+  <!-- trata los espacios en blanco como si no existiesen a no ser que se le diga lo contrario-->
+
+  <p>Este primer párrafo no contiene saltos de línea ni otro tipo de espaciado.</p>
+
+  <p>Este segundo párrafo sí que contiene saltos <br />
+    de <br />
+    línea <br />
+    y otro tipo de espaciado.</p>
+
+  <!-- no usar br a no ser que sea totalmente necesario (consultar ejercicios de clase) -->
+
+  <pre>
+        La etiqueta pre
+   respeta los espacios en blanco
+      y
+ muestra el texto
+     tal y como
+   está escrito
+</pre>
+
+  <p>
+    La etiqueta pre
+    respeta los espacios en blanco
+    y
+    muestra el texto
+    tal y como
+    está escrito
+  </p>
+
+  <code>
+    La etiqueta code
+no respeta los espacios en blanco
+</code>
+
+  <p>La etiqueta <code>code</code> es similar a la
+    etiqueta <code>pre</code>, sobre todo en el formato
+    del texto.</p>
+
+  Los caracteres <,>, " y & pueden dar problemas con los textos en HTML
+
+    <p>Este p&aacute;rrafo contiene caracteres acentuados y se almacena en formato UTF-8</p>
+
+    <p>
+      <!-- URL problemática -->
+      http://www.ejemplo.com/estaciones/otoño.html
+
+      <!-- URL correcta -->
+      http://www.ejemplo.com/estaciones/oto%F1o.html
+
+      <!-- URL problemática -->
+      http://www.ejemplo.com/ruta/nombre página.html
+
+      <!-- URL correcta -->
+      http://www.ejemplo.com/ruta/nombre%20p%E1gina.html
+    </p>
+
+    <p>
+      URL absoluta: http://www.ejemplo.com/ruta1/ruta2/pagina2.html
+      URL relativa: /ruta1/ruta2/pagina2.html
+    </p>
+
+    <p><a href="http://www.google.com">Página principal de Google</a></p>
+
+    <p><a href="http://www.ejemplo.com/fondo_escritorio.jpg">Imagen interesante para un fondo de escritorio</a></p>
+
+    <p>
+      <a href="http://www.ejemplo.com/informe.pdf">Descargar informe completo [PDF]</a>
+      <a href="http://www.ejemplo.com/informe.doc">Descargar informe completo [DOC]</a>
+    </p>
+
+    <a href="/">Volver al inicio</a>
+
+    <a name="primera_seccion"></a>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris id ligula eu felis adipiscing ultrices. Duis
+      gravida leo ut lectus. Praesent condimentum mattis ligula.</p>
+
+    <a name="segunda_seccion"></a>
+    <p>Pellentesque malesuada. In in lacus. Phasellus erat erat, lacinia a, convallis eu, nonummy et, odio. Aenean urna
+      elit, ultrices id, placerat varius, facilisis eget, dolor.</p>
+
+    <!-- Enlace normal a la página -->
+    <a href="http://www.ejemplo.com/pagina1.html">Enlace a la página 1</a>
+
+    <!-- Enlace directo a la segunda sección de la página -->
+    <a href="http://www.ejemplo.com/pagina1.html#segunda_seccion">Enlace a la sección 2 de la página 1</a>
+
+    <p>
+      <a name="inicio"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris id ligula eu felis adipiscing ultrices. Duis
+      gravida leo ut lectus. Praesent condimentum mattis ligula.</p>
+    <a href="#inicio">Volver al inicio de la página</a>
+    ...
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat veritatis officiis odit est consectetur
+      reprehenderit error ipsum quidem! Rerum praesentium illum eveniet voluptatibus aperiam dignissimos asperiores at
+      deleniti quos, error in ipsa maiores quod quisquam veniam ipsum fugiat reprehenderit, excepturi, quibusdam
+      nesciunt repudiandae aut! Accusamus nobis, distinctio consequuntur perferendis placeat voluptatum eum ea error
+      minus possimus aut impedit eaque odit ratione eius animi doloremque unde explicabo illo optio est harum incidunt
+      esse sunt. Veniam velit, animi sequi dolore quasi ducimus dicta voluptas sapiente inventore, minima exercitationem
+      eaque officia deserunt aliquid, delectus rerum nam facere totam quidem itaque reprehenderit accusamus blanditiis
+      fugiat sint. Mollitia deleniti iure nulla et eum. Nostrum, consectetur accusantium vel expedita asperiores fugiat
+      earum tempore reprehenderit repellat cupiditate nisi minima harum soluta modi nesciunt sequi dolorem id, libero,
+      iusto alias. Delectus quaerat voluptate vitae molestias consequuntur labore architecto quam quis doloremque earum
+      assumenda possimus ipsa magnam voluptatem consectetur, aliquam cum aperiam officia laboriosam, corporis
+      consequatur. Dolores tempora dolorem esse consequuntur obcaecati iure, quisquam, deserunt incidunt vitae officiis
+      commodi natus nisi! Quod, reprehenderit nam commodi quidem in aut ex atque molestiae dolorem sunt eos aspernatur
+      eligendi debitis reiciendis recusandae! Similique magni aperiam reiciendis corporis natus quidem eos assumenda,
+      nesciunt sint cupiditate veritatis id molestias minus esse nisi vero! Tempore sequi accusamus eum nobis, sunt
+      neque possimus. Est voluptates voluptatum necessitatibus provident nihil fugit impedit, nam non voluptatibus
+      molestias consequatur deserunt eum hic aut tempore accusantium ut! Alias repudiandae totam quod laudantium
+      consectetur quae aperiam, error aspernatur perspiciatis dolore pariatur nemo! Enim, natus amet magni sed
+      repellendus nesciunt error iure? Velit in rem, repudiandae ducimus error dolorem? Consectetur culpa eius ipsa,
+      eveniet dolores repellat repudiandae ut aspernatur quaerat esse vero ullam? Reprehenderit mollitia excepturi
+      corrupti consectetur culpa accusamus optio similique nisi voluptas laboriosam aspernatur provident assumenda
+      aliquam quidem, cupiditate recusandae distinctio placeat itaque? Ipsum, debitis dolorem earum et cum magnam
+      dolores, alias, voluptates veritatis enim unde quasi. Aliquid tempore magnam vel modi ab harum ipsa maiores ut et
+      iusto ratione provident aspernatur doloribus dolores sapiente placeat assumenda temporibus eum, aut dignissimos
+      est! Eius, quae deserunt consectetur quidem saepe unde. Vitae delectus minima quod iste facere asperiores ea
+      necessitatibus, velit laborum recusandae magnam incidunt, quae voluptatem excepturi sed deserunt perspiciatis
+      molestias officia quasi voluptatibus ad error aut rerum. Excepturi quam inventore, asperiores ullam id tenetur
+      rerum sunt iure, aspernatur reprehenderit magni praesentium nobis autem cupiditate placeat magnam corporis odio,
+      animi rem recusandae laboriosam voluptate veniam! Consequuntur adipisci officiis enim porro blanditiis, minus sunt
+      aliquam itaque vitae, praesentium alias dolores harum, accusamus at delectus quis corrupti laudantium! Nostrum
+      fuga porro dolores cupiditate commodi dolor autem perferendis dignissimos sequi. Beatae explicabo numquam maxime
+      accusantium unde impedit libero veniam earum, voluptate esse consequuntur nam, expedita, sapiente sit nesciunt
+      nostrum aspernatur rem autem distinctio saepe consectetur nisi iusto suscipit? Rem distinctio omnis tenetur velit
+      amet ipsa ut culpa nostrum consectetur suscipit accusamus, id blanditiis optio adipisci provident, quasi est,
+      pariatur saepe dolor? Ullam, delectus quaerat. Cupiditate enim, repellat earum neque ex iure! Quaerat, quis
+      reiciendis!
+    </p>
+    <a href="#inicio">Volver al inicio de la página</a>
+    </p>
+
+    <p>
+    <h1 id="inicio">Título de la página</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris id ligula eu felis adipiscing ultrices. Duis
+      gravida leo ut lectus. Praesent condimentum mattis ligula.</p>
+    <a href="#inicio">Volver al inicio de la página</a>
+    ...
+
+    <p>Pellentesque malesuada. In in lacus. Phasellus erat erat, lacinia a, convallis eu, nonummy et, odio. Aenean urna
+      elit, ultrices id, placerat varius, facilisis eget, dolor.</p>
+    <a href="#inicio">Volver al inicio de la página</a>
+    </p>
+
+    <p>
+      <a href="http://www.google.com" hreflang="en" type="text/html" charset="UTF-8">Página principal de Google</a>
+      <a href="http://www.ejemplo.com/fondo_escritorio.jpg" type="image/jpg">Imagen interesante para un fondo de
+        escritorio</a>
+    </p>
+
+    <p>
+      <a href="mailto:nombre@direccion.com" title="Dirección de email para solicitar más información">
+        Solicita más información
+      </a>
+
+      <!-- Envío del correo electrónico a varias direcciones a la vez -->
+      <a href="mailto:nombre@direccion.com,otro_nombre@direccion.com">Solicita más información</a>
+
+      <!-- Añadir un "asunto" inicial al correo electrónico -->
+      <a href="mailto:nombre@direccion.com?subject=Solicitud de más información">Solicita más información</a>
+
+      <!-- Añadir un texto inicial en el cuerpo del correo electrónico -->
+      <a href="mailto:nombre@direccion.com?body=Estaría interesado en solicitar más información sobre sus productos">Solicita
+        más información</a>
+    </p>
+
+    <p>La dirección de correo es <strong>nombre (arroba) direccion.com</strong></p>
+    <p>La dirección de correo es <strong>nombre_arroba_direccion.com</strong></p>
+    <p>La dirección de correo es <strong>nombreQUITAESTO@direccion.com</strong></p>
+    <p>La dirección de correo es <strong>nombre(ARROBA)direccion.com</strong></p>
+    <p>La dirección de correo es <strong>nombre @ direccion . com</strong></p>
+
+    <p>
+      <a href="ftp://ftp.ejemplo.com/ruta/archivo.zip" title="Archivo comprimido de los contenidos">
+        Descarga un ZIP con todos los contenidos
+      </a>
+    </p>
+
+    <h1>Menú</h1>
+
+    <ul>
+      <li>Inicio</li>
+      <li>Noticias</li>
+      <li>Artículos</li>
+      <li>Contacto</li>
+    </ul>
+
+    <h1>Instrucciones</h1>
+
+    <ol>
+      <li>Enchufar correctamente</li>
+      <li>Comprobar conexiones</li>
+      <li>Encender el aparato</li>
+    </ol>
+
+    <h1>Metalenguajes</h1>
+
+    <dl>
+      <dt>SGML</dt>
+      <dd>Metalenguaje para la definición de otros lenguajes de marcado</dd>
+
+      <dt>XML</dt>
+      <dd>Lenguaje basado en SGML y que se emplea para describir datos</dd>
+
+      <dt>RSS</dt>
+      <dt>GML</dt>
+      <dt>XHTML</dt>
+      <dt>SVG</dt>
+      <dt>XUL</dt>
+      <dd>Lenguajes derivados de XML para determinadas aplicaciones</dd>
+    </dl>
+
+    <p>
+      <img src="/Users/Usuario/Pictures/EZATO.jpg" alt="EZATO" width="200" height="250" />
+
+      <img src="/Users/Usuario/Pictures/DraKoModz/miniatura/6QbqR3C68Sv.png" alt="name" width="100" height="50">
+    </p>
+
+    <p>
+      <img src="/Users/Usuario/Pictures/Steam artwork/Artwork_Middle.png" alt="Imagen del Proyecto 1"
+        longdesc="/portfolio/proyecto1.html" width="100" height="175" />
+
+      <img src="/Users/Usuario/Pictures/Saved Pictures/descarga (2).jpg" alt="Imagen del Proyecto 2"
+        longdesc="/mas_informacion.html" width="100" height="175" />
+    </p>
+
+    <p>
+      <img src="/imagenes/foto1.jpg" alt="Fotografía de un paisaje" width="200" height="350" />
+
+      <img src="/imagenes/foto2.jpg" alt="Fotografía de un atardecer en la playa" width="330" height="220" />
+    </p>
+
+    <p>
+      <img src="mapa_mundo.gif" usemap="#continentes" />
+      ...
+      <map name="continentes">
+        ...
+      </map>
+    </p>
+
+    <p>
+      <img src="/Users/Usuario/Downloads/ejemplo_mapa_imagen.gif" usemap="#mapa_zonas" />
+
+      <map name="mapa_zonas">
+        <area shape="rect" coords="20,25,84,113" href="rectangulo.html" />
+        <area shape="polygon" coords="90,25,162,26,163,96,89,25,90,24" href="triangulo.html" />
+        <area shape="circle" coords="130,114,29" href="circulo.html" />
+        <area shape="rect" coords="19,156,170,211" href="mailto:rectangulo@direccion.com" />
+        <area shape="default" nohref="nohref" />
+      </map>
+    </p>
+
+    <p>
+      <object data="PlanetaTierra.mpeg" type="application/mpeg" />
+
+      <object title="La Tierra vista desde el espacio" classid="http://www.observer.mars/TheEarth.py">
+        <!-- Formato alternativo en forma de vídeo -->
+        <object data="PlanetaTierra.mpeg" type="application/mpeg">
+          <!-- Otro formato alternativo mediante una imagen GIF -->
+          <object data="PlanetaTierra.gif" type="image/gif">
+            <!-- Si el navegador no soporta ningún formato, se muestra el siguiente texto -->
+            La <strong>Tierra</strong> vista desde el espacio.
+          </object>
+        </object>
+      </object>
+    </p>
+
+    <p>
+      <object data="..." type="...">
+        <param name="parametro1" value="40" />
+        <param name="parametro2" value="20" />
+        <param name="parametro3" value="texto de prueba" />
+      </object>
+    </p>
+
+    <p>
+      <object data="nombre_video.swf" type="application/x-shockwave-flash"></object>
+
+      <object width="425" height="350">
+        <param name="movie" value="http://www.youtube.com/v/MsH0rBWCYjs">
+        </param>
+        <param name="wmode" value="transparent">
+        </param>
+        <embed src="http://www.youtube.com/v/MsH0rBWCYjs" type="application/x-shockwave-flash" wmode="transparent"
+          width="425" height="350"></embed>
+      </object>
+    </p>
+
+    <p>
+    <h1>Listado de cursos</h1>
+
+    <table border="8">
+      <tr>
+        <td><strong>Curso</strong></td>
+        <td><strong>Horas</strong></td>
+        <td><strong>Horario</strong></td>
+      </tr>
+
+      <tr>
+        <td>CSS</td>
+        <td>20</td>
+        <td>16:00 - 20:00</td>
+      </tr>
+
+      <tr>
+        <td>HTML</td>
+        <td>20</td>
+        <td>16:00 - 20:00</td>
+      </tr>
+
+      <tr>
+        <td>Dreamweaver</td>
+        <td>60</td>
+        <td>16:00 - 20:00</td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table border="1">
+      <tr>
+        <td colspan="2">A</td>
+      </tr>
+
+      <tr>
+        <td>B</td>
+        <td>C</td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <h2>Fusión de columnas</h1>
+
+      <table border="2">
+        <!-- EMPLEAMOS BORDER AUNQUE ESTÉ OBSOLETO DEBIDO A QUE ESTO SE HACE CON CSS-->
+        <tr>
+          <td colspan="3">A</td>
+          <td>B</td>
+        </tr>
+
+        <tr>
+          <td>C</td>
+          <td colspan="2">D</td>
+          <td>E</td>
+        </tr>
+
+        <tr>
+          <td colspan="4">F</td>
+        </tr>
+
+        <tr>
+          <td>G</td>
+          <td>H</td>
+          <td>I</td>
+          <td>J</td>
+        </tr>
+      </table>
+
+      </p>
+
+      <p>
+      <h2>Tabla compleja</h2>
+      <h2>Análisis de ventas</h2>
+
+      <table border="1" summary="Análisis de ventas anuales">
+        <caption>Análisis de ventas anuales</caption>
+        <thead>
+          <tr>
+            <th rowspan="2" scope="col">AÑO</th>
+            <th colspan="4" scope="col">Expansión de ventas</th>
+          </tr>
+          <tr>
+            <th scope="col">Producto A</th>
+            <th scope="col">Producto B</th>
+            <th scope="col">Producto C</th>
+            <th scope="col">Producto D</th>
+          </tr>
+        </thead>
+
+        <tfoot>
+          <tr>
+            <th rowspan="2" scope="col">AÑO</th>
+            <th scope="col">Producto A</th>
+            <th scope="col">Producto B</th>
+            <th scope="col">Producto C</th>
+            <th scope="col">Producto D</th>
+          </tr>
+          <tr>
+            <th colspan="4" scope="col">Expansión de ventas</th>
+          </tr>
+        </tfoot>
+
+        <tbody>
+          <tr>
+            <th scope="row">N-3</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row">N-2</th>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <th scope="row">N-1</th>
+            <td>4</td>
+            <td>4</td>
+            <td>7</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th scope="row">N</th>
+            <td>5</td>
+            <td>7</td>
+            <td>6</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+
+      <p>
+      <h2>Tabla complea 2.0</h2>
+      <table border="1" summary="Análisis de ventas anuales">
+        <caption>Análisis de ventas anuales</caption>
+
+        <col style="width:10%;" />
+        <col style="width:30%;" />
+
+        <thead>
+          <tr>
+            <th scope="col">AÑO</th>
+            <th scope="col">Producto A</th>
+            <th scope="col">Producto B</th>
+            <th scope="col">Producto C</th>
+            <th scope="col">Producto D</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">N-3</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row">N-2</th>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <th scope="row">N-1</th>
+            <td>4</td>
+            <td>4</td>
+            <td>7</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th scope="row">N</th>
+            <td>5</td>
+            <td>7</td>
+            <td>6</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+
+      <p>
+      <h2>Tabla compleja 3.0</h2>
+      <table border="1" summary="Análisis de ventas anuales">
+        <caption>Análisis de ventas anuales</caption>
+
+        <colgroup span="1" style="color:red;" />
+        <colgroup span="3" style="color:blue;" />
+
+        <thead>
+          <tr>
+            <th scope="col">AÑO</th>
+            <th scope="col">Producto A</th>
+            <th scope="col">Producto B</th>
+            <th scope="col">Producto C</th>
+            <th scope="col">Producto D</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">N-3</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row">N-2</th>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <th scope="row">N-1</th>
+            <td>4</td>
+            <td>4</td>
+            <td>7</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th scope="row">N</th>
+            <td>5</td>
+            <td>7</td>
+            <td>6</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+
+      <p>
+      <h1>FORMULARIOS</h1>
+
+      <p>
+      <h3>Formulario muy sencillo</h3>
+
+      <form action="http://www.librosweb.es/maneja_formulario.php" method="post">
+
+        <label>Escribe tu nombre:
+          <input type="text" name="nombre">
+        </label>
+
+        <br />
+
+        <input type="submit" value="Enviar" />
+      </form>
+
+      </p>
+
+      <h1>Encuesta alumnado</h1>
+
+      <form action="/server/procesa.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Datos iniciales</legend>
+          <p>
+            Seleccione a continuación cuales son los temas de su interés: <br><br>
+            <label>
+              <input type="checkbox" name="intereses" value="html" />HTML
+            </label><br>
+            <label>
+              <input type="checkbox" name="intereses" value="css">Estilos CSS
+            </label><br>
+            <label>
+              <input type="checkbox" name="intereses" value="java"> El lenguaje JaVAsCRIPT
+            </label>
+          </p>
+          <input type="reset" name="limpiar" value="Borrar datos del formulario" />
+      </form>
+      </fieldset>
+
+      <p>
+
+        <from>
+          <label>Nombre
+            <input type="text" name="nombre2">
+          </label>
+        </from>
+
+      </p>
+
+      <p>
+
+      <fieldset>
+        <legend>Seleccione zona donde víve:</legend>
+        <label>
+          <input type="radio" name="zona" value="jerez" checked>
+          Jerez (* Valor por defecto)
+        </label><br>
+        <label>
+          <input type="radio" name="zona" value="pedanias">
+          Pedanías: Cuartillos, Estella, etc..
+        </label><br>
+        <label>
+          <input type="radio" name="zona" value="fuera">
+          Fuera de Jerez: El Puerto, Chipiona ,etc..
+        </label>
+      </fieldset>
+
+      <p>
+        <label>Adjunta dos fotos, una tipo DNI y otra de cuerpo entero <br>
+          <input type="file" name="archivo" multiple>
+        </label>
+      </p>
+
+      <p>
+      <form action="maneja_formulario.php" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+          Nombre <br />
+          <input type="text" name="nombre" value="" />
+          <br />
+          Apellidos <br />
+          <input type="text" name="apellidos" value="" />
+          <br />
+          DNI <br />
+          <input type="text" name="dni" value="" size="10" maxlength="9" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos de conexión</legend>
+          <label>Nombre de usuario <br>
+            <input type="text" name="nombre" value="" maxlength="10" /></label>
+          <br />
+          <label>
+            Contraseña<br />
+            <input type="password" name="password" value="" maxlength="10" />
+          </label>
+          <br />
+          <label>
+            Repite la contraseña<br />
+            <input type="password" name="password2" value="" maxlength="10" />
+          </label>
+        </fieldset>
+      </form>
+      </p>
+
+      <p>
+      <form action="insertar_producto.php" method="post">
+
+        <label for="nombre">Nombre del producto</label> <br />
+        <input type="text" id="nombre" name="nombre" value="" />
+
+        <label for="descripcion">Descripción del producto</label> <br />
+        <textarea id="descripcion" name="descripcion" cols="40" rows="5"></textarea>
+
+      </form>
+      </p>
+
+      <p>
+        <label for="so">Sistema operativo</label> <br />
+        <select id="so" name="so">
+          <option value="" selected="selected">- selecciona -</option>
+          <option value="windows">Windows</option>
+          <option value="mac">Mac</option>
+          <option value="linux">Linux</option>
+          <option value="otro">Otro</option>
+        </select>
+        <br>
+        <label for="so2">Sistema operativo</label> <br />
+        <select id="so2" name="so2" size="5">
+          <option value="windows" selected="selected">Windows</option>
+          <option value="mac">Mac</option>
+          <option value="linux">Linux</option>
+          <option value="otro">Otro</option>
+        </select>
+        <br>
+        <label for="so3">Sistema operativo</label> <br />
+        <select id="so3" name="so3" size="5" multiple="multiple">
+          <option value="windows" selected="selected">Windows</option>
+          <option value="mac">Mac</option>
+          <option value="linux">Linux</option>
+          <option value="otro">Otro</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="so">Sistema operativo</label> <br />
+        <select id="so" name="so">
+          <option value="" selected="selected">- selecciona -</option>
+          <option value="windows">Windows</option>
+          <option value="mac">Mac</option>
+          <option value="linux">Linux</option>
+          <option value="otro">Otro</option>
+        </select>
+      </p>
+
+      <p>
+      <form id="formulario" method="post" action="">
+
+        <label for="programa">Programa seleccionado</label> <br />
+        <select id="programa" name="programa">
+          <optgroup label="Sistemas Operativos">
+            <option value="Windows" selected="selected">Windows</option>
+            <option value="Mac">Mac</option>
+            <option value="Linux">Linux</option>
+            <option value="Other">Otro</option>
+          </optgroup>
+          <optgroup label="Navegadores">
+            <option value="Internet Explorer" selected="selected">Internet Explorer</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Safari">Safari</option>
+            <option value="Opera">Opera</option>
+            <option value="Other">Otro</option>
+          </optgroup>
+        </select>
+
+      </form>
+      </p>
+
+      <p>
+        <label>Vamos a pintar la clase: selecione el color preferido (por defecto rojo)
+          <input type="color" name="color" value="#0000ff">
+        </label>
+      </p>
+
+      <p>
+        De esta forma, el esqueleto de una página HTML compleja suele ser similar al siguiente:
+
+        ...
+      <div id="contenedor">
+        <div id="cabecera">
+          ...
+        </div>
+
+        <div id="contenido">
+          <div id="menu">
+            ..
+          </div>
+          ...
+        </div>
+
+        <div id="pie">
+          ...
+        </div>
+      </div>
+      ...
+      El equivalente para las páginas en inglés sería el siguiente:
+
+      ...
+      <div id="wrapper">
+        <div id="header">
+          ...
+        </div>
+
+        <div id="content">
+          <div id="menu">
+            ..
+          </div>
+          ...
+        </div>
+
+        <div id="footer">
+          ...
+        </div>
+      </div>
+      </p>
+
+      <p>
+      <ul>
+        <li>1
+          <ul>
+            <li>1.1</li>
+            <li><u>1.2</u></li>
+          </ul>
+        </li>
+        <li>
+          2
+        </li>
+      </ul>
+      </p>
+
+      <a href="/EZATO.jpg"><img src="/4d1a8e14bd291b654b2bcc8f6847c674.png" alt="img" width="528" height="528"></a>
+
+      <br>
+
+      <video src="/DRAGON BALL FighterZ 2021.11.06 - 15.39.27.05.DVR_Trim.mp4" width="560" height="315" loop controls
+        preload="auto" autoplay></video>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/d60rlRPRUeo" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+      <p><a href="#arribacojone"><img src="/Users/Usuario/Pictures/AVATARES/Artorias.jpg" alt="Artorias" width="250"
+            height="400"></a></p>
+</body>
+
+</html>

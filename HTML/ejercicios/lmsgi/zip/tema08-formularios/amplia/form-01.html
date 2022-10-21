@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Recogida datos formulario</title>
+	<style> 
+     label { display: block; }
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Formulario 1 y PHP</h1>
+	<p>Los datos se envían a form-01.php, que los  recibe y genera una lista y uan tabla con ellos.</p>
+</header>
+
+<form action="form-01.php" method="post">
+	<label for="username">Nombre</label>
+	   <input type="text" name="username" id="username"/>
+	<label for="contrasena">Contraseña</label>
+	   <input type="password" name="contrasena" id="contrasena" />
+
+	<br/>Matricula:
+		 <label for="repiteS"> 
+				<input type="radio" name="repite" value="S" id="repiteS"/>
+		 Repetidor
+		 </label> 
+		 <label for="repiteN">
+				<input type="radio" name="repite" value="N" id="repiteN"/>
+			Alumno de nuevo ingreso
+		 </label> 
+	<br/> 
+
+	<input type="submit" name="enviar" value="Envíar" />
+	<input type="reset" name="limpiar" value="Borrar datos" />
+</form>
+
+
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+/* file: colores. css */
+
+section {
+  color: blue; /* se hereda */
+  border: 2px solid red; /* no se hereda */
+}
+/* para ver colisiones en el artículo */
+.revisar {
+  color: silver;
+}
+article h2 + p {
+  color: red;
+}
+article p {
+  color: green;
+  font-style: italic; /*Esta propiedad no colisiona*/
+}
+/* para ver colsiones en footer y "desempate" */
+footer > p {
+  color: green;
+}
+footer p {
+  color: tomato;
+}

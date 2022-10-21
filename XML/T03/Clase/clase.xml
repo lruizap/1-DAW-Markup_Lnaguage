@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE clase SYSTEM "clase.dtd">
+
+<clase>
+    <modulos>
+        <nombre id="M01">LMSGI</nombre>
+        <nombre id="M02">Base de Datos</nombre>
+        <nombre id="M03">Programación</nombre>
+        <nombre id="M04">Entornos de Desarrollo</nombre>
+    </modulos>
+    <alumnado>
+        <Datos modulos="M02">Alfredo</Datos>
+        <Datos modulos="M03">Paco</Datos>
+        <Datos modulos="M01"></Datos>
+    </alumnado>
+</clase>

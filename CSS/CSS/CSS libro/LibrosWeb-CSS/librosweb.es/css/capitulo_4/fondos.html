@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_4/fondos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>4.5. Fondos (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="margen_relleno_bordes_y_modelo_de_cajas.html" />
+        <link rel="next" href="../capitulo_5.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="4.5. Fondos (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_4.html" itemprop="url">
+                    <span itemprop="title">Capítulo 4. Modelo de cajas</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>4.5. Fondos</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="fondos" class="title">
+        <span>4.5.</span> Fondos
+    </h1>
+
+    
+
+<p>El último elemento que forma el <em>box model</em> es el fondo de la caja del elemento. El fondo puede ser un color simple o una imagen. El fondo solamente se visualiza en el área ocupada por el contenido y su relleno, ya que el color de los bordes se controla directamente desde los bordes y las zonas de los márgenes siempre son transparentes.</p>
+
+<p>Para establecer un color o imagen de fondo en la página entera, se debe establecer un fondo al elemento <code>&lt;body&gt;</code>. Si se establece un fondo a la página, como el valor inicial del fondo de los elementos es transparente, todos los elementos de la página se visualizan con el mismo fondo a menos que algún elemento especifique su propio fondo.</p>
+
+<p>CSS define cinco propiedades para establecer el fondo de cada elemento (<code>background-color</code>, <code>background-image</code>, <code>background-repeat</code>, <code>background-attachment</code>, <code>background-position</code>) y otra propiedad de tipo <em>"shorthand"</em> (<code>background</code>).</p>
+
+<p>La propiedad <code>background-color</code> permite mostrar un color de fondo sólido en la caja de un elemento. Esta propiedad no permite crear degradados ni ningún otro efecto avanzado.</p>
+
+<div class="table" id="table_4_15">
+
+    <table class="property" summary="Definición de la propiedad background-color de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>background-color</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td><a href="http://librosweb.es/referencia/css/colores.html">color</a> | transparent | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>transparent</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece un color de fondo para los elementos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El siguiente ejemplo muestra una página web con un color gris claro de fondo:</p>
+
+<div class="code css">
+<pre class="css">body <span class="br0">&#123;</span>
+  <span class="kw1">background-color</span><span class="sy0">:</span> <span class="re0">#F5F5F5</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Para crear efectos gráficos avanzados, es necesario utilizar la propiedad <code>background-image</code>, que permite mostrar una imagen como fondo de la caja de cualquier elemento:</p>
+
+<div class="table" id="table_4_16">
+
+    <table class="property" summary="Definición de la propiedad background-image de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>background-image</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>url | none | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>none</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece una imagen como fondo para los elementos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>CSS permite establecer de forma simultánea un color y una imagen de fondo. En este caso, la imagen se muestra delante del color, por lo que solamente si la imagen contiene zonas transparentes es posible ver el color de fondo.</p>
+
+<p>El siguiente ejemplo muestra una imagen como fondo de toda la página:</p>
+
+<div class="code css">
+<pre class="css">body <span class="br0">&#123;</span> <span class="kw1">background-image</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;imagenes/fondo.png&quot;</span><span class="br0">&#41;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Las imágenes de fondo se indican a través de su URL, que puede ser absoluta o relativa. Suele ser recomendable crear una carpeta de imágenes que se encuentre en el mismo directorio que los archivos CSS y que almacene todas las imágenes utilizadas en el diseño de las páginas.</p>
+
+<p>Así, las imágenes correspondientes al diseño de la página se mantienen separadas del resto de imágenes del sitio y el código CSS es más sencillo (por utilizar URL relativas) y más fácil de mantener (por no tener que actualizar URL absolutas en caso de que se cambie la estructura del sitio web).</p>
+
+<p>Por otra parte, suele ser habitual indicar un color de fondo siempre que se muestra una imagen de fondo. En caso de que la imagen no se pueda mostrar o contenga errores, el navegador mostrará el color indicado (que debería ser, en lo posible, similar a la imagen) y la página no parecerá que contiene errores.</p>
+
+<p>Si la imagen que se quiere mostrar es demasiado grande para el fondo del elemento, solamente se muestra la parte de imagen comprendida en el tamaño del elemento. Si la imagen es más pequeña que el elemento, CSS la repite horizontal y verticalmente hasta llenar el fondo del elemento.</p>
+
+<p>Este comportamiento es útil para establecer un fondo complejo a una página web entera. El siguiente ejemplo utiliza una imagen muy pequeña para establecer un fondo complejo a toda una página:</p>
+
+<p>Imagen original</p>
+
+<div class="figure" id="figure_4_18">
+    <img src="../../img/css/f0421.gif" alt="Imagen original utilizada para el fondo de la página" />
+
+    <p class="caption"><strong>Figura 4.18</strong> Imagen original utilizada para el fondo de la página</p>
+</div>
+
+
+<p>Reglas CSS</p>
+
+<div class="code css">
+<pre class="css">body <span class="br0">&#123;</span>
+  <span class="kw1">background-image</span><span class="sy0">:</span><span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">imagenes/fondo.gif</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Resultado</p>
+
+<div class="figure" id="figure_4_19">
+    <img src="../../img/css/f0417.gif" alt="Página con una imagen de fondo" />
+
+    <p class="caption"><strong>Figura 4.19</strong> Página con una imagen de fondo</p>
+</div>
+
+
+<p>Con una imagen muy pequeña (y que por tanto, se puede descargar en muy poco tiempo) se consigue cubrir completamente el fondo de la página, con lo que se consigue un gran ahorro de ancho de banda.</p>
+
+<p>En ocasiones, no es conveniente que la imagen de fondo se repita horizontal y verticalmente. Para ello, CSS introduce la propiedad <code>background-repeat</code> que permite controlar la forma de repetición de las imágenes de fondo.</p>
+
+<div class="table" id="table_4_17">
+
+    <table class="property" summary="Definición de la propiedad background-repeat de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>background-repeat</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>repeat | repeat-x | repeat-y | no-repeat | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>repeat</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Controla la forma en la que se repiten las imágenes de fondo</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El valor <code>repeat</code> indica que la imagen se debe repetir en todas direcciones y por tanto, es el comportamiento por defecto. El valor <code>no-repeat</code> muestra una sola vez la imagen y no se repite en ninguna dirección. El valor <code>repeat-x</code> repite la imagen sólo horizontalmente y el valor <code>repeat-y</code> repite la imagen solamente de forma vertical.</p>
+
+<p>El sitio web http://www.kottke.org/ utiliza el valor <code>repeat-x</code> para mostrar una imagen de fondo en la cabecera de la página:</p>
+
+<div class="figure" id="figure_4_20">
+    <img src="../../img/css/f0418.gif" alt="Uso de repeat-x en la página de Kottke.org" />
+
+    <p class="caption"><strong>Figura 4.20</strong> Uso de repeat-x en la página de Kottke.org</p>
+</div>
+
+
+<p>Las reglas CSS definidas para la cabecera son:</p>
+
+<div class="code css">
+<pre class="css"><span class="re0">#hdr</span> <span class="br0">&#123;</span>
+  <span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;/images/ds.gif&quot;</span><span class="br0">&#41;</span> <span class="kw2">repeat-x</span><span class="sy0">;</span>
+  <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">100%</span><span class="sy0">;</span>
+  <span class="kw1">text-align</span><span class="sy0">:</span> <span class="kw2">center</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Por otra parte, el sitio web http://veerle.duoh.com/ utiliza el valor <code>repeat-y</code> para mostrar el fondo de una columna de contenidos:</p>
+
+<div class="figure" id="figure_4_21">
+    <img src="../../img/css/f0419.gif" alt="Uso de repeat-y en la página de Veerle.duoh.com" />
+
+    <p class="caption"><strong>Figura 4.21</strong> Uso de repeat-y en la página de Veerle.duoh.com</p>
+</div>
+
+
+<p>Las reglas CSS definidas para esa columna de contenidos son:</p>
+
+<div class="code css">
+<pre class="css"><span class="re1">.wide</span> <span class="re0">#content-secondary</span> <span class="br0">&#123;</span>
+  <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">272px</span><span class="sy0">;</span>
+  <span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">13px</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+  <span class="kw1">margin-left</span><span class="sy0">:</span> <span class="re3">-8px</span><span class="sy0">;</span>
+  <span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;./graphics/wide/bg-content-secondary.gif&quot;</span><span class="br0">&#41;</span> <span class="kw2">repeat-y</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Además de seleccionar el tipo de repetición de las imágenes de fondo, CSS permite controlar la posición de la imagen dentro del fondo del elemento mediante la propiedad <code>background-position</code>.</p>
+
+<div class="table" id="table_4_18">
+
+    <table class="property" summary="Definición de la propiedad background-position de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>background-position</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( ( <a href="http://librosweb.es/referencia/css/porcentajes.html">porcentaje</a> | <a href="http://librosweb.es/referencia/css/unidades_de_medida.html">unidad de medida</a> | left | center | right ) ( <a href="http://librosweb.es/referencia/css/porcentajes.html">porcentaje</a> | <a href="http://librosweb.es/referencia/css/unidades_de_medida.html">unidad de medida</a> | top | center | bottom )? ) | ( ( left | center | right ) || ( top | center | bottom ) ) | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>0% 0%</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Controla la posición en la que se muestra la imagen en el fondo del elemento</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>La propiedad <code>background-position</code> permite indicar la distancia que se desplaza la imagen de fondo respecto de su posición original situada en la esquina superior izquierda.</p>
+
+<p>Si se indican dos porcentajes o dos medidas, el primero indica el desplazamiento horizontal y el segundo el desplazamiento vertical respecto del origen (situado en la esquina superior izquierda). Si solamente se indica un porcentaje o una medida, se considera que es el desplazamiento horizontal y al desplazamiento vertical se le asigna automáticamente el valor de 50%.</p>
+
+<p>Cuando se utilizan porcentajes, su interpretación no es intuitiva. Si el valor de la propiedad <code>background-position</code> se indica mediante dos porcentajes <code>x% y%</code>, el navegador coloca el punto <code>(x%, y%)</code> de la imagen de fondo en el punto <code>(x%, y%)</code> del elemento.</p>
+
+<p>Las palabras clave permitidas son equivalentes a algunos porcentajes significativos: <code>top</code> = 0%, <code>left</code> = 0%, <code>center</code> = 50%, <code>bottom</code> = 100%, <code>right</code> = 100%.</p>
+
+<p>CSS permite mezclar porcentajes y palabras clave, como por ejemplo <code>50% 2cm</code>, <code>center 2cm</code>, <code>center 10%</code>.</p>
+
+<p>Si se utilizan solamente palabras clave, el orden es indiferente y por tanto, es equivalente indicar <code>top left</code> y <code>left top</code>.</p>
+
+<p>El siguiente ejemplo muestra una misma imagen de fondo posicionada de tres formas diferentes:</p>
+
+<div class="figure" id="figure_4_22">
+    <img src="../../img/css/f0420.gif" alt="Ejemplo de propiedad background-position" />
+
+    <p class="caption"><strong>Figura 4.22</strong> Ejemplo de propiedad background-position</p>
+</div>
+
+
+<p>Las reglas CSS del ejemplo anterior se muestran a continuación:</p>
+
+<div class="code css">
+<pre class="css"><span class="re0">#caja1</span> <span class="br0">&#123;</span>
+  <span class="kw1">background-image</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;images/help.png&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">background-repeat</span><span class="sy0">:</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+  <span class="kw1">background-position</span><span class="sy0">:</span> <span class="kw1">bottom</span> <span class="kw1">left</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re0">#caja2</span> <span class="br0">&#123;</span>
+  <span class="kw1">background-image</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;images/help.png&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">background-repeat</span><span class="sy0">:</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+  <span class="kw1">background-position</span><span class="sy0">:</span> <span class="kw1">right</span> <span class="kw1">top</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re0">#caja3</span> <span class="br0">&#123;</span>
+  <span class="kw1">background-image</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;images/help.png&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">background-repeat</span><span class="sy0">:</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+  <span class="kw1">background-position</span><span class="sy0">:</span> <span class="re3">50%</span> <span class="re3">50%</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+&lt;div id<span class="sy0">=</span><span class="st0">&quot;caja1&quot;</span><span class="sy0">&gt;</span>&lt;h1<span class="sy0">&gt;</span><span class="kw1">bottom</span> left&lt;/h1<span class="sy0">&gt;</span>&lt;/div<span class="sy0">&gt;</span>
+&lt;div id<span class="sy0">=</span><span class="st0">&quot;caja2&quot;</span><span class="sy0">&gt;</span>&lt;h1<span class="sy0">&gt;</span><span class="kw1">right</span> top&lt;/h1<span class="sy0">&gt;</span>&lt;/div<span class="sy0">&gt;</span>
+&lt;div id<span class="sy0">=</span><span class="st0">&quot;caja3&quot;</span><span class="sy0">&gt;</span>&lt;h1<span class="sy0">&gt;</span><span class="re3">50%</span> <span class="re3">50%</span>&lt;/h1<span class="sy0">&gt;</span>&lt;/div<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>Opcionalmente, se puede indicar que el fondo permanezca fijo cuando la ventana del navegador se desplaza mediante las barras de <em>scroll</em>. Se trata de un comportamiento que en general no es deseable y que algunos navegadores no soportan correctamente. La propiedad que controla este comportamiento es <code>background-attachment</code>.</p>
+
+<div class="table" id="table_4_19">
+
+    <table class="property" summary="Definición de la propiedad background-attachment de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>background-attachment</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>scroll | fixed | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>scroll</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Controla la forma en la que se visualiza la imagen de fondo: permanece fija cuando se hace scroll en la ventana del navegador o se desplaza junto con la ventana</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Para hacer que una imagen de fondo se muestre fija al desplazar la ventana del navegador, se debe añadir la propiedad <code>background-attachment: fixed</code>.</p>
+
+<p>Por último, CSS define una propiedad de tipo <em>"shorthand"</em> para indicar todas las propiedades de los colores e imágenes de fondo de forma directa. La propiedad se denomina <code>background</code> y es la que generalmente se utiliza para establecer las propiedades del fondo de los elementos.</p>
+
+<div class="table" id="table_4_20">
+
+    <table class="property" summary="Definición de la propiedad background de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>background</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( background-<a href="http://librosweb.es/referencia/css/colores.html">color</a> || background-image || background-repeat || background-attachment || background-position ) | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece todas las propiedades del fondo de un elemento</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El orden en el que se indican las propiedades es indiferente, aunque en general se sigue el formato indicado de color, url de imagen, repetición y posición.</p>
+
+<p>El siguiente ejemplo muestra la ventaja de utilizar la propiedad <code>background</code>:</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/* Color e imagen de fondo de la página mediante una propiedad shorthand */</span>
+body <span class="br0">&#123;</span> <span class="kw1">background</span><span class="sy0">:</span> <span class="re0">#222d2d</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">./graphics/colorstrip.gif</span><span class="br0">&#41;</span> <span class="kw2">repeat-x</span> <span class="nu0">0</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* La propiedad shorthand anterior es equivalente a las siguientes propiedades */</span>
+body <span class="br0">&#123;</span>
+  <span class="kw1">background-color</span><span class="sy0">:</span> <span class="re0">#222d2d</span><span class="sy0">;</span>
+  <span class="kw1">background-image</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;./graphics/colorstrip.gif&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">background-repeat</span><span class="sy0">:</span> <span class="kw2">repeat-x</span><span class="sy0">;</span>
+  <span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>La propiedad <code>background</code> permite asignar todos o sólo algunos de todos los valores que se pueden definir para los fondos de los elementos:</p>
+
+<div class="code css">
+<pre class="css"><span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;./graphics/wide/bg-content-secondary.gif&quot;</span><span class="br0">&#41;</span> <span class="kw2">repeat-y</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;./graphics/wide/footer-content-secondary.gif&quot;</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span> <span class="kw1">bottom</span> <span class="kw1">left</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">transparent</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;./graphics/navigation.gif&quot;</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span> <span class="nu0">0</span> <span class="re3">-27px</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">background</span><span class="sy0">:</span> <span class="re0">#293838</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;./graphics/icons/icon-permalink-big.gif&quot;</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span> <span class="kw2">center</span> <span class="kw1">left</span><span class="sy0">;</span></pre>
+</div>
+
+<p><div class="exercise"><p class="title">Ejercicio 5</p> <p><a href="../capitulo_15/ejercicio_5.html">Ver enunciado</a></p></div></p>
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="margen_relleno_bordes_y_modelo_de_cajas.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>4.4. Margen, relleno, bordes y modelo de cajas</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="../capitulo_5.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>Capítulo 5. Posicionamiento y visualización</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Fondos%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1 ">
+                <a href="../capitulo_4.html">
+                    <span>Capítulo 4.</span> Modelo de cajas
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="anchura_y_altura.html">
+                    <span>4.1.</span> Anchura y altura
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="margen_y_relleno.html">
+                    <span>4.2.</span> Margen y relleno
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="bordes.html">
+                    <span>4.3.</span> Bordes
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="margen_relleno_bordes_y_modelo_de_cajas.html">
+                    <span>4.4.</span> Margen, relleno, bordes y modelo de cajas
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="fondos.html">
+                    <span>4.5.</span> Fondos
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Posicionamiento y visualización</a>
+            </li>
+                                                                                                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_4/fondos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:17 GMT -->
+</html>

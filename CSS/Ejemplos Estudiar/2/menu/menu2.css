@@ -1,0 +1,86 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#horizontal ul {
+  background-color: gray;
+  list-style-type: none;
+  padding: 0;
+}
+
+#horizontal ul li {
+  border: 4px darkblue solid;
+  text-align: center;
+  padding: 0.1em;
+}
+
+#horizontal ul li a {
+  text-decoration: none;
+  display: block;
+}
+
+#horizontal ul li a:hover {
+  color: red;
+}
+
+#horizontal ul li:hover {
+  background-color: black;
+}
+
+#horizontal ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#horizontal ul li ul {
+    display: none;
+    position: absolute;
+    margin-top: 4px;
+    left: 8px;
+}
+
+#horizontal li:hover ul {
+    display: block;
+}
+
+
+#vertical {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#vertical li {
+  list-style-type: none;
+  position: relative;
+  text-align: center;
+  width: 120px;
+}
+
+#vertical li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  width: 120px;
+  height: 30px;
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+}
+
+#vertical li a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+#vertical li ul {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+}
+
+#vertical li:hover ul {
+  display: block;
+}

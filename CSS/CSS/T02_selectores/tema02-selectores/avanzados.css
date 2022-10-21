@@ -1,0 +1,49 @@
+/* File: avanzados.css */
+
+/* selector hijo */
+section > p {
+    color: red;
+}
+
+/* selector adyacente */
+h2 + p {
+    text-decoration: overline;
+}
+
+/* selector sibling */
+h2 ~ p {
+    background-color: yellowgreen;
+}
+
+/* selectores de atributo */
+
+/* existe el atributo */
+[title] {
+  color: blue;
+}
+/* igual a */
+[title="revisar"] {
+    color: red;
+}
+/* contiene (no en uniwebsidad) */
+[title*="revisar"] {
+    background-color: yellow;
+}
+/* termina en (no en uniwebsidad)*/
+[href$=".pdf"] {
+    color: green;
+}
+/* comienza en  (no en uniwebsidad) */
+[href^="ftp://"] {
+    color: orange;
+}
+
+/* [nombre_atributo~=valor], selecciona los elementos que tienen establecido un atributo llamado nombre_atributo y al menos uno de los valores del atributo es valor.
+ */
+
+/* [nombre_atributo|=valor], selecciona los elementos que tienen establecido un atributo llamado nombre_atributo y cuyo valor es una serie de palabras separadas con guiones, pero que comienza con valor. Este tipo de selector sólo es útil para los atributos de tipo lang que indican el idioma del contenido del elemento. */
+
+[class~="externo"]{ /* .externo */
+    font-weight: bold;
+}
+

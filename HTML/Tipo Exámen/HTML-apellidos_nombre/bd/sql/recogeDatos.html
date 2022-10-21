@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recoge datos</title>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Recorra nuestro sitio web</h2>
+        <ul>
+            <li><a href="../../index.html">Página inicial</a></li>
+            <li><a href="recogeDatos.html">Recogida de datos</a></li>
+            <li><a href="../resultados.html">Tabla de resultados</a></li>
+            <li><a href="../../blog/blog.html">Nuestro blog</a></li>
+        </ul>
+    </nav>
+
+    <h1>Formulario de recogida de datos</h1>
+
+    <form action="/procesa/altas.php" method="POST" enctype="multipart/form-data" >
+        <fieldset>
+            <legend>Datos de la compra</legend>
+            <p>
+                <p>Seleccione la marca:</p> 
+                <label ><input type="radio" name="marcas" value="A">Marca A</label>
+                <label ><input type="radio" name="marcas" value="B">Marca B</label>
+                <label ><input type="radio" name="marcas" value="C">Marca C</label>
+                <label ><input type="radio" name="marcas" value="D">Marca D</label>
+            </p>
+
+            <p>
+                <label for="unidades">Nº de unidades</label><input type="number" id="unidades" min="1" value="1">
+            </p>
+            <p>
+                <label for="ficheros">Adjuntar 2 ficheros: factura de compra y fotocopia del DNI</label>
+                <input type="file" name="ficheros" id="ficheros" multiple>
+            </p>
+            <p>
+                <label for="fechacompra">Fecha Compra
+                    <input type="date" name="fechacompra" id="fechacompra">
+                </label>
+            </p>
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Datos personales</legend>
+        </fieldset>
+        
+        <p>
+            <label for="correo">Usuario
+                <input type="email" name="correo" id="correo">
+            </label>
+            <label for="codigo">Código
+                <input type="text" name="correo" id="correo" pattern="[A-Z]{2}{-}[a-z0-9]{2,3,4,5}" required>
+            </label>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </p>
+
+    </form>
+
+</body>
+
+</html>

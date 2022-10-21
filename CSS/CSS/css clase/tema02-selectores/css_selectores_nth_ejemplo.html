@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo uso nth</title>
+    <style>
+    /* Selectores generales */
+
+    section {
+        border: 1px dotted blue;
+        margin: 1%;
+        padding: 1em;
+    }
+    /* Contadores para párrafos ejemplo */
+
+    #ejemplo {
+        counter-reset: np;
+    }
+
+    #ejemplo p:before {
+        counter-increment: np;
+        content: " (" counter(np) ") ";
+    }
+    /* Añadir aquí selectores solicitados en texto.. */
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplo uso nth, nth-of-type, etc..</h1>
+    <section id="instrucciones">
+        <h2>Instrucciones</h2>
+        <ol>
+            <li>Aplique el selector nth-child a la sección siguiente con id ejemplo:
+                <br> #ejemplo :nth-child(2n) { color: blue; } </li>
+            <li>Inserte un titular h2 al principio de la sección ejemplo. Observe como se aplica el color de fondo a los párrafos, se ha "desplazado" el estilo, h2 también es hijo.</li>
+            <li>Inserte un titular de nivel 3 antes del párrafo número 3 y otro antes del párrafo 4. Observe como se aplica el color de fondo también a las cabecera de nivel h3, hijos y pares (2n).</li>
+            <li>Modifique el selector #ejemplo :nth-child(2n) a #ejemplo p:nth-child(2n). Ahora debe cunplir ser hijo par (h2 y h3 siguen siendo hijos) y además párrafo. A h3 ahora no se le aplica el estilo</li>
+        </ol>
+        <p>Si quire aplicar el estilo a los párrafos sin tener en cuenta otro elementos que también sean hijos debemos usar el selector p:nth-of-type</p>
+        <ol>
+            <li>Modifique el selector a #ejemplo p:nth-of-type(2n). Observe que ahora se aplica el estilo a los párrafos 2n independientemente de que haya otro elememtos intercalados.</li>
+            <li>Modifique el selector a #ejemplo :nth-of-type(2n). SE aplica a lso elementos pares sean del tipo que sean. Los párrafos siguen igual pero ahora se le aplica estilo a la segunda cabeceras h3.</li>
+        </ol>
+        <p>Estos selectores se pueden aplicar a filas de tablas, o a listas. Además podemos usar otros: :first-child, :first-of-type, :last-child, :last-of-type,, etc..</p>
+        <p>Recordemos que en la expresión an+b entre paréntesis en los selectores nth, a es el tamaño del ciclo y b la ocurrencia dentro de ese ciclo. Un sólo número indica el elemento en dicha posición, y las palabras reservadas even (par) y odd (impar) son equivalentes a 2n y 2n+1.</p>
+        <ol>
+            <li>Aplique el selector ul li:nth-child(3) y observe que sólo se aplica estilo al tercer elemento de la lista en la última sección. </li>
+            <li>Modifique el selector anterior a ul li:nth-child(3n) y observe que se aplique cada tres elementos.</li>
+            <li>Modifique el selector anterior a ul li:nth-child(3n+1) y observe que se aplica al primer elemento de cada ciclo de tres.</li>
+        </ol>
+    </section>
+    <section id="ejemplo">
+        <!-- comentar/descomentar según instrucciones-->
+        <!-- <h2>titular secció-n de ejemplo</h2> -->
+        <p>Lorem ipsum dolor sit amet, <a href="https://Aclarando cosas.pdf">consectetur</a> adipisicing elit. Nemo enim aut mollitia porro, ex sapiente asperiores, iure totam neque, perspiciatis minus, numquam repudiandae facere vel! Cupiditate possimus, excepturi quam harum!</p>
+        <p>In minus, animi sequi excepturi ducimus fugit voluptates iste similique ut commodi, soluta voluptatem suscipit! Earum autem repudiandae, iste nihil, esse eligendi impedit eveniet, sequi quia non, cumque error voluptatem!</p>
+        <!-- comentar/descomentar según instrucciones-->
+        <!-- <h3>titular nivel 3 dentro de sección</h3> -->
+        <p>Adipisci dolorum sunt assumenda modi quaerat iure amet esse, excepturi debitis tenetur culpa ut expedita laboriosam minima non voluptatibus dolor dicta. Asperiores et optio voluptatum minus voluptatibus laudantium, quae sit.</p>
+        <!-- comentar/descomentar según instrucciones-->
+        <!-- <h3>segunda cabecera nivel 3</h3> -->
+        <p>Doloremque dicta cum, amet numquam nam. Excepturi magnam obcaecati rem modi soluta eos, delectus molestias ex aut fuga beatae laboriosam in tempora ipsum iure error, autem numquam temporibus perspiciatis officiis.</p>
+        <p>Hic voluptatum sequi, cupiditate necessitatibus fugiat architecto nobis tempora a ipsum sed corporis est laboriosam! Ipsum numquam obcaecati ullam ex consectetur, quisquam asperiores molestiae, vero. Officiis ex soluta ipsam, enim.</p>
+        <p>Est mollitia animi cupiditate a fugit molestiae excepturi eveniet voluptatem dicta deserunt, magnam esse dolore quae tenetur, nesciunt hic. Dolor, eum, alias. Labore vitae deserunt dolore, adipisci. Reiciendis, officiis, expedita.</p>
+        <p>Cupiditate blanditiis, qui amet sit vitae mollitia ex labore doloremque dolorum repellat impedit esse soluta atque incidunt error a illo recusandae libero aliquid hic, nobis aliquam! Asperiores quos deserunt, aut?</p>
+        <p>Suscipit, esse illo ut corporis deleniti, quidem. Accusamus vero voluptates magni ipsum placeat distinctio deserunt, eos totam ratione dolorum, quidem obcaecati! Facere non perferendis ad. Earum, explicabo corporis odio odit.</p>
+        <p>Autem non esse molestiae facilis sunt commodi earum rerum nulla laborum error. Assumenda obcaecati quidem exercitationem minima quibusdam temporibus, fuga dolor excepturi cum nemo quod, eaque sapiente officia. Minima, at.</p>
+        <p>Nostrum expedita molestias recusandae consequuntur maiores dicta earum soluta alias in deleniti, eum ex dolores quam illum asperiores porro non quasi ipsa temporibus, doloremque, dolorem? Soluta doloribus qui sunt laboriosam.</p>
+    </section>
+    <section id="listas">
+        <h2>listas</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur.</li>
+            <li>Quae reprehenderit, ipsam dolore ducimus sequi.</li>
+            <li>Perspiciatis excepturi magnam, commodi ullam corrupti.</li>
+            <li>Unde ipsam, libero impedit soluta error.</li>
+            <li>Impedit eum corrupti incidunt maiores culpa.</li>
+            <li>Sequi, deleniti iure dolores quam reiciendis?</li>
+            <li>Nobis illum earum eveniet quisquam recusandae!</li>
+            <li>Animi quaerat voluptatibus unde. Assumenda, laudantium!</li>
+            <li>Ab, minus odit eaque tempora esse.</li>
+            <li>Sit laborum, excepturi sapiente blanditiis nulla!</li>
+            <li>Porro eveniet ipsum modi quidem recusandae.</li>
+            <li>Ab, quia! Quos, esse! Tempore, nemo.</li>
+            <li>Numquam consequatur illum sed, vitae magni.</li>
+            <li>Quae illo ipsam, perferendis ut obcaecati.</li>
+            <li>Fugit beatae architecto, libero distinctio laboriosam.</li>
+            <li>Praesentium ipsa, harum nobis dolorem consequuntur.</li>
+            <li>Explicabo pariatur voluptate tempore dicta nostrum?</li>
+            <li>Eius facilis similique nobis, explicabo inventore.</li>
+            <li>Dolorum perspiciatis distinctio modi sint magnam.</li>
+            <li>Itaque, consequuntur commodi quis. Eveniet, maxime.</li>
+        </ul>
+    </section>
+</body>
+
+</html>

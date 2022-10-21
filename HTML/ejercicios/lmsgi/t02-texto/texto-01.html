@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T02: texto ejemplos iniciales</title>
+</head>
+<body>
+    
+    <h1>Tutorial html</h1>
+   
+    <p>Lorem ipsum <strong>dolor</strong> sit amet consectetur adipisicing elit. Iusto quae deleniti voluptate harum repellat praesentium temporibus dolores adipisci veniam, consequuntur cupiditate reiciendis. Enim optio corporis itaque temporibus voluptate blanditiis aliquid?</p>
+
+    <blockquote>ipsum dolor sit amet consectetur adipisicing elit. Minima nesciunt molestias deserunt facere quidem nisi magni perferendis, vero assumenda tempore.</blockquote> 
+
+    <h2>Cap 1 : Elementos html</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, temporibus!</p>
+
+    <h3>1.1 Elementos de texto</h3>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h3>1.2 Elementos de estructura</h3>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Cap 2 : Aplicar estilos</h2>
+    <h3>2.1 Estilos inline</h3>
+    <h3>2.2 Estilos en ficheros</h3>
+    <h4>2.2.1 Ficheros remotos</h4>
+    <h4>2.2.2 Ficheros en CDN</h4>
+
+    <p lang="fr" ><em>Lorem</em> ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <style>
+        [lang="fr"] { 
+            font-style : italic;
+            font-weight : normal;
+            color: green;
+        }
+     </style>
+
+    <p> Precio impresora <ins>HP 4500</ins> : <ins>100€</ins>  <del>200€</del></p>
+
+    <p>El actual presidente <cite>Pedro Sánchez</cite> ha dicho: 
+        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magnam minima fugiat.</blockquote>
+    </p>
+
+    <h2>Cap 3 : Marcado avanzado de texto</h2>
+    <p> <abbr title="World Wide Web consortium">W3C</abbr></p>
+
+    <p>Con estos síntomas, podría tratarse de un caso de <dfn title="Imagen o sensación subjetiva, propia de un sentido determinada por otra sensación que afecta a un sentido diferente">sinestesia</dfn></p>
+
+        <style> 
+        dfn::after {
+            content : " (" attr(title) ") ";
+        }
+        </style>
+
+    <h3>Marcado genérico de texto</h3>
+
+    <div class="revisar">
+        <p>El teléfono del IES es <span class="tel">64567890</span> y su email es <span class="correo">secretaria@ies.com</span></p>
+            <style>
+                span.correo{
+                    color: brown;
+                    background-color: yellow;
+                }
+                span.tel{
+                    color: black;
+                    background-color: blueviolet;
+                }
+            </style>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias sapiente repellat eligendi quos, tempore velit?</p>
+    </div>
+
+    <h3>Espacios en blanco y nuevas líneas</h3>
+
+    <p>Lorem ipsum <em class="1">dolor</em> sit amet consectetur, adipisicing elit. Blanditiis molestiae voluptatibus totam veniam tempora mollitia hic et odio accusamus quam eos corporis ut quod soluta quos maiores vitae, reiciendis sequi.
+    </p>
+
+    <style>
+        em {
+            margin: 60px;
+        }
+        p {
+            margin-bottom: 30px;
+            margin-left: 5px;
+        }
+    </style>
+
+    <p>
+        m
+        <br>
+        n 
+    </p>
+
+    <pre>
+        m mmmmmmmmmm m
+        n
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, facilis.
+    </pre>
+
+    <pre>
+        <code>
+            &lt;p>Lorem ipsum &lt;strong>dolor&lt;/strong> sit amet consectetur adipisicing elit. Recusandae architecto cum odit quo nostrum non, ut ipsa. Magnam, minus necessitatibus! &lt;/p>
+        </code>
+    </pre>
+
+    <p>Ññ ¿? !¡
+        &aacute;
+        &eacute;
+
+        <code>&amp;amp;</code>
+
+    </p>
+
+
+
+
+
+</body>
+</html>

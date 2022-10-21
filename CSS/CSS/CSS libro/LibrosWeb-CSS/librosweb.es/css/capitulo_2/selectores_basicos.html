@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_2/selectores_basicos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>2.1. Selectores básicos (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="../capitulo_2.html" />
+        <link rel="next" href="selectores_avanzados.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="2.1. Selectores básicos (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_2.html" itemprop="url">
+                    <span itemprop="title">Capítulo 2. Selectores</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>2.1. Selectores básicos</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="selectores_basicos" class="title">
+        <span>2.1.</span> Selectores básicos
+    </h1>
+
+    
+
+<h3 id="selector_universal">2.1.1. Selector universal</h3>
+
+<p>Se utiliza para seleccionar todos los elementos de la página. El siguiente ejemplo elimina el margen y el relleno de todos los elementos HTML (por ahora no es importante fijarse en la parte de la declaración de la regla CSS):</p>
+
+<div class="code css">
+<pre class="css"><span class="sy0">*</span> <span class="br0">&#123;</span>
+  <span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>El selector universal se indica mediante un asterisco (<code>*</code>). A pesar de su sencillez, no se utiliza habitualmente, ya que es difícil que un mismo estilo se pueda aplicar a todos los elementos de una página.</p>
+
+<p>No obstante, sí que se suele combinar con otros selectores y además, forma parte de algunos <em>hacks</em> muy utilizados, como se verá más adelante.</p>
+
+<h3 id="selector_de_tipo_o_etiqueta">2.1.2. Selector de tipo o etiqueta</h3>
+
+<p>Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector. El siguiente ejemplo selecciona todos los párrafos de la página:</p>
+
+<div class="code css">
+<pre class="css">p <span class="br0">&#123;</span>
+  ...
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Para utilizar este selector, solamente es necesario indicar el nombre de una etiqueta HTML (sin los caracteres <code>&lt;</code> y <code>&gt;</code>) correspondiente a los elementos que se quieren seleccionar.</p>
+
+<p>El siguiente ejemplo aplica diferentes estilos a los titulares y a los párrafos de una página HTML:</p>
+
+<div class="code css">
+<pre class="css">h1 <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+h2 <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="kw1">blue</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+p <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="kw1">black</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Si se quiere aplicar los mismos estilos a dos etiquetas diferentes, se pueden encadenar los selectores. En el siguiente ejemplo, los títulos de sección <code>h1</code>, <code>h2</code> y <code>h3</code> comparten los mismos estilos:</p>
+
+<div class="code css">
+<pre class="css">h1 <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#8A8E27</span><span class="sy0">;</span>
+  <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">normal</span><span class="sy0">;</span>
+  <span class="kw1">font-family</span><span class="sy0">:</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+h2 <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#8A8E27</span><span class="sy0">;</span>
+  <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">normal</span><span class="sy0">;</span>
+  <span class="kw1">font-family</span><span class="sy0">:</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+h3 <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#8A8E27</span><span class="sy0">;</span>
+  <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">normal</span><span class="sy0">;</span>
+  <span class="kw1">font-family</span><span class="sy0">:</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>En este caso, CSS permite agrupar todas las reglas individuales en una sola regla con un selector múltiple. Para ello, se incluyen todos los selectores separados por una coma (<code>,</code>) y el resultado es que la siguiente regla CSS es equivalente a las tres reglas anteriores:</p>
+
+<div class="code css">
+<pre class="css">h1<span class="sy0">,</span> h2<span class="sy0">,</span> h3 <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#8A8E27</span><span class="sy0">;</span>
+  <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">normal</span><span class="sy0">;</span>
+  <span class="kw1">font-family</span><span class="sy0">:</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>En las hojas de estilo complejas, es habitual agrupar las propiedades comunes de varios elementos en una única regla CSS y posteriormente definir las propiedades específicas de esos mismos elementos. El siguiente ejemplo establece en primer lugar las propiedades comunes de los títulos de sección (color y tipo de letra) y a continuación, establece el tamaño de letra de cada uno de ellos:</p>
+
+<div class="code css">
+<pre class="css">h1<span class="sy0">,</span> h2<span class="sy0">,</span> h3 <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#8A8E27</span><span class="sy0">;</span>
+  <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">normal</span><span class="sy0">;</span>
+  <span class="kw1">font-family</span><span class="sy0">:</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+h1 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">2em</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+h2 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">1.5em</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+h3 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">1.2em</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<h3 id="selector_descendente">2.1.3. Selector descendente</h3>
+
+<p>Selecciona los elementos que se encuentran dentro de otros elementos. Un elemento es descendiente de otro cuando se encuentra entre las etiquetas de apertura y de cierre del otro elemento.</p>
+
+<p>El selector del siguiente ejemplo selecciona todos los elementos <code>&lt;span&gt;</code> de la página que se encuentren dentro de un elemento <code>&lt;p&gt;</code>:</p>
+
+<div class="code css">
+<pre class="css">p span <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Si el código HTML de la página es el siguiente:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+  ...
+  <span class="sc2">&lt;<span class="kw2">span</span>&gt;</span>texto1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
+  ...
+  <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;</span>...<span class="sc2">&lt;<span class="kw2">span</span>&gt;</span>texto2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+  ...
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>El selector <code>p span</code> selecciona tanto <code>texto1</code> como <code>texto2</code>. El motivo es que en el selector descendente, un elemento no tiene que ser descendiente directo del otro. La única condición es que un elemento debe estar dentro de otro elemento, sin importar el nivel de profundidad en el que se encuentre.</p>
+
+<p>Al resto de elementos <code>&lt;span&gt;</code> de la página que no están dentro de un elemento <code>&lt;p&gt;</code>, no se les aplica la regla CSS anterior.</p>
+
+<p>Los selectores descendentes permiten aumentar la precisión del selector de tipo o etiqueta. Así, utilizando el selector descendente es posible aplicar diferentes estilos a los elementos del mismo tipo. El siguiente ejemplo amplía el anterior y muestra de color azul todo el texto de los <code>&lt;span&gt;</code> contenidos dentro de un <code>&lt;h1&gt;</code>:</p>
+
+<div class="code css">
+<pre class="css">p span  <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span>  <span class="br0">&#125;</span>
+h1 span <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw1">blue</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Con las reglas CSS anteriores:</p>
+
+<ul>
+<li>Los elementos <code>&lt;span&gt;</code> que se encuentran dentro de un elemento <code>&lt;p&gt;</code> se muestran de color rojo.</li>
+<li>Los elementos <code>&lt;span&gt;</code> que se encuentran dentro de un elemento <code>&lt;h1&gt;</code> se muestran de color azul.</li>
+<li>El resto de elementos <code>&lt;span&gt;</code> de la página, se muestran con el color por defecto aplicado por el navegador.</li>
+</ul>
+
+<p>La sintaxis formal del selector descendente se muestra a continuación:</p>
+
+<div class="code code">
+<pre class="code">selector1 selector2 selector3 ... selectorN</pre>
+</div>
+
+<p>Los selectores descendentes siempre están formados por dos o más selectores separados entre sí por espacios en blanco. El último selector indica el elemento sobre el que se aplican los estilos y todos los selectores anteriores indican el lugar en el que se debe encontrar ese elemento.</p>
+
+<p>En el siguiente ejemplo, el selector descendente se compone de cuatro selectores:</p>
+
+<div class="code css">
+<pre class="css">p a span em <span class="br0">&#123;</span> <span class="kw1">text-decoration</span><span class="sy0">:</span> <span class="kw2">underline</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Los estilos de la regla anterior se aplican a los elementos de tipo <code>&lt;em&gt;</code> que se encuentren dentro de elementos de tipo <code>&lt;span&gt;</code>, que a su vez se encuentren dentro de elementos de tipo <code>&lt;a&gt;</code> que se encuentren dentro de elementos de tipo <code>&lt;p&gt;</code>.</p>
+
+<p>No debe confundirse el selector descendente con la combinación de selectores:</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/* El estilo se aplica a todos los elementos &quot;p&quot;, &quot;a&quot;, &quot;span&quot; y &quot;em&quot; */</span>
+p<span class="sy0">,</span> a<span class="sy0">,</span> span<span class="sy0">,</span> em <span class="br0">&#123;</span> <span class="kw1">text-decoration</span><span class="sy0">:</span> <span class="kw2">underline</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* El estilo se aplica solo a los elementos &quot;em&quot; que se
+   encuentran dentro de &quot;p a span&quot; */</span>
+p a span em <span class="br0">&#123;</span> <span class="kw1">text-decoration</span><span class="sy0">:</span> <span class="kw2">underline</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Se puede restringir el alcance del selector descendente combinándolo con el selector universal. El siguiente ejemplo, muestra los dos enlaces de color rojo:</p>
+
+<div class="code css">
+<pre class="css">p a <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+&lt;p<span class="sy0">&gt;</span>&lt;a href<span class="sy0">=</span><span class="st0">&quot;#&quot;</span><span class="sy0">&gt;</span>Enlace&lt;/a<span class="sy0">&gt;</span>&lt;/p<span class="sy0">&gt;</span>
+&lt;p<span class="sy0">&gt;</span>&lt;span<span class="sy0">&gt;</span>&lt;a href<span class="sy0">=</span><span class="st0">&quot;#&quot;</span><span class="sy0">&gt;</span>Enlace&lt;/a<span class="sy0">&gt;</span>&lt;/span<span class="sy0">&gt;</span>&lt;/p<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>Sin embargo, en el siguiente ejemplo solamente el segundo enlace se muestra de color rojo:</p>
+
+<div class="code css">
+<pre class="css">p <span class="sy0">*</span> a <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+&lt;p<span class="sy0">&gt;</span>&lt;a href<span class="sy0">=</span><span class="st0">&quot;#&quot;</span><span class="sy0">&gt;</span>Enlace&lt;/a<span class="sy0">&gt;</span>&lt;/p<span class="sy0">&gt;</span>
+&lt;p<span class="sy0">&gt;</span>&lt;span<span class="sy0">&gt;</span>&lt;a href<span class="sy0">=</span><span class="st0">&quot;#&quot;</span><span class="sy0">&gt;</span>Enlace&lt;/a<span class="sy0">&gt;</span>&lt;/span<span class="sy0">&gt;</span>&lt;/p<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>La razón es que el selector <code>p * a</code> se interpreta como <em>todos los elementos de tipo <code>&lt;a&gt;</code> que se encuentren dentro de cualquier elemento que, a su vez, se encuentre dentro de un elemento de tipo <code>&lt;p&gt;</code></em>. Como el primer elemento <code>&lt;a&gt;</code> se encuentra directamente bajo un elemento <code>&lt;p&gt;</code>, no se cumple la condición del selector <code>p * a</code>.</p>
+
+<h3 id="selector_de_clase">2.1.4. Selector de clase</h3>
+
+<p>Si se considera el siguiente código HTML de ejemplo:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Nunc sed lacus et est adipiscing accumsan...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Class aptent taciti sociosqu ad litora...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span></pre>
+</div>
+
+<p>¿Cómo se pueden aplicar estilos CSS sólo al primer párrafo? El selector universal (<code>*</code>) no se puede utilizar porque selecciona todos los elementos de la página. El selector de tipo o etiqueta (<code>p</code>) tampoco se puede utilizar porque seleccionaría todos los párrafos. Por último, el selector descendente (<code>body p</code>) tampoco se puede utilizar porque todos los párrafos se encuentran en el mismo sitio.</p>
+
+<p>Una de las soluciones más sencillas para aplicar estilos a un solo elemento de la página consiste en utilizar el atributo <code>class</code> de HTML sobre ese elemento para indicar directamente la regla CSS que se le debe aplicar:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;destacado&quot;</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Nunc sed lacus et est adipiscing accumsan...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Class aptent taciti sociosqu ad litora...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span></pre>
+</div>
+
+<p>A continuación, se crea en el archivo CSS una nueva regla llamada <code>destacado</code> con todos los estilos que se van a aplicar al elemento. Para que el navegador no confunda este selector con los otros tipos de selectores, se prefija el valor del atributo <code>class</code> con un punto (<code>.</code>) tal y como muestra el siguiente ejemplo:</p>
+
+<div class="code css">
+<pre class="css"><span class="re1">.destacado</span> <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>El selector <code>.destacado</code> se interpreta como <em>"cualquier elemento de la página cuyo atributo <code>class</code> sea igual a <code>destacado</code>"</em>, por lo que solamente el primer párrafo cumple esa condición.</p>
+
+<p>Este tipo de selectores se llaman selectores de clase y son los más utilizados junto con los selectores de ID que se verán a continuación. La principal característica de este selector es que en una misma página HTML varios elementos diferentes pueden utilizar el mismo valor en el atributo <code>class</code>:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;destacado&quot;</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Nunc sed lacus et <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;destacado&quot;</span>&gt;</span>est adipiscing<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span> accumsan...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Class aptent taciti <span class="sc2">&lt;<span class="kw2">em</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;destacado&quot;</span>&gt;</span>sociosqu ad<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span> litora...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span></pre>
+</div>
+
+<p>Los selectores de clase son imprescindibles para diseñar páginas web complejas, ya que permiten disponer de una precisión total al seleccionar los elementos. Además, estos selectores permiten reutilizar los mismos estilos para varios elementos diferentes.</p>
+
+<p>A continuación se muestra otro ejemplo de selectores de clase:</p>
+
+<div class="code css">
+<pre class="css"><span class="re1">.aviso</span> <span class="br0">&#123;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">0.5em</span><span class="sy0">;</span>
+  <span class="kw1">border</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="re0">#98be10</span><span class="sy0">;</span>
+  <span class="kw1">background</span><span class="sy0">:</span> <span class="re0">#f6feda</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re1">.error</span> <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#930</span><span class="sy0">;</span>
+  <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">bold</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&lt;span class<span class="sy0">=</span><span class="st0">&quot;error&quot;</span><span class="sy0">&gt;</span>...&lt;/span<span class="sy0">&gt;</span>
+&nbsp;
+&lt;div class<span class="sy0">=</span><span class="st0">&quot;aviso&quot;</span><span class="sy0">&gt;</span>...&lt;/div<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>El elemento <code>&lt;span&gt;</code> tiene un atributo <code>class="error"</code>, por lo que se le aplican las reglas CSS indicadas por el selector <code>.error</code>. Por su parte, el elemento <code>&lt;div&gt;</code> tiene un atributo <code>class="aviso"</code>, por lo que su estilo es el que definen las reglas CSS del selector <code>.aviso</code>.</p>
+
+<p>En ocasiones, es necesario restringir el alcance del selector de clase. Si se considera de nuevo el ejemplo anterior:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;destacado&quot;</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Nunc sed lacus et <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;destacado&quot;</span>&gt;</span>est adipiscing<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span> accumsan...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Class aptent taciti <span class="sc2">&lt;<span class="kw2">em</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;destacado&quot;</span>&gt;</span>sociosqu ad<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span> litora...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span></pre>
+</div>
+
+<p>¿Cómo es posible aplicar estilos solamente al párrafo cuyo atributo <code>class</code> sea igual a <code>destacado</code>? Combinando el selector de tipo y el selector de clase, se obtiene un selector mucho más específico:</p>
+
+<div class="code css">
+<pre class="css">p<span class="re1">.destacado</span> <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>El selector <code>p.destacado</code> se interpreta como <em>"aquellos elementos de tipo <code>&lt;p&gt;</code> que dispongan de un atributo <code>class</code> con valor <code>destacado</code>"</em>. De la misma forma, el selector <code>a.destacado</code> solamente selecciona los enlaces cuyo atributo <code>class</code> sea igual a <code>destacado</code>.</p>
+
+<p>De lo anterior se deduce que el atributo <code>.destacado</code> es equivalente a <code>*.destacado</code>, por lo que todos los diseñadores obvian el símbolo <code>*</code> al escribir un selector de clase normal.</p>
+
+<p>No debe confundirse el selector de clase con los selectores anteriores:</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/* Todos los elementos de tipo &quot;p&quot; con atributo class=&quot;aviso&quot; */</span>
+p<span class="re1">.aviso</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Todos los elementos con atributo class=&quot;aviso&quot; que estén dentro
+   de cualquier elemento de tipo &quot;p&quot; */</span>
+p <span class="re1">.aviso</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Todos los elementos &quot;p&quot; de la página y todos los elementos con
+   atributo class=&quot;aviso&quot; de la página */</span>
+p<span class="sy0">,</span> <span class="re1">.aviso</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Por último, es posible aplicar los estilos de varias clases CSS sobre un mismo elemento. La sintaxis es similar, pero los diferentes valores del atributo <code>class</code> se separan con espacios en blanco. En el siguiente ejemplo:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;especial destacado error&quot;</span>&gt;</span>Párrafo de texto...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>Al párrafo anterior se le aplican los estilos definidos en las reglas <code>.especial</code>, <code>.destacado</code> y <code>.error</code>, por lo que en el siguiente ejemplo, el texto del párrafo se vería de color rojo, en negrita y con un tamaño de letra de 15 píxel:</p>
+
+<div class="code html5">
+<pre class="html5">.error { color: red; }
+.destacado { font-size: 15px; }
+.especial  { font-weight: bold; }
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;especial destacado error&quot;</span>&gt;</span>Párrafo de texto...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>Si un elemento dispone de un atributo <code>class</code> con más de un valor, es posible utilizar un selector más avanzado:</p>
+
+<div class="code html5">
+<pre class="html5">.error { color: red; }
+.error.destacado { color: blue; }
+.destacado { font-size: 15px; }
+.especial  { font-weight: bold; }
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;especial destacado error&quot;</span>&gt;</span>Párrafo de texto...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>En el ejemplo anterior, el color de la letra del texto es azul y no rojo. El motivo es que se ha utilizado un selector de clase múltiple  <code>.error.destacado</code>, que se interpreta como <em>"aquellos elementos de la página que dispongan de un atributo <code>class</code> con al menos los valores <code>error</code> y <code>destacado</code>"</em>.</p>
+
+<h3 id="selectores_de_id">2.1.5. Selectores de ID</h3>
+
+<p>En ocasiones, es necesario aplicar estilos CSS a un único elemento de la página. Aunque puede utilizarse un selector de clase para aplicar estilos a un único elemento, existe otro selector más eficiente en este caso.</p>
+
+<p>El selector de ID permite seleccionar un elemento de la página a través del valor de su atributo <code>id</code>. Este tipo de selectores sólo seleccionan un elemento de la página porque el valor del atributo <code>id</code> no se puede repetir en dos elementos diferentes de una misma página.</p>
+
+<p>La sintaxis de los selectores de ID es muy parecida a la de los selectores de clase, salvo que se utiliza el símbolo de la almohadilla (<code>#</code>) en vez del punto (<code>.</code>) como prefijo del nombre de la regla CSS:</p>
+
+<div class="code css">
+<pre class="css"><span class="re0">#destacado</span> <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+&lt;p<span class="sy0">&gt;</span>Primer párrafo&lt;/p<span class="sy0">&gt;</span>
+&lt;p id<span class="sy0">=</span><span class="st0">&quot;destacado&quot;</span><span class="sy0">&gt;</span>Segundo párrafo&lt;/p<span class="sy0">&gt;</span>
+&lt;p<span class="sy0">&gt;</span>Tercer párrafo&lt;/p<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>En el ejemplo anterior, el selector <code>#destacado</code> solamente selecciona el segundo párrafo (cuyo atributo <code>id</code> es igual a <code>destacado</code>).</p>
+
+<p>La principal diferencia entre este tipo de selector y el selector de clase tiene que ver con HTML y no con CSS. Como se sabe, en una misma página, el valor del atributo <code>id</code> debe ser único, de forma que dos elementos diferentes no pueden tener el mismo valor de <code>id</code>. Sin embargo, el atributo <code>class</code> no es obligatorio que sea único, de forma que muchos elementos HTML diferentes pueden compartir el mismo valor para su atributo <code>class</code>.</p>
+
+<p>De esta forma, la recomendación general es la de utilizar el selector de ID cuando se quiere aplicar un estilo a un solo elemento específico de la página y utilizar el selector de clase cuando se quiere aplicar un estilo a varios elementos diferentes de la página HTML.</p>
+
+<p>Al igual que los selectores de clase, en este caso también se puede restringir el alcance del selector mediante la combinación con otros selectores. El siguiente ejemplo aplica la regla CSS solamente al elemento de tipo <code>&lt;p&gt;</code> que tenga un atributo <code>id</code> igual al indicado:</p>
+
+<div class="code css">
+<pre class="css">p<span class="re0">#aviso</span> <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw1">blue</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>A primera vista, restringir el alcance de un selector de ID puede parecer absurdo. En realidad, un selector de tipo <code>p#aviso</code> sólo tiene sentido cuando el archivo CSS se aplica sobre muchas páginas HTML diferentes.</p>
+
+<p>En este caso, algunas páginas pueden disponer de elementos con un atributo <code>id</code> igual a <code>aviso</code> y que no sean párrafos, por lo que la regla anterior no se aplica sobre esos elementos.</p>
+
+<p>No debe confundirse el selector de ID con los selectores anteriores:</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/* Todos los elementos de tipo &quot;p&quot; con atributo id=&quot;aviso&quot; */</span>
+p<span class="re0">#aviso</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Todos los elementos con atributo id=&quot;aviso&quot; que estén dentro
+    de cualquier elemento de tipo &quot;p&quot; */</span>
+p <span class="re0">#aviso</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Todos los elementos &quot;p&quot; de la página y todos los elementos con
+    atributo id=&quot;aviso&quot; de la página */</span>
+p<span class="sy0">,</span> <span class="re0">#aviso</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span></pre>
+</div>
+
+<h3 id="combinacion_de_selectores_basicos">2.1.6. Combinación de selectores básicos</h3>
+
+<p>CSS permite la combinación de uno o más tipos de selectores para restringir el alcance de las reglas CSS. A continuación se muestran algunos ejemplos habituales de combinación de selectores.</p>
+
+<div class="code css">
+<pre class="css"><span class="re1">.aviso</span> <span class="re1">.especial</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span></pre>
+</div>
+
+<p>El anterior selector solamente selecciona aquellos elementos con un <code>class="especial"</code> que se encuentren dentro de cualquier elemento con un <code>class="aviso"</code>.</p>
+
+<p>Si se modifica el anterior selector:</p>
+
+<div class="code css">
+<pre class="css">div<span class="re1">.aviso</span> span<span class="re1">.especial</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Ahora, el selector solamente selecciona aquellos elementos de tipo <code>&lt;span&gt;</code> con un atributo <code>class="especial"</code> que estén dentro de cualquier elemento de tipo <code>&lt;div&gt;</code> que tenga un atributo <code>class="aviso"</code>.</p>
+
+<p>La combinación de selectores puede llegar a ser todo lo compleja que sea necesario:</p>
+
+<div class="code css">
+<pre class="css">ul<span class="re0">#menuPrincipal</span> li<span class="re1">.destacado</span> a<span class="re0">#inicio</span> <span class="br0">&#123;</span> ... <span class="br0">&#125;</span></pre>
+</div>
+
+<p>El anterior selector hace referencia al enlace con un atributo <code>id</code> igual a <code>inicio</code> que se encuentra dentro de un elemento de tipo <code>&lt;li&gt;</code> con un atributo <code>class</code> igual a <code>destacado</code>, que forma parte de una lista <code>&lt;ul&gt;</code> con un atributo <code>id</code> igual a <code>menuPrincipal</code>.</p>
+
+<p><div class="exercise"><p class="title">Ejercicio 1</p> <p><a href="../capitulo_15.html">Ver enunciado</a></p></div></p>
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="../capitulo_2.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>Capítulo 2. Selectores</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="selectores_avanzados.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>2.2. Selectores avanzados</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Selectores%20b%C3%A1sicos%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_2.html">
+                    <span>Capítulo 2.</span> Selectores
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="selectores_basicos.html">
+                    <span>2.1.</span> Selectores básicos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="selectores_avanzados.html">
+                    <span>2.2.</span> Selectores avanzados
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="agrupacion_de_reglas.html">
+                    <span>2.3.</span> Agrupación de reglas
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="herencia.html">
+                    <span>2.4.</span> Herencia
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="colisiones_de_estilos.html">
+                    <span>2.5.</span> Colisiones de estilos
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Posicionamiento y visualización</a>
+            </li>
+                                                                                                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_2/selectores_basicos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:06 GMT -->
+</html>

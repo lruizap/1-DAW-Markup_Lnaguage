@@ -1,0 +1,45 @@
+@media screen and (min-width: 800px) {
+
+    #contenedor {
+        background-color: rgb(194, 194, 54);
+        width: 80%;
+        margin: auto;
+    }
+
+    header, nav {
+        float: left;
+        width: 70%;
+    }
+
+    nav {
+        width: 30%;
+    }
+
+    article {
+        clear: both;
+    }
+
+    nav ol {
+        grid-template-columns: 1fr;
+        list-style-type:lower-roman;
+        text-align-last: left;
+        list-style-position: inside;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    #contenedor {
+        background-color: lightcoral;
+    }
+
+    article section {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+    }
+    
+    aside {
+        clear: both;
+    }
+}

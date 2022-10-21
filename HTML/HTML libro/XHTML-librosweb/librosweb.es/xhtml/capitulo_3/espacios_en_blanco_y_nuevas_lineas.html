@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/xhtml/capitulo_3/espacios_en_blanco_y_nuevas_lineas.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>3.5. Espacios en blanco y nuevas líneas (Introducción a XHTML)</title>
+        <link href="../../css/main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="marcado_generico_de_texto.html" />
+        <link rel="next" href="codificacion_de_caracteres.html" />
+        <link rel="start" href="http://librosweb.es/xhtml" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="3.5. Espacios en blanco y nuevas líneas (Introducción a XHTML)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page xhtml">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index-2.html" itemprop="url">
+                    <span itemprop="title">Introducción a XHTML</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_3.html" itemprop="url">
+                    <span itemprop="title">Capítulo 3. Texto</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>3.5. Espacios en blanco y nuevas líneas</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="espacios_en_blanco_y_nuevas_lineas" class="title">
+        <span>3.5.</span> Espacios en blanco y nuevas líneas
+    </h1>
+
+    
+
+<p>El aspecto más sorprendente del lenguaje HTML cuando se desarrollan los primeros documentos es el tratamiento especial de los <em>"espacios en blanco"</em> del texto. HTML considera <em>espacio en blanco</em> a los espacios en blanco, los tabuladores, los retornos de carro y el carácter de nueva línea (<code>ENTER</code> o <code>Intro</code>).</p>
+
+<p>El siguiente ejemplo ilustra este comportamiento:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;&lt;<span class="kw2">title</span>&gt;</span>Ejemplo de etiqueta p<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Este primer párrafo no contiene saltos de línea ni otro tipo de espaciado.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Este segundo párrafo sí que contiene saltos
+de
+línea
+y   otro   tipo   de   espaciado.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<p>El anterior código HTML se visualiza en cualquier navegador de la siguiente manera:</p>
+
+<div class="figure" id="figure_3_12">
+    <img src="../../img/xhtml/ejemplo_etiqueta_p.gif" alt="Ejemplo de comportamiento de HTML con los espacios en blanco" />
+
+    <p class="caption"><strong>Figura 3.12</strong> Ejemplo de comportamiento de HTML con los espacios en blanco</p>
+</div>
+
+
+<p>Los dos párrafos de la imagen anterior se ven idénticos, aunque el segundo párrafo incluye varios espacios en blanco y está escrito en varias líneas diferentes. La razón de este comportamiento es que HTML ignora todos los espacios en blanco <em>sobrantes</em>, es decir, todos los espacios en blanco que no son el espacio en blanco que separa las palabras.</p>
+
+<p>No obstante, HTML proporciona varias alternativas para poder incluir tantos espacios en blanco y tantas nuevas líneas como sean necesarias dentro del contenido textual de las páginas.</p>
+
+<h3 id="nuevas_lineas">3.5.1. Nuevas líneas</h3>
+
+<p>Para incluir una nueva línea en un punto y forzar a que el texto que sigue se muestre en la línea inferior, se utiliza la etiqueta <code>&lt;br&gt;</code>. En cierta manera, insertar la etiqueta <code>&lt;br&gt;</code> en un determinado punto del texto equivale a presionar la tecla <code>ENTER</code> (o <code>Intro</code>) en ese mismo punto.</p>
+
+<p>La definición formal de <code>&lt;br&gt;</code> se muestra a continuación:</p>
+
+<div class="table" id="table_3_12">
+
+    <table class="property" summary="Definición y propiedades de la etiqueta br de XHTML">
+    <thead>
+        <tr>
+            <th scope="row">Etiqueta</th>
+            <td><strong class="title"><span>&lt;</span>br<span>&gt;</span></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Atributos comunes</th>
+            <td><a href="../capitulo_2/etiquetas_y_atributos.html#atributos_basicos">básicos</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Atributos propios</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Tipo de elemento</th>
+            <td>En línea y etiqueta vacía</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Fuerza al navegador a insertar una nueva línea</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>La etiqueta <code>&lt;br&gt;</code> es una de las pocas <em>etiquetas especiales</em> de HTML. La particularidad de <code>&lt;br&gt;</code> es que es una etiqueta vacía, es decir, no encierra ningún texto. De esta forma, la etiqueta debe abrirse y cerrarse de forma consecutiva: <code>&lt;br&gt;&lt;/br&gt;</code>.</p>
+
+<p>En estos casos, HTML permite utilizar un atajo para indicar que una etiqueta se está abriendo y cerrando de forma consecutiva: <code>&lt;br/&gt;</code> (también se puede escribir como <code>&lt;br /&gt;</code>).</p>
+
+<p>Utilizando la etiqueta <code>&lt;br&gt;</code> se puede rehacer el ejemplo anterior para que respete las líneas que forman el segundo párrafo:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Ejemplo de etiqueta br<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Este primer párrafo no contiene saltos de línea ni otro tipo de espaciado.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Este segundo párrafo sí que contiene saltos <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+de <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+línea <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+y   otro   tipo   de   espaciado.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<p>El navegador ahora sí que muestra correctamente las nuevas líneas que se querían insertar:</p>
+
+<div class="figure" id="figure_3_13">
+    <img src="../../img/xhtml/ejemplo_etiqueta_br.gif" alt="Ejemplo de uso de la etiqueta br" />
+
+    <p class="caption"><strong>Figura 3.13</strong> Ejemplo de uso de la etiqueta br</p>
+</div>
+
+
+<h3 id="espacios_en_blanco">3.5.2. Espacios en blanco</h3>
+
+<p>La solución al problema de los espacios en blanco no es tan sencilla como el de las nuevas líneas. Para incluir espacios en blanco adicionales, se debe sustituir cada nuevo espacio en blanco por el texto <code>&amp;nbsp;</code> (es importante incluir el símbolo <code>&amp;</code> al principio y el símbolo <code>;</code> al final).</p>
+
+<p>Así, el código HTML del ejemplo anterior se debe rehacer para incluir los espacios en blanco adicionales:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Ejemplo de entidad <span class="sc1">&amp;nbsp;</span><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Este primer párrafo no contiene saltos de línea ni otro tipo de espaciado.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Este segundo párrafo sí que contiene saltos <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+de <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+línea <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+y <span class="sc1">&amp;nbsp;&amp;nbsp;</span> otro <span class="sc1">&amp;nbsp;</span> tipo <span class="sc1">&amp;nbsp;</span> de <span class="sc1">&amp;nbsp;</span> espaciado.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<p>Ahora el navegador sí que muestra correctamente los espacios en blanco (y las nuevas líneas) del segundo párrafo:</p>
+
+<div class="figure" id="figure_3_14">
+    <img src="../../img/xhtml/ejemplo_entidad_nbsp.gif" alt="Ejemplo de uso de espacios en blanco en HTML" />
+
+    <p class="caption"><strong>Figura 3.14</strong> Ejemplo de uso de espacios en blanco en HTML</p>
+</div>
+
+
+<p>Cada texto <code>&amp;nbsp;</code> solamente equivale a un espacio en blanco, por lo que se deben escribir tantos <code>&amp;nbsp;</code> seguidos como espacios en blanco seguidos existan en el texto.</p>
+
+<p>Más adelante se profundiza en el origen de <code>&amp;nbsp;</code> y se comprenderá por qué es necesario incluir esa sucesión tan extraña de caracteres cada vez que se quiere incluir un espacio en blanco adicional.</p>
+
+<p><div class="exercise"><p class="title">Ejercicio 4</p> <p>Determinar el código HTML que corresponde al siguiente documento:</p>
+
+<div class="figure" id="figure_3_15">
+    <img src="../../img/xhtml/e0401.gif" alt="Texto HTML con espacios en blanco y nuevas líneas" />
+
+    <p class="caption"><strong>Figura 3.15</strong> Texto HTML con espacios en blanco y nuevas líneas</p>
+</div>
+
+
+<p><a href="../capitulo_15/ejercicio_4.html">Ver solución</a></p></div></p>
+
+<h3 id="texto_preformateado">3.5.3. Texto preformateado</h3>
+
+<p>En ocasiones, es necesario mostrar los espacios en blanco de un texto que no se puede modificar. Se trata de un caso habitual cuando una página web debe mostrar directamente el texto generado por alguna aplicación.</p>
+
+<p>En estos casos, se puede utiliza la etiqueta <code>&lt;pre&gt;</code>, que muestra el texto tal y como se ha escrito, respetando todos los espacios en blanco y todas las nuevas líneas. La definición formal de la etiqueta se muestra a continuación:</p>
+
+<div class="table" id="table_3_13">
+
+    <table class="property" summary="Definición y propiedades de la etiqueta pre de XHTML">
+    <thead>
+        <tr>
+            <th scope="row">Etiqueta</th>
+            <td><strong class="title"><span>&lt;</span>pre<span>&gt;</span></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Atributos comunes</th>
+            <td><a href="../capitulo_2/etiquetas_y_atributos.html#atributos_basicos">básicos</a>, <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_para_internacionalizacion">internacionalización</a> y <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_de_eventos">eventos</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Atributos propios</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Tipo de elemento</th>
+            <td>Bloque</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Muestra el texto que encierra tal y como está escrito (respetando los espacios en blanco)</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El siguiente ejemplo muestra el uso de la etiqueta <code>&lt;pre&gt;</code>:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;&lt;<span class="kw2">title</span>&gt;</span>Ejemplo de etiqueta pre<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">pre</span>&gt;</span>
+        La etiqueta pre
+   respeta los espacios en blanco
+      y
+ muestra el texto
+     tal y como
+   está escrito
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">pre</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+        La etiqueta pre
+   respeta los espacios en blanco
+      y
+ muestra el texto
+     tal y como
+   está escrito
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<p>El ejemplo anterior incluye el mismo texto (con espacios en blanco y varias líneas) dentro de una etiqueta <code>&lt;pre&gt;</code> y dentro de una etiqueta <code>&lt;p&gt;</code>. Las diferencias visuales en un navegador son muy evidentes:</p>
+
+<div class="figure" id="figure_3_16">
+    <img src="../../img/xhtml/ejemplo_etiqueta_pre.gif" alt="Ejemplo de uso de la etiqueta pre" />
+
+    <p class="caption"><strong>Figura 3.16</strong> Ejemplo de uso de la etiqueta pre</p>
+</div>
+
+
+<p>El primer texto se ve en pantalla tal y como se ha escrito, respetando todos los espacios en blanco y todas las nuevas líneas. El segundo texto se ve como un párrafo normal, ya que HTML ha eliminado todos los espacios en blanco sobrantes.</p>
+
+<p>Los elementos <code>&lt;pre&gt;</code> son <em>especiales</em>, ya que los navegadores les aplican las siguientes reglas:</p>
+
+<ul>
+<li>Mantienen todos los espacios en blanco (tabuladores, espacios y nuevas líneas)</li>
+<li>Muestra el texto con un tipo de letra especial, denominado <em>"de ancho fijo"</em>, ya que todas sus letras son de la misma anchura</li>
+<li>No se ajusta la longitud de las líneas (las líneas largas producen un <em>scroll</em> horizontal en la ventana del navegador)</li>
+</ul>
+
+<p>Esta última característica diferencia por completo a los párrafos de los elementos <code>&lt;pre&gt;</code>. Como se ha visto, los navegadores ajustan la anchura de los párrafos de texto para que ocupen todo el tamaño de la ventana. Sin embargo, los elementos <code>&lt;pre&gt;</code> se muestran tal y como son originalmente, por lo que una línea muy larga dentro de un elemento <code>&lt;pre&gt;</code> provoca que la anchura de la página sea superior a la anchura de la ventana del navegador.</p>
+
+<p>Si en el ejemplo anterior se añade más texto al final de la segunda línea (para producir una línea larga), el navegador muestra un <em>scroll</em> horizontal ya que el texto completo no cabe en el tamaño de la ventana y las líneas de los elementos <code>&lt;pre&gt;</code> nunca se ajustan.</p>
+
+<div class="figure" id="figure_3_17">
+    <img src="../../img/xhtml/ejemplo_etiqueta_pre_scroll.gif" alt="Ejemplo de aparición de scroll horizontal con la etiqueta pre" />
+
+    <p class="caption"><strong>Figura 3.17</strong> Ejemplo de aparición de scroll horizontal con la etiqueta pre</p>
+</div>
+
+
+<p>Otra etiqueta relacionada con <code>&lt;pre&gt;</code> es la etiqueta <code>&lt;code&gt;</code>, que se utiliza para mostrar código fuente de cualquier lenguaje de programación. La definición formal de <code>&lt;code&gt;</code> es la siguiente:</p>
+
+<div class="table" id="table_3_14">
+
+    <table class="property" summary="Definición y propiedades de la etiqueta code de XHTML">
+    <thead>
+        <tr>
+            <th scope="row">Etiqueta</th>
+            <td><strong class="title"><span>&lt;</span>code<span>&gt;</span></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Atributos comunes</th>
+            <td><a href="../capitulo_2/etiquetas_y_atributos.html#atributos_basicos">básicos</a>, <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_para_internacionalizacion">internacionalización</a> y <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_de_eventos">eventos</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Atributos propios</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Tipo de elemento</th>
+            <td>En línea</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Delimita el texto considerado un fragmento de código fuente</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>En la mayoría de páginas web, no tiene sentido utilizar la etiqueta <code>&lt;code&gt;</code>. Sin embargo, en muchas páginas web técnicas que incluyen listados de programas, trozos de código o etiquetas HTML, lo correcto es emplear la etiqueta <code>&lt;code&gt;</code>.</p>
+
+<p>Ejemplo:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;&lt;<span class="kw2">title</span>&gt;</span>Ejemplo de etiqueta code<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">code</span>&gt;</span>
+        La etiqueta code
+   no respeta los espacios en blanco
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">code</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>La etiqueta <span class="sc2">&lt;<span class="kw2">code</span>&gt;</span>code<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">code</span>&gt;</span> es similar a la 
+etiqueta <span class="sc2">&lt;<span class="kw2">code</span>&gt;</span>pre<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">code</span>&gt;</span>, sobre todo en el formato 
+del texto.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<p>El navegador muestra claramente el comportamiento de <code>&lt;code&gt;</code> y sus diferencias con <code>&lt;pre&gt;</code>:</p>
+
+<div class="figure" id="figure_3_18">
+    <img src="../../img/xhtml/ejemplo_etiqueta_code.gif" alt="Ejemplo de uso de la etiqueta code" />
+
+    <p class="caption"><strong>Figura 3.18</strong> Ejemplo de uso de la etiqueta code</p>
+</div>
+
+
+<p>Al igual que sucede con los elementos <code>&lt;pre&gt;</code>, el texto encerrado por la etiqueta <code>&lt;code&gt;</code> se muestra con un tipo de letra especial de ancho fijo. Por el contrario, el elemento <code>&lt;code&gt;</code> no respeta los espacios en blanco ni las líneas, por lo que su comportamiento es similar a la etiqueta <code>&lt;p&gt;</code>. La última diferencia es que <code>&lt;code&gt;</code> es un elemento en línea, mientras que <code>&lt;pre&gt;</code> es un elemento de bloque.</p>
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="marcado_generico_de_texto.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>3.4. Marcado genérico de texto</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="codificacion_de_caracteres.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>3.6. Codificación de caracteres</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Espacios%20en%20blanco%20y%20nuevas%20l%C3%ADneas%20%28Introducci%C3%B3n%20a%20XHTML%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Características básicas</a>
+            </li>
+                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_3.html">
+                    <span>Capítulo 3.</span> Texto
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="estructurar.html">
+                    <span>3.1.</span> Estructurar
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="marcado_basico_de_texto.html">
+                    <span>3.2.</span> Marcado básico de texto
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="marcado_avanzado_de_texto.html">
+                    <span>3.3.</span> Marcado avanzado de texto
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="marcado_generico_de_texto.html">
+                    <span>3.4.</span> Marcado genérico de texto
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="espacios_en_blanco_y_nuevas_lineas.html">
+                    <span>3.5.</span> Espacios en blanco y nuevas líneas
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="codificacion_de_caracteres.html">
+                    <span>3.6.</span> Codificación de caracteres
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Enlaces</a>
+            </li>
+                                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Listas</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Imágenes y objetos</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Formularios</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Estructura y layout</a>
+            </li>
+                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Metainformación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Otras etiquetas importantes</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Accesibilidad</a>
+            </li>
+                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Validación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Fragmentos de código</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.900 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/xhtml/capitulo_3/espacios_en_blanco_y_nuevas_lineas.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:30 GMT -->
+</html>

@@ -1,0 +1,8 @@
+/* layout.css */
+
+
+div#contenedor {
+    width: 80%;
+    max-width: 550px;
+    margin: auto;
+}

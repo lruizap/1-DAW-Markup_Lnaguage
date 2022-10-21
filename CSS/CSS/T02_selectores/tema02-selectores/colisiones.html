@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia y colisiones</title>
+    <link rel="stylesheet" href="colisiones.css">
+
+</head>
+<body>
+    <h1>Ejemplo herencia y colisiones</h1>
+    <ul>
+        <li>En la sección se aplican dos propiedades: <code>color</code> se hereda a los elementos interiores y <code>border</code> no.</li>
+        <li>En el artículo vemos un ejemplo de colisiones sobre el primer párrafo y cómo se resuelve en base a la "especificidad". Observe cómo <code>color</code> colisiona, pero <code>font-style</code> no.</li>
+        <li>En el footer un ejemplo de desempate en caso de la misma especificidad: gana "el último"</li>
+    </ul>
+
+    <section>
+        <h2>Titular de la sección: ejemplo de herencia</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore accusantium distinctio sint magnam dicta voluptas debitis possimus, autem omnis accusamus veritatis ullam eaque quae quis quo nisi laboriosam sunt dolore!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia minus saepe odio quos quas corporis explicabo impedit eveniet natus, ut dignissimos aut temporibus earum nulla dicta quia. Dolor, fuga ipsam?</p>
+    </section>
+    <article>
+        <h2>Titular del artículo</h2>
+        <p class="revisar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint exercitationem deserunt molestiae voluptatibus, doloribus perferendis sunt, labore numquam, id temporibus ipsum quod perspiciatis excepturi praesentium harum repellendus fuga. Atque, nulla.</p>
+        <p>Veritatis, voluptate impedit tempore a magnam facere dignissimos in sed ratione delectus deserunt corporis, quod ad. Saepe dicta hic eveniet totam perferendis ipsum neque aut quaerat non, amet, voluptate accusantium.</p>
+        <p>Voluptatem saepe, dolores amet architecto corporis similique repellat sequi consequatur! Illum suscipit repellendus ullam quod excepturi, officiis repudiandae molestias dolor eveniet quae tempora aspernatur! Nisi veritatis quasi natus voluptatem harum?</p>
+    </article>
+
+    <footer>
+        <h2>Ejemplo de "desempate"</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos dolore totam quo repellendus nesciunt perspiciatis? Eius cumque incidunt aut deserunt odio corrupti, perferendis unde ducimus doloribus perspiciatis quae, vel molestias!</p>
+        <p>Sequi autem praesentium unde incidunt vitae iusto a labore consectetur magnam dolore atque, obcaecati, amet vero, ea voluptatem nihil error reprehenderit accusamus! Sequi, saepe. Cumque fugit cupiditate expedita possimus natus?</p>
+        <p>Voluptate a nesciunt numquam laudantium hic error at! Beatae est sint commodi. Quaerat aliquid hic natus quisquam, atque neque aut autem adipisci id. Id sequi consequuntur distinctio nam, culpa quod!</p>
+    </footer>
+    
+</body>
+</html>

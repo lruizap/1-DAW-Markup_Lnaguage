@@ -1,0 +1,58 @@
+/* de id */
+#resumen {
+    border: 3px red solid;
+}
+/* h1#resumen {
+    border: 3px blue solid;
+} */
+
+/* de clase */
+.revisar {
+   color:crimson;   
+}
+
+p.revisar {
+    margin-left: 20px;
+}
+
+.error {
+    text-decoration: underline;
+}
+
+.error.revisar {
+    font-style: italic;
+}
+
+
+
+
+* {  /* universal */
+    color: green;
+}
+
+/* descendente */
+header h1 strong {
+    background-color: yellow;
+}
+
+/* agrupando */
+h1, h2 {
+    color: blue;
+    border-bottom: 1px solid #000;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+/* h2 {
+    color: blue;
+    border-bottom: 1px solid #000;
+} */
+
+
+/* de tipo o etiqueta */
+p {
+    color: grey;
+}

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/xhtml/capitulo_8/elementos_de_formulario.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>8.2. Elementos de formulario (Introducción a XHTML)</title>
+        <link href="../../css/main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="formularios_basicos.html" />
+        <link rel="next" href="formularios_avanzados.html" />
+        <link rel="start" href="http://librosweb.es/xhtml" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="8.2. Elementos de formulario (Introducción a XHTML)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page xhtml">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index-2.html" itemprop="url">
+                    <span itemprop="title">Introducción a XHTML</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_8.html" itemprop="url">
+                    <span itemprop="title">Capítulo 8. Formularios</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>8.2. Elementos de formulario</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="elementos_de_formulario" class="title">
+        <span>8.2.</span> Elementos de formulario
+    </h1>
+
+    
+
+<p>Los elementos de formulario como botones y cuadros de texto también se denominan <em>"campos de formulario"</em> y <em>"controles de formulario"</em>. La mayoría de controles se crean con la etiqueta <code>&lt;input&gt;</code>, por lo que su definición formal y su lista de atributos es muy extensa:</p>
+
+<div class="table" id="table_8_2">
+
+    <table class="property" summary="Definición y propiedades de la etiqueta input de XHTML">
+    <thead>
+        <tr>
+            <th scope="row">Etiqueta</th>
+            <td><strong class="title"><span>&lt;</span>input<span>&gt;</span></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Atributos comunes</th>
+            <td><a href="../capitulo_2/etiquetas_y_atributos.html#atributos_basicos">básicos</a>, <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_para_internacionalizacion">internacionalización</a>, <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_de_eventos">eventos</a> y <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_de_foco">foco</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Atributos propios</th>
+            <td><ul><li><p><code>type = "text | password | checkbox | radio | submit | reset | file | hidden | image | button"</code> - Indica el tipo de control que se incluye en el formulario</p></li><li><p><code>name = "texto"</code> - Asigna un nombre al control (es imprescindible para que el servidor pueda procesar el formulario)</p></li><li><p><code>value = "texto"</code> - Valor inicial del control</p></li><li><p><code>size = "unidad_de_medida"</code> - Tamaño inicial del control (para los campos de texto y de password se refiere al número de caracteres, en el resto de controles se refiere a su tamaño en píxel)</p></li><li><p><code>maxlength = "numero"</code> - Máximo número de caracteres para los controles de texto y de password</p></li><li><p><code>checked = "checked"</code> - Para los controles checkbox y radiobutton permite indicar qué opción aparece preseleccionada</p></li><li><p><code>disabled = "disabled"</code> - El control aparece deshabilitado y su valor no se envía al servidor junto con el resto de datos</p></li><li><p><code>readonly = "readonly"</code> - El contenido del control no se puede modificar</p></li><li><p><code>src = "url"</code> - Para el control que permite crear botones con imágenes, indica la URL de la imagen que se emplea como botón de formulario</p></li><li><p><code>alt = "texto"</code> - Descripción del control</p></li></ul></td>
+        </tr>
+        <tr>
+            <th scope="row">Tipo de elemento</th>
+            <td>En línea y etiqueta vacía</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Se emplean para insertar un control en un formulario</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>A continuación se muestran ejemplos para los diez controles que se pueden crear con la etiqueta <code>&lt;input&gt;</code>.</p>
+
+<h3 id="cuadro_de_texto">8.2.1. Cuadro de texto</h3>
+
+<p>Se trata del elemento más utilizado en los formularios. En el caso más sencillo, se muestra un cuadro de texto vacío en el que el usuario puede escribir cualquier texto:</p>
+
+<div class="figure" id="figure_8_2">
+    <img src="../../img/xhtml/ejemplo_input_type_text.gif" alt="Ejemplo de etiqueta input (type=text)" />
+
+    <p class="caption"><strong>Figura 8.2</strong> Ejemplo de etiqueta input (type=text)</p>
+</div>
+
+
+<p>A continuación se muestra el código HTML correspondiente al ejemplo anterior:</p>
+
+<div class="code html5">
+<pre class="html5">Nombre <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;nombre&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+</div>
+
+<p>El atributo <code>type</code> diferencia a cada uno de los diez controles que se pueden crear con la etiqueta <code>&lt;input&gt;</code>. Para los cuadros de texto, su valor es <code>text</code>. El atributo <code>name</code> es el más importante en los campos del formulario. De hecho, si un campo no incluye el atributo <code>name</code>, sus datos no se envían al servidor. El valor que se indica en el atributo <code>name</code> es el nombre que utiliza la aplicación del servidor para obtener el valor de este campo de formulario.</p>
+
+<p>Cuando el usuario pulsa el botón de envío del formulario, el navegador envía los datos a una aplicación del servidor para que procese la información y genere una respuesta adecuada. En el servidor, la aplicación que procesa los datos debe obtener en primer lugar toda la información introducida por el usuario. Para ello, utiliza el valor del atributo <code>name</code> para obtener los datos de cada control del formulario.</p>
+
+<p>Como el valor del atributo <code>name</code> se utiliza en aplicaciones programadas, es esencial ponerse de acuerdo con el programador de la aplicación, no se debe modificar su valor sin modificar la aplicación y no se deben utilizar caracteres problemáticos en programación (espacios en blanco, acentos y caracteres como <code>ñ</code> o <code>ç</code>).</p>
+
+<p>El atributo <code>value</code> se emplea para establecer el valor inicial del cuadro de texto. Si se crea un formulario para insertar datos, los cuadros de texto deberían estar vacíos. Por lo tanto, o no se añade el atributo <code>value</code> o se incluye con un valor vacío <code>value=""</code>. Si por el contrario se crea un formulario para modificar datos, lo lógico es que se muestren inicialmente los datos guardados en el sistema. En este caso, el atributo <code>value</code> incluirá el valor que se desea mostrar: <code>&lt;input type="text" name="nombre" value="Juan Pérez" /&gt;</code></p>
+
+<p>Si no se especifica un tamaño, el navegador muestra el cuadro de texto con un tamaño predeterminado. El atributo <code>size</code> permite establecer el tamaño, en caracteres, con el que se muestra el cuadro de texto. Su uso es imprescindible en muchos formularios, en los que algunos campos como la dirección deben mostrar más caracteres de lo normal (<code>&lt;input size="100" ...</code>)  y otros campos como el código postal deben mostrar menos caracteres de lo normal (<code>&lt;input size="5"...</code>).</p>
+
+<p>Además de controlar el tamaño con el que se muestra un cuadro de texto, también se puede limitar el tamaño del texto introducido. El atributo <code>maxlength</code> permite establecer el máximo número de caracteres que el usuario puede introducir en un cuadro de texto. Su uso es imprescindible para campos como el código postal, el número de la Seguridad Social y cualquier otro dato con formato predefinido y limitado.</p>
+
+<p>Por último, el atributo <code>readonly</code> permite que el usuario pueda ver los contenidos del cuadro de texto pero no pueda modificarlos y el atributo <code>disabled</code> deshabilita un cuadro de texto de forma que el usuario no pueda modificarlo y además, el navegador no envía sus datos al servidor.</p>
+
+<h3 id="cuadro_de_contrasena">8.2.2. Cuadro de contraseña</h3>
+
+<p>La única diferencia entre este control y el cuadro de texto normal es que el texto que el usuario escribe en un cuadro de contraseña no se ve en la pantalla. En su lugar, los navegadores ocultan el texto utilizando asteriscos o círculos, por lo que es ideal para escribir contraseñas y otros datos sensibles.</p>
+
+<div class="figure" id="figure_8_3">
+    <img src="../../img/xhtml/ejemplo_input_type_password.gif" alt="Ejemplo de etiqueta input (type=password)" />
+
+    <p class="caption"><strong>Figura 8.3</strong> Ejemplo de etiqueta input (type=password)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5">Contraseña <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;password&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;contrasena&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+</div>
+
+<p>Cambiando el valor del atributo <code>type</code> por <code>password</code> se transforma el cuadro de texto normal en un cuadro de contraseña. Todos los demás atributos se utilizan de la misma forma y tienen el mismo significado.</p>
+
+<h3 id="checkbox">8.2.3. Checkbox</h3>
+
+<p>Los checkbox o <em>"casillas de verificación"</em> son controles de formulario que permiten al usuario seleccionar y deseleccionar opciones individualmente. Aunque en ocasiones se muestran varios checkbox juntos, cada uno de ellos es completamente independiente del resto. Por este motivo, se utilizan cuando el usuario puede activar y desactivar varias opciones relacionadas pero no excluyentes.</p>
+
+<div class="figure" id="figure_8_4">
+    <img src="../../img/xhtml/ejemplo_input_type_checkbox.gif" alt="Ejemplo de etiqueta input (type=checkbox)" />
+
+    <p class="caption"><strong>Figura 8.4</strong> Ejemplo de etiqueta input (type=checkbox)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5">Puestos de trabajo buscados <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;puesto_directivo&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;direccion&quot;</span><span class="sy0">/</span>&gt;</span> Dirección
+<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;puesto_tecnico&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;tecnico&quot;</span><span class="sy0">/</span>&gt;</span> Técnico
+<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;puesto_empleado&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;empleado&quot;</span><span class="sy0">/</span>&gt;</span> Empleado</pre>
+</div>
+
+<p>El valor del atributo <code>type</code> para estos controles de formulario es <code>checkbox</code>. Como se muestra en el ejemplo anterior, el texto que se encuentra al lado de cada <em>checkbox</em> no se puede establecer mediante ningún atributo, por lo que es necesario añadirlo manualmente fuera del control del formulario. Si no se añade un texto al lado de la etiqueta <code>&lt;input /&gt;</code> del <em>checkbox</em>, el usuario sólo ve un pequeño cuadrado sin ninguna información relativa a la finalidad de ese <em>checkbox</em>.</p>
+
+<p>El valor del atributo <code>value</code>, junto con el valor del atributo <code>name</code>, es la información que llega al servidor cuando el usuario envía el formulario.</p>
+
+<p>Si se quiere mostrar un <em>checkbox</em> seleccionado por defecto, se utiliza el atributo <code>checked</code>. Si el valor del atributo es <code>checked</code>, el <em>checkbox</em> se muestra seleccionado. En cualquier otro caso, el <em>checkbox</em> permanece sin seleccionar. Aunque resulta redundante que el nombre y el valor del atributo sean idénticos, es obligatorio indicarlo de esta forma porque los atributos en XHTML no pueden tener valores vacíos:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">checked</span><span class="sy0">=</span><span class="st0">&quot;checked&quot;</span> ... <span class="sy0">/</span>&gt;</span> Checkbox seleccionado por defecto</pre>
+</div>
+
+<h3 id="radiobutton">8.2.4. Radiobutton</h3>
+
+<p>Los controles de tipo <code>radiobutton</code> son similares a los controles de tipo <code>checkbox</code>, pero presentan una diferencia muy importante: son mutuamente excluyentes. Los <code>radiobutton</code> se utilizan cuando el usuario solamente puede escoger una opción entre las distintas opciones relacionadas que se le presentan. Cada vez que se selecciona una opción, automáticamente se deselecciona la otra opción que estaba seleccionaba.</p>
+
+<div class="figure" id="figure_8_5">
+    <img src="../../img/xhtml/ejemplo_input_type_radio.gif" alt="Ejemplo de etiqueta input (type=radio)" />
+
+    <p class="caption"><strong>Figura 8.5</strong> Ejemplo de etiqueta input (type=radio)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5">Sexo <span class="sc2">&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;radio&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;sexo&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;hombre&quot;</span> <span class="kw3">checked</span><span class="sy0">=</span><span class="st0">&quot;checked&quot;</span> <span class="sy0">/</span>&gt;</span> Hombre
+<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;radio&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;sexo&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;mujer&quot;</span> <span class="sy0">/</span>&gt;</span> Mujer</pre>
+</div>
+
+<p>El valor del atributo <code>type</code> para estos controles de formulario es <code>radio</code>. El atributo <code>name</code> se emplea para indicar los radiobutton que están relacionados. Por lo tanto, cuando varios <em>radiobutton</em> tienen el mismo valor en su atributo <code>name</code>, el navegador sabe que están relacionados y puede deseleccionar una opción del grupo de <em>radiobutton</em> cuando se seleccione otra opción.</p>
+
+<h3 id="boton_de_envio_de_formulario">8.2.5. Botón de envío de formulario</h3>
+
+<p>La mayoría de formularios dispone de un botón para enviar al servidor los datos introducidos por el usuario:</p>
+
+<div class="figure" id="figure_8_6">
+    <img src="../../img/xhtml/ejemplo_input_type_submit.gif" alt="Ejemplo de etiqueta input (type=submit)" />
+
+    <p class="caption"><strong>Figura 8.6</strong> Ejemplo de etiqueta input (type=submit)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;submit&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;buscar&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Buscar&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+</div>
+
+<p>El valor del atributo <code>type</code> para este control de formulario es <code>submit</code>. El navegador se encarga de enviar automáticamente los datos cuando el usuario pincha sobre este tipo de botón. El valor del atributo <code>value</code> es el texto que muestra el botón. Si no se establece el atributo <code>value</code>, el navegador muestra el texto predefinido <code>Enviar consulta</code>.</p>
+
+<h3 id="boton_de_reseteo_del_formulario">8.2.6. Botón de reseteo del formulario</h3>
+
+<p>Aunque su uso era muy popular hace unos años, la mayoría de formularios modernos ya no utilizan este tipo de botón. Se trata de un botón especial que borra todos los datos introducidos por el usuario y devuelve el formulario a su estado original:</p>
+
+<div class="figure" id="figure_8_7">
+    <img src="../../img/xhtml/ejemplo_input_type_reset.gif" alt="Ejemplo de etiqueta input (type=reset)" />
+
+    <p class="caption"><strong>Figura 8.7</strong> Ejemplo de etiqueta input (type=reset)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;reset&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;limpiar&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Borrar datos del formulario&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+</div>
+
+<p>El valor del atributo <code>type</code> para este control de formulario es <code>reset</code>. Cuando el usuario pulsa este botón, el navegador borra toda la información introducida y muestra el formulario en su estado original. Si el formulario no contenía originalmente ningún valor, el botón de <code>reset</code> lo vuelve a mostrar vacío. si el formulario contenía información, el botón <code>reset</code> vuelve a mostrar la misma información original.</p>
+
+<p>Como es habitual en los botones de formulario, el atributo <code>value</code> permite establecer el texto que muestra el botón. Si no es utiliza este atributo, el navegador muestra el texto predefinido del botón, que en este caso es <code>Restablecer</code>.</p>
+
+<h3 id="ficheros_adjuntos">8.2.7. Ficheros adjuntos</h3>
+
+<p>Los formularios también permiten adjuntar archivos para subirlos al servidor. Aunque desde el punto de vista de HTML y del navegador no existe ninguna limitación sobre el número, tipo o tamaño total de los archivos que se pueden adjuntar, todos los servidores añaden restricciones por motivos de seguridad.</p>
+
+<div class="figure" id="figure_8_8">
+    <img src="../../img/xhtml/ejemplo_input_type_file.gif" alt="Ejemplo de etiqueta input (type=file)" />
+
+    <p class="caption"><strong>Figura 8.8</strong> Ejemplo de etiqueta input (type=file)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5">Fichero adjunto
+<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;file&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;adjunto&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+</div>
+
+<p>El valor del atributo <code>type</code> para este control de formulario es <code>file</code>. El navegador se encarga de mostrar un cuadro de texto donde aparece el nombre del archivo seleccionado y un botón que permite navegar por los directorios y archivos del ordenador del usuario.</p>
+
+<p>Si se incluye un control para adjuntar archivos, es obligatorio añadir el atributo <code>enctype</code> en la etiqueta <code>&lt;form&gt;</code> del formulario. El valor del atributo <code>enctype</code> debe ser <code>multipart/form-data</code>, por lo que la etiqueta <code>&lt;form&gt;</code> de los formularios que permiten adjuntar archivos siempre es:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">form</span> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;...&quot;</span> <span class="kw3">method</span><span class="sy0">=</span><span class="st0">&quot;post&quot;</span> <span class="kw3">enctype</span><span class="sy0">=</span><span class="st0">&quot;multipart/form-data&quot;</span>&gt;</span>
+  ...
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">form</span>&gt;</span></pre>
+</div>
+
+<h3 id="campos_ocultos">8.2.8. Campos ocultos</h3>
+
+<p>Los campos ocultos se emplean para añadir información oculta en el formulario:</p>
+
+<div class="figure" id="figure_8_9">
+    <img src="../../img/xhtml/ejemplo_input_type_hidden.gif" alt="Ejemplo de etiqueta input (type=hidden)" />
+
+    <p class="caption"><strong>Figura 8.9</strong> Ejemplo de etiqueta input (type=hidden)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;hidden&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;url_previa&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;/articulo/primero.html&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+</div>
+
+<p>El valor del atributo <code>type</code> para este control de formulario es <code>hidden</code>. Los campos ocultos no se muestran por pantalla, de forma que el usuario desconoce que el formulario los incluye. Normalmente los campos ocultos se utilizan para incluir información que necesita el servidor pero que no es necesario o no es posible que la establezca el usuario.</p>
+
+<h3 id="boton_de_imagen">8.2.9. Botón de imagen</h3>
+
+<p>El aspecto de los botones de formulario se puede personalizar por completo, ya que incluso es posible utilizar una imagen como botón:</p>
+
+<div class="figure" id="figure_8_10">
+    <img src="../../img/xhtml/ejemplo_input_type_image.gif" alt="Ejemplo de etiqueta input (type=image)" />
+
+    <p class="caption"><strong>Figura 8.10</strong> Ejemplo de etiqueta input (type=image)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;image&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;enviar&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;accept.png&quot;</span>  <span class="sy0">/</span>&gt;</span></pre>
+</div>
+
+<p>El valor del atributo <code>type</code> para este control de formulario es <code>image</code>. El atributo <code>src</code> indica la URL de la imagen que debe mostrar el navegador en lugar del botón normal.</p>
+
+<p>Su principal ventaja es que permite personalizar por completo la estética de los botones y mostrarlos con un aspecto homogéneo en todos los navegadores. El principal inconveniente es que ralentiza la carga del formulario y que si se quiere modificar su aspecto, es necesario crear una nueva imagen.</p>
+
+<h3 id="boton">8.2.10. Botón</h3>
+
+<p>Algunos formularios complejos necesitan botones más avanzados que los de enviar datos (<code>type="submit"</code>) y resetear el formulario (<code>type="reset"</code>). Por ese motivo, el estándar HTML/XHTML define un botón de tipo genérico:</p>
+
+<div class="figure" id="figure_8_11">
+    <img src="../../img/xhtml/ejemplo_input_type_button.gif" alt="Ejemplo de etiqueta input (type=button)" />
+
+    <p class="caption"><strong>Figura 8.11</strong> Ejemplo de etiqueta input (type=button)</p>
+</div>
+
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;button&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;guardar&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Guardar Cambios&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+</div>
+
+<p>El valor del atributo <code>type</code> para este control de formulario es <code>button</code>. Si pruebas a pulsar un botón de este tipo, verás que el navegador no hace nada: no envía los datos al servidor y no borra los datos introducidos. Este tipo de botones sólo son útiles si se utilizan junto con el lenguaje de programación JavaScript. Si la página incluye código JavaScript, los botones de este tipo se pueden programar para que realicen cualquier tarea compleja cuando se pulsa sobre ellos.</p>
+
+<p><div class="exercise"><p class="title">Ejercicio 14</p> <p>Determinar el código HTML necesario para crear el formulario que se muestra en la siguiente imagen:</p>
+
+<div class="figure" id="figure_8_12">
+    <img src="../../img/xhtml/e1401.gif" alt="Formulario con controles de varios tipos" />
+
+    <p class="caption"><strong>Figura 8.12</strong> Formulario con controles de varios tipos</p>
+</div>
+
+
+<ol>
+<li>Elegir el método más adecuado para el formulario (<code>GET</code> o <code>POST</code>) y cualquier otro atributo necesario.</li>
+<li>La aplicación que se encarga de procesar el formulario se encuentra en la raíz del servidor, carpeta "<code>php</code>" y archivo "<code>insertar_cv.php</code>" .</li>
+<li>El nombre puede tener 30 caracteres como máximo, los apellidos 80 caracteres y la contraseña 10 caracteres como máximo.</li>
+<li>Asignar los atributos adecuados al campo del DNI.</li>
+<li>Por defecto, debe estar marcada la casilla de suscripción al boletín de novedades.</li>
+</ol>
+
+<p><a href="../capitulo_15/ejercicio_14.html">Ver solución</a></p></div></p>
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="formularios_basicos.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>8.1. Formularios básicos</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="formularios_avanzados.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>8.3. Formularios avanzados</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Elementos%20de%20formulario%20%28Introducci%C3%B3n%20a%20XHTML%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Características básicas</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Texto</a>
+            </li>
+                                                                                                                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Enlaces</a>
+            </li>
+                                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Listas</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Imágenes y objetos</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1 ">
+                <a href="../capitulo_8.html">
+                    <span>Capítulo 8.</span> Formularios
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="formularios_basicos.html">
+                    <span>8.1.</span> Formularios básicos
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="elementos_de_formulario.html">
+                    <span>8.2.</span> Elementos de formulario
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="formularios_avanzados.html">
+                    <span>8.3.</span> Formularios avanzados
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="otros_elementos_de_formulario.html">
+                    <span>8.4.</span> Otros elementos de formulario
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Estructura y layout</a>
+            </li>
+                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Metainformación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Otras etiquetas importantes</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Accesibilidad</a>
+            </li>
+                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Validación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Fragmentos de código</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.900 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/xhtml/capitulo_8/elementos_de_formulario.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:45 GMT -->
+</html>

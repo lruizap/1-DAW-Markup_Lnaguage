@@ -1,0 +1,26 @@
+section {
+  border: blue dotted 5px;
+  margin: 20px 0;
+}
+
+img.relativa {
+  border: 6px solid yellow;
+  position: relative;
+  top: 200px;
+  left: 200px;
+}
+
+img.absoluta {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  border: 6px solid orange;
+}
+
+#anexos img.absoluta {
+  border: 6px solid lime;
+}
+
+#anexos {
+  position: relative;
+}

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/xhtml/capitulo_2/etiquetas_y_atributos.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>2.3. Etiquetas y atributos (Introducción a XHTML)</title>
+        <link href="../../css/main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="el_primer_documento_html.html" />
+        <link rel="next" href="elementos_html.html" />
+        <link rel="start" href="http://librosweb.es/xhtml" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="2.3. Etiquetas y atributos (Introducción a XHTML)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page xhtml">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index-2.html" itemprop="url">
+                    <span itemprop="title">Introducción a XHTML</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_2.html" itemprop="url">
+                    <span itemprop="title">Capítulo 2. Características básicas</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>2.3. Etiquetas y atributos</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="etiquetas_y_atributos" class="title">
+        <span>2.3.</span> Etiquetas y atributos
+    </h1>
+
+    
+
+<p>HTML define 91 etiquetas que los diseñadores pueden utilizar para <em>marcar</em> los diferentes elementos que componen una página:</p>
+
+<p><code>a</code>, <code>abbr</code>, <code>acronym</code>, <code>address</code>, <code>applet</code>, <code>area</code>, <code>b</code>, <code>base</code>, <code>basefont</code>, <code>bdo</code>, <code>big</code>, <code>blockquote</code>, <code>body</code>, <code>br</code>, <code>button</code>, <code>caption</code>, <code>center</code>, <code>cite</code>, <code>code</code>, <code>col</code>, <code>colgroup</code>, <code>dd</code>, <code>del</code>, <code>dfn</code>, <code>dir</code>, <code>div</code>, <code>dl</code>, <code>dt</code>, <code>em</code>, <code>fieldset</code>, <code>font</code>, <code>form</code>, <code>frame</code>, <code>frameset</code>, <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>, <code>head</code>, <code>hr</code>, <code>html</code>, <code>i</code>, <code>iframe</code>, <code>img</code>, <code>input</code>, <code>ins</code>, <code>isindex</code>, <code>kbd</code>, <code>label</code>, <code>legend</code>, <code>li</code>, <code>link</code>, <code>map</code>, <code>menu</code>, <code>meta</code>, <code>noframes</code>, <code>noscript</code>, <code>object</code>, <code>ol</code>, <code>optgroup</code>, <code>option</code>, <code>p</code>, <code>param</code>, <code>pre</code>, <code>q</code>, <code>s</code>, <code>samp</code>, <code>script</code>, <code>select</code>, <code>small</code>, <code>span</code>, <code>strike</code>, <code>strong</code>, <code>style</code>, <code>sub</code>, <code>sup</code>, <code>table</code>, <code>tbody</code>, <code>td</code>, <code>textarea</code>, <code>tfoot</code>, <code>th</code>, <code>thead</code>, <code>title</code>, <code>tr</code>, <code>tt</code>, <code>u</code>, <code>ul</code>, <code>var</code>.</p>
+
+<p>De todas las etiquetas disponibles, las siguientes se consideran <strong>obsoletas</strong> y no se pueden utilizar: <code>applet</code>, <code>basefont</code>, <code>center</code>, <code>dir</code>, <code>font</code>, <code>isindex</code>, <code>menu</code>, <code>s</code>, <code>strike</code>, <code>u</code>.</p>
+
+<p>A pesar de que se trata de un número de etiquetas muy grande, no es suficiente para crear páginas complejas. Algunos elementos como las imágenes y los enlaces requieren cierta información adicional para estar completamente definidos.</p>
+
+<p>La etiqueta <code>&lt;a&gt;</code> por ejemplo se emplea para incluir un enlace en una página. Utilizando sólo la etiqueta <code>&lt;a&gt;</code> no es posible establecer la dirección a la que apunta cada enlace. Como no es viable crear una etiqueta por cada enlace diferente, la solución consiste en personalizar las etiquetas HTML mediante cierta información adicional llamada <strong>atributos</strong>.</p>
+
+<p>De esta forma, se utiliza la misma etiqueta <code>&lt;a&gt;</code> para todos los enlaces de la página y se utilizan los atributos para indicar la dirección a la que apunta cada enlace.</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Ejemplo de atributos en las etiquetas<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+  Los enlaces son muy fáciles de indicar: 
+  <span class="sc2">&lt;<span class="kw2">a</span>&gt;</span>Soy un enlace incompleto, porque no tengo dirección de destino<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>. 
+  <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.google.com&quot;</span>&gt;</span>Este otro enlace apunta a la página de Google<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<div class="figure" id="figure_2_6">
+    <img src="../../img/xhtml/ejemplo_etiquetas_atributos.gif" alt="Los atributos permiten personalizar las etiquetas HTML" />
+
+    <p class="caption"><strong>Figura 2.6</strong> Los atributos permiten personalizar las etiquetas HTML</p>
+</div>
+
+
+<p>El primer enlace del ejemplo anterior no está completamente definido, ya que no apunta a ninguna dirección. El segundo enlace, utiliza la misma etiqueta <code>&lt;a&gt;</code>, pero añade información adicional mediante un atributo llamado <code>href</code>. Los atributos se incluyen dentro de la etiqueta de apertura. Por ahora no es importante comprender la etiqueta <code>&lt;a&gt;</code> ni el atributo <code>href</code>, ya que se explicarán con todo detalle más adelante.</p>
+
+<p>No todos los atributos se pueden utilizar en todas las etiquetas. Por ello, cada etiqueta define su propia lista de atributos disponibles. Además, cada atributo también indica el tipo de valor que se le puede asignar. Si el valor de un atributo no es válido, el navegador ignora ese atributo.</p>
+
+<p>Aunque cada una de las etiquetas HTML define sus propios atributos, algunos de los atributos son comunes a muchas o casi todas las etiquetas. De esta forma, es habitual explicar por separado los atributos comunes de las etiquetas para no tener que volver a hacerlo cada vez que se explica una nueva etiqueta. Los atributos comunes se dividen en cuatro grupos según su funcionalidad:</p>
+
+<ul>
+<li><strong>Atributos básicos</strong>: se pueden utilizar prácticamente en todas las etiquetas HTML.</li>
+<li><strong>Atributos para internacionalización</strong>: los utilizan las páginas que muestran sus contenidos en varios idiomas.</li>
+<li><strong>Atributos de eventos</strong>: sólo se utilizan en las páginas web dinámicas creadas con JavaScript.</li>
+<li><strong>Atributos de foco</strong>: relacionados principalmente con la accesibilidad de los sitios web.</li>
+</ul>
+
+<h3 id="atributos_basicos">2.3.1. Atributos básicos</h3>
+
+<p>Los siguiente cuatro atributos básicos se pueden aplicar prácticamente a todas las etiquetas HTML:</p>
+
+<div class="table" id="table_2_1">
+
+    <table>
+<thead>
+<tr>
+  <th>Atributo</th>
+  <th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>id = "texto"</code></td>
+  <td>Establece un identificador único a cada elemento dentro de una página HTML</td>
+</tr>
+<tr>
+  <td><code>class = "texto"</code></td>
+  <td>Establece la clase CSS que se aplica a los estilos del elemento</td>
+</tr>
+<tr>
+  <td><code>style = "texto"</code></td>
+  <td>Establece de forma directa los estilos CSS de un elemento</td>
+</tr>
+<tr>
+  <td><code>title = "texto"</code></td>
+  <td>Establece el título a un elemento (mejora la accesibilidad y los navegadores lo muestran cuando el usuario pasa el ratón por encima del elemento)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>La mayoría de páginas web actuales utilizan los atributos <code>id</code> y <code>class</code> de forma masiva. Sin embargo, estos atributos sólo son realmente útiles cuando se trabaja con CSS y con Javascript.</p>
+
+<p>Respecto al valor de los atributos <code>id</code> y <code>class</code>, sólo pueden contener guiones medios (<code>-</code>), guiones bajos (<code>_</code>), letras y/o números, pero no pueden empezar por números. Además, los navegadores distinguen mayúsculas de minúsculas y no se recomienda utilizar letras como <code>ñ</code> y acentos, ya que no es seguro que funcionen correctamente en todas las versiones de todos los navegadores.</p>
+
+<h3 id="atributos_para_internacionalizacion">2.3.2. Atributos para internacionalización</h3>
+
+<p>Estos atributos son útiles para aquellas páginas que muestran sus contenidos en varios idiomas y para aquellas que quieren indicar de forma explítica el idioma de sus contenidos:</p>
+
+<div class="table" id="table_2_2">
+
+    <table>
+<thead>
+<tr>
+  <th>Atributo</th>
+  <th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>lang = "codigo de idioma"</code></td>
+  <td>Indica el idioma del elemento mediante un código predefinido</td>
+</tr>
+<tr>
+  <td><code>xml:lang = "codigo de idioma"</code></td>
+  <td>Indica el idioma del elemento mediante un código predefinido</td>
+</tr>
+<tr>
+  <td><code>dir</code></td>
+  <td>Indica la dirección del texto (útil para los idiomas que escriben de derecha a izquierda)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>En las páginas XHTML, el atributo <code>xml:lang</code> tiene más prioridad que <code>lang</code> y es obligatorio incluirlo siempre que se incluye el atributo <code>lang</code>. Los idiomas se indican mediante un código estandarizado (<code>es</code> para español, <code>en</code> para inglés, etc.), tal y como se explicará más adelante en la sección <a href="#idioma_del_enlace_hreflang">idioma del enlace</a> del capítulo 4.</p>
+
+<p>Como la palabra <code>internacionalización</code> es muy larga, se suele sustituir por la abreviatura <code>i18n</code> (el número <code>18</code> se refiere al número de letras que existen entre la letra <code>i</code> y la letra <code>n</code> de la palabra <code>internacionalización</code>).</p>
+
+<h3 id="atributos_de_eventos">2.3.3. Atributos de eventos</h3>
+
+<p>Estos atributos sólo se utilizan en las páginas web que incluyen código JavaScript para realizar acciones dinámicas sobre los elementos de la página. Cada vez que el usuario pulsa una tecla, mueve su ratón o pulsa cualquier botón del ratón, se produce un evento dentro del navegador. Utilizando JavaScript y los siguientes atributos, es posible responder de forma adecuada a cada evento.</p>
+
+<div class="table" id="table_2_3">
+
+    <table>
+<thead>
+<tr>
+  <th>Atributo</th>
+  <th>Descripción</th>
+  <th>Elementos que pueden usarlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>onblur</code></td>
+  <td>Deseleccionar el elemento</td>
+  <td><code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;body&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onchange</code></td>
+  <td>Deseleccionar un elemento que se ha modificado</td>
+  <td><code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onclick</code></td>
+  <td>Pinchar y soltar el ratón</td>
+  <td>Todos los elementos</td>
+</tr>
+<tr>
+  <td><code>ondblclick</code></td>
+  <td>Pinchar dos veces seguidas con el ratón</td>
+  <td>Todos los elementos</td>
+</tr>
+<tr>
+  <td><code>onfocus</code></td>
+  <td>Seleccionar un elemento</td>
+  <td><code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;body&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onkeydown</code></td>
+  <td>Pulsar una tecla (sin soltar)</td>
+  <td>Elementos de formulario y <code>&lt;body&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onkeypress</code></td>
+  <td>Pulsar una tecla</td>
+  <td>Elementos de formulario y <code>&lt;body&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onkeyup</code></td>
+  <td>Soltar una tecla pulsada</td>
+  <td>Elementos de formulario y <code>&lt;body&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onload</code></td>
+  <td>La página se ha cargado completamente</td>
+  <td><code>&lt;body&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onmousedown</code></td>
+  <td>Pulsar (sin soltar) un botón del ratón</td>
+  <td>Todos los elementos</td>
+</tr>
+<tr>
+  <td><code>onmousemove</code></td>
+  <td>Mover el ratón</td>
+  <td>Todos los elementos</td>
+</tr>
+<tr>
+  <td><code>onmouseout</code></td>
+  <td>El ratón <em>"sale"</em> del elemento (pasa por encima de otro elemento)</td>
+  <td>Todos los elementos</td>
+</tr>
+<tr>
+  <td><code>onmouseover</code></td>
+  <td>El ratón <em>"entra"</em> en el elemento (pasa por encima del elemento)</td>
+  <td>Todos los elementos</td>
+</tr>
+<tr>
+  <td><code>onmouseup</code></td>
+  <td>Soltar el botón que estaba pulsado en el ratón</td>
+  <td>Todos los elementos</td>
+</tr>
+<tr>
+  <td><code>onreset</code></td>
+  <td>Inicializar el formulario (borrar todos sus datos)</td>
+  <td><code>&lt;form&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onresize</code></td>
+  <td>Se ha modificado el tamaño de la ventana del navegador</td>
+  <td><code>&lt;body&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onselect</code></td>
+  <td>Seleccionar un texto</td>
+  <td><code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onsubmit</code></td>
+  <td>Enviar el formulario</td>
+  <td><code>&lt;form&gt;</code></td>
+</tr>
+<tr>
+  <td><code>onunload</code></td>
+  <td>Se abandona la página (por ejemplo al cerrar el navegador)</td>
+  <td><code>&lt;body&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h3 id="atributos_de_foco">2.3.4. Atributos de foco</h3>
+
+<p>Cuando el usuario selecciona un elemento en una aplicación, se dice que <em>"el elemento tiene el foco del programa"</em>. Si por ejemplo un usuario pincha con su ratón sobre un cuadro de texto y comienza a escribir, ese cuadro de texto tiene el foco del programa, llamado <em>"focus"</em> en inglés. Si el usuario selecciona después otro elemento, el elemento original pierde el foco y el nuevo elemento es el que tiene el foco del programa.</p>
+
+<p>Los elementos de las páginas web también pueden obtener el foco de la aplicación (en este caso, el foco del navegador) y HTML define algunos atributos específicos para controlar cómo se seleccionan los elementos.</p>
+
+<div class="table" id="table_2_4">
+
+    <table>
+<thead>
+<tr>
+  <th>Atributo</th>
+  <th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>accesskey = "letra"</code></td>
+  <td>Establece una tecla de acceso rápido a un elemento HTML</td>
+</tr>
+<tr>
+  <td><code>tabindex = "numero"</code></td>
+  <td>Establece la posición del elemento en el orden de tabulación de la página. Su valor debe estar comprendido entre <code>0</code> y <code>32.767</code></td>
+</tr>
+<tr>
+  <td><code>onfocus, onblur</code></td>
+  <td>Controlan los eventos JavaScript que se ejecutan cuando el elemento obtiene o pierde el foco</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Cuando se pulsa repetidamente la tecla del tabulador sobre una página web, el navegador selecciona de forma alternativa todos los elementos de la página que se pueden seleccionar (principalmente los enlaces y los elementos de formulario). El atributo <code>tabindex</code> permite alterar el orden en el que se seleccionan los elementos, por lo que es muy útil cuando se quiere controlar de forma precisa cómo se seleccionan los campos de un formulario complejo.</p>
+
+<p>Por su parte, el atributo <code>accesskey</code> permite establecer una tecla para acceder de forma rápida a cualquier elemento. Aunque la tecla de acceso rápido se establece mediante HTML, la combinación de teclas necesarias para activar ese acceso rápido depende del navegador. En el navegador Internet Explorer se pulsa la tecla <code>ALT</code> + la tecla definida; en el navegador Firefox se pulsa <code>Alt</code> + <code>Shift</code> + la tecla definida; en el navegador Opera se pulsa <code>Shift</code> + <code>Esc</code> + la tecla definida; en el navegador Safari se pulsa <code>Ctrl</code> + la tecla definida.</p>
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="el_primer_documento_html.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>2.2. El primer documento HTML</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="elementos_html.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>2.4. Elementos HTML</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Etiquetas%20y%20atributos%20%28Introducci%C3%B3n%20a%20XHTML%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_2.html">
+                    <span>Capítulo 2.</span> Características básicas
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="el_primer_documento_html.html">
+                    <span>2.2.</span> El primer documento HTML
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="etiquetas_y_atributos.html">
+                    <span>2.3.</span> Etiquetas y atributos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="elementos_html.html">
+                    <span>2.4.</span> Elementos HTML
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="sintaxis_de_las_etiquetas_xhtml.html">
+                    <span>2.5.</span> Sintaxis de las etiquetas XHTML
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Texto</a>
+            </li>
+                                                                                                                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Enlaces</a>
+            </li>
+                                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Listas</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Imágenes y objetos</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Formularios</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Estructura y layout</a>
+            </li>
+                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Metainformación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Otras etiquetas importantes</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Accesibilidad</a>
+            </li>
+                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Validación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Fragmentos de código</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.900 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/xhtml/capitulo_2/etiquetas_y_atributos.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:25 GMT -->
+</html>

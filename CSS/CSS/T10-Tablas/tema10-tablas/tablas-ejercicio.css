@@ -1,0 +1,47 @@
+/* tablas-ejercicio.css */
+/* numerar las celdas con (nfil.ncol) */
+
+/* contador nfil */
+table {
+    counter-reset: nfil;
+}
+
+tr {
+    counter-increment: nfil;
+}
+
+/* td:before {
+    content: "(" counter(nfila) ")"
+} */
+
+/* contador ncol */
+tr {
+    counter-reset: ncol;
+}
+
+td {
+    counter-increment: ncol;
+
+}
+
+td:before {
+    content: "(" counter(nfil) "." counter(ncol) ")"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* decora tabla */
+table, th, td {
+    border: 1px solid blue;
+    border-collapse: collapse;
+}

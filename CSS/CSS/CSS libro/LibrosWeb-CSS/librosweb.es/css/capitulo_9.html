@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_9.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Capítulo 9. Listas (Introducción a CSS)</title>
+        <link href="main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="capitulo_8/estilos_avanzados_2.html" />
+        <link rel="next" href="capitulo_9/estilos_avanzados_3.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Capítulo 9. Listas (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+        
+            <li class="active">
+                <span>Capítulo 9. Listas</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="listas" class="title">
+        <span>Capítulo 9.</span> Listas
+    </h1>
+
+    <h2 id="estilos_basicos_3">9.1. Estilos básicos</h2>
+
+
+<h3 id="vinetas_personalizadas">9.1.1. Viñetas personalizadas</h3>
+
+<p>Por defecto, los navegadores muestran los elementos de las listas no ordenadas con una viñeta formada por un pequeño círculo de color negro. Los elementos de las listas ordenadas se muestran por defecto con la numeración decimal utilizada en la mayoría de países.</p>
+
+<p>No obstante, CSS define varias propiedades para controlar el tipo de viñeta que muestran las listas, además de poder controlar la posición de la propia viñeta. La propiedad básica es la que controla el tipo de viñeta que se muestra y que se denomina <code>list-style-type</code>.</p>
+
+<div class="table" id="table_9_1">
+
+    <table class="property" summary="Definición de la propiedad list-style-type de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>list-style-type</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha | none | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Elementos de una lista</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>disc</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Permite establecer el tipo de viñeta mostrada para una lista</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>En primer lugar, el valor <code>none</code> permite mostrar una lista en la que sus elementos no contienen viñetas, números o letras. Se trata de un valor muy utilizado, ya que es imprescindible para los menús de navegación creados con listas, como se verá más adelante.</p>
+
+<p>El resto de valores de la propiedad <code>list-style-type</code> se dividen en tres tipos: gráficos, numéricos y alfabéticos.</p>
+
+<ul>
+<li>Los valores gráficos son <code>disc</code>, <code>circle</code> y <code>square</code> y muestran como viñeta un círculo relleno, un círculo vacío y un cuadrado relleno respectivamente.</li>
+<li>Los valores numéricos están formados por <code>decimal</code>, <code>decimal-leading-zero</code>, <code>lower-roman</code>, <code>upper-roman</code>, <code>armenian</code> y <code>georgian</code>.</li>
+<li>Por último, los valores alfanuméricos se controlan mediante <code>lower-latin</code>, <code>lower-alpha</code>, <code>upper-latin</code>, <code>upper-alpha</code> y <code>lower-greek</code>.</li>
+</ul>
+
+<p>La siguiente imagen muestra algunos de los valores definidos por la propiedad <code>list-style-type</code>:</p>
+
+<div class="figure" id="figure_9_1">
+    <img src="../img/css/f0901.gif" alt="Ejemplo de propiedad list-style-type" />
+
+    <p class="caption"><strong>Figura 9.1</strong> Ejemplo de propiedad list-style-type</p>
+</div>
+
+
+<p>El código CSS de algunas de las listas del ejemplo anterior se muestra a continuación:</p>
+
+<div class="code css">
+<pre class="css">&lt;ul style<span class="sy0">=</span><span class="st0">&quot;list-style-type: square&quot;</span><span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span><span class="kw1">list-style-type</span><span class="sy0">:</span> square&lt;/li<span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span>Elemento&lt;/li<span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span>Elemento&lt;/li<span class="sy0">&gt;</span>
+&lt;/ul<span class="sy0">&gt;</span>
+&nbsp;
+&lt;ol style<span class="sy0">=</span><span class="st0">&quot;list-style-type: lower-roman&quot;</span><span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span><span class="kw1">list-style-type</span><span class="sy0">:</span> lower-roman&lt;/li<span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span>Elemento&lt;/li<span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span>Elemento&lt;/li<span class="sy0">&gt;</span>
+&lt;/ol<span class="sy0">&gt;</span>
+&nbsp;
+&lt;ol style<span class="sy0">=</span><span class="st0">&quot;list-style-type: decimal-leading-zero; padding-left: 2em;&quot;</span><span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span><span class="kw1">list-style-type</span><span class="sy0">:</span> decimal-leading-zero&lt;/li<span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span>Elemento&lt;/li<span class="sy0">&gt;</span>
+  &lt;li<span class="sy0">&gt;</span>Elemento&lt;/li<span class="sy0">&gt;</span>
+&lt;/ol<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>La propiedad <code>list-style-position</code> permite controlar la colocación de las viñetas.</p>
+
+<div class="table" id="table_9_2">
+
+    <table class="property" summary="Definición de la propiedad list-style-position de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>list-style-position</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>inside | outside | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Elementos de una lista</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>outside</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Permite establecer la posición de la viñeta de cada elemento de una lista</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>La diferencia entre los valores <code>outside</code> y <code>inside</code> se hace evidente cuando los elementos contienen mucho texto, como en la siguiente imagen:</p>
+
+<div class="figure" id="figure_9_2">
+    <img src="../img/css/f0902.gif" alt="Ejemplo de propiedad list-style-position" />
+
+    <p class="caption"><strong>Figura 9.2</strong> Ejemplo de propiedad list-style-position</p>
+</div>
+
+
+<p>Utilizando las propiedades anteriores (<code>list-style-type</code> y <code>list-style-position</code>), se puede seleccionar el tipo de viñeta y su posición, pero no es posible personalizar algunas de sus características básicas como su color y tamaño.</p>
+
+<p>Cuando se requiere personalizar el aspecto de las viñetas, se debe emplear la propiedad <code>list-style-image</code>, que permite mostrar una imagen propia en vez de una viñeta automática.</p>
+
+<div class="table" id="table_9_3">
+
+    <table class="property" summary="Definición de la propiedad list-style-image de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>list-style-image</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>url | none | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Elementos de una lista</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>none</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Permite reemplazar las viñetas automáticas por una imagen personalizada</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Las imágenes personalizadas se indican mediante la URL de la imagen. Si no se encuentra la imagen o no se puede cargar, se muestra la viñeta automática correspondiente (salvo que explícitamente se haya eliminado mediante la propiedad <code>list-style-type</code>).</p>
+
+<p>La siguiente imagen muestra el uso de la propiedad <code>list-style-image</code> mediante tres ejemplos sencillos de listas con viñetas personalizadas:</p>
+
+<div class="figure" id="figure_9_3">
+    <img src="../img/css/f0903.gif" alt="Ejemplo de propiedad list-style-image" />
+
+    <p class="caption"><strong>Figura 9.3</strong> Ejemplo de propiedad list-style-image</p>
+</div>
+
+
+<p>Las reglas CSS correspondientes al ejemplo anterior se muestran a continuación:</p>
+
+<div class="code css">
+<pre class="css">ul<span class="re1">.ok</span> <span class="br0">&#123;</span> <span class="kw1">list-style-image</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;imagenes/ok.png&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+ul<span class="re1">.flecha</span> <span class="br0">&#123;</span> <span class="kw1">list-style-image</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;imagenes/flecha.png&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+ul<span class="re1">.circulo</span> <span class="br0">&#123;</span> <span class="kw1">list-style-image</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;imagenes/circulo_rojo.png&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Como es habitual, CSS define una propiedad de tipo <em>"shorthand"</em> que permite establecer todas las propiedades de una lista de forma directa. La propiedad se denomina <code>list-style</code>.</p>
+
+<div class="table" id="table_9_4">
+
+    <table class="property" summary="Definición de la propiedad list-style de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>list-style</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( list-style-type || list-style-position || list-style-image ) | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Elementos de una lista</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Propiedad que permite establecer de forma simultánea todas las opciones de una lista</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>En la definición anterior, la notación <code>||</code> significa que el orden en el que se indican los valores de la propiedad es indiferente. El siguiente ejemplo indica que no se debe mostrar ni viñetas automáticas ni viñetas personalizadas:</p>
+
+<div class="code css">
+<pre class="css">ul <span class="br0">&#123;</span> <span class="kw1">list-style</span><span class="sy0">:</span> <span class="kw2">none</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Cuando se utiliza una viñeta personalizada, es conveniente indicar la viñeta automática que se mostrará cuando no se pueda cargar la imagen:</p>
+
+<div class="code css">
+<pre class="css">ul <span class="br0">&#123;</span> <span class="kw1">list-style</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">&quot;imagenes/cuadrado_rojo.gif&quot;</span><span class="br0">&#41;</span> <span class="kw2">square</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<h3 id="menu_vertical">9.1.2. Menú vertical</h3>
+
+<p>Los sitios web correctamente diseñados emplean las listas de elementos para crear todos sus menús de navegación. Utilizando la etiqueta <code>&lt;ul&gt;</code> de HTML se agrupan todas las opciones del menú y haciendo uso de CSS se modifica su aspecto para mostrar un menú horizontal o vertical.</p>
+
+<p>A continuación se muestra la transformación de una lista sencilla de enlaces en un menú vertical de navegación.</p>
+
+<p>Lista de enlaces original:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Elemento 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Elemento 2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Elemento 3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Elemento 4<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Elemento 5<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Elemento 6<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></pre>
+</div>
+
+<p>Aspecto final del menú vertical:</p>
+
+<div class="figure" id="figure_9_4">
+    <img src="../img/css/f0904.gif" alt="Menú vertical sencillo creado con CSS" />
+
+    <p class="caption"><strong>Figura 9.4</strong> Menú vertical sencillo creado con CSS</p>
+</div>
+
+
+<p>El proceso de transformación de la lista en un menú requiere de los siguientes pasos:</p>
+
+<p>1) Definir la anchura del menú:</p>
+
+<div class="code css">
+<pre class="css">ul<span class="re1">.menu</span> <span class="br0">&#123;</span> <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">180px</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<div class="figure" id="figure_9_5">
+    <img src="../img/css/f0905.gif" alt="Menú vertical: definiendo su anchura" />
+
+    <p class="caption"><strong>Figura 9.5</strong> Menú vertical: definiendo su anchura</p>
+</div>
+
+
+<p>2) Eliminar las viñetas automáticas y todos los márgenes y espaciados aplicados por defecto:</p>
+
+<div class="code css">
+<pre class="css">ul<span class="re1">.menu</span> <span class="br0">&#123;</span>
+  <span class="kw1">list-style</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>
+  <span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">180px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<div class="figure" id="figure_9_6">
+    <img src="../img/css/f0906.gif" alt="Menú vertical: eliminar viñetas por defecto" />
+
+    <p class="caption"><strong>Figura 9.6</strong> Menú vertical: eliminar viñetas por defecto</p>
+</div>
+
+
+<p>3) Añadir un borde al menú de navegación y establecer el color de fondo y los bordes de cada elemento del menú:</p>
+
+<div class="code css">
+<pre class="css">ul<span class="re1">.menu</span> <span class="br0">&#123;</span>
+  <span class="kw1">border</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="re0">#7C7C7C</span><span class="sy0">;</span>
+  <span class="kw1">border-bottom</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>  
+  <span class="kw1">list-style</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>
+  <span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">180px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+ul<span class="re1">.menu</span> li <span class="br0">&#123;</span>
+  <span class="kw1">background</span><span class="sy0">:</span> <span class="re0">#F4F4F4</span><span class="sy0">;</span>
+  <span class="kw1">border-bottom</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="re0">#7C7C7C</span><span class="sy0">;</span>
+  <span class="kw1">border-top</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="re0">#FFF</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<div class="figure" id="figure_9_7">
+    <img src="../img/css/f0907.gif" alt="Menú vertical: añadiendo bordes" />
+
+    <p class="caption"><strong>Figura 9.7</strong> Menú vertical: añadiendo bordes</p>
+</div>
+
+
+<p>4) Aplicar estilos a los enlaces: mostrarlos como un elemento de bloque para que ocupen todo el espacio de cada <code>&lt;li&gt;</code> del menú, añadir un espacio de relleno y modificar los colores y la decoración por defecto:</p>
+
+<div class="code css">
+<pre class="css">ul<span class="re1">.menu</span> li a <span class="br0">&#123;</span>
+  <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#333</span><span class="sy0">;</span>
+  <span class="kw1">display</span><span class="sy0">:</span> <span class="kw2">block</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">.2em</span> <span class="nu0">0</span> <span class="re3">.2em</span> <span class="re3">.5em</span><span class="sy0">;</span>
+  <span class="kw1">text-decoration</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<div class="figure" id="figure_9_8">
+    <img src="../img/css/f0908.gif" alt="Aspecto final del menú vertical sencillo creado con CSS" />
+
+    <p class="caption"><strong>Figura 9.8</strong> Aspecto final del menú vertical sencillo creado con CSS</p>
+</div>
+
+
+<p>Los tipos de menús verticales que se pueden definir mediante las propiedades CSS son innumerables, como se puede observar en la página http://www.exploding-boy.com/images/EBmenus/menus.html</p>
+
+<h4 id="menu_vertical_avanzado">9.1.2.1. Menú vertical avanzado</h4>
+
+<p><div class="exercise"><p class="title">Ejercicio 10</p> <p><a href="capitulo_15/ejercicio_10.html">Ver enunciado</a></p></div></p>
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="capitulo_8/estilos_avanzados_2.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>8.2. Estilos avanzados</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="capitulo_9/estilos_avanzados_3.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>9.2. Estilos avanzados</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Listas%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>4.</span> <a href="capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="capitulo_5.html"> Posicionamiento y visualización</a>
+            </li>
+                                                                                                                                                                            <li class="level-1">
+                <span>6.</span> <a href="capitulo_6.html"> Texto</a>
+            </li>
+                                                            <li class="level-1">
+                <span>7.</span> <a href="capitulo_7.html"> Enlaces</a>
+            </li>
+                                                            <li class="level-1">
+                <span>8.</span> <a href="capitulo_8.html"> Imágenes</a>
+            </li>
+                                                            <li class="level-1 active">
+                <a href="capitulo_9.html">
+                    <span>Capítulo 9.</span> Listas
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="capitulo_9/estilos_avanzados_3.html">
+                    <span>9.2.</span> Estilos avanzados
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>10.</span> <a href="capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_9.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:27 GMT -->
+</html>

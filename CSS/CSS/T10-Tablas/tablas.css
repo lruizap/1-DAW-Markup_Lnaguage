@@ -1,0 +1,42 @@
+td {
+    border: 1px blue solid;
+}
+
+th {
+    border: 2px rgb(30, 177, 10) solid;
+    background-color: yellow;
+}
+
+table {
+    border: 4px rgb(0, 0, 0) solid;
+    border-collapse: separate;
+    border-spacing: 0em;
+    empty-cells: hide;  /* Ocultar celdas vacias */
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: purple;
+}
+
+td:nth-child(even) {
+    width: 200px;
+    background-color: orangered;
+}
+
+th[scope="col"] {
+    background-color: red;
+    text-align: center;
+}
+
+caption {
+    font-weight: bold;
+    color: blue;
+    text-align: right;
+    caption-side: bottom;
+    margin-top: 0.5em;
+}
+
+table tr:hover{
+    background-color: cyan;
+}

@@ -1,0 +1,42 @@
+/* tablas.css */
+
+td, th{
+    border: 2px solid blue;
+}
+
+table{
+    border: 2px solid red;
+    border-collapse: collapse;
+    /* border-spacing: 0; */
+    /* border-spacing: .5em; */
+    /* width: 100%; */
+    empty-cells: hide;
+}
+
+tr:nth-child(even){
+    background-color: silver;
+}
+
+th[scope="col"] {
+    background: tomato;
+    font-weight: normal;
+    text-align: right;
+}
+
+
+/* th:nth-child(even), td:nth-child(even) {
+    width: 200px;
+    background-color: yellow;
+} */
+
+caption {
+    font-weight: bold;
+    color: blue;
+    /* text-align: right; */
+    caption-side: bottom;
+    margin-top: .5em;
+}
+
+tr:hover {
+    background-color: yellow;
+}

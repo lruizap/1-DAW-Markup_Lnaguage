@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Formularios y pruebas</title>
+</head>
+<body>
+
+<h1>Formulario de pruebas</h1>
+<p>Los campos se envian al servidor local (uso de XAMPP), y los recibe un script en Perl (formulario.pl, en el directorio cgi-bin de xampp). Este script muestra los nombres de los campos recibidos y sus valores.</p>
+<ul>
+	<li>Probar métodos get o post, ver URL</li>
+	<li>Probar quitar el atributo name de un campo y enviar..</li>
+	<li>Probar en local, sin XAMPP iniciado..</li>
+</ul>
+
+
+<form action="/cgi-bin/procesa-perl.pl" method="get"  enctype=multipart/form-data>
+<p>
+	<label for=""><input type="text"  name="usuario" id="usuario" placeholder="Usuario"></label>
+</p>
+<p>
+	<label for=""><input type="password" name="clave" id="clave" placeholder="Clave"></label>
+</p>
+<p>
+	<label>
+    <input type="checkbox" name="modulos" value="LMSGI"> Lenguaje de Marcas 
+  </label>
+</p>
+<p>
+	<label>
+		<input type="checkbox" name="modulos" value="SO"> Sistemas
+	</label>
+</p>
+
+<p>
+	<label><input type="radio" name="horario" value="M">Mañana</label>
+	<label><input type="radio" name="horario" value="T">Tarde</label>
+	<label><input type="radio" name="horario" value="N">Noche</label>
+</p>
+
+
+<p>
+	<label><input type="file" name="fichero" placeholder="Fichero"></label>
+</p>
+<p>
+	<input type="submit" value="Enviar">
+	<input type="reset" value="Limpiar">
+</p>
+
+
+</form>
+	
+</body>
+</html>

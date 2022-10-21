@@ -1,0 +1,66 @@
+/* txt */
+
+blockquote::first-letter {
+    font-size: 4em;
+    color: blue;
+}
+
+blockquote::first-line {
+    color: red;    
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+article img {
+    vertical-align: middle;
+}
+
+abbr {
+    font-variant: small-caps;
+}
+
+p:nth-of-type(1) {
+    text-transform: uppercase;
+    text-align: justify; /*todos los parrafos acaban en el mismo punto*/
+
+}
+
+/* p {
+    line-height: normal;
+    text-indent: 4em;
+} */
+
+strong {
+    background-color: yellow;
+    font-weight: normal;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: overline; 
+    border-bottom: 1px solid black; /*border-bottom --> más alejado del texto subrayado*/
+    font-size: 3em;
+    vertical-align: top;
+}
+
+/* color */
+
+h1 {
+    color: teal;
+    font: 24px "Comic Neue", monospace;
+    /*  font-family:"Comic Neue";
+        font-size: large;
+        font-weight: normal;
+        font-style: italic; */
+    text-align: center;
+    text-decoration: underline;
+    border-bottom: 1px solid black;
+}
+
+h1 :nth-child(1) {
+    font-family: sans-serif;
+    font-size: large;
+}

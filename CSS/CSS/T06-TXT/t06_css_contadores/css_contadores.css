@@ -1,0 +1,56 @@
+h1 {
+  border-bottom: 1px solid black;
+}
+
+section.unnivel {
+  counter-reset: napartadoh2;
+}
+section.unnivel h2::before {
+  counter-increment: napartadoh2;
+  content: "Apartado " counter(napartadoh2) ": ";
+}
+.dosniveles {
+  counter-reset: nh2 nh3;
+}
+.dosniveles h2::before {
+  counter-increment: nh2;
+  content: counter(nh2) ". ";
+}
+.dosniveles h2 {
+  counter-reset: nh3;
+}
+.dosniveles h3::before {
+  counter-increment: nh3;
+  content: counter(nh2) "." counter(nh3);
+}
+
+.parrafos {
+  counter-reset: cp;
+}
+.parrafos p::before {
+  counter-increment: cp;
+  content: "(" counter(cp) ") ";
+}
+
+dl {
+  counter-reset: cd;
+}
+dl dt::before {
+  counter-increment: cd;
+  content: counter(cd) ". ";
+  padding: 1px 2px;
+  margin-right: 0.2em;
+  background: #ffc;
+  color: #000;
+  border: 1px solid #999;
+  font-weight: bold;
+}
+
+.listas ol {
+  counter-reset: nli;
+  list-style-type: none;
+}
+.listas li::before {
+  counter-increment: nli;
+  content: counters(nli, ".") " - ";
+}

@@ -1,0 +1,39 @@
+/* box-model-image.css */
+
+h1 {
+    text-shadow: 6px 3px 2px red;
+    background-color: black;
+    color: white
+}
+
+p {
+    
+    background: url(figuras/facebook.jpg) repeat-x right top,
+                url(figuras/twitter.jpg) repeat-y right bottom,
+                url(figuras/pensando.png) repeat-y left bottom;
+
+    /* background-color: yellow;
+    background-image: url(figuras/facebook.jpg); */
+    /* background-repeat: repeat-x; */ /*repeat-x, repeat-y, no-repeat.. */
+    /* background-position: right top; */
+
+  
+    
+    border: 2px red solid;
+    padding-top: 50px;
+    margin: 32px;
+    border-radius: 10px 20px 30px 40px; 
+    box-shadow: 40px 20px 15px red;
+    width: 300px;
+
+    margin: 3em auto;
+    border: blue 3px solid;
+    padding: 2em ;
+    border-radius: 15px;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+section {
+    width: 50%
+}

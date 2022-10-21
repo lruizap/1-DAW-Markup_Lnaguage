@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Contadores</title>
+	<link rel="stylesheet" href="css_contadores.css">
+</head>
+
+<body>
+	<h1>Contadores CSS</h1>
+	<p><em>Nota: se usan varias cabeceras h1 para ejemplos de uso..</em></p>
+	<p>El uso de contadores se basa en el pesudo elemento <code>::before (o ::after)</code>, la propiedad
+		<code>content</code> para insertar el contador y el uso de nuevas propiedades:</p>
+
+	<ul>
+		<li><code>counter-reset</code> - Creates or resets a counter</li>
+		<li><code>counter-increment</code> - Increments a counter value</li>
+		<li><code>counter() </code> - Adds the value of a counter to an element</li>
+	</ul>
+
+	<p>Si va a numerar los apartados de nivel 2, debe iniciar el contador en una regla CSS asociada al elemento padre, e
+		incrementarlo y mostrarlo en una propiedad del elemento a numerar usando la pseudoclase <code>::before</code>
+	</p>
+	<p>Por ejemplo, si quiere numerar los apartados de nivel 2 de una sección de clase unnivel</p>
+	<pre><code> 
+section.unnivel { 
+    counter-reset: nh2;
+}
+section.unnivel h2::before {
+    counter-increment: nh2;
+    content: "Apartado " counter(nh2) ": ";
+}
+</code></pre>
+
+	<p> También se puede crear contadores anidados, usarlo para numerar listas, numerar párrafos, listas de
+		definiciones, etc. Tiene varios ejemplos abajo, y puede obtener más información en:</p>
+
+	<ul>
+		<li><a href="http://www.w3schools.com/css/css_counters.asp">Contadores</a> en W3Schools</li>
+		<li><a href="http://www.smashingmagazine.com/2013/04/css-generated-content-counters/">Ejemplos detallados</a>
+		</li>
+	</ul>
+	<p>
+
+
+	<section class="unnivel">
+		<h1> Ejemplo de numeración de un nivel</h1>
+		<h2>HTML</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, quis, saepe amet commodi minima
+			possimus aliquid eum vel totam aut magni quo voluptate eaque vitae.</p>
+		<h2>CSS</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, libero voluptates earum dicta tenetur ab
+			cum itaque quasi asperiores repudiandae nisi ullam eius nihil recusandae id odit reprehenderit. Rerum error
+			adipisci eos velit iste magni quaerat tenetur voluptatem. Fugit, quaerat, numquam maxime illum modi
+			assumenda non voluptas deleniti quae nisi impedit debitis provident explicabo saepe repellendus! Fugit,
+			doloribus, magnam, nulla recusandae perspiciatis ipsa odit eligendi nam adipisci veniam voluptates sequi aut
+			expedita. Labore, placeat, excepturi consectetur accusantium saepe natus voluptatibus ea vero repellendus
+			illum incidunt non corporis tempore veritatis quis sint deserunt ipsam id atque numquam sunt assumenda
+			repellat cumque!</p>
+		<h2>XML</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolore rerum velit sed numquam
+			assumenda facere ducimus veritatis minus nemo itaque quisquam voluptate modi sunt adipisci fugiat quis cum
+			architecto maiores est alias suscipit quo quia temporibus vel quos odit distinctio optio voluptatum quae.
+			Sit, delectus, veniam laudantium consequuntur tenetur aliquam praesentium iure voluptate vitae quod omnis
+			fugit perferendis ipsa quo molestiae soluta explicabo est quam placeat perspiciatis amet earum ipsam quos
+			voluptatem repellendus accusantium accusamus minima ea numquam excepturi. Necessitatibus, quos, hic, harum
+			odit accusantium voluptatum laboriosam tempora vitae adipisci suscipit ratione aliquam quisquam perferendis
+			fuga similique assumenda itaque! In, voluptatum, a accusantium sapiente soluta expedita labore
+			exercitationem ipsa. Temporibus, quod aliquid iusto dolores vero similique beatae velit totam fugit magni
+			eveniet delectus debitis!</p>
+	</section>
+
+	<section class="dosniveles">
+		<h1> Ejemplo de numeración de dos niveles</h1>
+		<pre><code> 
+.dosniveles {
+    counter-reset: nh2 nh3;
+}
+.dosniveles h2::before {
+    counter-increment: nh2;
+    content: counter(nh2) ". ";
+}
+.dosniveles h2 {
+      counter-reset:  nh3;
+}
+.dosniveles h3::before {
+    counter-increment: nh3;
+    content: counter(nh2) "." counter(nh3) ;
+}
+</code></pre>
+
+		<h2>HTML</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, quis, saepe amet commodi minima
+			possimus aliquid eum vel totam aut magni quo voluptate eaque vitae.</p>
+		<h3> HTML 5</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, culpa!</p>
+		<h3> HTML6</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam earum esse porro quasi culpa quam unde
+			expedita recusandae distinctio consectetur reiciendis vitae dignissimos velit.</p>
+		<h2>CSS</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, libero voluptates earum dicta tenetur ab
+			cum itaque quasi asperiores repudiandae nisi ullam eius nihil recusandae id odit reprehenderit.</p>
+		<h3> CSS3</h3>
+		<h3> CSS3 y XML</h3>
+		<h2>XML</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolore rerum velit sed numquam
+			assumenda facere ducimus veritatis minus nemo itaque quisquam voluptate!</p>
+	</section>
+
+	<section class="parrafos">
+		<h1> Ejemplo de numeración de párrafos</h1>
+
+		<pre><code> 
+.parrafos {
+  counter-reset: cp;
+}
+.parrafos p::before {
+  counter-increment: cp;
+	content: "(" counter(cp) ") " ;
+}
+</code></pre>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, vitae nihil incidunt delectus itaque
+			laboriosam autem aliquam fugit nulla animi dignissimos consectetur culpa iure voluptatem.</p>
+		<p>Earum, voluptate, nisi, animi, magni libero praesentium inventore laudantium fugiat iure reprehenderit soluta
+			quod ut esse neque explicabo impedit fuga? Nulla veniam laudantium odio fugit!</p>
+		<p>Enim corrupti beatae tenetur. Architecto, dolorum, vel rem ex quidem dignissimos asperiores quis eaque?
+			Corporis adipisci minus repellat tempora vitae non iste tenetur dolores unde.</p>
+		<p>Dolorem, natus ducimus possimus porro alias ad temporibus eum repellat quod vel. Repellat, alias ratione
+			officia rerum excepturi unde omnis illo esse iste adipisci ducimus.</p>
+		<p>Voluptatibus, sed, consectetur commodi vero alias ratione eum ducimus quod iusto corporis cupiditate
+			similique dolore tempora enim quam quisquam hic officia perspiciatis dicta incidunt laboriosam.</p>
+
+	</section>
+
+	<section>
+		<h1> Ejemplo de numeración de una lista de definiciones. </h1>
+		<p>Observe que además se le aplican estilos al contenidos generado con ::before </p>
+
+		<pre><code> 
+dl {
+  counter-reset: cd;
+}
+dl dt::before {
+  counter-increment: cd;
+	content: counter(cd) ". ";
+  background: #ffc;
+	color: #000;
+	border: 1px solid #999;
+	font-weight: bold;	
+}
+</code></pre>
+		<dl>
+			<dt>Definición 1</dt>
+			<dd>enunciado de la definición del elemento 1</dd>
+			<dt>Definición 2</dt>
+			<dd>enunciado de la definición del elemento 2</dd>
+			<dt>Definición 3</dt>
+			<dd>enunciado de la definición del elemento 3</dd>
+			<dt>Definición 4</dt>
+			<dd>enunciado de la definición del elemento 4</dd>
+		</dl>
+	</section>
+
+	<section class="listas">
+		<h1>Ejemplo de numeración de listas ordenadas</h1>
+		<p>Los contadores son auto-anidados: si se resetea (define) un contador en un elemento descendiente se crea una
+			nueva instancia de ese contador (un contador distinto pero con el mismo identificador).</p>
+		<p> Esto es útil por ejemplo con las listas anidadas donde es posible que no conozcamos los niveles de
+			anidación, o estos cambien, o sean tantos que hagan el código CSS farragoso. </p>
+		<p> En este contexto es útil la función counters(): crea un string con todos los contadores que existen en ese
+			ámbito o scope con un identificador dado ,separados por el string que se indica en la función: </p>
+<pre><code> 
+.listas ol {
+	counter-reset: nli;
+	list-style-type: none;
+}
+.listas li::before {
+	counter-increment: nli;
+	content: <strong>counters(nli,".")</strong> " - ";
+}
+</code></pre>
+
+	<p>Observe que se muestra un contador con la función counters</p>
+		<ol> 
+			<li>item</li>
+			<li>item - Observe que se muestran dos contadores con la función counters
+				<ol> 
+					<li>item</li>
+					<li>item</li>
+					<li>item - Observe que se muestran tres contadores con la función counters
+						<ol>
+							<li>item</li>
+							<li>item</li>
+							<li>item</li>
+						</ol>
+					</li>
+					<li>item</li>
+				</ol>
+			</li>
+			<li>item</li>
+			<li>item</li>
+		</ol>
+	</section>
+
+</body>
+
+</html>

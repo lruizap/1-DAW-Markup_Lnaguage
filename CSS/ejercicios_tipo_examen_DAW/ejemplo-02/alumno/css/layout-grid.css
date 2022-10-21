@@ -1,0 +1,40 @@
+@media screen and (min-width: 800px) {
+
+    #contenedor {
+        background-color: rgb(194, 194, 54);
+        width: 80%;
+        margin: auto;
+    }
+
+    #cabecera{
+        display: grid;
+        grid-column: 1fr 2fr;    }
+
+    nav{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    nav ol {
+        grid-template-columns: 1fr;
+        list-style-type:lower-roman;
+        text-align-last: left;
+        list-style-position: inside;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    #contenedor {
+        background-color: lightcoral;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    article h2 {
+        grid-column: 1 / 3;
+    }
+}

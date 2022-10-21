@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_3/colores.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>3.2. Colores (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="unidades_de_medida.html" />
+        <link rel="next" href="../capitulo_4.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="3.2. Colores (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_3.html" itemprop="url">
+                    <span itemprop="title">Capítulo 3. Unidades de medida y colores</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>3.2. Colores</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="colores" class="title">
+        <span>3.2.</span> Colores
+    </h1>
+
+    
+
+<p>Los colores en CSS se pueden indicar de cinco formas diferentes: palabras clave, colores del sistema, RGB hexadecimal, RGB numérico y RGB porcentual. Aunque el método más habitual es el del RGB hexadecimal, a continuación se muestran todas las alternativas que ofrece CSS.</p>
+
+<h3 id="palabras_clave">3.2.1. Palabras clave</h3>
+
+<p>CSS define 17 palabras clave para referirse a los colores básicos. Las palabras se corresponden con el nombre en inglés de cada color:</p>
+
+<p><code>aqua</code>, <code>black</code>, <code>blue</code>, <code>fuchsia</code>, <code>gray</code>, <code>green</code>, <code>lime</code>, <code>maroon</code>, <code>navy</code>, <code>olive</code>, <code>orange</code>, <code>purple</code>, <code>red</code>, <code>silver</code>, <code>teal</code>, <code>white</code>, <code>yellow</code></p>
+
+<div class="figure" id="figure_3_1">
+    <img src="../../img/css/f0303.gif" alt="Colores definidos mediante las palabras clave de CSS" />
+
+    <p class="caption"><strong>Figura 3.1</strong> Colores definidos mediante las palabras clave de CSS</p>
+</div>
+
+
+<p>La imagen anterior ha sido extraída de la <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">sección sobre colores de la especificación oficial de CSS</a>.</p>
+
+<p>Aunque es una forma muy sencilla de referirse a los colores básicos, este método prácticamente no se utiliza en las hojas de estilos de los sitios web reales, ya que se trata de una gama de colores muy limitada.</p>
+
+<p>Además de la lista básica, los navegadores modernos soportan muchos otros nombres de colores. La lista completa se puede ver en <a href="http://en.wikipedia.org/wiki/Websafe">en.wikipedia.org/wiki/Websafe</a>.</p>
+
+<h3 id="rgb_decimal">3.2.2. RGB decimal</h3>
+
+<p>En el campo del diseño gráfico, se han definido varios modelos para hacer referencia a los colores. Los dos modelos más conocidos son RGB y CMYK. Simplificando su explicación, el modelo RGB consiste en definir un color indicando la cantidad de color rojo, verde y azul que se debe <em>mezclar</em> para obtener ese color. Técnicamente, el modelo RGB es un modelo de tipo "aditivo", ya que los colores se obtienen sumando sus componentes.</p>
+
+<p>Por lo tanto, en el modelo RGB un color se define indicando sus tres componentes R (rojo), G (verde) y B (azul). Cada una de las componentes puede tomar un valor entre cero y un valor máximo. De esta forma, el color rojo puro en RGB se crea mediante el máximo valor de la componente R y un valor de <code>0</code> para las componentes G y B.</p>
+
+<p>Si todas las componentes valen <code>0</code>, el color creado es el negro y si todas las componentes toman su valor máximo, el color obtenido es el blanco. En CSS, las componentes de los colores definidos mediante RGB decimal pueden tomar valores entre <code>0</code> y <code>255</code>. El siguiente ejemplo establece el color del texto de un párrafo:</p>
+
+<div class="code css">
+<pre class="css">p <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">rgb</span><span class="br0">&#40;</span><span class="nu0">71</span><span class="sy0">,</span> <span class="nu0">98</span><span class="sy0">,</span> <span class="nu0">176</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>La sintaxis que se utiliza para indicar los colores es <code>rgb()</code> y entre paréntesis se indican las tres componentes RGB, en ese mismo orden y separadas por comas. El color del ejemplo anterior se obtendría mezclando las componentes R=<code>71</code>, G=<code>98</code>, B=<code>176</code>, que se corresponde con un color azul claro.</p>
+
+<p>Si se indica un valor menor que <code>0</code> para una componente, automáticamente se transforma su valor en <code>0</code>. Igualmente, si se indica un valor mayor que <code>255</code>, se transforma automáticamente su valor a <code>255</code>.</p>
+
+<h3 id="rgb_porcentual">3.2.3. RGB porcentual</h3>
+
+<p>Las componentes RGB de un color también se pueden indicar mediante un porcentaje. El funcionamiento y la sintaxis de este método es el mismo que el del RGB decimal. La única diferencia es que en este caso el valor de las componentes RGB puede tomar valores entre <code>0%</code> y <code>100%</code>. Por tanto, para transformar un valor RGB decimal en un valor RGB porcentual, es preciso realizar una regla de tres considerando que <code>0</code> es igual a <code>0%</code> y <code>255</code> es igual a <code>100%</code>.</p>
+
+<p>El mismo color del ejemplo anterior se puede representar de forma porcentual:</p>
+
+<div class="code css">
+<pre class="css">p <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">rgb</span><span class="br0">&#40;</span><span class="re3">27%</span><span class="sy0">,</span> <span class="re3">38%</span><span class="sy0">,</span> <span class="re3">69%</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Al igual que sucede con el RGB decimal, si se indica un valor inferior a <code>0%</code>, se transforma automáticamente en <code>0%</code> y si se indica un valor superior a <code>100%</code>, se trunca su valor a <code>100%</code>.</p>
+
+<h3 id="rgb_hexadecimal">3.2.4. RGB hexadecimal</h3>
+
+<p>Aunque es el método más complicado para indicar los colores, se trata del método más utilizado con mucha diferencia. De hecho, prácticamente todos los sitios web reales utilizan exclusivamente este método.</p>
+
+<p>Para entender el modelo RGB hexadecimal, en primer lugar es preciso introducir un concepto matemático llamado <em>sistema numérico hexadecimal</em>. Cuando realizamos operaciones matemáticas, siempre utilizamos 10 símbolos para representar los números (del <code>0</code> al <code>9</code>). Por este motivo, se dice que utilizamos un sistema numérico decimal.</p>
+
+<p>No obstante, el sistema decimal es solamente uno de los muchos sistemas numéricos que se han definido. Entre los sistemas numéricos alternativos más utilizados se encuentra el sistema hexadecimal, que utiliza 16 símbolos para representar sus números.</p>
+
+<p>Como sólo conocemos 10 símbolos numéricos, el sistema hexadecimal utiliza también seis letras (de la <code>A</code> a la <code>F</code>) para representar los números. De esta forma, en el sistema hexadecimal, después del <code>9</code> no va el <code>10</code>, sino la <code>A</code>. La letra <code>B</code> equivale al número <code>11</code>, la <code>C</code> al <code>12</code>, la <code>D</code> al <code>13</code>, la <code>E</code> al <code>14</code> y la <code>F</code> al número <code>15</code>.</p>
+
+<p>Definir un color en CSS con el método RGB hexadecimal requiere realizar los siguientes pasos:
+  - Determinar las componentes RGB decimales del color original, por ejemplo: R = <code>71</code>, G = <code>98</code>, B = <code>176</code>
+  - Transformar el valor decimal de cada componente al sistema numérico hexadecimal. Se trata de una operación exclusivamente matemática, por lo que puedes utilizar una calculadora. En el ejemplo anterior, el valor hexadecimal de cada componente es: R = <code>47</code>, G = <code>62</code>, B = <code>B0</code>
+  - Para obtener el color completo en formato RGB hexadecimal, se concatenan los valores hexadecimales de las componentes RGB en ese orden y se les añade el prefijo <code>#</code>. De esta forma, el color del ejemplo anterior es <code>#4762B0</code> en formato RGB hexadecimal.</p>
+
+<p>Siguiendo el mismo ejemplo de las secciones anteriores, el color del párrafo se indica de la siguiente forma utilizando el formato RGB hexadecimal:</p>
+
+<div class="code css">
+<pre class="css">p <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#4762B0</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Recuerda que aunque es el método más complicado para definir un color, se trata del método que utilizan la inmensa mayoría de sitios web, por lo que es imprescindible dominarlo. Afortunadamente, todos los programas de diseño gráfico convierten de forma automática los valores RGB decimales a sus valores RGB hexadecimales, por lo que no tienes que hacer ninguna operación matemática:</p>
+
+<div class="figure" id="figure_3_2">
+    <img src="../../img/css/f0305.gif" alt="Herramienta de color de Photoshop para definir los colores según los modelos RGB, CMYK, Lab, HSB y RGB hexadecimal" />
+
+    <p class="caption"><strong>Figura 3.2</strong> Herramienta de color de Photoshop para definir los colores según los modelos RGB, CMYK, Lab, HSB y RGB hexadecimal</p>
+</div>
+
+
+<p>El formato RGB hexadecimal es la forma más compacta de indicar un color, ya que incluso es posible comprimir sus valores cuando todas sus componentes son iguales dos a dos:</p>
+
+<div class="code code">
+<pre class="code">#AAA = #AAAAAA
+#FFF = #FFFFFF
+#A0F = #AA00FF
+#369 = #336699</pre>
+</div>
+
+<p>En el siguiente ejemplo se establece el color de fondo de la página a blanco, el color del texto a negro y el color de la letra de los titulares se define de color rojo:</p>
+
+<div class="code css">
+<pre class="css">body <span class="br0">&#123;</span> <span class="kw1">background-color</span><span class="sy0">:</span> <span class="re0">#FFF</span><span class="sy0">;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#000</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+h1<span class="sy0">,</span> h2<span class="sy0">,</span> h3<span class="sy0">,</span> h4<span class="sy0">,</span> h5<span class="sy0">,</span> h6 <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#C00</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Las letras que forman parte del color en formato RGB hexadecimal se pueden escribir en mayúsculas o minúsculas indistintamente. No obstante, se recomienda escribirlas siempre en mayúsculas o siempre en minúsculas para que la hoja de estilos resultante sea más limpia y homogénea.</p>
+
+<h3 id="colores_del_sistema">3.2.5. Colores del sistema</h3>
+
+<p>Los colores del sistema son similares a los colores indicados mediante su nombre, pero en este caso hacen referencia al color que muestran algunos elementos del sistema operativo del usuario.</p>
+
+<p>Existen varios colores definidos, como por ejemplo <code>ActiveBorder</code>, que hace referencia al color del borde de las ventanas activas. Consulta la <a href="http://www.w3.org/TR/CSS21/ui.html#system-colors">lista completa de colores del sistema</a>.</p>
+
+<p>Aunque es posible definir los colores en CSS utilizando estos nombres, se trata de un método que nunca se utiliza, por lo que se puede considerar prácticamente como una rareza de CSS.</p>
+
+<h3 id="colores_web_safe">3.2.6. Colores web safe</h3>
+
+<p>Como cada componente RGB de los colores puede tomar un valor entre <code>0</code> y <code>255</code>, el número total de colores que se pueden representar con este formato es de <code>256 x 256 x 256 = 16.777.216</code> colores. Sin embargo, en la década de los 90 los monitores de los usuarios no eran capaces de mostrar más de <code>256</code> colores diferentes.</p>
+
+<p>A partir de todos los colores disponibles, se eligieron <code>216</code> colores que formaron la paleta de colores <em>"web safe"</em>. Esta paleta de colores podía ser utilizada por los diseñadores con la seguridad de que se verían correctamente en cualquier navegador de cualquier sistema operativo de cualquier usuario.</p>
+
+<p>Hoy en día, su importancia ha descendido notablemente, ya que prácticamente todos los usuarios utilizan dispositivos con una profundidad de color de 16 y 32 bits. No obstante, el auge en el uso de los dispositivos móviles hace que siga siendo un tema a considerar, ya que las pantallas de muchos móviles sólo pueden representar un número reducido de colores.</p>
+
+<p>Consulta la <a href="http://en.wikipedia.org/wiki/Web_colors#Web-safe_colors">lista completa de colores web safe y sus valores hexadecimales</a>.</p>
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="unidades_de_medida.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>3.1. Unidades de medida</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="../capitulo_4.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>Capítulo 4. Modelo de cajas</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Colores%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_3.html">
+                    <span>Capítulo 3.</span> Unidades de medida y colores
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="unidades_de_medida.html">
+                    <span>3.1.</span> Unidades de medida
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="colores.html">
+                    <span>3.2.</span> Colores
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Posicionamiento y visualización</a>
+            </li>
+                                                                                                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_3/colores.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:13 GMT -->
+</html>

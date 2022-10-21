@@ -1,0 +1,183 @@
+/* Selectores */
+
+/* Selector Universal */
+
+* {
+    margin: 5;
+    padding: 0;
+  }
+  
+  /* Selector tipo etiqueta */
+
+  /* Coincide con la etiqueta html que queramos */
+
+p {
+    color: rgb(66, 177, 177);
+}
+
+a:visited{ color: chartreuse; text-decoration: none;}
+
+a:hover{ color: red; text-decoration: line-through;}
+
+h1 {
+    color: #ff0000;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  h2 {
+    color: rgb(30, 192, 38);
+  }
+
+  /* See puede agrupar más de 1 etiqueta con el mismo estilo separandola por comas
+  
+  h1, h2, h3 {
+    color: #8A8E27;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+  } 
+  
+  */
+
+  /* Selector descendente */
+
+  p span  { color: red;}
+
+  p a span  { color: yellow;}
+
+  p a span em { text-decoration: underline; color: silver;}
+
+  /* Selector de clase */
+
+  .Destacado { color: red; }
+
+  .aviso {
+    padding: 0.5em;
+    border: 1px solid #98be10;
+    background: #f6feda;
+  }
+  
+  /* todos los elementos con la clase error */
+
+  .error {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  /* todos los elementos tipo p con la clase violeta */
+
+  p.violeta { color:violet }
+
+  /* Selectores de ID */
+
+  #azul { color: rgb(118, 118, 255); }
+
+  /* Todos los elementos de tipo "p" con atributo id="aviso" */
+
+  p#aviso { padding: 0.5em; border: 2px solid red; background-color: yellow; font-weight: bold;}
+
+  /* Todos los elementos con atributo id="aviso" que estén dentro de cualquier elemento de tipo "p" */
+
+  p #aviso { color: turquoise; }
+
+  /* Combinación de selectores básicos */
+
+  .aviso .especial { color: black; background-color: red; }
+
+  div.lol span.xd { font-weight: bold;}
+
+/* Ahora, el selector solamente selecciona aquellos elementos de tipo <span> con un atributo class="especial" que estén dentro de cualquier elemento de tipo <div> que tenga un atributo class="aviso". */
+
+/* Selectores Hijo */
+
+p > span { color: rgb(20, 199, 35); }
+
+/* Selector adyacente */
+
+h1 + h2 { border: 2px solid red; background-color: white;}
+
+/* Selector de atributos */
+
+  /* Se muestran de color azul todos los enlaces que tengan un atributo "class", independientemente de su valor */
+   a[class] { color: blue; }
+ 
+   /* Se muestran de color azul todos los enlaces que tengan un atributo "class" con el valor "externo" */
+   a[class="externo"] { color: blue; }
+    
+   /* Se muestran de color azul todos los enlaces que apunten al sitio "http://www.ejemplo.com" */
+   a[href="http://www.ejemplo.com"] { color: blue; }
+    
+   /* Se muestran de color azul todos los enlaces que tengan un atributo "class" en el que al menos uno de sus valores
+      sea "externo" */
+   a[class~="externo"] { color: blue; }
+    
+   /* Selecciona todos los elementos de la página cuyo atributo "lang" sea igual a "en", es decir, todos los elementos en inglés */
+    *[lang=en] { color: red; }
+    
+   /* Selecciona todos los elementos de la página cuyo atributo "lang" empiece por "es", es decir, "es", "es-ES", "es-AR", etc. */
+    *[lang|="es"] { color : red }
+   
+
+/* Unidades de medida */
+
+/* Absolutas */
+
+/* El cuerpo de la página debe mostrar un margen de media pulgada */
+body { margin: 0.5in; }
+ 
+/* Los elementos <h1> deben mostrar un interlineado de 2 centímetros */
+h1 { line-height: 2cm; }
+ 
+/* Las palabras de todos los párrafos deben estar separadas 4 milímetros entre si */
+p { word-spacing: 4mm; }
+ 
+/* Los enlaces se deben mostrar con un tamaño de letra de 12 puntos */
+a { font-size: 12pt }
+ 
+/* Los elementos <span> deben tener un tamaño de letra de 1 pica */
+span { font-size: 1pc }
+
+/* Relativas */
+
+/* En este caso, el margen tendrá una anchura de 20px, ya que 1em siempre equivale al tamaño de letra del elemento. */
+
+p { font-size: 20px; margin: 1em; }
+
+/* Si se quiere reducir la anchura del margen a 16px pero manteniendo el tamaño de letra de los párrafos en 20px, se debe utilizar la siguiente regla CSS: */
+
+p { font-size: 20px; margin: 0.5em; }
+
+/* El valor 0.5em se interpreta como "la mitad del tamaño de letra del elemento", ya que se debe multiplicar por 0.5 su tamaño de letra (32px x 0.5 = 16px). De la misma forma, si se quiere mostrar un margen de 8px de anchura, se debería utilizar el valor 0.25em, ya que 32px x 0.25 = 8px.
+ */
+
+ /* Las unidades de medida se pueden mezclar en los diferentes elementos de una misma página, como en el siguiente ejemplo: */
+ 
+ body { font-size: 10px; }
+ h1 { font-size: 2.5em; }
+ 
+ /* En primer lugar, se establece un tamaño de letra base de 10 píxel para toda la página. A continuación, se asigna un tamaño de 2.5em al elemento <h1>, por lo que su tamaño de letra real será de 2.5 x 10px = 25px. */
+
+ /* Sin embargo, el valor de las medidas relativas no se hereda directamente, sino que se hereda su valor real una vez calculado. El siguiente ejemplo muestra este comportamiento: */
+
+body {
+  font-size: 12px;
+  text-indent: 3em;
+}
+h1 { font-size: 15px }
+
+/* Si se heredará el valor 3em, al multiplicarlo por el valor de font-size del elemento <h1> (que vale 15px) el resultado sería 3em x 15px = 45px. No obstante, como se ha comentado, los valores que se heredan no son los relativos, sino los valores ya calculados.
+Por lo tanto, en primer lugar se calcula el valor real de 3em para el elemento <body>: 3em x 12px = 36px. Una vez calculado el valor real, este es el valor que se hereda para el resto de elementos.
+ */
+
+ 
+
+
+
+
+
+
+  
+
+
+
+  

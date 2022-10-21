@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_5/posicionamiento_flotante.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>5.7. Posicionamiento flotante (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="posicionamiento_fijo.html" />
+        <link rel="next" href="visualizacion.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="5.7. Posicionamiento flotante (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_5.html" itemprop="url">
+                    <span itemprop="title">Capítulo 5. Posicionamiento y visualización</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>5.7. Posicionamiento flotante</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="posicionamiento_flotante" class="title">
+        <span>5.7.</span> Posicionamiento flotante
+    </h1>
+
+    
+
+<p>El posicionamiento flotante es el más difícil de comprender pero al mismo tiempo es el más utilizado. La mayoría de estructuras de las páginas web complejas están diseñadas con el posicionamiento flotante, como se verá más adelante.</p>
+
+<p>Cuando una caja se posiciona con el modelo de posicionamiento flotante, automáticamente se convierte en una <em>caja flotante</em>, lo que significa que se desplaza hasta la zona más a la izquierda o más a la derecha de la posición en la que originalmente se encontraba.</p>
+
+<p>La siguiente imagen muestra el resultado de posicionar de forma flotante hacia la derecha la caja 1:</p>
+
+<div class="figure" id="figure_5_13">
+    <img src="../../img/css/f0507.gif" alt="Ejemplo de posicionamiento float de una caja" />
+
+    <p class="caption"><strong>Figura 5.13</strong> Ejemplo de posicionamiento float de una caja</p>
+</div>
+
+
+<p>Cuando se posiciona una caja de forma flotante:
+  * La caja deja de pertenecer al flujo normal de la página, lo que significa que el resto de cajas ocupan el lugar dejado por la caja flotante.
+  * La caja flotante se posiciona lo más a la izquierda o lo más a la derecha posible de la posición en la que se encontraba originalmente.</p>
+
+<p>Si en el anterior ejemplo la caja 1 se posiciona de forma flotante hacia la izquierda, el resultado es el que muestra la siguiente imagen:</p>
+
+<div class="figure" id="figure_5_14">
+    <img src="../../img/css/f0508.gif" alt="Ejemplo de posicionamiento float de una caja" />
+
+    <p class="caption"><strong>Figura 5.14</strong> Ejemplo de posicionamiento float de una caja</p>
+</div>
+
+
+<p>La caja 1 es de tipo flotante, por lo que <em>desaparece del flujo normal</em> de la página y el resto de cajas ocupan su lugar. El resultado es que la caja 2 ahora se muestra donde estaba la caja 1 y la caja 3 se muestra donde estaba la caja 2.</p>
+
+<p>Al mismo tiempo, la caja 1 se desplaza todo lo posible hacia la izquierda de la posición en la que se encontraba. El resultado es que la caja 1 se muestra encima de la nueva posición de la caja 2 y tapa todos sus contenidos.</p>
+
+<p>Si existen otras cajas flotantes, al posicionar de forma flotante otra caja, se tiene en cuenta el sitio disponible. En el siguiente ejemplo se posicionan de forma flotante hacia la izquierda las tres cajas:</p>
+
+<div class="figure" id="figure_5_15">
+    <img src="../../img/css/f0509.gif" alt="Ejemplo de posicionamiento float de varias cajas" />
+
+    <p class="caption"><strong>Figura 5.15</strong> Ejemplo de posicionamiento float de varias cajas</p>
+</div>
+
+
+<p>En el ejemplo anterior, las cajas no se superponen entre sí porque las cajas flotantes tienen en cuenta las otras cajas flotantes existentes. Como la caja 1 ya estaba posicionada lo más a la izquierda posible, la caja 2 sólo puede colocarse al lado del borde derecho de la caja 1, que es el sitio más a la izquierda posible respecto de la zona en la que se encontraba.</p>
+
+<p>Si no existe sitio en la línea actual, la caja flotante baja a la línea inferior hasta que encuentra el sitio necesario para mostrarse lo más a la izquierda o lo más a la derecha posible en esa nueva línea:</p>
+
+<div class="figure" id="figure_5_16">
+    <img src="../../img/css/f0510.gif" alt="Ejemplo de posicionamiento float cuando no existe sitio suficiente" />
+
+    <p class="caption"><strong>Figura 5.16</strong> Ejemplo de posicionamiento float cuando no existe sitio suficiente</p>
+</div>
+
+
+<p>Las cajas flotantes influyen en la disposición de todas las demás cajas. Los elementos en línea <em>hacen sitio</em> a las cajas flotantes adaptando su anchura al espacio libre dejado por la caja desplazada. Los elementos de bloque no les hacen sitio, pero sí que adaptan sus contenidos para que no se solapen con las cajas flotantes.</p>
+
+<p>La propiedad CSS que permite posicionar de forma flotante una caja se denomina <code>float</code>:</p>
+
+<div class="table" id="table_5_3">
+
+    <table class="property" summary="Definición de la propiedad float de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>float</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>left | right | none | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>none</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el tipo de posicionamiento flotante del elemento</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Si se indica un valor <code>left</code>, la caja se desplaza hasta el punto más a la izquierda posible en esa misma línea (si no existe sitio en esa línea, la caja baja una línea y se muestra lo más a la izquierda posible en esa nueva línea). El resto de elementos adyacentes se adaptan y <em>fluyen</em> alrededor de la caja flotante.</p>
+
+<p>El valor <code>right</code> tiene un funcionamiento idéntico, salvo que en este caso, la caja se desplaza hacia la derecha. El valor <code>none</code> permite anular el posicionamiento flotante de forma que el elemento se muestre en su posición original.</p>
+
+<p><div class="exercise"><p class="title">Ejercicio 6</p> <p><a href="../capitulo_15/ejercicio_6.html">Ver enunciado</a></p></div></p>
+
+<p>Los elementos que se encuentran alrededor de una caja flotante adaptan sus contenidos para que fluyan alrededor del elemento posicionado:</p>
+
+<div class="figure" id="figure_5_17">
+    <img src="../../img/css/f0513.gif" alt="Elementos que fluyen alrededor de un elemento posicionado mediante float" />
+
+    <p class="caption"><strong>Figura 5.17</strong> Elementos que fluyen alrededor de un elemento posicionado mediante float</p>
+</div>
+
+
+<p>La regla CSS que se aplica en la imagen del ejemplo anterior es:</p>
+
+<div class="code css">
+<pre class="css">img <span class="br0">&#123;</span>
+  <span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Uno de los principales motivos para la creación del posicionamiento <code>float</code> fue precisamente la posibilidad de colocar imágenes alrededor de las cuales fluye el texto.</p>
+
+<p>CSS permite controlar la forma en la que los contenidos fluyen alrededor de los contenidos posicionados mediante <code>float</code>. De hecho, en muchas ocasiones es admisible que algunos contenidos fluyan alrededor de una imagen, pero el resto de contenidos deben mostrarse en su totalidad sin fluir alrededor de la imagen:</p>
+
+<div class="figure" id="figure_5_18">
+    <img src="../../img/css/f0514.gif" alt="Forzando a que un elemento no fluya alrededor de otro elemento posicionado mediante float" />
+
+    <p class="caption"><strong>Figura 5.18</strong> Forzando a que un elemento no fluya alrededor de otro elemento posicionado mediante float</p>
+</div>
+
+
+<p>La propiedad <code>clear</code> permite modificar el comportamiento por defecto del posicionamiento flotante para forzar a un elemento a mostrarse debajo de cualquier caja flotante. La regla CSS que se aplica al segundo párrafo del ejemplo anterior es la siguiente:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;clear: left;&quot;</span>&gt;</span>...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>La definición formal de la propiedad <code>clear</code> se muestra a continuación:</p>
+
+<div class="table" id="table_5_4">
+
+    <table class="property" summary="Definición de la propiedad clear de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>clear</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>none | left | right | both | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos de bloque</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>none</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Indica el lado del elemento que no debe ser adyacente a ninguna caja flotante</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>La propiedad <code>clear</code> indica el lado del elemento HTML que no debe ser adyacente a ninguna caja posicionada de forma flotante. Si se indica el valor <code>left</code>, el elemento se desplaza de forma descendente hasta que pueda colocarse en una línea en la que no haya ninguna caja flotante en el lado izquierdo.</p>
+
+<p>La especificación oficial de CSS explica este comportamiento como <em>"un desplazamiento descendente hasta que el borde superior del elemento esté por debajo del borde inferior de cualquier elemento flotante hacia la izquierda"</em>.</p>
+
+<p>Si se indica el valor <code>right</code>, el comportamiento es análogo, salvo que en este caso se tienen en cuenta los elementos desplazados hacia la derecha.</p>
+
+<p>El valor <code>both</code> despeja los lados izquierdo y derecho del elemento, ya que desplaza el elemento de forma descendente hasta que el borde superior se encuentre por debajo del borde inferior de cualquier elemento flotante hacia la izquierda o hacia la derecha.</p>
+
+<p>Como se verá más adelante, la propiedad <code>clear</code> es imprescindible cuando se crean las estructuras de las páginas web complejas.</p>
+
+<p>Si se considera el siguiente código CSS y HTML:</p>
+
+<div class="code css">
+<pre class="css"><span class="re0">#paginacion</span> <span class="br0">&#123;</span>
+  <span class="kw1">border</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="re0">#CCC</span><span class="sy0">;</span>
+  <span class="kw1">background-color</span><span class="sy0">:</span> <span class="re0">#E0E0E0</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">.5em</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re1">.derecha</span>   <span class="br0">&#123;</span> <span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">right</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.izquierda</span> <span class="br0">&#123;</span> <span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>  <span class="br0">&#125;</span></pre>
+</div>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;paginacion&quot;</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;izquierda&quot;</span>&gt;</span><span class="sc1">&amp;laquo;</span> Anterior<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;derecha&quot;</span>&gt;</span>Siguiente <span class="sc1">&amp;raquo;</span><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></pre>
+</div>
+
+<p>Si se visualiza la página anterior en cualquier navegador, el resultado es el que muestra la siguiente imagen:</p>
+
+<div class="figure" id="figure_5_19">
+    <img src="../../img/css/f0511.gif" alt="Visualización incorrecta de dos elementos posicionados mediante float" />
+
+    <p class="caption"><strong>Figura 5.19</strong> Visualización incorrecta de dos elementos posicionados mediante float</p>
+</div>
+
+
+<p>Los elementos <code>Anterior</code> y <code>Siguiente</code> <em>se salen</em> de su elemento contenedor y el resultado es visualmente incorrecto. El motivo de este comportamiento es que un elemento posicionado de forma flotante ya no pertenece al flujo normal de la página HTML. Por tanto, el elemento <code>&lt;div id="paginacion"&gt;</code> en realidad no encierra ningún contenido y por eso se visualiza incorrectamente.</p>
+
+<p>La solución consiste en utilizar la propiedad <code>overflow</code> (que se explica más adelante) sobre el elemento contenedor:</p>
+
+<div class="code css">
+<pre class="css"><span class="re0">#paginacion</span> <span class="br0">&#123;</span>
+  <span class="kw1">border</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="re0">#CCC</span><span class="sy0">;</span>
+  <span class="kw1">background-color</span><span class="sy0">:</span> <span class="re0">#E0E0E0</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">.5em</span><span class="sy0">;</span>
+  <span class="kw1">overflow</span><span class="sy0">:</span> <span class="kw2">hidden</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re1">.derecha</span>   <span class="br0">&#123;</span> <span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">right</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.izquierda</span> <span class="br0">&#123;</span> <span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>  <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Si se visualiza de nuevo la página anterior en cualquier navegador, el resultado ahora sí que es el esperado:</p>
+
+<div class="figure" id="figure_5_20">
+    <img src="../../img/css/f0512.gif" alt="Visualización correcta de dos elementos posicionados mediante float" />
+
+    <p class="caption"><strong>Figura 5.20</strong> Visualización correcta de dos elementos posicionados mediante float</p>
+</div>
+
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="posicionamiento_fijo.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>5.6. Posicionamiento fijo</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="visualizacion.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>5.8. Visualización</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Posicionamiento%20flotante%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_5.html">
+                    <span>Capítulo 5.</span> Posicionamiento y visualización
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="tipos_de_elementos.html">
+                    <span>5.1.</span> Tipos de elementos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento.html">
+                    <span>5.2.</span> Posicionamiento
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_normal.html">
+                    <span>5.3.</span> Posicionamiento normal
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_relativo.html">
+                    <span>5.4.</span> Posicionamiento relativo
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_absoluto.html">
+                    <span>5.5.</span> Posicionamiento absoluto
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_fijo.html">
+                    <span>5.6.</span> Posicionamiento fijo
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="posicionamiento_flotante.html">
+                    <span>5.7.</span> Posicionamiento flotante
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="visualizacion.html">
+                    <span>5.8.</span> Visualización
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_5/posicionamiento_flotante.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:22 GMT -->
+</html>

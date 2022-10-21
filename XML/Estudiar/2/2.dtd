@@ -1,0 +1,60 @@
+<!ELEMENT tablon (anuncio+)>
+
+    <!-- , secuencia obligatoria de elementos
+            +   almenos 1
+            *   cero o más
+            ?   cero o una, elemento opcional
+            |   una u otra
+    -->
+
+    <!ELEMENT anuncio (fecha,asunto,texto?,precio,(contacto|telefono)+,fechaLimite?,localiza,vacio)>
+
+    <!-- ATTLIST = nombreElemento nombreAtributo tipoAtributo valorPorDefecto -->
+
+    <!-- Valor Atributos :
+                    #REQUIRED => OBLIGATORIO
+                    #IMPLIED => OPCIONAL
+                    #FIXED "VALOR" => VALOR CONSTANTE
+                    (VALOR1 | VALOR2) => ENUMAERADO
+    -->
+
+    <!-- Tipos de attuto
+            CDATA -> CUALQUIER CARÁCTER
+            NMTOKEN -> SOLO LETRAS, DÍGITOS, ., -, _, :
+            NMTOKENS -> LOS MISMOS QUE NMTOKEN + ESPACIOS EN BLANCO, TAB ...
+            ID -> 
+                    DEBE COMENZAR CON 1 LETRA
+                    SOLO CARÁCTERES VÁLIDFOS EN NMTOKEN
+                    1 ELEMENTO SOLO 1 ATRIBUTO ID
+                    ID DEBE TENER UN VALOR QUE NO SE REPITA INCLUSO ENTREETROS ATRIBUTOS DEL TIPO ID
+            IDREF -> CORRESPONDE CON EL VALOR DE ALGÚN ATRIBUTO ID DEL DOCUMENTO
+            IDREFS -> PUEDE CONTENER VARIAS REFERENCIAS A ELEMENTOS CON ATRIBUTOS ID SEPARADOS POR ESPACIOS EN BLANCO
+    -->
+
+    <!-- 3 atributos para 1 elemento -->
+
+    <!ATTLIST anuncio vendido (Si|No) #REQUIRED>
+    <!ATTLIST anuncio lang CDATA #FIXED "ESP">
+    <!ATTLIST anuncio codigo ID #REQUIRED>
+
+    <!-- Cuando hay más de un atributo para un elemento se puede poner de la siguiente forma
+
+        <!ATTLIST anuncio vendido (Si|No) #REQUIRED
+                        lang CDATA #FIXED "ESP"
+                        codigo ID #REQUIRED> 
+    -->
+
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT asunto (#PCDATA)>
+        <!ELEMENT texto (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+        <!ATTLIST precio Moneda_Pago NMTOKEN #IMPLIED>
+        <!ELEMENT contacto (nombre, telefono)>
+        <!ATTLIST contacto visible (Si|No) #REQUIRED>
+            <!ELEMENT nombre (#PCDATA)>
+            <!ELEMENT telefono (#PCDATA)>
+        <!ELEMENT fechaLimite (#PCDATA)>
+        <!ELEMENT localiza (#PCDATA)>
+        <!ELEMENT vacio EMPTY>
+
+        <!-- & < > ==> &amp; &lt; &gt; -->

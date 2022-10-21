@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_5/visualizacion.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>5.8. Visualización (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="posicionamiento_flotante.html" />
+        <link rel="next" href="../capitulo_6.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="5.8. Visualización (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_5.html" itemprop="url">
+                    <span itemprop="title">Capítulo 5. Posicionamiento y visualización</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>5.8. Visualización</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="visualizacion" class="title">
+        <span>5.8.</span> Visualización
+    </h1>
+
+    
+
+<p>Además de las propiedades que controlan el posicionamiento de los elementos, CSS define otras cuatro propiedades para controlar su visualización: <code>display</code>, <code>visibility</code>, <code>overflow</code> y <code>z-index</code>.</p>
+
+<p>Utilizando algunas de estas propiedades es posible ocultar y/o hacer invisibles las cajas de los elementos, por lo que son imprescindibles para realizar efectos avanzados y animaciones.</p>
+
+<h3 id="propiedades_display_y_visibility">5.8.1. Propiedades display y visibility</h3>
+
+<p>Las propiedades <code>display</code> y <code>visibility</code> controlan la visualización de los elementos. Las dos propiedades permiten ocultar cualquier elemento de la página. Habitualmente se utilizan junto con JavaScript para crear efectos dinámicos como mostrar y ocultar determinados textos o imágenes cuando el usuario pincha sobre ellos.</p>
+
+<p>La propiedad <code>display</code> permite ocultar completamente un elemento haciendo que desaparezca de la página. Como el elemento oculto no se muestra, el resto de elementos de la página se mueven para ocupar su lugar.</p>
+
+<p>Por otra parte, la propiedad <code>visibility</code> permite hacer invisible un elemento, lo que significa que el navegador crea la caja del elemento pero no la muestra. En este caso, el resto de elementos de la página no modifican su posición, ya que aunque la caja no se ve, sigue ocupando sitio.</p>
+
+<p>La siguiente imagen muestra la diferencia entre ocultar la caja número 5 mediante la propiedad <code>display</code> o hacerla invisible mediante la propiedad <code>visibility</code>:</p>
+
+<div class="figure" id="figure_5_21">
+    <img src="../../img/css/f0522.gif" alt="Diferencias visuales entre las propiedades display y visibility" />
+
+    <p class="caption"><strong>Figura 5.21</strong> Diferencias visuales entre las propiedades display y visibility</p>
+</div>
+
+
+<p>En general, cuando se oculta un elemento no es deseable que siga ocupando sitio en la página, por lo que la propiedad <code>display</code> se utiliza mucho más que la propiedad <code>visibility</code>.</p>
+
+<p>A continuación se muestra la definición completa de la propiedad <code>display</code>:</p>
+
+<div class="table" id="table_5_5">
+
+    <table class="property" summary="Definición de la propiedad display de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>display</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>inline | block | none | list-item | run-in | inline-block | table | inline-table | table-row-group | table-header-group | table-footer-group | table-row | table-column-group | table-column | table-cell | table-caption | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>inline</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Permite controlar la forma de visualizar un elemento e incluso ocultarlo</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Las posibilidades de la propiedad <code>display</code> son mucho más avanzadas que simplemente ocultar elementos. En realidad, la propiedad <code>display</code> modifica la forma en la que se visualiza un elemento.</p>
+
+<p>Los valores más utilizados son <code>inline</code>, <code>block</code> y <code>none</code>. El valor <code>block</code> muestra un elemento como si fuera un elemento de bloque, independientemente del tipo de elemento que se trate. El valor <code>inline</code> visualiza un elemento en forma de elemento en línea, independientemente del tipo de elemento que se trate.</p>
+
+<p>El valor <code>none</code> oculta un elemento y hace que desaparezca de la página. El resto de elementos de la página se visualizan como si no existiera el elemento oculto, es decir, pueden ocupar el espacio en el que se debería visualizar el elemento.</p>
+
+<p>El siguiente ejemplo muestra el uso de la propiedad <code>display</code> para mostrar un elemento de bloque como si fuera un elemento en línea y para mostrar un elemento en línea como si fuera un elemento de bloque:</p>
+
+<div class="figure" id="figure_5_22">
+    <img src="../../img/css/f0523.gif" alt="Ejemplo de propiedad display" />
+
+    <p class="caption"><strong>Figura 5.22</strong> Ejemplo de propiedad display</p>
+</div>
+
+
+<p>Las reglas CSS del ejemplo anterior son las siguientes:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">div</span>&gt;</span>DIV normal<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;display:inline&quot;</span>&gt;</span>DIV con display:inline<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Enlace normal<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;display:block&quot;</span>&gt;</span>Enlace con display:block<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre>
+</div>
+
+<p>Como se verá más adelante, la propiedad <code>display: inline</code> se puede utilizar en las listas (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>) que se quieren mostrar horizontalmente y la propiedad <code>display: block</code> se emplea frecuentemente para los enlaces que forman el menú de navegación.</p>
+
+<p>Por su parte, la definición completa de la propiedad <code>visibility</code> es mucho más sencilla:</p>
+
+<div class="table" id="table_5_6">
+
+    <table class="property" summary="Definición de la propiedad visibility de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>visibility</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>visible | hidden | collapse | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>visible</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Permite hacer visibles e invisibles a los elementos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Las posibilidades de la propiedad <code>visibility</code> son mucho más limitadas que las de la propiedad <code>display</code>, ya que sólo permite hacer visibles o invisibles a los elementos de la página.</p>
+
+<p>Inicialmente todas las cajas que componen la página son visibles. Empleando el valor <code>hidden</code> es posible convertir una caja en invisible para que no muestre sus contenidos. El resto de elementos de la página se muestran como si la caja todavía fuera visible, por lo que en el lugar donde originalmente se mostraba la caja invisible, ahora se muestra un hueco vacío.</p>
+
+<p>Por último, el valor <code>collapse</code> de la propiedad <code>visibility</code> sólo se puede utilizar en las filas, grupos de filas, columnas y grupos de columnas de una tabla. Su efecto es similar al de la propiedad <code>display</code>, ya que oculta completamente la fila y/o columna y se pueden mostrar otros contenidos en ese lugar. Si se utiliza el valor <code>collapse</code> sobre cualquier otro tipo de elemento, su efecto es idéntico al valor <code>hidden</code>.</p>
+
+<h3 id="relacion_entre_display_float_y_position">5.8.2. Relación entre display, float y position</h3>
+
+<p>Cuando se establecen las propiedades <code>display</code>, <code>float</code> y <code>position</code> sobre una misma caja, su interpretación es la siguiente:</p>
+
+<ol>
+<li>Si <code>display</code> vale <code>none</code>, se ignoran las propiedades <code>float</code> y <code>position</code> y la caja no se muestra en la página.</li>
+<li>Si <code>position</code> vale <code>absolute</code> o <code>fixed</code>, la caja se posiciona de forma absoluta, se considera que <code>float</code> vale <code>none</code> y la propiedad <code>display</code> vale <code>block</code> tanto para los elementos en línea como para los elementos de bloque. La posición de la caja se determina mediante el valor de las propiedades <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code>.</li>
+<li>En cualquier otro caso, si <code>float</code> tiene un valor distinto de <code>none</code>, la caja se posiciona de forma flotante y la propiedad <code>display</code> vale <code>block</code> tanto para los elementos en línea como para los elementos de bloque.</li>
+</ol>
+
+<h3 id="propiedad_overflow">5.8.3. Propiedad overflow</h3>
+
+<p>Normalmente, los contenidos de un elemento se pueden mostrar en el espacio reservado para ese elemento. Sin embargo, en algunas ocasiones el contenido de un elemento no cabe en el espacio reservado para ese elemento y se desborda.</p>
+
+<p>La situación más habitual en la que el contenido sobresale de su espacio reservado es cuando se establece la anchura y/o altura de un elemento mediante la propiedad <code>width</code> y/o <code>height</code>. Otra situación habitual es la de las líneas muy largas contenidas dentro de un elemento <code>&lt;pre&gt;</code>, que hacen que la página entera sea demasiado ancha.</p>
+
+<p>CSS define la propiedad <code>overflow</code> para controlar la forma en la que se visualizan los contenidos que sobresalen de sus elementos.</p>
+
+<div class="table" id="table_5_7">
+
+    <table class="property" summary="Definición de la propiedad overflow de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>overflow</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>visible | hidden | scroll | auto | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Elementos de bloque y celdas de tablas</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>visible</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Permite controlar los contenidos sobrantes de un elemento</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Los valores de la propiedad <code>overflow</code> tienen el siguiente significado:</p>
+
+<ul>
+<li><code>visible</code>: el contenido no se corta y se muestra sobresaliendo la zona reservada para visualizar el elemento. Este es el comportamiento por defecto.</li>
+<li><code>hidden</code>: el contenido sobrante se oculta y sólo se visualiza la parte del contenido que cabe dentro de la zona reservada para el elemento.</li>
+<li><code>scroll</code>: solamente se visualiza el contenido que cabe dentro de la zona reservada para el elemento, pero también se muestran barras de <em>scroll</em> que permiten visualizar el resto del contenido.</li>
+<li><code>auto</code>: el comportamiento depende del navegador, aunque normalmente es el mismo que la propiedad <code>scroll</code>.</li>
+</ul>
+
+<p>La siguiente imagen muestra un ejemplo de los tres valores típicos de la propiedad <code>overflow</code>:</p>
+
+<div class="figure" id="figure_5_23">
+    <img src="../../img/css/f0524.gif" alt="Ejemplo de propiedad overflow" />
+
+    <p class="caption"><strong>Figura 5.23</strong> Ejemplo de propiedad overflow</p>
+</div>
+
+
+<p>El código HTML y CSS del ejemplo anterior se muestran a continuación:</p>
+
+<div class="code css">
+<pre class="css">div <span class="br0">&#123;</span>
+  <span class="kw1">display</span><span class="sy0">:</span> <span class="kw2">inline</span><span class="sy0">;</span>
+  <span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>
+  <span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">1em</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">.3em</span><span class="sy0">;</span>
+  <span class="kw1">border</span><span class="sy0">:</span> <span class="re3">2px</span> <span class="kw2">solid</span> <span class="re0">#555</span><span class="sy0">;</span>
+  <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">100px</span><span class="sy0">;</span>
+  <span class="kw1">height</span><span class="sy0">:</span> <span class="re3">150px</span><span class="sy0">;</span>
+  <span class="kw1">font</span><span class="sy0">:</span> <span class="re3">1em</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+&lt;div<span class="sy0">&gt;</span>&lt;h1<span class="sy0">&gt;</span><span class="kw1">overflow</span><span class="sy0">:</span> visible&lt;/h1<span class="sy0">&gt;</span> Lorem ipsum dolor sit amet<span class="sy0">,</span> consectetuer 
+adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. Maecenas 
+blandit. Morbi mi.&lt;/div<span class="sy0">&gt;</span>
+&nbsp;
+&lt;div style<span class="sy0">=</span><span class="st0">&quot;overflow:hidden&quot;</span><span class="sy0">&gt;</span>&lt;h1<span class="sy0">&gt;</span><span class="kw1">overflow</span><span class="sy0">:</span> hidden&lt;/h1<span class="sy0">&gt;</span> Lorem ipsum dolor 
+sit amet<span class="sy0">,</span> consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim 
+lacinia. Maecenas blandit. Morbi mi.&lt;/div<span class="sy0">&gt;</span>
+&nbsp;
+&lt;div style<span class="sy0">=</span><span class="st0">&quot;overflow:scroll&quot;</span><span class="sy0">&gt;</span>&lt;h1<span class="sy0">&gt;</span><span class="kw1">overflow</span><span class="sy0">:</span> scroll&lt;/h1<span class="sy0">&gt;</span> Lorem ipsum dolor sit 
+amet<span class="sy0">,</span> consectetuer adipiscing elit. Cras vitae dolor eu enim dignissim lacinia. 
+Maecenas blandit. Morbi mi.&lt;/div<span class="sy0">&gt;</span></pre>
+</div>
+
+<h3 id="propiedad_z_index">5.8.4. Propiedad z-index</h3>
+
+<p>Además de posicionar una caja de forma horizontal y vertical, CSS permite controlar la posición tridimensional de las cajas posicionadas. De esta forma, es posible indicar las cajas que se muestran delante o detrás de otras cajas cuando se producen solapamientos.</p>
+
+<p>La posición tridimensional de un elemento se establece sobre un tercer eje llamado Z y se controla mediante la propiedad <code>z-index</code>. Utilizando esta propiedad es posible crear páginas complejas con varios niveles o capas.</p>
+
+<p>A continuación se muestra la definición formal de la propiedad <code>z-index</code>:</p>
+
+<div class="table" id="table_5_8">
+
+    <table class="property" summary="Definición de la propiedad z-index de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>z-index</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>auto | numero | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Elementos que han sido posicionados explícitamente</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>auto</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el nivel tridimensional en el que se muestra el elemento</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El valor más común de la propiedad <code>z-index</code> es un número entero. Aunque la especificación oficial permite los números negativos, en general se considera el número <code>0</code> como el nivel más bajo.</p>
+
+<p>Cuanto más alto sea el valor numérico, más cerca del usuario se muestra la caja. Un elemento con <code>z-index: 10</code> se muestra por encima de los elementos con <code>z-index: 8</code> o <code>z-index: 9</code>, pero por debajo de elementos con <code>z-index: 20</code> o <code>z-index: 50</code>.</p>
+
+<p>La siguiente imagen muestra un ejemplo de uso de la propiedad <code>z-index</code>:</p>
+
+<div class="figure" id="figure_5_24">
+    <img src="../../img/css/f0525.gif" alt="Ejemplo de propiedad z-index" />
+
+    <p class="caption"><strong>Figura 5.24</strong> Ejemplo de propiedad z-index</p>
+</div>
+
+
+<p>El código HTML y CSS del ejemplo anterior es el siguiente:</p>
+
+<div class="code css">
+<pre class="css">div <span class="br0">&#123;</span> <span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re0">#caja1</span> <span class="br0">&#123;</span> <span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">5</span><span class="sy0">;</span>  <span class="kw1">top</span><span class="sy0">:</span> <span class="re3">1em</span><span class="sy0">;</span> <span class="kw1">left</span><span class="sy0">:</span> <span class="re3">8em</span><span class="sy0">;</span><span class="br0">&#125;</span>
+<span class="re0">#caja2</span> <span class="br0">&#123;</span> <span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">15</span><span class="sy0">;</span>  <span class="kw1">top</span><span class="sy0">:</span> <span class="re3">5em</span><span class="sy0">;</span> <span class="kw1">left</span><span class="sy0">:</span> <span class="re3">5em</span><span class="sy0">;</span><span class="br0">&#125;</span>
+<span class="re0">#caja3</span> <span class="br0">&#123;</span> <span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">25</span><span class="sy0">;</span>  <span class="kw1">top</span><span class="sy0">:</span> <span class="re3">2em</span><span class="sy0">;</span> <span class="kw1">left</span><span class="sy0">:</span> <span class="re3">2em</span><span class="sy0">;</span><span class="br0">&#125;</span>
+&nbsp;
+&lt;div id<span class="sy0">=</span><span class="st0">&quot;caja1&quot;</span><span class="sy0">&gt;</span>Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - 
+Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - 
+Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span> - Caja <span class="nu0">1</span>&lt;/div<span class="sy0">&gt;</span>
+&nbsp;
+&lt;div id<span class="sy0">=</span><span class="st0">&quot;caja2&quot;</span><span class="sy0">&gt;</span>Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - 
+Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - 
+Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span> - Caja <span class="nu0">2</span>&lt;/div<span class="sy0">&gt;</span>
+&nbsp;
+&lt;div id<span class="sy0">=</span><span class="st0">&quot;caja3&quot;</span><span class="sy0">&gt;</span>Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - 
+Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - 
+Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span> - Caja <span class="nu0">3</span>&lt;/div<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>La propiedad <code>z-index</code> sólo tiene efecto en los elementos posicionados, por lo que es obligatorio que la propiedad <code>z-index</code> vaya acompañada de la propiedad <code>position</code>. Si debes posicionar un elemento pero no quieres moverlo de su posición original ni afectar al resto de elementos de la página, puedes utilizar el posicionamiento relativo (<code>position: relative</code>).</p>
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="posicionamiento_flotante.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>5.7. Posicionamiento flotante</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="../capitulo_6.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>Capítulo 6. Texto</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Visualizaci%C3%B3n%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_5.html">
+                    <span>Capítulo 5.</span> Posicionamiento y visualización
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="tipos_de_elementos.html">
+                    <span>5.1.</span> Tipos de elementos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento.html">
+                    <span>5.2.</span> Posicionamiento
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_normal.html">
+                    <span>5.3.</span> Posicionamiento normal
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_relativo.html">
+                    <span>5.4.</span> Posicionamiento relativo
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_absoluto.html">
+                    <span>5.5.</span> Posicionamiento absoluto
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_fijo.html">
+                    <span>5.6.</span> Posicionamiento fijo
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_flotante.html">
+                    <span>5.7.</span> Posicionamiento flotante
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="visualizacion.html">
+                    <span>5.8.</span> Visualización
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_5/visualizacion.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:23 GMT -->
+</html>

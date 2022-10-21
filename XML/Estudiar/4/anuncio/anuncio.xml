@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="anuncio.xsd"
+        type="application/xml" 
+        schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<tablon fechaApertura="2011-12-21" categoria="deporte">
+    <anuncio categoria="deporte">
+        <fecha>2012-12-21</fecha>
+        <asunto>Vendo Bici paseo</asunto>
+        <estado estado="nuevo"></estado>
+        <texto>Bici marca RXcederTX en buen estado </texto>
+        <peso KG="12.3"/>
+        <precio moneda="€">100.99</precio>
+        <contacto>García, 956121212</contacto>
+    </anuncio>
+
+    <anuncio categoria="deporte">
+        <fecha>2022-04-12</fecha>
+        <asunto>Vendo Patinete</asunto>
+        <estado estado="semi-nuevo"></estado>
+        <texto>Vendo Patinete de 4 ruedas</texto>
+        <peso KG="2.75"/>
+        <precio moneda="€">12.00</precio>
+        <contacto>pacosanz@gmail.com</contacto>
+    </anuncio>
+</tablon>

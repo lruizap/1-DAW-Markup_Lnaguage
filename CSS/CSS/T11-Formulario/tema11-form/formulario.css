@@ -1,0 +1,62 @@
+/* formulario.css */
+
+input:focus {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* input {
+    padding:  .3em .5em;
+} */
+
+/* disposición input debajo de label */
+
+/* label, input[type="submit"] {
+    display: block;
+    margin-top: 1.5em;
+}  */
+
+/* disposición en columnas con float */
+
+/* label {
+    width: 25%;
+    float: left;
+}
+
+div {
+    margin-top:1em;
+} */
+
+/* con grid */
+
+/* form.rejilla {
+    display: grid;
+    grid-template-columns: 25% 55%;
+} */
+
+
+body {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+}
+
+h1 {
+    grid-column: 1/ span 2;
+    margin: 1em;
+}
+
+nav {
+    margin: 2em;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 1em;
+    width: 40%;
+}
+
+input[type="submit"] {
+    position: relative;
+    left: 26%;
+    width: 15%;
+}

@@ -1,0 +1,42 @@
+/* enlaces.css */
+
+a img {
+  border: blue 4px solid;
+}
+a img {
+  border: none;
+  box-shadow: 30px 10px red;
+}
+
+li a {
+  color: red;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  border-bottom: green 2px dotted;
+  background-color: yellow;
+}
+
+p a[href$=".pdf"] {
+  color: green;
+  background-image: url(icono_pdf.png);
+  background-repeat: no-repeat;
+  padding-right: 16px;
+  background-position: right center;
+}
+
+p a:visited {
+  text-decoration: none;
+  color: lime;
+}
+
+p a:hover {
+  background-color: yellow;
+}
+
+p a:active {
+  border: 2px solid red;
+}
+h1:hover {
+  color: red;
+}

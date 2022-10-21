@@ -1,0 +1,66 @@
+/* texto.css */
+
+blockquote::first-line {
+    color:red;
+}
+
+blockquote::first-letter {
+    color:blue;
+    font-weight: bold;
+    font-size: 300%;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+article img {
+    vertical-align: center;
+}
+
+abbr {
+    font-variant: small-caps;
+}
+
+p:nth-of-type(1) {
+    text-transform: uppercase;
+}
+strong {
+    background-color: yellow;
+    font-weight: normal;
+}
+em {
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: blink;
+    font-size: 3em;
+    vertical-align: top;
+    
+}
+
+/* color */
+
+h1 {
+    /* font-family: "Comic Neue", monospace;*/
+    font: 24px "Comic Neue", monospace;
+    color: #494949;
+    font-size: large;
+    font-weight: bolder;
+    font-style: italic; 
+    text-align: right;
+    border-bottom: 1px solid #000;
+    text-decoration: underline;
+}
+
+section {
+    font-size: 12px;
+}
+p:nth-child(1) {
+    /* font-family: monospace; */
+    font-size: large;
+    text-align: justify;
+}
+
+/* p{
+ text-indent: 2em;
+ word-spacing: 3em;
+} */

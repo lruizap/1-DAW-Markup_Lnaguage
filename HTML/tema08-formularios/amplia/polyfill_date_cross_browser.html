@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Modernizer Detect 'date' input type</title>
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">  
+
+  <script type="text/javascript" 
+          src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-1.7-development-only.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>		
+
+  <script type="text/javascript">
+		$(function(){
+			if(!Modernizr.inputtypes.date) { // Comprueba si está soportado
+				alert("si ve esta ventana es que el tipo date no está soportado. Se simula ese tipo mediante polyfill con JQueryUI");
+				console.log("The 'date' input type is not supported, so using JQueryUI datepicker instead.");
+				$("input.fecha").datepicker(); // selecciona todos los class fecha y le asocia el calendario de JQueryUI
+			}
+			// sin modernizr
+			//var xx = $("input[type='date']"); // en html está date
+			//if (xx[0].type != 'date' )   // pero en DOM son tipo text
+			//	 $(xx).datepicker(); 			
+    }); 
+  </script>
+</head>
+<body>
+
+<h1> Inputs HTML5: ¿Y si no están soportados por el navegador?</h1>
+<p>No todos los nuevos input estan soportados por los navegadores. Por ejemplo, date, time o color. Si no están soportados por el navegador, este ignora el tipo y considera la entrada de tipo texto. </p>
+<p> En estos casos existe la posibilidad de comprobar si el navegador soporta el tipo (con Modernizr por ejemplo), y si no lo hace añadir  una solución "programada" (por ejemplo JQuery  da la misma funcionalidad con el método datepicker). </p>
+
+<p> En esta página se utiliza el <code>&lt;input type=&quot;date&quot;&gt;</code> que a fecha  01-10-2016 <strong>no está soportado por Firefox</strong>. En caso de mostrar la página con Chrome, se muestra el input nativo HTML5. En caso de usar Firefox se detecta que no lo soporta, y en ese caso se seleccionan los input de la clase fecha y se les aplica el método datepicker de jQueryUI.</p>
+
+<p>En general se habla en estos casos de Polyfill: código o plugin que permite obtener las funcionalidades de HTML5 en  navegadores que no lo soportan.</p>
+
+		<form action="#">
+		<fieldset>	
+		<legend>Formulario de ejemplo con input de tipo date</legend>			
+		     <label for="fechaSalida">Fecha Salida
+				  <input id="fechaSalida" name="fechaSalida" type="date" class="fecha" />
+				</label> <br>
+				<label for="fechaLlegada">Fecha Llegada
+				  <input id="fechaLlegada" name="fechaLlegada" type="date" class="fecha"/>
+				</label>
+				<br>
+				<input type="submit" value="Enviar">
+		</fieldset>
+		</form>		
+
+
+
+<p>En este ejemplo se ha añadido en la cabecera código similar a este, con una llamada a alert que le indica si el tipo date esta soportado o no:</p>
+<pre><code>
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(function(){
+  if(!Modernizr.inputtypes.date) { // Comprueba si est&aacute; soportado
+    alert(&quot;tipo date no soportado. Se simula ese tipo mediante polyfill con JQueryUI&quot;);
+    console.log(&quot;The &#039;date&#039; input type is not supported, so using JQueryUI datepicker instead.&quot;);
+    $(&quot;input.fecha&quot;).datepicker(); // selecciona todos los class fecha y le asocia el calendario de JQueryUI
+  }	
+}); 
+&lt;/script&gt;
+</code></pre>
+
+
+</body>
+</html>

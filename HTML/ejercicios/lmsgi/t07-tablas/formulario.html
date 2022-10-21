@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>  
+
+    <h1>Formulario inicial</h1>
+
+    <p><button onclick="alert('YEPA!!')">Botón Alerta</button> <!-- Tiene que estar fuera del formulario y en el navegador externo para que funcione--></p>
+
+    <form action="/reclama.php">
+
+        <p>  
+        <label for="nombre">Nombre</label>
+        <input required name="nombre" type="text" id="nombre">
+        </p> <!-- maxlength="5" restringir contenido y va en el imput --> 
+    
+        <p>
+         <label for="clave">Clave</label>
+         <input minlength="4" name="clave" type="password" id="clave">
+        </p>
+
+        <p> <strong>Aficiones</strong>
+            <br>
+            <input id="informatica" name="Aficiones" type="checkbox" value="informatica"/>
+            <label for="informatica">informatica</label>
+            <br> 
+            <input id="musica" name="Aficiones" type="checkbox" value="musica"/>
+            <label for="musica">Música</label>
+            <br>
+            <input id="juegos" name="Aficiones" type="checkbox" value="juegos"/>
+            <label for="juegos">Juegos</label>
+        </p>
+
+        <p> <strong>Asignaturas</strong> 
+            <br>
+            <input id="programacion" name="Asignaturas" type="checkbox" value="programacion"/>
+            <label for="programacion">Programación</label>
+            <br>
+            <input id="base de datos" name="Asignaturas" type="checkbox" value="base de datos"/>
+            <label for="base de datos">Base de Datos</label>
+            <br>
+            <input checked name="Asignaturas" type="checkbox" id="LDM" value="LDM"/>
+            <label for="LDM">LDM</label> <!-- checked para poner un por defecto -->
+        </p>
+
+        <fieldset>
+        <p>
+            Su serie favorita :
+            <br>
+            <input type="radio" name="serie" id="juego de tronos" value="tronos">
+            <label for="juego de tronos">Juego de Tronos</label>
+            <br>
+            <input type="radio" name="serie" id="calamar" value="calamar">
+            <label for="calamar">El Juego del Calamar</label>
+
+        </p>
+        </fieldset>
+
+        <p>
+            <!-- muchas opciones : --> <!-- pocas opciones : select-->
+
+            Selecciona Sistema Operativo :
+
+            <select name="sistema" id="sistema">
+                <output label="Sistemas operativos">
+                <optgroup> 
+                    <option value="Linux">Linux</option>
+                    <option selected value="Windows">Windows</option>
+                    <option value="ubuntu">Ubuntu</option>
+                </optgroup>
+                </output>
+                <option value="Mozilla">Mozilla Firefox</option>
+                <option value="Explore">INternet Explore</option>
+                
+            </select>
+
+        </p>
+
+        <fieldset>
+            <legend>
+                Otros elementos de formulario
+            </legend>
+            <p>
+                <label for="reclama">Texto reclamación</label>
+                <br>
+                <textarea name="reclama" id="reclama" cols="80" rows="10" maxlength="100"></textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            Adjunte CV
+            <input type="file" name="archivo" multiple>
+        </p>
+
+        <p>
+            <input required type="checkbox" name="contrato" id="contrato" value="acepta">
+            <label for="contrato">Acepto las condiciones del contrato</label>
+            <!-- required obliga al usuario a rellenar ese hueco -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </p>
+
+    </form>
+
+</body>
+</html>

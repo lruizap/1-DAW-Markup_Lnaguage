@@ -1,0 +1,47 @@
+<xml version="1.0" encoding="UTF-8">
+
+    <tablon>
+
+        <anuncio vendido="Si">
+
+            <fecha></fecha>
+            <asunto></asunto>
+            <texto></texto>
+            <precioVenta moneda="euro"></precioVenta>
+            <contacto></contacto>
+
+        </anuncio>
+
+        <anuncio vendido="No">
+
+            <fecha></fecha>
+            <asunto></asunto>
+            <texto></texto>
+            <precioVenta moneda="euro"></precioVenta>
+            <contacto></contacto>
+
+        </anuncio>
+
+    </tablon>
+
+    <clase>
+
+        <alumno>
+
+            <nombre></nombre>
+            <fechaNacimiento></fechaNacimiento>
+            <mail visible="Si"></mail>
+
+        </alumno>
+
+        <alumno>
+
+            <nombre></nombre>
+            <fechaNacimiento></fechaNacimiento>
+            <mail visible="No"></mail>
+
+        </alumno>
+
+    </clase>
+
+</xml>

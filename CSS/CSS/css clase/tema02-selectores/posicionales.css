@@ -1,0 +1,50 @@
+/* File: posicionales.css */
+
+/* :nth-child()  */
+ul :nth-child(1) {
+    color: blue;
+}
+ul :nth-last-child(2) {
+    color: blue;
+}
+
+/* :nth-child(an+b) */
+ul :nth-child(4n+3) {
+    background-color: yellow;
+}
+
+/* a partir de  */
+ul :nth-child(n+5) {
+ text-decoration: underline;
+}
+
+/* hasta el  */
+ul :nth-child(-n+5) {
+    font-style: italic;
+}
+
+/* pares/impares: nth-child(2n+1) */
+ol :nth-child(odd) { /* even|odd */
+    color:red;
+}
+
+section p:nth-of-type(even) {
+    color:darkblue;
+}
+
+/* atajos */
+section :first-child {
+    font-weight: bold;
+}
+
+section :last-child {
+    font-weight: bold;
+}
+
+section p:last-of-type {
+    font-weight: bold;
+}
+
+section p:first-of-type {
+    text-align: center;
+}

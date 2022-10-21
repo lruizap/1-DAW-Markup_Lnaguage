@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_3/unidades_de_medida.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>3.1. Unidades de medida (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="../capitulo_3.html" />
+        <link rel="next" href="colores.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="3.1. Unidades de medida (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_3.html" itemprop="url">
+                    <span itemprop="title">Capítulo 3. Unidades de medida y colores</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>3.1. Unidades de medida</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="unidades_de_medida" class="title">
+        <span>3.1.</span> Unidades de medida
+    </h1>
+
+    
+
+<p>Las medidas en CSS se emplean, entre otras, para definir la altura, anchura y márgenes de los elementos y para establecer el tamaño de letra del texto. Todas las medidas se indican como un valor numérico entero o decimal seguido de una unidad de medida (sin ningún espacio en blanco entre el número y la unidad de medida).</p>
+
+<p>CSS divide las unidades de medida en dos grupos: absolutas y relativas. Las medidas relativas definen su valor en relación con otra medida, por lo que para obtener su valor real, se debe realizar alguna operación con el valor indicado. Las unidades absolutas establecen de forma completa el valor de una medida, por lo que su valor real es directamente el valor indicado.</p>
+
+<p>Si el valor es <code>0</code>, la unidad de medida es opcional. Si el valor es distinto a <code>0</code> y no se indica ninguna unidad, la medida se ignora completamente, lo que suele ser uno de los errores más habituales de los diseñadores que empiezan con CSS. Algunas propiedades permiten indicar medidas negativas, aunque habitualmente sus valores son positivos. Si el valor decimal de una medida es inferior a <code>1</code>, se puede omitir el <code>0</code> de la izquierda (<code>0.5em</code> es equivalente a <code>.5em</code>).</p>
+
+<h3 id="unidades_absolutas">3.1.1. Unidades absolutas</h3>
+
+<p>Una medida indicada mediante unidades absolutas está completamente definida, ya que su valor no depende de otro valor de referencia. A continuación se muestra la lista completa de unidades absolutas definidas por CSS y su significado:</p>
+
+<ul>
+<li><code>in</code>, pulgadas (<em>"inches"</em>, en inglés). Una pulgada equivale a <code>2.54</code> centímetros.</li>
+<li><code>cm</code>, centímetros.</li>
+<li><code>mm</code>, milímetros.</li>
+<li><code>pt</code>, puntos. Un punto equivale a <code>1 pulgada/72</code>, es decir, unos <code>0.35</code> milímetros.</li>
+<li><code>pc</code>, picas. Una pica equivale a <code>12</code> puntos, es decir, unos <code>4.23</code> milímetros.</li>
+</ul>
+
+<p>A continuación se muestran ejemplos de utilización de unidades absolutas:</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/* El cuerpo de la página debe mostrar un margen de media pulgada */</span>
+body <span class="br0">&#123;</span> <span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">0.5in</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Los elementos &lt;h1&gt; deben mostrar un interlineado de 2 centímetros */</span>
+h1 <span class="br0">&#123;</span> <span class="kw1">line-height</span><span class="sy0">:</span> <span class="re3">2cm</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Las palabras de todos los párrafos deben estar separadas 4 milímetros entre si */</span>
+p <span class="br0">&#123;</span> <span class="kw1">word-spacing</span><span class="sy0">:</span> 4mm<span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Los enlaces se deben mostrar con un tamaño de letra de 12 puntos */</span>
+a <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">12pt</span> <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Los elementos &lt;span&gt; deben tener un tamaño de letra de 1 pica */</span>
+span <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> 1pc <span class="br0">&#125;</span></pre>
+</div>
+
+<p>La principal ventaja de las unidades absolutas es que su valor es directamente el valor que se debe utilizar, sin necesidad de realizar cálculos intermedios. Su principal desventaja es que son muy poco flexibles y no se adaptan fácilmente a los diferentes medios.</p>
+
+<p>De todas las unidades absolutas, la única que suele utilizarse es el punto (<code>pt</code>). Se trata de la unidad de medida preferida para establecer el tamaño del texto en los documentos que se van a imprimir, es decir, para el medio <code>print</code> de CSS, tal y como se verá más adelante.</p>
+
+<h3 id="unidades_relativas">3.1.2. Unidades relativas</h3>
+
+<p>La unidades relativas, a diferencia de las absolutas, no están completamente definidas, ya que su valor siempre está referenciado respecto a otro valor. A pesar de su aparente dificultad, son las más utilizadas en el diseño web por la flexibilidad con la que se adaptan a los diferentes medios.</p>
+
+<p>A continuación se muestran las tres unidades de medida relativas definidas por CSS y la referencia que toma cada una para determinar su valor real:</p>
+
+<ul>
+<li><code>em</code>, (no confundir con la etiqueta <code>&lt;em&gt;</code> de HTML) relativa respecto del tamaño de letra del elemento. </li>
+<li><code>ex</code>, relativa respecto de la altura de la letra <code>x</code> (<em>"equis minúscula"</em>) del tipo y tamaño de letra del elemento.</li>
+<li><code>px</code>, (píxel) relativa respecto de la resolución de la pantalla del dispositivo en el que se visualiza la página HTML.</li>
+</ul>
+
+<p>Las unidades <code>em</code> y <code>ex</code> no han sido creadas por CSS, sino que llevan décadas utilizándose en el campo de la tipografía. Aunque no es una definición exacta, la unidad <code>1em</code> equivale a la anchura de la letra <code>M</code> (<em>"eme mayúscula"</em>) del tipo y tamaño de letra del elemento.</p>
+
+<p>La unidad <code>em</code> hace referencia al tamaño en puntos de la letra que se está utilizando. Si se utiliza una tipografía de 12 puntos, <code>1em</code> equivale a <code>12 puntos</code>. El valor de <code>1ex</code> se puede aproximar por <code>0.5 em</code>.</p>
+
+<p>Si se considera el siguiente ejemplo:</p>
+
+<div class="code css">
+<pre class="css">p <span class="br0">&#123;</span> <span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">1em</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>La regla CSS anterior indica que los párrafos deben mostrar un margen de anchura igual a <code>1em</code>. Como se trata de una unidad de medida relativa, es necesario realizar un cálculo matemático para determinar la anchura real de ese margen.</p>
+
+<p>La unidad de medida <code>em</code> siempre hace referencia al tamaño de letra del elemento. Por otra parte, todos los navegadores muestran por defecto el texto de los párrafos con un tamaño de letra de 16 píxel. Por tanto, en este caso el margen de <code>1em</code> equivale a un margen de anchura <code>16px</code>.</p>
+
+<p>A continuación se modifica el ejemplo anterior para cambiar el tamaño de letra de los párrafos:</p>
+
+<div class="code css">
+<pre class="css">p <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">32px</span><span class="sy0">;</span> <span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">1em</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>El valor del margen sigue siendo el mismo en unidades relativas (<code>1em</code>) pero su valor real ha variado porque el tamaño de letra de los párrafos ha variado. En este caso, el margen tendrá una anchura de <code>32px</code>, ya que <code>1em</code> siempre equivale al tamaño de letra del elemento.</p>
+
+<p>Si se quiere reducir la anchura del margen a <code>16px</code> pero manteniendo el tamaño de letra de los párrafos en <code>32px</code>, se debe utilizar la siguiente regla CSS:</p>
+
+<div class="code css">
+<pre class="css">p <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">32px</span><span class="sy0">;</span> <span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">0.5em</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>El valor <code>0.5em</code> se interpreta como <em>"la mitad del tamaño de letra del elemento"</em>, ya que se debe multiplicar por <code>0.5</code> su tamaño de letra (<code>32px x 0.5 = 16px</code>). De la misma forma, si se quiere mostrar un margen de <code>8px</code> de anchura, se debería utilizar el valor <code>0.25em</code>, ya que <code>32px x 0.25 = 8px</code>.</p>
+
+<p>La gran ventaja de las unidades relativas es que siempre mantienen las proporciones del diseño de la página. Establecer el margen de un elemento con el valor <code>1em</code> equivale a indicar que <em>"el margen del elemento debe ser del mismo tamaño que su letra y debe cambiar proporcionalmente"</em>.</p>
+
+<p>En efecto, si el tamaño de letra de un elemento aumenta hasta un valor enorme, su margen de <code>1em</code> también será enorme. Si su tamaño de letra se reduce hasta un valor diminuto, el margen de <code>1em</code> también será diminuto. El uso de unidades relativas permite mantener las proporciones del diseño cuando se modifica el tamaño de letra de la página.</p>
+
+<p>El funcionamiento de la unidad <code>ex</code> es idéntico a <code>em</code>, salvo que en este caso, la referencia es la altura de la letra <code>x</code> minúscula, por lo que su valor es aproximadamente la mitad que el de la unidad <code>em</code>.</p>
+
+<p>Por último, las medidas indicadas en píxel también se consideran relativas, ya que el aspecto de los elementos dependerá de la resolución del dispositivo en el que se visualiza la página HTML. Si un elemento tiene una anchura de <code>400px</code>, ocupará la mitad de una pantalla con una resolución de <code>800x600</code>, pero ocupará menos de la tercera parte en una pantalla con resolución de <code>1440x900</code>.</p>
+
+<p>Las unidades de medida se pueden mezclar en los diferentes elementos de una misma página, como en el siguiente ejemplo:</p>
+
+<div class="code css">
+<pre class="css">body <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">10px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+h1 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">2.5em</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>En primer lugar, se establece un tamaño de letra base de <code>10</code> píxel para toda la página. A continuación, se asigna un tamaño de <code>2.5em</code> al elemento <code>&lt;h1&gt;</code>, por lo que su tamaño de letra real será de <code>2.5 x 10px = 25px</code>.</p>
+
+<p>Como se vio en los capítulos anteriores, el valor de la mayoría de propiedades CSS se hereda de padres a hijos. Así por ejemplo, si se establece el tamaño de letra al elemento <code>&lt;body&gt;</code>, todos los elementos de la página tendrán el mismo tamaño de letra, salvo que indiquen otro valor.</p>
+
+<p>Sin embargo, el valor de las medidas relativas no se hereda directamente, sino que se hereda su valor real una vez calculado. El siguiente ejemplo muestra este comportamiento:</p>
+
+<div class="code css">
+<pre class="css">body <span class="br0">&#123;</span>
+  <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">12px</span><span class="sy0">;</span>
+  <span class="kw1">text-indent</span><span class="sy0">:</span> <span class="re3">3em</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+h1 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">15px</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>La propiedad <code>text-indent</code>, como se verá en los próximos capítulos, se utiliza para tabular la primera línea de un texto. El elemento <code>&lt;body&gt;</code> define un valor para esta propiedad, pero el elemento <code>&lt;h1&gt;</code> no lo hace, por lo que heredará el valor de su elemento padre. Sin embargo, el valor heredado no es <code>3em</code>, sino <code>36px</code>.</p>
+
+<p>Si se heredara el valor <code>3em</code>, al multiplicarlo por el valor de <code>font-size</code> del elemento <code>&lt;h1&gt;</code> (que vale <code>15px</code>) el resultado sería <code>3em x 15px = 45px</code>. No obstante, como se ha comentado, los valores que se heredan no son los relativos, sino los valores ya calculados.</p>
+
+<p>Por lo tanto, en primer lugar se calcula el valor real de <code>3em</code> para el elemento <code>&lt;body&gt;</code>: <code>3em x 12px = 36px</code>. Una vez calculado el valor real, este es el valor que se hereda para el resto de elementos.</p>
+
+<h3 id="porcentajes">3.1.3. Porcentajes</h3>
+
+<p>El porcentaje también es una unidad de medida relativa, aunque por su importancia CSS la trata de forma separada a <code>em</code>, <code>ex</code> y <code>px</code>. Un porcentaje está formado por un valor numérico seguido del símbolo <code>%</code> y siempre está referenciado a otra medida. Cada una de las propiedades de CSS que permiten indicar como valor un porcentaje, define el valor al que hace referencia ese porcentaje.</p>
+
+<p>Los porcentajes se pueden utilizar por ejemplo para establecer el valor del tamaño de letra de los elementos:</p>
+
+<div class="code css">
+<pre class="css">body <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">1em</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+h1 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">200%</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+h2 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">150%</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Los tamaños establecidos para los elementos <code>&lt;h1&gt;</code> y <code>&lt;h2&gt;</code> mediante las reglas anteriores, son equivalentes a <code>2em</code> y <code>1.5em</code> respectivamente, por lo que es más habitual definirlos mediante <code>em</code>.</p>
+
+<p>Los porcentajes también se utilizan para establecer la anchura de los elementos:</p>
+
+<div class="code css">
+<pre class="css">div<span class="re0">#contenido</span> <span class="br0">&#123;</span> <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">600px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+div<span class="re1">.principal</span> <span class="br0">&#123;</span> <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">80%</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+&lt;div id<span class="sy0">=</span><span class="st0">&quot;contenido&quot;</span><span class="sy0">&gt;</span>
+  &lt;div class<span class="sy0">=</span><span class="st0">&quot;principal&quot;</span><span class="sy0">&gt;</span>
+    ...
+  &lt;/div<span class="sy0">&gt;</span>
+&lt;/div<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>En el ejemplo anterior, la referencia del valor <code>80%</code> es la anchura de su elemento padre. Por tanto, el elemento <code>&lt;div&gt;</code> cuyo atributo <code>class</code> vale <code>principal</code> tiene una anchura de <code>80% x 600px = 480px</code>.</p>
+
+<h3 id="recomendaciones">3.1.4. Recomendaciones</h3>
+
+<p>En general, se recomienda el uso de unidades relativas siempre que sea posible, ya que mejora la accesibilidad de la página y permite que los documentos se adapten fácilmente a cualquier medio y dispositivo.</p>
+
+<p>El documento <a href="http://www.w3.org/TR/WCAG10-CSS-TECHS/">Recomendaciones sobre técnicas CSS para la mejora de la accesibilidad de los contenidos HTML</a>, elaborado por el organismo W3C, recomienda el uso de la unidad <code>em</code> para indicar el tamaño del texto y para todas las medidas que sean posibles.</p>
+
+<p>Normalmente se utilizan píxel y porcentajes para definir el layout del documento (básicamente, la anchura de las columnas y de los elementos de las páginas) y <code>em</code> y porcentajes para el tamaño de letra de los textos.</p>
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="../capitulo_3.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>Capítulo 3. Unidades de medida y colores</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="colores.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>3.2. Colores</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Unidades%20de%20medida%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_3.html">
+                    <span>Capítulo 3.</span> Unidades de medida y colores
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="unidades_de_medida.html">
+                    <span>3.1.</span> Unidades de medida
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="colores.html">
+                    <span>3.2.</span> Colores
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Posicionamiento y visualización</a>
+            </li>
+                                                                                                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_3/unidades_de_medida.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:12 GMT -->
+</html>

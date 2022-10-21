@@ -1,0 +1,45 @@
+/* File: avanzados.css */
+
+/* selector hijo */
+section > p {
+    color: red;
+}
+
+/* selector adyacente */
+h2 + p {
+    text-decoration: underline;
+}
+
+/* selector sibling */
+h2 ~ p {
+    background-color: yellowgreen;
+}
+
+/* selectores de atributo */
+
+/* existe el atributo */
+[title] {
+  color: blue;
+}
+/* igual a */
+[title="revisar"] {
+    color: red;
+}
+/* contiene (no en uniwebsidad) */
+[title*="revisar"] {
+    background-color: yellow;
+}
+/* termina en (no en uniwebsidad)*/
+[href$=".pdf"] {
+    color: green;
+}
+/* comienza en  (no en uniwebsidad) */
+[href^="ftp://"] {
+    color: orange;
+}
+
+/*  */
+[class~="externo"]{ /* .externo */
+    font-weight: bold;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Valida DNI</title>
+</head>
+<body>
+
+<h1> Formulario de entrada</h1>
+<p>Los datos se envían a dni.php. 
+El formulario valida en local que son 8 números y una letra en mayúscula.</p>
+
+<form action="dni.php" method="get">
+	<p>
+		<label>
+		  DNI <input type="text" name="dni" pattern="[0-9]{8}" placeholder="8 dígitos SIN letra" />
+		</label>
+	</p>
+
+	<p>
+		<label>
+		  Letra NIF <input type="text" name="letra" pattern="[A-Z]" placeholder="Una Letra mayúscula" />
+		</label>
+	</p>
+
+	<input type="submit" name="enviar" 
+		value="Envíar" />
+	<input type="reset" name="limpiar" 
+		value="Borrar datos" />
+</form>
+
+
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tablon SYSTEM "2.dtd">
+
+<tablon>
+    <anuncio codigo="A-001" vendido="No" lang="ESP">
+        <fecha>2022/03/20</fecha>
+        <asunto>Vendo Patinete</asunto>
+        <texto>Vendo Patinete Seminuevo</texto>
+        <precio Moneda_Pago="Euros">50</precio>
+        <contacto visible="Si">
+            <nombre>Juan Jose</nombre>
+            <telefono>344334333</telefono>
+        </contacto>
+        <contacto visible="No">
+            <nombre>Paco</nombre>
+            <telefono>555666555</telefono>
+        </contacto>
+        <fechaLimite>2023/01/01</fechaLimite>
+        <localiza>Madrid</localiza>
+        <vacio />
+    </anuncio>
+
+    <anuncio codigo="B-001" vendido="Si" lang="ESP">
+        <fecha>2019/12/15</fecha>
+        <asunto>Vendo Bici</asunto>
+        <precio>100</precio>
+        <contacto visible="Si">
+            <nombre>Antonio</nombre>
+            <telefono>121223222</telefono>
+        </contacto>
+        <localiza>Gibraltar</localiza>
+        <vacio />
+    </anuncio>
+</tablon>

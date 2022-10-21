@@ -1,0 +1,21 @@
+<!-- debemos introducir todo el código en una etiqueta de cierre -->
+
+<clase>
+
+    <!-- elemento sin contenido con normalmente un atributo -->
+
+    <test prueba="test1" />
+
+    <!-- dentro de este elemento hay atributo  -->
+
+    <test prueba="test2"> descripcion test 2</test>
+
+    <!-- Elemento mixto -> tiene una estructura correcta pero debemos EVITARLO -->
+
+    <alumno>
+        Repetidora
+        <nombre>Raquel</nombre>
+        <apellidos>Garcia</apellidos>
+    </alumno>
+
+</clase>

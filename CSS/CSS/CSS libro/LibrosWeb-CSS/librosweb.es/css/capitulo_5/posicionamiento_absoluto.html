@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_5/posicionamiento_absoluto.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>5.5. Posicionamiento absoluto (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="posicionamiento_relativo.html" />
+        <link rel="next" href="posicionamiento_fijo.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="5.5. Posicionamiento absoluto (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_5.html" itemprop="url">
+                    <span itemprop="title">Capítulo 5. Posicionamiento y visualización</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>5.5. Posicionamiento absoluto</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="posicionamiento_absoluto" class="title">
+        <span>5.5.</span> Posicionamiento absoluto
+    </h1>
+
+    
+
+<p>El posicionamiento absoluto se emplea para establecer de forma exacta la posición en la que se muestra la caja de un elemento. La nueva posición de la caja se indica mediante las propiedades <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code>. La interpretación de los valores de estas propiedades es mucho más compleja que en el posicionamiento relativo, ya que en este caso dependen del posicionamiento del elemento contenedor.</p>
+
+<p>Cuando una caja se posiciona de forma absoluta, el resto de elementos de la página se ven afectados y modifican su posición. Al igual que en el posicionamiento relativo, cuando se posiciona de forma absoluta una caja es probable que se produzcan solapamientos con otras cajas.</p>
+
+<p>En el siguiente ejemplo, se posiciona de forma absoluta la caja 2:</p>
+
+<div class="figure" id="figure_5_7">
+    <img src="../../img/css/f0516.gif" alt="Ejemplo de posicionamiento absoluto de un elemento" />
+
+    <p class="caption"><strong>Figura 5.7</strong> Ejemplo de posicionamiento absoluto de un elemento</p>
+</div>
+
+
+<p>La caja 2 está posicionada de forma absoluta, lo que provoca que el resto de elementos de la página modifiquen su posición. En concreto, la caja 3 deja su lugar original y pasa a ocupar el hueco dejado por la caja 2.</p>
+
+<p>El estándar de CSS 2.1 indica que las cajas posicionadas de forma absoluta <em>"salen del flujo normal de la página"</em>, lo que provoca que el resto de elementos de la página se muevan y en ocasiones, ocupen la posición original en la que se encontraba la caja.</p>
+
+<p>Por otra parte, el desplazamiento de una caja posicionada de forma absoluta se controla mediante las propiedades <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code>. A diferencia del posicionamiento relativo, la interpretación de los valores de estas propiedades depende del elemento contenedor de la caja posicionada.</p>
+
+<p>Determinar la referencia utilizada para interpretar los valores de <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code> de una caja posicionada de forma absoluta es un proceso complejo que se compone de los siguientes pasos:</p>
+
+<ul>
+<li>Se buscan todos los elementos contenedores de la caja hasta llegar al elemento <code>&lt;body&gt;</code> de la página.</li>
+<li>Se recorren todos los elementos contenedores empezando por el más cercano a la caja y llegando hasta el <code>&lt;body&gt;</code></li>
+<li>El primer elemento contenedor que esté posicionado de cualquier forma diferente a <code>position: static</code> se convierte en la referencia que determina la posición de la caja posicionada de forma absoluta.</li>
+<li>Si ningún elemento contenedor está posicionado, la referencia es la ventana del navegador, que no debe confundirse con el elemento <code>&lt;body&gt;</code> de la página.</li>
+</ul>
+
+<p>Una vez determinada la referencia del posicionamiento absoluto, la interpretación de los valores de las propiedades <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code> se realiza como sigue:</p>
+
+<ul>
+<li>El valor de la propiedad <code>top</code> indica el desplazamiento desde el borde superior de la caja hasta el borde superior del elemento contenedor que se utiliza como referencia.</li>
+<li>El valor de la propiedad <code>right</code> indica el desplazamiento desde el borde derecho de la caja hasta el borde derecho del elemento contenedor que se utiliza como referencia.</li>
+<li>El valor de la propiedad <code>bottom</code> indica el desplazamiento desde el borde inferior de la caja hasta el borde inferior del elemento contenedor que se utiliza como referencia.</li>
+<li>El valor de la propiedad <code>left</code> indica el desplazamiento desde el borde izquierdo de la caja hasta el borde izquierdo del elemento contenedor que se utiliza como referencia.</li>
+</ul>
+
+<p>En los siguientes ejemplos, se utiliza la página HTML que muestra la siguiente imagen:</p>
+
+<div class="figure" id="figure_5_8">
+    <img src="../../img/css/f0517.gif" alt="Situación original antes de modificar el posicionamiento" />
+
+    <p class="caption"><strong>Figura 5.8</strong> Situación original antes de modificar el posicionamiento</p>
+</div>
+
+
+<p>A continuación, se muestra el código HTML y CSS de la página original:</p>
+
+<div class="code html5">
+<pre class="html5">div {
+  border: 2px solid #CCC;
+  padding: 1em;
+  margin: 1em 0 1em 4em;
+  width: 300px;
+}
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">div</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;imagenes/imagen.png&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Imagen genérica&quot;</span> <span class="sy0">/</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus 
+ullamcorper velit eu ipsum. Ut pellentesque, est in volutpat cursus, risus 
+mi viverra augue, at pulvinar turpis leo sed orci. Donec ipsum. Curabitur 
+felis dui, ultrices ut, sollicitudin vel, rutrum at, tellus.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></pre>
+</div>
+
+<p>En primer lugar, se posiciona de forma absoluta la imagen mediante la propiedad <code>position</code> y se indica su nueva posición mediante las propiedades <code>top</code> y <code>left</code>:</p>
+
+<div class="code css">
+<pre class="css">div img <span class="br0">&#123;</span>
+  <span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+  <span class="kw1">top</span><span class="sy0">:</span>  <span class="re3">50px</span><span class="sy0">;</span> 
+  <span class="kw1">left</span><span class="sy0">:</span> <span class="re3">50px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>El resultado visual se muestra en la siguiente imagen:</p>
+
+<div class="figure" id="figure_5_9">
+    <img src="../../img/css/f0518.gif" alt="Imagen posicionada de forma absoluta" />
+
+    <p class="caption"><strong>Figura 5.9</strong> Imagen posicionada de forma absoluta</p>
+</div>
+
+
+<p>La imagen posicionada de forma absoluta no toma como referencia su elemento contenedor <code>&lt;div&gt;</code>, sino la ventana del navegador, tal y como demuestra la siguiente imagen:</p>
+
+<div class="figure" id="figure_5_10">
+    <img src="../../img/css/f0519.gif" alt="La referencia del posicionamiento absoluto es la ventana del navegador" />
+
+    <p class="caption"><strong>Figura 5.10</strong> La referencia del posicionamiento absoluto es la ventana del navegador</p>
+</div>
+
+
+<p>Para posicionar la imagen de forma absoluta, el navegador realiza los siguientes pasos:</p>
+
+<ol>
+<li>Obtiene la lista de elementos contenedores de la imagen: <code>&lt;div&gt;</code> y <code>&lt;body&gt;</code>.</li>
+<li>Recorre la lista de elementos contenedores desde el más cercano a la imagen (el <code>&lt;div&gt;</code>) hasta terminar en el <code>&lt;body&gt;</code> buscando el primer elemento contenedor que esté posicionado.</li>
+<li>El posicionamiento de todos los elementos contenedores es el normal o estático, ya que ni siquiera tienen establecida la propiedad <code>position</code></li>
+<li>Como ningún elemento contenedor está posicionado, la referencia es la ventana del navegador.</li>
+<li>A partir de esa referencia, la caja de la imagen se desplaza <code>50px</code> hacia la derecha (<code>left: 50px</code>) y otros <code>50px</code> de forma descendente (<code>top: 50px</code>).</li>
+</ol>
+
+<p>Como la imagen se posiciona de forma absoluta, el resto de elementos de la página se mueven para ocupar el lugar libre dejado por la imagen. Por este motivo, el párrafo sube hasta el principio del <code>&lt;div&gt;</code> y se produce un solapamiento con la imagen posicionada que impide ver parte de los contenidos del párrafo.</p>
+
+<p>A continuación, se modifica el ejemplo anterior posicionando de forma relativa el elemento <code>&lt;div&gt;</code> que contiene la imagen y el párrafo. La única propiedad añadida al <code>&lt;div&gt;</code> es <code>position: relative</code> por lo que el elemento contenedor se posiciona pero no se desplaza respecto de su posición original:</p>
+
+<div class="code css">
+<pre class="css">div <span class="br0">&#123;</span>
+  <span class="kw1">border</span><span class="sy0">:</span> <span class="re3">2px</span> <span class="kw2">solid</span> <span class="re0">#CCC</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">1em</span><span class="sy0">;</span>
+  <span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">1em</span> <span class="nu0">0</span> <span class="re3">1em</span> <span class="re3">4em</span><span class="sy0">;</span>
+  <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">300px</span><span class="sy0">;</span>
+  <span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+div img <span class="br0">&#123;</span>
+  <span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+  <span class="kw1">top</span><span class="sy0">:</span> <span class="re3">50px</span><span class="sy0">;</span> 
+  <span class="kw1">left</span><span class="sy0">:</span> <span class="re3">50px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>La siguiente imagen muestra el resultado obtenido:</p>
+
+<div class="figure" id="figure_5_11">
+    <img src="../../img/css/f0520.gif" alt="Imagen posicionada de forma absoluta" />
+
+    <p class="caption"><strong>Figura 5.11</strong> Imagen posicionada de forma absoluta</p>
+</div>
+
+
+<p>En este caso, como el elemento contenedor de la imagen está posicionado, se convierte en la referencia para el posicionamiento absoluto. El resultado es que la posición de la imagen es muy diferente a la del ejemplo anterior:</p>
+
+<div class="figure" id="figure_5_12">
+    <img src="../../img/css/f0521.gif" alt="La referencia del posicionamiento absoluto es el elemento contenedor de la imagen" />
+
+    <p class="caption"><strong>Figura 5.12</strong> La referencia del posicionamiento absoluto es el elemento contenedor de la imagen</p>
+</div>
+
+
+<p>Por tanto, si se quiere posicionar un elemento de forma absoluta respecto de su elemento contenedor, es imprescindible posicionar este último. Para ello, sólo es necesario añadir la propiedad <code>position: relative</code>, por lo que no es obligatorio desplazar el elemento contenedor respecto de su posición original.</p>
+
+
+
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="posicionamiento_relativo.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>5.4. Posicionamiento relativo</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="posicionamiento_fijo.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>5.6. Posicionamiento fijo</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Posicionamiento%20absoluto%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_5.html">
+                    <span>Capítulo 5.</span> Posicionamiento y visualización
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="tipos_de_elementos.html">
+                    <span>5.1.</span> Tipos de elementos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento.html">
+                    <span>5.2.</span> Posicionamiento
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_normal.html">
+                    <span>5.3.</span> Posicionamiento normal
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_relativo.html">
+                    <span>5.4.</span> Posicionamiento relativo
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="posicionamiento_absoluto.html">
+                    <span>5.5.</span> Posicionamiento absoluto
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_fijo.html">
+                    <span>5.6.</span> Posicionamiento fijo
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="posicionamiento_flotante.html">
+                    <span>5.7.</span> Posicionamiento flotante
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="visualizacion.html">
+                    <span>5.8.</span> Visualización
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_5/posicionamiento_absoluto.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:21 GMT -->
+</html>

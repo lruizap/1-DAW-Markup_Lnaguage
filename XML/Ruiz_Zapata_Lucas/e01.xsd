@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="mayorista" type="Tmayorista" />
+
+    <xs:complexType name="Tmayorista">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="ruta" type="Truta" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Truta">
+        <xs:sequence>
+            <xs:element name="bloqueado" type="Tbloqueado" minOccurs="0" />
+            <xs:element name="destino" type="Tdestino" />
+            <xs:element name="fechaIni" type="Tdate" />
+            <xs:element name="fechaFin" type="Tdate" />
+            <xs:element name="etiqueta" type="xs:string" maxOccurs="unbounded" />
+            <xs:element name="destacados" type="Tdestacados" />
+        </xs:sequence>
+        <xs:attribute name="codigo" type="Tcodigo" use="required" />
+    </xs:complexType>
+
+    <xs:simpleType name="Tcodigo">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="[A-Z]{1}-[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tdate">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="visible" type="Testado" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- <xs:complexType name="Tbloqueado">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="estado" type="Testado" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType> -->
+
+    <xs:complexType name="Tbloqueado">
+        <xs:attribute name="estado" type="Testado" use="required" />
+    </xs:complexType>
+
+    <xs:simpleType name="Testado">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(si|no)" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tdestino">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+            <xs:element name="precioEstimado" type="TprecioEstimado" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TprecioEstimado">
+        <xs:simpleContent>
+            <xs:extension base="TTprecioEstimado">
+                <xs:attribute name="moneda" type="Tmoneda" use="required" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Tmoneda">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(E|L|D)" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TTprecioEstimado">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tdestacados">
+        <xs:sequence>
+            <xs:element name="poi" type="Tpoi" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tpoi">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="web" type="xs:anyURI" />
+            <xs:element name="horario" type="xs:string" />
+            <xs:element name="etiqueta" type="xs:string" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

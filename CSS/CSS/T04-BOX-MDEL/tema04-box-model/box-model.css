@@ -1,0 +1,58 @@
+/* box-model.css */
+
+/* shorthand de las 4 direcciones */
+p {
+  margin: 32px;
+}
+
+p {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  /* + left y top */
+}
+
+/* para ver solape vertical */
+p:first-child {
+  margin: 16px 32px 64px;
+}
+
+/* border */
+/* shorthand */
+/* p {
+  border: red 16px solid;
+  border-width: 16px 48px;
+  border-color: goldenrod green blue violet;
+  border-style: solid inset dashed double;
+
+p:nth-child(2) {
+  border-bottom-color: green;
+  border-bottom-width: 22px;
+  border-bottom-style: double;
+  border-left-color: blue;
+  border-left-width: 4px;
+  border-left-style: dotted;
+}
+p:nth-child(3) {
+  border-right: firebrick dashed 8px;
+} */
+
+/* padding */
+
+p {
+  padding: 32px;
+  border: red 12px ridge;
+}
+
+/* color de fondo */
+p {
+  background-color: yellow;
+}
+
+section {
+  background-color:lightcoral;
+  margin-top: 64px;
+}
+
+a {
+  margin: 0 32px;
+}

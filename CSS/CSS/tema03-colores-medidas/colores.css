@@ -1,0 +1,15 @@
+/* colores.css */
+
+p { 
+    color: hsl(240, 100%, 50%);
+    opacity: 0.5;
+}
+
+h1 {
+    color: #ff00007e;
+}
+
+img, form {
+    opacity: 0.5;
+}
+

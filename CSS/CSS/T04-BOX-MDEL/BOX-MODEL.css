@@ -1,0 +1,68 @@
+/* box-model.css */
+
+p{
+    margin: 32px;
+}
+
+p {
+    margin-bottom: 4px;
+    margin-left: 4px;
+    /* + left y top */
+}
+
+p:first-child{
+    margin: 16px 32px 64px 128px
+    /*arriba, derecha, abajo, izquierda*/
+} 
+
+/* Solape vertical
+
+p:first-child {
+    margin: 64px;
+}  
+
+*/
+
+/* border */
+/* 
+p{
+    border: red 7px solid;
+    border-left: springgreen 7px solid;
+    border-right: springgreen 7px solid;
+}
+
+p:nth-child(2){
+    border: double blue 10px;
+    border-top: green double 10px;
+    border-bottom: green double 10px;
+}
+
+p:nth-child(3){
+    border-style: dotted double solid none;
+} 
+*/
+
+/*padding -> separa el borde del texto*/
+
+p{
+    border: red groove 20px;
+    padding: 30px
+}
+
+/* backgroud */
+
+p{
+    background-color: rgb(200, 255, 0);
+}
+
+section {
+    background-color: cyan;
+}
+
+div {
+    background-color: darkgreen;
+}
+
+a{
+    margin: 0 32px
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <h2>uso de srcset con width</h2>
+ 
+    <p>Para probar este ejemplo abra en el navegador las herramientas de depuración, acceda a la pestaña Network y vaya modificadno el ancho de la página para ver como se cargan las distintas imágenes</p>
+    <p>Observe que al ir de menos a más se van cargando las imágenes de mayor resolución, pero al revés no, se mantine la misma imagen. </p>
+    <p>
+      <img
+        sizes="100%"
+        srcset="
+          dog/dog_c_scale,w_200.jpg   200w,
+          dog/dog_c_scale,w_591.jpg   591w,
+          dog/dog_c_scale,w_879.jpg   879w,
+          dog/dog_c_scale,w_1056.jpg 1056w,
+          dog/dog_c_scale,w_1258.jpg 1258w,
+          dog/dog_c_scale,w_1352.jpg 1352w,
+          dog/dog_c_scale,w_1400.jpg 1400w
+        "
+        src="dog/dog_c_scale,w_1400.jpg"
+        alt="perro con bola roja en la boca corriendo por pradera"
+      />
+    </p>
+  
+  </body>
+</html>

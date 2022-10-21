@@ -1,0 +1,20 @@
+
+
+h1, h2 {
+    /* display: none; */
+    /* visibility: hidden; */
+    display: inline;
+}
+
+li a {
+  display: block;
+}
+
+article p {
+    height: 50px;
+    overflow: auto;
+}
+
+article {
+    visibility: HIDE;
+}

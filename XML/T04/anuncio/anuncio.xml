@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="anuncio.xsd" 
+type="application/xml" 
+schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<tablon>
+    
+<anuncio>
+
+    <fecha>2012-12-24</fecha>
+    <asunto>Vendo Bici</asunto>
+    <texto>Bicicleta de montaña</texto>
+    <precio>100</precio>
+    <contacto>Garcia, 697300299</contacto>
+    <contacto>Paco, 697800550</contacto>
+
+</anuncio>
+
+<anuncio>
+
+    <fecha>2022-07-14</fecha>
+    <asunto>Vendo Patinete</asunto>
+    <texto>Xiami</texto>
+    <precio>300</precio>
+    <contacto>Lucia, 645333222</contacto>
+    <contacto>Luci, 666666666</contacto>
+
+</anuncio>
+
+</tablon>

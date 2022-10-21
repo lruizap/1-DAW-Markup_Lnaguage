@@ -1,0 +1,30 @@
+/* listas.css */
+
+ol {
+    /* list-style-type: lower-greek;
+    list-style-position: outside;
+    list-style-image: url(./fb1.png); */
+    /* shorhand */
+    list-style: inside url(./fb1.png) decimal ;
+}
+
+/* probar disclosure-open y disclosure-closed */
+ul li {
+    /* list-style-type: none; */
+    /* list-style-position: outside;  */
+    /* padding-left: 0; */
+    list-style-image: url(icon.png);
+} 
+
+/* modificando al pasar el ratón sobre.. */
+ul li:hover{
+    list-style-image: url(./fb.png);
+    background-color: yellow;
+    margin-left: 0.5em;
+}
+
+/* modificando uno de la lista */
+ul li:nth-child(2)
+{
+    list-style-image: url(fb.png);
+}

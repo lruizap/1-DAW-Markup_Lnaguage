@@ -1,0 +1,58 @@
+ol {
+    list-style-type: none; /*Desactiva la numeración por defecto*/
+    counter-reset: nli;
+}
+
+ol li::before {
+    /* content: counter(nli); */
+    content: counters(nli, ".") " ";
+    counter-increment: nli;
+}
+
+/*Contador h2*/
+
+body {
+    counter-reset: nh2;
+}
+
+h2 {
+    counter-increment: nh2;
+}
+
+h2::before {
+    content: counter(nh2) "-.";
+}
+
+/* contador h3 */
+
+h2 {
+    counter-reset: nh3;
+}
+
+h3 {
+    counter-increment: nh3;
+}
+
+h3::before {
+    content: counter(nh2) "." counter(nh3) "-";
+}
+
+/* contador h4 */
+
+h3 {
+    counter-reset: nh4;
+}
+
+h4 {
+    counter-increment: nh4;
+}
+
+h4::before {
+    content: counter(nh2) "." counter(nh3) "." counter(nh4) "-";
+}
+
+@media print {
+    body {
+        color: blue;
+    }
+}

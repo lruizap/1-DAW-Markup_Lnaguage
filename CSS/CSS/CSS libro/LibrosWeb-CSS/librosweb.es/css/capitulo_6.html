@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_6.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Capítulo 6. Texto (Introducción a CSS)</title>
+        <link href="main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="capitulo_5/visualizacion.html" />
+        <link rel="next" href="capitulo_6/texto_2.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Capítulo 6. Texto (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+        
+            <li class="active">
+                <span>Capítulo 6. Texto</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="texto" class="title">
+        <span>Capítulo 6.</span> Texto
+    </h1>
+
+    <h2 id="tipografia">6.1. Tipografía</h2>
+
+
+<p>CSS define numerosas propiedades para modificar la apariencia del texto. A pesar de que no dispone de tantas posibilidades como los lenguajes y programas específicos para crear documentos impresos, CSS permite aplicar estilos complejos y muy variados al texto de las páginas web.</p>
+
+<p>La propiedad básica que define CSS relacionada con la tipografía se denomina <code>color</code> y se utiliza para establecer el color de la letra.</p>
+
+<div class="table" id="table_6_1">
+
+    <table class="property" summary="Definición de la propiedad color de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>color</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td><a href="http://librosweb.es/referencia/css/colores.html">color</a> | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>Depende del navegador</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el color de letra utilizado para el texto</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Aunque el color por defecto del texto depende del navegador, todos los navegadores principales utilizan el color negro. Para establecer el color de letra de un texto, se puede utilizar cualquiera de las cinco formas que incluye CSS para definir un color.</p>
+
+<p>A continuación se muestran varias reglas CSS que establecen el color del texto de diferentes formas:</p>
+
+<div class="code css">
+<pre class="css">h1 <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#369</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+p  <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw1">black</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+a<span class="sy0">,</span> span <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#B1251E</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+div <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">rgb</span><span class="br0">&#40;</span><span class="nu0">71</span><span class="sy0">,</span> <span class="nu0">98</span><span class="sy0">,</span> <span class="nu0">176</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Como el valor de la propiedad <code>color</code> se hereda, normalmente se establece la propiedad <code>color</code> en el elemento <code>body</code> para establecer el color de letra de todos los elementos de la página:</p>
+
+<div class="code css">
+<pre class="css">body <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#777</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>En el ejemplo anterior, todos los elementos de la página muestran el mismo color de letra salvo que establezcan de forma explícita otro color. La única excepción de este comportamiento son los enlaces que se crean con la etiqueta <code>&lt;a&gt;</code>. Aunque el color de la letra se hereda de los elementos padre a los elementos hijo, con los enlaces no sucede lo mismo, por lo que es necesario indicar su color de forma explícita:</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/* Establece el mismo color a todos los elementos de
+   la página salvo los enlaces */</span>
+body <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#777</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Establece el mismo color a todos los elementos de
+   la página, incluyendo los enlaces */</span>
+body<span class="sy0">,</span> a <span class="br0">&#123;</span> <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#777</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>La otra propiedad básica que define CSS relacionada con la tipografía se denomina <code>font-family</code> y se utiliza para indicar el tipo de letra con el que se muestra el texto.</p>
+
+<div class="table" id="table_6_2">
+
+    <table class="property" summary="Definición de la propiedad font-family de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>font-family</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>(( nombre_familia | familia_generica ) (,nombre_familia | familia_generica)* ) | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>Depende del navegador</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el tipo de letra utilizado para el texto</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El tipo de letra del texto se puede indicar de dos formas diferentes:</p>
+
+<ul>
+<li>Mediante el nombre de una <em>familia</em> tipográfica: en otras palabras, mediante el nombre del tipo de letra, como por ejemplo "Arial", "Verdana", "Garamond", etc.</li>
+<li>Mediante el nombre genérico de una <em>familia</em> tipográfica: los nombres genéricos no se refieren a ninguna fuente en concreto, sino que hacen referencia al estilo del tipo de letra. Las familias genéricas definidas son <code>serif</code> (tipo de letra similar a <em>Times New Roman</em>), <code>sans-serif</code> (tipo <em>Arial</em>), <code>cursive</code> (tipo <em>Comic Sans</em>), <code>fantasy</code> (tipo <em>Impact</em>) y <code>monospace</code> (tipo <em>Courier New</em>).</li>
+</ul>
+
+<p>Los navegadores muestran el texto de las páginas web utilizando los tipos de letra instalados en el ordenador o dispositivo del propio usuario. De esta forma, si el diseñador indica en la propiedad <code>font-family</code> que el texto debe mostrarse con un tipo de letra especialmente raro o rebuscado, casi ningún usuario dispondrá de ese tipo de letra.</p>
+
+<p>Para evitar el problema común de que el usuario no tenga instalada la fuente que quiere utilizar el diseñador, CSS permite indicar en la propiedad <code>font-family</code> más de un tipo de letra. El navegador probará en primer lugar con el primer tipo de letra indicado. Si el usuario la tiene instalada, el texto se muestra con ese tipo de letra.</p>
+
+<p>Si el usuario no dispone del primer tipo de letra indicado, el navegador irá probando con el resto de tipos de letra hasta que encuentre alguna fuente que esté instalada en el ordenador del usuario. Evidentemente, el diseñador no puede indicar para cada propiedad <code>font-family</code> tantos tipos de letra como posibles fuentes parecidas existan.</p>
+
+<p>Para solucionar este problema se utilizan las familias tipográficas genéricas. Cuando la propiedad <code>font-family</code> toma un valor igual a <code>sans-serif</code>, el diseñador no indica al navegador que debe utilizar la fuente Arial, sino que debe utilizar <em>"la fuente que más se parezca a Arial de todas las que tiene instaladas el usuario"</em>.</p>
+
+<p>Por todo ello, el valor de <code>font-family</code> suele definirse como una lista de tipos de letra alternativos separados por comas. El último valor de la lista es el nombre de la familia tipográfica genérica que más se parece al tipo de letra que se quiere utilizar.</p>
+
+<p>Las listas de tipos de letra más utilizadas son las siguientes:</p>
+
+<div class="code css">
+<pre class="css"><span class="kw1">font-family</span><span class="sy0">:</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="kw1">font-family</span><span class="sy0">:</span> <span class="st0">&quot;Times New Roman&quot;</span><span class="sy0">,</span> Times<span class="sy0">,</span> <span class="kw2">serif</span><span class="sy0">;</span>
+<span class="kw1">font-family</span><span class="sy0">:</span> <span class="st0">&quot;Courier New&quot;</span><span class="sy0">,</span> Courier<span class="sy0">,</span> <span class="kw2">monospace</span><span class="sy0">;</span>
+<span class="kw1">font-family</span><span class="sy0">:</span> Georgia<span class="sy0">,</span> <span class="st0">&quot;Times New Roman&quot;</span><span class="sy0">,</span> Times<span class="sy0">,</span> <span class="kw2">serif</span><span class="sy0">;</span>
+<span class="kw1">font-family</span><span class="sy0">:</span> Verdana<span class="sy0">,</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Ya que las fuentes que se utilizan en la página deben estar instaladas en el ordenador del usuario, cuando se quiere disponer de un diseño complejo con fuentes muy especiales, se debe recurrir a soluciones alternativas.</p>
+
+<p>La solución más sencilla consiste en crear imágenes en las que se muestra el texto con la fuente deseada. Esta técnica solamente es viable para textos cortos (por ejemplo los titulares de una página) y puede ser manual (creando las imágenes una por una) o automática, utilizando JavaScript, PHP y/o CSS.</p>
+
+<p>Otra alternativa es la de la sustitución automática de texto basada en Flash. La técnica más conocida es la de sIFR, de la que se puede encontrar más información en http://wiki.novemberborn.net/sifr</p>
+
+<p>Una vez seleccionado el tipo de letra, se puede modificar su tamaño mediante la propiedad <code>font-size</code>.</p>
+
+<div class="table" id="table_6_3">
+
+    <table class="property" summary="Definición de la propiedad font-size de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>font-size</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>tamaño_absoluto | tamaño_relativo | <a href="http://librosweb.es/referencia/css/unidades_de_medida.html">unidad de medida</a> | <a href="http://librosweb.es/referencia/css/porcentajes.html">porcentaje</a> | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>medium</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el tamaño de letra utilizado para el texto</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Además de todas las unidades de medida relativas y absolutas y el uso de porcentajes, CSS permite utilizar una serie de palabras clave para indicar el tamaño de letra del texto:</p>
+
+<ul>
+<li><code>tamaño_absoluto</code>: indica el tamaño de letra de forma absoluta mediante alguna de las siguientes palabras clave: <code>xx-small</code>, <code>x-small</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>x-large</code>, <code>xx-large</code>.</li>
+<li><code>tamaño_relativo</code>: indica de forma relativa el tamaño de letra del texto mediante dos palabras clave (<code>larger</code>, <code>smaller</code>) que toman como referencia el tamaño de letra del elemento padre.</li>
+</ul>
+
+<p>La siguiente imagen muestra una comparación entre los tamaños típicos del texto y las unidades que más se utilizan:</p>
+
+<div class="figure" id="figure_6_1">
+    <img src="../img/css/f0601.gif" alt="Comparación visual de las distintas unidades para indicar el tamaño del texto" />
+
+    <p class="caption"><strong>Figura 6.1</strong> Comparación visual de las distintas unidades para indicar el tamaño del texto</p>
+</div>
+
+
+<p>CSS recomienda indicar el tamaño del texto en la unidad <code>em</code> o en porcentaje (<code>%</code>). Además, es habitual indicar el tamaño del texto en puntos (<code>pt</code>) cuando el documento está específicamente diseñado para imprimirlo.</p>
+
+<p>Por defecto los navegadores asignan los siguientes tamaños a los títulos de sección: <code>&lt;h1&gt;</code> = <code>xx-large</code>, <code>&lt;h2&gt;</code> = <code>x-large</code>, <code>&lt;h3&gt;</code> = <code>large</code>, <code>&lt;h4&gt;</code> = <code>medium</code>, <code>&lt;h5&gt;</code> = <code>small</code>, <code>&lt;h6&gt;</code> = <code>xx-small</code>.</p>
+
+<p>Una vez indicado el tipo y el tamaño de letra, es habitual modificar otras características como su grosor (texto en negrita) y su estilo (texto en cursiva). La propiedad que controla la anchura de la letra es <code>font-weight</code>.</p>
+
+<div class="table" id="table_6_4">
+
+    <table class="property" summary="Definición de la propiedad font-weight de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>font-weight</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>normal</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece la anchura de la letra utilizada para el texto</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Los valores que normalmente se utilizan son <code>normal</code> (el valor por defecto) y <code>bold</code> para los textos en negrita. El valor <code>normal</code> equivale al valor numérico <code>400</code> y el valor <code>bold</code> al valor numérico <code>700</code>.</p>
+
+<p>El siguiente ejemplo muestra una aplicación práctica de la propiedad <code>font-weight</code>:</p>
+
+<div class="figure" id="figure_6_2">
+    <img src="../img/css/f0602.gif" alt="Ejemplo de propiedad font-weight" />
+
+    <p class="caption"><strong>Figura 6.2</strong> Ejemplo de propiedad font-weight</p>
+</div>
+
+
+<p>Por defecto, los navegadores muestran el texto de los elementos <code>&lt;em&gt;</code> en cursiva y el texto de los elementos <code>&lt;strong&gt;</code> en negrita. La propiedad <code>font-weight</code> permite alterar ese aspecto por defecto y mostrar por ejemplo los elementos <code>&lt;em&gt;</code> como cursiva y negrita y los elementos <code>&lt;strong&gt;</code> destacados mediante un color de fondo y sin negrita.</p>
+
+<p>Las reglas CSS del ejemplo anterior se muestran a continuación:</p>
+
+<div class="code html5">
+<pre class="html5">#especial em {
+  font-weight: bold;
+}
+#especial strong {
+  font-weight: normal;
+  background-color: #FFFF66;
+  padding: 2px;
+}
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut in 
+purus ac <span class="sc2">&lt;<span class="kw2">em</span>&gt;</span>libero nonummy vestibulum<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span>. Nullam molestie, nunc id 
+nonummy laoreet, <span class="sc2">&lt;<span class="kw2">strong</span>&gt;</span>tortor diam mollis elit<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;</span>, quis hendrerit 
+libero lorem vitae nunc.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;especial&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+Ut in purus ac <span class="sc2">&lt;<span class="kw2">em</span>&gt;</span>libero nonummy vestibulum<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span>. Nullam molestie, nunc id 
+nonummy laoreet, <span class="sc2">&lt;<span class="kw2">strong</span>&gt;</span>tortor diam mollis elit<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;</span>, quis hendrerit 
+libero lorem vitae nunc.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>Además de la anchura de la letra, CSS permite variar su estilo mediante la propiedad <code>font-style</code>.</p>
+
+<div class="table" id="table_6_5">
+
+    <table class="property" summary="Definición de la propiedad font-style de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>font-style</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>normal | italic | oblique | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>normal</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el estilo de la letra utilizada para el texto</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Normalmente la propiedad <code>font-style</code> se emplea para mostrar un texto en cursiva mediante el valor <code>italic</code>.</p>
+
+<p>El ejemplo anterior se puede modificar para personalizar aun más el aspecto por defecto de los elementos <code>&lt;em&gt;</code> y <code>&lt;strong&gt;</code>:</p>
+
+<div class="figure" id="figure_6_3">
+    <img src="../img/css/f0603.gif" alt="Ejemplo de propiedad font-style" />
+
+    <p class="caption"><strong>Figura 6.3</strong> Ejemplo de propiedad font-style</p>
+</div>
+
+
+<p>Ahora, el texto del elemento <code>&lt;em&gt;</code> se muestra como un texto en negrita y el texto del elemento <code>&lt;strong&gt;</code> se muestra como un texto en cursiva con un color de fondo muy destacado.</p>
+
+<p>El único cambio necesario en las reglas CSS anteriores es el de añadir la propiedad <code>font-style</code>:</p>
+
+<div class="code css">
+<pre class="css"><span class="re0">#especial</span> em <span class="br0">&#123;</span>
+  <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">bold</span><span class="sy0">;</span>
+  <span class="kw1">font-style</span><span class="sy0">:</span> <span class="kw2">normal</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re0">#especial</span> strong <span class="br0">&#123;</span>
+  <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">normal</span><span class="sy0">;</span>
+  <span class="kw1">font-style</span><span class="sy0">:</span> <span class="kw2">italic</span><span class="sy0">;</span>
+  <span class="kw1">background-color</span><span class="sy0">:</span><span class="re0">#FFFF66</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">2px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Por último, CSS permite otra variación en el estilo del tipo de letra, controlado mediante la propiedad <code>font-variant</code>.</p>
+
+<div class="table" id="table_6_6">
+
+    <table class="property" summary="Definición de la propiedad font-variant de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>font-variant</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>normal | small-caps | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>normal</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el estilo alternativo de la letra utilizada para el texto</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>La propiedad <code>font-variant</code> no se suele emplear habitualmente, ya que sólo permite mostrar el texto con <em>letra versal</em> (mayúsculas pequeñas).</p>
+
+<p>Siguiendo con el ejemplo anterior, se ha aplicado la propiedad <code>font-variant: small-caps</code> al segundo párrafo de texto:</p>
+
+<div class="figure" id="figure_6_4">
+    <img src="../img/css/f0604.gif" alt="Ejemplo de propiedad font-variant" />
+
+    <p class="caption"><strong>Figura 6.4</strong> Ejemplo de propiedad font-variant</p>
+</div>
+
+
+<p>Para este último ejemplo, solamente es necesario añadir una regla a los estilos CSS:</p>
+
+<div class="code css">
+<pre class="css"><span class="re0">#especial</span> <span class="br0">&#123;</span>
+  <span class="kw1">font-variant</span><span class="sy0">:</span> <span class="kw2">small-caps</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Por otra parte, CSS proporciona una propiedad tipo <em>"shorthand"</em> denominada <code>font</code> y que permite indicar de forma directa algunas o todas las propiedades de la tipografía de un texto.</p>
+
+<div class="table" id="table_6_7">
+
+    <table class="property" summary="Definición de la propiedad font de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>font</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( ( font-style || font-variant || font-weight )? font-size ( / line-height )? font-family ) | caption | icon | menu | message-box | small-caption | status-bar | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Permite indicar de forma directa todas las propiedades de la tipografía de un texto</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El orden en el que se deben indicar las propiedades del texto es el siguiente:</p>
+
+<ul>
+<li>En primer lugar y de forma opcional se indican el <code>font-style</code>, <code>font-variant</code> y <code>font-weight</code> en cualquier orden.</li>
+<li>A continuación, se indica obligatoriamente el valor de <code>font-size</code> seguido opcionalmente por el valor de <code>line-height</code>.</li>
+<li>Por último, se indica obligatoriamente el tipo de letra a utilizar.</li>
+</ul>
+
+<p>Ejemplos de uso de la propiedad <code>font</code>:</p>
+
+<div class="code css">
+<pre class="css"><span class="kw1">font</span><span class="sy0">:</span> <span class="re3">76%</span>/<span class="re3">140%</span> Verdana<span class="sy0">,</span>Arial<span class="sy0">,</span>Helvetica<span class="sy0">,</span><span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="kw1">font</span><span class="sy0">:</span> <span class="kw2">normal</span> <span class="re3">24px</span>/<span class="re3">26px</span> <span class="st0">&quot;Century Gothic&quot;</span><span class="sy0">,</span><span class="st0">&quot;Trebuchet MS&quot;</span><span class="sy0">,</span>Arial<span class="sy0">,</span>Helvetica<span class="sy0">,</span><span class="kw2">sans-serif</span><span class="sy0">;</span> 
+<span class="kw1">font</span><span class="sy0">:</span> <span class="kw2">normal</span> <span class="re3">.94em</span> <span class="st0">&quot;Trebuchet MS&quot;</span><span class="sy0">,</span>Arial<span class="sy0">,</span>Helvetica<span class="sy0">,</span><span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="kw1">font</span><span class="sy0">:</span> <span class="kw2">bold</span> <span class="re3">1em</span> <span class="st0">&quot;Trebuchet MS&quot;</span><span class="sy0">,</span>Arial<span class="sy0">,</span>Sans-Serif<span class="sy0">;</span>
+<span class="kw1">font</span><span class="sy0">:</span> <span class="kw2">normal</span> <span class="re3">0.9em</span> <span class="st0">&quot;Lucida Grande&quot;</span><span class="sy0">,</span> Verdana<span class="sy0">,</span> Arial<span class="sy0">,</span> Helvetica<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="kw1">font</span><span class="sy0">:</span> <span class="kw2">normal</span> <span class="re3">1.2em</span>/<span class="re3">1em</span> helvetica<span class="sy0">,</span> arial<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="kw1">font</span><span class="sy0">:</span> <span class="re3">11px</span> verdana<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="kw1">font</span><span class="sy0">:</span> <span class="kw2">normal</span> <span class="re3">1.4em</span>/<span class="re3">1.6em</span> <span class="st0">&quot;helvetica&quot;</span><span class="sy0">,</span> arial<span class="sy0">,</span> <span class="kw2">sans-serif</span><span class="sy0">;</span>
+<span class="kw1">font</span><span class="sy0">:</span> <span class="kw2">bold</span> <span class="re3">14px</span> georgia<span class="sy0">,</span> times<span class="sy0">,</span> <span class="kw2">serif</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Aunque su uso no es muy común, la propiedad <code>font</code> también permite indicar el tipo de letra a utilizar mediante una serie de palabras clave: <code>caption</code>, <code>icon</code>, <code>menu</code>, <code>message-box</code>, <code>small-caption</code>, <code>status-bar</code>.</p>
+
+<p>Si por ejemplo se utiliza la palabra <code>status-bar</code>, el navegador muestra el texto con el mismo tipo de letra que la que utiliza el sistema operativo para mostrar los textos de la barra de estado de las ventanas. La palabra <code>icon</code> se puede utilizar para mostrar el texto con el mismo tipo de letra que utiliza el sistema operativo para mostrar el nombre de los iconos y así sucesivamente.</p>
+
+<p><div class="exercise"><p class="title">Ejercicio 7</p> <p><a href="capitulo_15/ejercicio_7.html">Ver enunciado</a></p></div></p>
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="capitulo_5/visualizacion.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>5.8. Visualización</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="capitulo_6/texto_2.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>6.2. Texto</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Texto%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>4.</span> <a href="capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="capitulo_5.html"> Posicionamiento y visualización</a>
+            </li>
+                                                                                                                                                                            <li class="level-1 active">
+                <a href="capitulo_6.html">
+                    <span>Capítulo 6.</span> Texto
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="capitulo_6/texto_2.html">
+                    <span>6.2.</span> Texto
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>7.</span> <a href="capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_6.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:23 GMT -->
+</html>

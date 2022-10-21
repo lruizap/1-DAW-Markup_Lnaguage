@@ -1,0 +1,74 @@
+/*Selector hijo*/
+
+section > p{
+    color: red;
+}
+
+/*Selector adyacente*/
+
+h2 + p{
+    text-decoration: underline;
+}
+
+/*Selector sibling*/
+
+h2 ~ p {
+    background-color: yellow;
+}
+
+/*Selectores de atributos*/
+
+[title] {
+    background-color: blue;
+}
+
+[title="revisar"] {
+    color: white;
+}
+
+[title*="esto"] {
+    color: green;
+    background-color: white;
+}
+
+[href$=".pdf"] {
+    color: red;
+}
+
+[href ^="ftp://"]{
+    background-color: purple;
+}
+
+/**/
+
+.externo {
+    font-weight: bold;
+}
+
+[class ~="externo"] {
+    background-color: white;
+}
+
+[class *="externo"] { 
+    background-color: rgb(0, 255, 179);
+}
+
+[lang|="es"] { /*Que empiece por y el resto le da igual*/
+    color: purple
+}
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/**/

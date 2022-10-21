@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recogedatos.html</title>
+</head>
+
+<body>
+  <nav>
+    <h2>Recorra nuestro sitio web</h2>
+    <ul>
+      <li><a href="../../index.html">Página inicial</a></li>
+      <li><a href="recogeDatos.html">Recogida de datos</a></li>
+      <li><a href="../resultados.html">Tabla de resultados</a></li>
+      <li><a href="../../blog/blog.html"> Nuestro blog</a></li>
+    </ul>
+  </nav>
+
+  <h1>Formulario de recogida de datos</h1>
+
+  <form action="/procesa/altas.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Datos de la compra</legend>
+
+      <p>  Seleccione la marca: <br>
+        <label><input type="radio" name="marcas" value="A">Marca A</label>
+        <label><input type="radio" name="marcas" value="B">Marca B</label>
+        <label><input type="radio" name="marcas" value="C">Marca C</label>
+        <label><input type="radio" name="marcas" value="D">Marca D</label>
+      </p>
+
+      <p>
+        <label for="unidades">Nº de unidades</label>
+        <input type="number" name="unidades" id="unidades" min="0" value="1">
+      </p>
+      <p>
+        <label for="ficheros">Adjuntar 2 ficheros: factura de compra y fotocopia del DNI</label>
+        <input type="file" name="ficheros" id="ficheros" multiple>
+      </p>
+      <p>
+        <label for="fechaCompra">Fecha Compra</label>
+        <input type="date" name="fechaCompra" id="fechaCompra">
+      </p>
+
+    </fieldset>
+
+    <fieldset>
+      <legend> Datos personales</legend>
+
+      <p>
+        <label for="usuario">Usuario</label>
+        <input type="email" name="usuario" id="usuario">
+      </p>
+      <p>
+        <label for="codigo">Código</label>
+        <input type="text" name="codigo" id="codigo" pattern="[A-Z]{2}[-][a-z0-9]{2,5}">
+      </p>
+
+
+    </fieldset>
+
+
+    <p>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar">
+    </p>
+  </form>
+
+
+ 
+
+ 
+  Marca a Marca b Marca c Marca d
+
+  
+
+  Adjuntar 2 ficheros: factura de compra y fotocopia del DNI
+
+  
+ 
+
+  Usuario
+
+  Código de validación * Campo obligatorio. Formato: 2 mayúsculas, un guión, y entre 2 y 5 caracteres que pueden ser
+  indistíntamente minúsculas o dígitos. Por jemplo, AB-123, o ZA-ab12z
+
+
+
+</body>
+
+</html>

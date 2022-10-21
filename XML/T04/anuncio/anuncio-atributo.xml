@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="anuncio-atributo.xsd" 
+type="application/xml" 
+schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<tablon categoria="deportes">
+
+    <anuncio fechaLimite="2020-12-03" duracion="P10Y25M">
+
+        <fecha>2012-12-24</fecha>
+        <asunto>Vendo Bicicleta de montaña</asunto>
+        <texto>Bicicleta de montaña, practicamente nueva</texto>
+        <precio moneda="euro">100.50</precio>
+        <contacto tipo="correo">Garcia, garcia@gmail.com</contacto>
+        <contacto tipo="tel">Paco, 697800550</contacto>
+        <sindatos fuente="002"/>
+
+    </anuncio>
+
+    <anuncio fechaLimite="2030-07-20">
+
+        <fecha>2022-07-14</fecha>
+        <asunto>Vendo Patinete</asunto>
+        <texto>Xiami</texto>
+        <precio moneda="dolares">299.99</precio>
+        <contacto tipo="sms">Lucia, 645333222</contacto>
+        <contacto tipo="tel">Luci, 666666666</contacto>
+    </anuncio>
+
+</tablon>

@@ -1,0 +1,13 @@
+a::after {
+  content: " (" attr(href) ") ";
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+aside {
+  display: none;
+}

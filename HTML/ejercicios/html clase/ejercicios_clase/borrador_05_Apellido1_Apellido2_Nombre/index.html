@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <h2>Zona de navegación de nuesta web.</h2> Aquí NOOOOOOO-->
+  <nav>
+    <!-- el título del navb/section/article va dentro de...  -->
+    <h2>Zona de navegación de nuesta web.</h2>
+<!--     normalmente en el enunciado se indica que no se pueden usar en nav ni enlaces abosultos ni relativos a la raíz -->
+    <ul>
+      <li><a href="index.html">Página inicial</a></li>
+      <li><a href="info/tecnologia/blog.html">Nuestro blog</a></li>
+      <li><a href="sat/resultados.html">Resultados</a></li>
+      <li><a href="docs/html5-cheat-sheet.png">Ayuda HTML</a></li>
+    </ul>  
+  </nav>
+
+  <h1>Encuesta alumnado</h1>
+
+  <form action="server/procesa.php" method="get" enctype="multipart/form-data" >
+    <!--  REVISAR atributos form get/post !!!! -->
+
+    <!-- fieldset/legend  -->
+    <fieldset>
+      <legend>Datos iniciales</legend>
+
+      <!-- chexbox temas interés-->
+      <p>
+        Seleccione a continuación cuales son los temas de su interés: <br>
+       
+        <input type="checkbox" name="interes" id="interes" value="HTML">
+        <label for="interes">HTML</label> <br>
+        <input type="checkbox" name="interes" id="interes1" value="CSS">
+        <label for="interes1">Estilos CSS</label> <br>
+        <input type="checkbox" name="interes" id="interes2" value="JS">
+        <label for="interes2"> El lenguaje JaVAsCRIPT</label> <br>
+      </p>   
+
+      <!-- fecha (posterior a...)-->
+      <p>
+        <label for="fecha">Fecha posterior a...</label> <br>
+        <input type="date" name="fecha" id="fecha" min="2021-10-02">
+      </p>
+
+      <!-- dos fotos-->
+      <p>
+        <label for="fotos">Fotos</label> <br>
+        <input multiple type="file" name="fotos" id="fotos">
+      </p>
+  
+      <!-- color -->
+      <p>
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color" value="#ff0000">
+      </p>
+      <!-- pagina web -->
+      <p>
+        <label for="web">Página web</label> <br>
+        <input type="url" name="web" id="web">
+      </p>
+
+      <!-- código alumno con patrón -->
+      <label for="alumno">Código de alumno</label>
+      <input type="text" name="alumno" id="alumno" 
+              pattern="[A-Z]{3}[0-9]{1,2}">
+
+      <!-- zona de domicilio con radiobutton -->
+      <p>
+        Seleccione zona donde víve: <br>
+        <label><input checked type="radio" name="zona" value="Jerez">Jerez </label> (* Valor por defecto)<br>
+        <label><input type="radio" name="zona" value="Pedanías">Pedanías: Cuartillos, Estella, etc.</label> <br>       
+        <label><input type="radio" name="zona" value="fuera">Fuera de Jerez: El Puerto, Chipiona ,etc.. </label> <br>             
+      </p>
+
+      <!-- legales -->
+      <input type="checkbox" name="encuesta" id="encuesta" required value="si">
+      <label for="encuesta">
+        Acepto recibir noticaciones del estado de la encuesta (campo
+        obligatorio)
+      </label>
+
+    </fieldset>
+    <!-- enviar/recibir -->
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpiar">
+
+  </form>
+
+
+</body>
+</html>

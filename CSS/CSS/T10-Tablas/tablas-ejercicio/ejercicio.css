@@ -1,0 +1,21 @@
+table, tr, th {
+    border: blue solid 2px;
+    border-collapse: collapse;
+}
+
+table {
+    counter-reset: nfila;
+}
+
+tr {
+    counter-reset: ncolumna;
+    counter-increment: nfila;
+}
+
+th {
+    counter-increment: ncolumna;
+}
+
+th::before {
+    content: counter(nfila) "." counter(ncolumna);
+}

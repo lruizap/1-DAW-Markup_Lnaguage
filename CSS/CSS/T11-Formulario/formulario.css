@@ -1,0 +1,40 @@
+fieldset {
+    margin-top: 1.5em;
+}
+
+input {
+    padding: .2em .4em;
+}
+
+
+label, input[type="submit"] {
+    display: block;
+    margin-top: 1.5em;
+} 
+
+/* label con float */
+
+/* label {
+    width: 25%;
+    float: left;
+}
+
+div {
+    margin-top: 1em;
+}
+
+form.rejilla {
+    display: grid;
+    grid-template-columns: 25%, 75%;
+}
+
+form.rejilla input[type="submit"] {
+    grid-column: 2;
+}
+
+*/
+
+:focus {
+    background-color: yellow;
+    font-weight: bold;
+}

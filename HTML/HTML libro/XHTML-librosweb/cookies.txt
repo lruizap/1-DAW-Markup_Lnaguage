@@ -1,0 +1,10 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.cloudflare.com	TRUE	/	FALSE	1999999999	__cfduid	de7cd0e10c04ed21843888a80c7d9f8811572439009
+.google.com	TRUE	/	FALSE	1999999999	1P_JAR	2019-10-30-12
+www.google.com	TRUE	/	FALSE	1999999999	SameSite	none
+.google.com	TRUE	/	FALSE	1999999999	NID	190=OePMQ5zPguUQUhsTS_ae-iPbenfxCqBac7BZ4Wu6GcbaksiHIstHTQ9o6cPlnhfdgOylKCMHrBBNDEAl7jqSNIfJWSHOQc74jOs4Sme8F-usaUzvDkU8J3ljUHQWeO33DfY--2Fql625tm79C9QvxSx45xn27t3gSmHXrkpqlQ4
+www.cloudflare.com	TRUE	/	FALSE	1999999999	__cflb	2245242212
+.www.cloudflare.com	TRUE	/	FALSE	1999999999	__cf_bm	34792e1b1e629d130d7b1ae55fefef4900ff347e-1572439202-1800-ARMrZotMVdzu1dE0uhJ08GtPQ+ZycNDEdahSUNpl1rxG7paqcVv/Cq0fnuGBVAQKEB8irLcx3nBeHwa6oMXnkpU=
+.uniwebsidad.com	TRUE	/	FALSE	1999999999	__cfduid	d793b5b006715e9a86d44a32c7aebd2531572443732
+

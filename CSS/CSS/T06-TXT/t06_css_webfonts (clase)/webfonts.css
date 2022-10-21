@@ -1,0 +1,42 @@
+/* webfonts.css */
+
+.googlefonts {
+  font-family: 'Tangerine', serif;
+}
+
+@font-face {
+  font-family: nuevaFuente;
+  src: url("mona_shark/Mona Shark.otf");
+}
+
+.comic {
+  font-family: nuevaFuente;
+}
+
+
+/* uso similar a box-shadow */
+
+.sombra {
+  text-shadow: 2px 2px 1px #666;
+}
+
+
+/* ejemplo uso box-model */
+
+section {
+  border: 1px solid blue;
+  border-radius: 15px;
+  box-shadow: 40px 30px 10px #444;
+  margin: 5%;
+  padding: 0 1%;
+}
+
+pre {
+  color: blue;
+  margin-left: 40px;
+}
+
+strong {
+  background-color: yellow;
+  color: blue;
+}

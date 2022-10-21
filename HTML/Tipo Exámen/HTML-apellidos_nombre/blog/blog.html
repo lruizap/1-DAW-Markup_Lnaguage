@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Recorra nuestro sitio web</h2>
+        <ul>
+            <li><a href="../index.html">Página inicial</a></li>
+            <li><a href="../bd/sql/recogeDatos.html">Recogida de datos</a></li>
+            <li><a href="../bd/resultados.html">Tabla de resultados</a></li>
+            <li><a href="blog.html">Nuestro blog</a></li>
+        </ul>
+    </nav>
+
+    <h1>
+        Blog
+        Hablaremos de dos grandres temas: HTML y CSS
+    </h1>
+    <nav>
+        <h2>Indice del blog</h2>
+        <ul>
+            <li>
+                <a href="#html">Bloque HTML</a>
+                <ol>
+                    <li><a href="#cerrar">Cerrar etiquetas</a></li>
+                    <li><a href="#evitar">Evitar estilos inline</a></li>
+                </ol>
+            </li>
+
+            <li>
+                <a href="#css">Bloque CSS</a>
+                <ul>
+                    <li><a href="#jerarquia">Jerarquía</a></li>
+                    <li><a href="#fuentes">Fuentes</a></li>
+                    <ul>
+                        <li><a href="#txt">Text Shadow</a></li>
+                    </ul>
+            </li>
+    </nav>
+
+    <section>
+        <h2 id="html">Bloque HTML</h2>
+        <article>
+            <h3 id="cerrar">Artículo 1: Cerrar las etiquetas</h3>
+
+            <p>
+                Back in the day, it wasn't uncommon to see things like this:
+
+            <pre>
+                    <code>
+                        &lt;li>Some text here.
+                        &lt;li>Some new text here.
+                        &lt;li>You get the idea.
+                    </code>
+                </pre>
+
+            <p>
+                Notice how the wrapping UL/OL tag was omitted. Additionally, many chose to leave off the closing LI tags
+                as
+                well. By today's standards, this is simply bad practice and should be 100% avoided. Always, always close
+                your
+                tags. Otherwise, you'll encounter validation and glitch issues at every turn.
+                Artículo 2: Never Use Inline Styles</p>
+            </p>
+
+
+        </article>
+        <article id="evitar">
+            <h3>Evitar estilos inline</h3>
+            <p>
+                When you're hard at work on your markup, sometimes it can be tempting to take the easy route and sneak
+                in a bit
+                of styling. 1
+            </p>
+            <pre><code>
+                &lt;p style="color: red;">I'm going to make this text red so that it really stands out and makes people take
+                    notice! &lt;/p>
+            </code></pre>
+            <p>Sure -- it looks harmless enough. However, this points to an error in your coding practices.</p>
+        </article>
+    </section>
+    <section>
+        <h2 id="css">Bloque css</h2>
+        <article>
+            <h3 id="jerarquia">Artículo 1: Hierarchy provides a clear visual order to content</h3>
+            <img src="../figuras/typography_hiearchy-1_vab7fy.jpg" alt="jerarquia" width="822" height="354">
+            <p> Hierarchy is something you really only notice when it’s not there. In typography, hierarchy refers to
+                the visual
+                difference between various pieces of text. It’s the distinction between headings, paragraphs, links, and
+                other
+                text styles.
+
+                This distinction is made by choosing different fonts, colors, size, capitalization, and other properties
+                for
+                each type of text content. Good hierarchy makes complex information easier to digest and guides users
+                through
+                your content.
+
+                Left: Poor hierarchy. There’s not much differentiation in the size or color of the text to help users
+                digest the
+                content. Right: Better hierarchy that uses more variety in font size, color, and spacing to help users
+                quickly
+                navigate the content.
+            </p>
+        </article>
+        <article>
+            <h3 id="fuentes">Artículo 2: choosing fonts</h3>
+            <img src="../figuras/googlefonts.gif" alt="fuentes" width="640" height="477">
+            <p>With typography, we need to make sure it is as easy to read as possible. The greatest overall factor in
+                readability is the font you choose—which is a huge topic. There are many factors that determine how
+                "readable" a font is. Some fonts are made specifically to be used as headings or short lines of text;
+                these are called "display" fonts, and they often have more personality than fonts designed to be used
+                for text. Unique flourishes and quirks make display fonts harder to read at small sizes and when part of
+                a large paragraph. As a rule of thumb, use a more straightforward font for text and only use display
+                fonts for headings.</p>
+            <p> If you’re in a pinch and need a readable font, try Google Fonts. Add a paragraph of text to the preview
+                field and size it roughly how it will display on your website. You can then narrow down your results to
+                serif or sans-serif and scan the list of fonts for one that is easy to read. Roboto, Noto Sans,
+                Merriweather, and PT Serif are all very readable options</p>
+            <h4 id="txt">text shadow</h4>
+            <p>Text Shadow</p>
+            <p> Este código define dos sombras (text shadow) para elementos p. El número de sombras puede ampliarse
+                según se desee; no olvides poner siempre una coma para separar las cifras.</p>
+            <p> Los dos primeros elementos determinan la posición de la sombra (primero la coordenada para X y luego
+                para Y). La tercera cifra define el tamaño. Por último se especifica el color de la sombra, ya sea por
+                indicación RGBA (300,180, 100, 1) como en la primera línea, o por indicación absoluta como en la segunda
+                línea (red). Una vez aplicado el anterior comando CSS, el texto se verá de la siguiente forma:</p>
+
+            <img src="../figuras/css-text-shadow.png" alt="txt" width="334" height="102">
+        </article>
+    </section>
+</body>
+
+</html>

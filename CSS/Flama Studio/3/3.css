@@ -1,0 +1,28 @@
+h1{
+    color: red;
+    background-color: aqua;
+    font-size: 27px;
+    border: black solid 10px;
+}
+
+/* @charset  */
+/* diseño adaptable */
+@media (max-width:799px){
+    h1 {
+        color: blue;
+        background-color: orange;
+    }
+    p {
+        background-color: red;
+    }
+}
+
+p{ 
+    /* padding: 14px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px; */
+
+    padding: 10px 10px 10px 15px;
+}

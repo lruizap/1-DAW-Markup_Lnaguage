@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t08: Formulario inicial</title>
+</head>
+
+<body>
+  <h1>Formulario inicial </h1>
+
+  <form action="/reclama.php" >
+
+    <p>
+      <input required type="checkbox" name="contrato" id="contrato" value="acepta">
+      <label for="contrato">Acepto las condiciones del contrato</label>
+    </p>
+
+
+    <p>
+      Su serie preferida:
+      <input type="radio" name="serie" id="tronos" value="TRO">
+      <label for="tronos">Juego de Tronos</label>
+      <input type="radio" name="serie" id="calamar" value="calamar">
+      <label for="calamar">El Calamar</label>
+    </p>
+
+    <p>
+      Balón de oro
+      <input checked type="radio" name="balonoro" id="messi" value="messi">
+      <label for="messi">Messi</label>
+      <input type="radio" name="balonoro" id="benzema" value="benzema">
+      <label for="benzema">Benzema</label>
+
+    </p>
+
+    <p>
+        Aficiones <br>
+        <input checked type="checkbox" name="aficiones" id="deportes" >
+        <label for="deportes">Sports y similares</label>
+        <br>
+        <input type="checkbox" name="aficiones" id="cine" >
+        <label for="cine">Cine</label>
+        <br>
+        <input checked type="checkbox" name="aficiones" id="tecnologia" value="TEC">
+        <label for="tecnologia">Tecnología</label>
+    </p>
+
+    <p> Módulos <br>
+        <input type="checkbox" name="modulos" id="lmsgi" value="LMSGI">
+        <label for="lmsgi">LMSGI</label>
+        <br>
+        <input type="checkbox" name="modulos" id="bd" value="BD">
+        <label for="bd">BD</label>
+        <br>
+        <input type="checkbox" name="modulos" id="prog" value="PROG">
+        <label for="prog">Programación</label>
+    </p>
+
+
+
+    <p> <!-- label forma 1 -->
+      <label for="nombre">Nombre</label><br>
+      <input required placeholder="Anónimo" minlength="4" maxlength="4"  name="nombre" type="text" id="nombre">
+    </p>
+    <p>  <!-- label forma 2 -->
+      <label>Clave <br> 
+        <input type="password" name="clave">
+    </label>
+    </p>
+    <p>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar">
+    </p>
+  </form>
+</body>
+
+</html>

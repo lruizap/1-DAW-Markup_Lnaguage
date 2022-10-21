@@ -1,0 +1,18 @@
+Txmlstartlet:
+
+1. Validar fichero xml
+
+xmlstarlet val -e (fichero)
+
+2. Validar fichero xml con dtd
+
+xmlstarlet val -e -d (dtd) (xml)
+
+3. Validar xml con xsd
+
+xmlstarlet val -e -s (xsd) (xml)
+
+4. Transformaciones 
+
+xmlstarlet tr -e -s (xsl) (xml)
+

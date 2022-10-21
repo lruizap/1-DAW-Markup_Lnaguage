@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Recogida datos formulario</title>
+</head>
+
+<body>
+  <h1> Formulario de entrada</h1>
+  <p>Los datos se envían a ejemplo-formulario.php</p>
+  <p>En este ejemplo, para los nombres de las entradas de tipo checkbox se ha usado un único nombre con notación de array. Esto permite que PHP reciba todos los posibles valores en una única variable de tipo array, y en ese caso se podrá recorrer con un bucle. </p>
+  <form action="ejemplo-formulario.php" method="get">
+    <p>
+      <label>
+        Nombre <input type="text" name="username" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Contraseña <input type="password" name="contrasena" />
+      </label>
+    </p>
+    <p>
+      Matricula: <br>
+      <label><input type="radio" name="repite" value="S" /> Repetidor </label>
+      <label><input type="radio" name="repite" value="N" /> Alumno de nuevo ingreso</label>
+    </p>
+    <p>
+      Áreas de interés: <br />
+      <label><input type="checkbox" name="intereses[]" value="TEC" /> Tecnología</label> <br>
+      <label><input type="checkbox" name="intereses[]" value="TUR" /> Turismo</label> <br>
+      <label><input type="checkbox" name="intereses[]" value="MUS" /> Conciertos</label> <br>
+    </p>
+    <input type="submit" name="enviar" value="Envíar" />
+    <input type="reset" name="limpiar" value="Borrar datos" />
+  </form>
+</body>
+
+</html>

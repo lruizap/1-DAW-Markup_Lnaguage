@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Mirrored from uniwebsidad.com/libros/referencia-css2/display by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Nov 2019 14:54:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#003580">
+<title>Propiedad display (Referencia de CSS 2.1)</title>
+<meta name="description" content="La propiedad display es una de las propiedades CSS más infrautilizadas. Aunque todos los diseñadores conocen esta propiedad y utilizan sus valores inline, block y none, las posibilidades de display son mucho más avanzadas.">
+<style type="text/css">
+                .border{border:1px solid #dee2e6!important}.border-top{border-top:1px solid #dee2e6!important}.border-right{border-right:1px solid #dee2e6!important}.border-bottom{border-bottom:1px solid #dee2e6!important}.border-left{border-left:1px solid #dee2e6!important}.d-none{display:none!important}.d-block{display:block!important}.d-flex,.metric{display:flex!important}@media (min-width:576px){.d-sm-none{display:none!important}}@media (min-width:768px){.d-md-inline{display:inline!important}.d-md-block{display:block!important}}@media (min-width:992px){.d-lg-none{display:none!important}.d-lg-block{display:block!important}}.embed-responsive{position:relative;display:block;width:100%;padding:0;overflow:hidden}.embed-responsive:before{display:block;content:""}.embed-responsive .embed-responsive-item,.embed-responsive iframe{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0}.embed-responsive-16by9:before{padding-top:56.25%}.flex-row{flex-direction:row!important}.metric{flex-direction:column!important}.flex-fill{flex:1 1 auto!important}.justify-content-center,.metric{justify-content:center!important}.justify-content-between{justify-content:space-between!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.w-100{width:100%!important}.text-nowrap{white-space:nowrap!important}.text-right{text-align:right!important}.metric{text-align:center!important}@media (min-width:576px){.text-sm-right{text-align:right!important}}.font-weight-normal{font-weight:400!important}.text-danger{color:#dc3545!important}a.text-danger:focus,a.text-danger:hover{color:#a71d2a!important}.text-muted{color:#6c757d!important}*,:after,:before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(11,12,12,0)}article,aside,figcaption,footer,header,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}[tabindex="-1"]:focus{outline:0!important}hr{box-sizing:content-box;height:0;overflow:visible}h1,h2,h3,h4{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}abbr[data-original-title],abbr[title]{text-decoration:underline;text-decoration:underline dotted;cursor:help;border-bottom:0;text-decoration-skip-ink:none}dl,ol,ul{margin-bottom:1rem}dl,ol,ul{margin-top:0}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}b,strong{font-weight:bolder}small{font-size:80%}a{text-decoration:none;background-color:transparent}a:hover{text-decoration:underline}a:not([href]):not([tabindex]),a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus{outline:0}code,pre{font-family:SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto}img{border-style:none}img,svg{vertical-align:middle}svg{overflow:hidden}table{border-collapse:collapse}caption{padding-top:.75rem;padding-bottom:.75rem;color:#6c757d;text-align:left;caption-side:bottom}th{text-align:inherit}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}button,input{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=date],input[type=datetime-local],input[type=month],input[type=time]{-webkit-appearance:listbox}legend{display:block;width:100%;max-width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit;color:inherit;white-space:normal}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:none}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}[hidden]{display:none!important}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.row{display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col,.col-12,.col-lg-3,.col-lg-5,.col-lg-9,.col-md-2,.col-md-6,.col-md-auto,.col-sm,.col-sm-2,.col-sm-4,.col-sm-6,.col-sm-8{position:relative;width:100%;padding-right:15px;padding-left:15px}.col{flex-basis:0;flex-grow:1;max-width:100%}.col-12{flex:0 0 100%;max-width:100%}@media (min-width:576px){.col-sm{flex-basis:0;flex-grow:1;max-width:100%}.col-sm-2{flex:0 0 16.66667%;max-width:16.66667%}.col-sm-4{flex:0 0 33.33333%;max-width:33.33333%}.col-sm-6{flex:0 0 50%;max-width:50%}.col-sm-8{flex:0 0 66.66667%;max-width:66.66667%}}@media (min-width:768px){.col-md-auto{flex:0 0 auto;width:auto;max-width:100%}.col-md-2{flex:0 0 16.66667%;max-width:16.66667%}.col-md-6{flex:0 0 50%;max-width:50%}}@media (min-width:992px){.col-lg-3{flex:0 0 25%;max-width:25%}.col-lg-5{flex:0 0 41.66667%;max-width:41.66667%}.col-lg-9{flex:0 0 75%;max-width:75%}}.pagination{display:flex;padding-left:0;list-style:none;border-radius:.25rem}.page-link{position:relative;display:block;padding:.5rem .75rem;margin-left:-1px;line-height:1.25;color:#0358d8;background-color:#fff;border:1px solid #dee2e6}.page-link:hover{z-index:2;color:#d86c5c;text-decoration:none;background-color:#e9ecef;border-color:#dee2e6}.page-link:focus{z-index:2;outline:0;box-shadow:0 0 0 .2rem rgba(3,88,216,.25)}.page-link:not(:disabled):not(.disabled){cursor:pointer}.page-item:first-child .page-link{margin-left:0;border-top-left-radius:.25rem;border-bottom-left-radius:.25rem}.page-item:last-child .page-link{border-top-right-radius:.25rem;border-bottom-right-radius:.25rem}.page-item.active .page-link{z-index:1;color:#fff;background-color:#0358d8;border-color:#0358d8}.page-item.disabled .page-link{color:#6c757d;pointer-events:none;cursor:auto;background-color:#fff;border-color:#dee2e6}.nav{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none}
+
+/*! purgecss start ignore */.hljs-comment{color:#998;font-style:italic}.hljs-string{color:#183691}.hljs-keyword{color:#ce2068}.hljs-number{color:#099}.hljs-symbol{color:#0086b3}.hljs-tag .hljs-name{color:#63a35c}.hljs-tag .hljs-attr{color:#795da3}.hljs-class .hljs-title{color:#0086b3}.hljs-function .hljs-title{color:#795da3}.hljs-variable{color:#183691}.hljs-selector-class,.hljs-selector-id{color:#795da3}.hljs-selector-tag{color:#63a35c}.hljs-built_in{color:#c57633}.javascript .hljs-function .hljs-title{color:inherit}.json .hljs-attr{color:#ce2068}.json .hljs-literal{color:#0086b3}.json .hljs-string{color:#63a35c}.python .hljs-meta{color:#099}.yaml .hljs-attr{color:#63a35c}.yaml .hljs-number{color:#0086b3}
+
+/*! purgecss end ignore */
+
+/*! purgecss start ignore */.m-b-0{margin-bottom:0!important}.m-b-5{margin-bottom:5px!important}.m-b-15{margin-bottom:15px!important}.m-b-30{margin-bottom:30px!important}.m-b-45{margin-bottom:45px!important}.m-l-15{margin-left:15px!important}.m-r-10{margin-right:10px!important}.m-r-15{margin-right:15px!important}.m-t-0{margin-top:0!important}.m-t-10{margin-top:10px!important}.m-t-30{margin-top:30px!important}.text-bold{font-weight:700}.text-italic{font-style:italic}.text-large{font-size:20px}.text-normal{font-size:16px}.text-small{font-size:13px}.text-nodecoration{text-decoration:none}.text-nowrap{white-space:nowrap}html{height:100%}body{display:flex;flex-direction:column;min-height:100%;overflow-wrap:break-word}.container{max-width:100%}main{flex:1}section+section{margin-top:45px}img{max-width:100%}.avatar{border-radius:50%;border:1px solid #f7f7f7;height:50px;width:50px}.avatar--large{height:75px;width:75px}.svg-image svg{height:auto!important;max-width:100%}.svg-logo{padding:10px}.svg-logo svg{max-height:150px!important;max-width:250px}a{color:#0358d8;text-decoration:underline}a:hover{color:#d86c5c;text-decoration:none}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:inherit;text-decoration:none}.link-muted{color:#6c757d;text-decoration:none}.link-muted:hover{color:#d86c5c;text-decoration:underline}.link-nodecoration{text-decoration:none}.link-text{color:#24292e}.link-more{font-weight:700;text-decoration:none}dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}abbr[title]{text-decoration:none}h1,h2,h3,h4,h5,h6{color:#2f363c;margin-top:24px;margin-bottom:16px;font-weight:700;line-height:1.25}.h1,h1{margin-top:0;font-size:24px}.h2,h2{font-size:21px}.h3,.h4,.h5,.h6,h3,h4,h5,h6{font-size:18px}.h6,h6{color:#dee0e2}article h1:first-child,article h2:first-child,article h3:first-child{margin-top:0}ul{padding-left:1.1em}ul ul{margin-top:15px}dt,li{margin-bottom:8px}.list--unstyled{list-style:none;margin-left:0;padding-left:0}table{display:block;width:100%;overflow:auto}tr{background-color:#fff;border-top:1px solid #c6cbd1}tr:nth-child(2n){background-color:#f6f8fa}td,th{border:1px solid #dfe2e5;padding:5px 10px}th{font-size:15px}.table--listing,.table--listing td,.table--listing tr{border:0;vertical-align:top}.table--listing tr,.table--listing tr:nth-child(2n){background-color:transparent}hr.divider{border:1px solid #f7f7f7;margin:30px 0}header .brand{background:#003580;height:52px}header svg{height:auto;margin-left:-3px;margin-top:8px;width:200px}footer{background:#f7f7f7;color:#6f777b;font-size:13px;line-height:2;padding:30px 0 0}footer a{color:#6f777b;text-decoration:none}aside{margin-top:30px}.google-auto-placed,.google-auto-placed+main .headline{margin-top:15px}.headline{border-bottom:1px solid #d5d5d5;margin:20px 0;padding-bottom:20px}.headline .title{color:#2f363c;font-size:28px;font-weight:700;letter-spacing:-.015em;line-height:1.04;margin-bottom:0;word-spacing:-.02em}.headline .pretitle{color:#6f777b;margin-bottom:8px}.headline .subtitle{color:#6f777b;font-size:16px;margin-bottom:0;margin-top:8px}aside .book__toc{margin-bottom:0;padding-left:5px}aside .book__toc li{list-style:none;margin-bottom:5px}aside .book__toc a{text-decoration:none}aside .book__toc li.level-2{margin-left:15px}aside .book__toc .active a{color:#24292e;font-weight:700}.pager a{text-decoration:none}.pagination .page-link{color:#0358d8;text-decoration:none}.taglist{display:flex;flex-wrap:wrap}.tag{background:#e4ebf6;border-radius:2px;color:#24292e;display:inline-flex;font-size:14px;margin:0 10px 10px 0;padding:1px 7px 2px;text-decoration:none}.tag:before{content:"#";color:#0358d8;font-weight:700;margin-right:2px}.tag--active,.tag--active:before,.tag:hover,.tag:hover:before{background:#d86c5c;color:#fff}.blankslate{background-color:#f7f7f7;border:1px solid #e1e4e8;border-radius:3px;box-shadow:inset 0 0 10px #dee0e2;padding:75px 45px;text-align:center}.blankslate--clean{background:transparent;border:0;box-shadow:none}.toc{list-style:none;margin:0;padding:0}.toc a{text-decoration:none}.toc a:hover{text-decoration:underline}.toc--level-1{font-size:18px;font-weight:700}.toc--level-2{margin-left:15px}.toc--level-2+.toc--level-1{margin-top:30px}.metric{background:#f7f7f7;color:#6f777b;padding:10px}.metric .value{font-size:28px;line-height:1.04}.metric .label{display:block;font-size:13px}.fileicon,.fileicon:hover{background:#f7f7f7;border:2px solid #998;border-radius:2px;display:block;height:90px;position:relative;width:70px}.fileicon:after,.fileicon:hover:after{content:"";border-left:16px solid #998;border-top:16px solid #fff;display:block;height:0;position:absolute;right:-2px;top:-2px;width:0}.fileicon__label{background:#6f777b;border-radius:1px;bottom:28%;color:#fff;display:block;font-size:1rem;font-weight:700;left:-4px;padding:4px;position:absolute;text-align:center;width:74px}.fileicon--epub .fileicon__label{background:#4bba1b}.fileicon--html .fileicon__label{background:#00508e}.fileicon--key .fileicon__label{background:#ff8b3d}.fileicon--mp3 .fileicon__label{background:#5893cc}.fileicon--pdf .fileicon__label{background:#cc1414}.fileicon--ppt .fileicon__label{background:#ff8b3d}.fileicon--zip .fileicon__label{background:#fc3;color:#24292e!important}.admonition,.box{-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;column-break-inside:avoid;background:#f7f7f7;border-radius:2px;margin:15px 0;padding:15px}.box--small{padding:15px}.box--micro{border-radius:2px;display:inline-block;margin:0;padding:5px}.box--shadow{background:none;box-shadow:0 1px 6px rgba(0,0,0,.2)}.box--white{background:#fff}.box--outline{border:2px solid #dee0e2;background:none}.box--dashed{border:2px dashed #dee0e2;background:none}.box--active{background:#6f777b;border-color:#6f777b;color:#fff}.box--warning{background:#fffccc;border:1px solid rgba(0,0,0,.1)}.admonition{padding:20px 20px 5px}.admonition .title{display:block}.admonition.sidebar .title{font-size:20px}.admonition.note .title{color:#4073bf}.admonition.tip .title{color:#58a775}.admonition.caution .title{color:#ee6d6d}.admonition.bestpractice .title{color:#bf8a40}.admonition.note{background:#e6f0ff}.admonition.tip{background:#e8f3ec}.admonition.caution{background:#fce8de}.admonition.bestpractice{background:#fff4e6}.admonition.sidebar{border:2px solid #dee0e2;padding:30px 30px 15px}code,pre{background:#f6f8fa;color:#333;font-family:SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:14px;font-size-adjust:.5;white-space:pre-wrap;word-break:break-all}code{border-radius:2px;padding:1px 2px}.admonition .title code,.book__toc code,.breadcrumb code,.navigation code,.pager code,.toc code,a code,h1 code,h2 code,h3 code,h4 code,h5 code,h6 code{background:inherit;color:inherit;font:inherit!important;padding:0}div.code,pre{margin:1em 0}pre{background:#fff;border:none;border-radius:0;color:#24292e;line-height:2;padding:15px}.code pre.code{background:#f6f8fa}.code.bash,.code.cli{background-color:#1e2125;border:solid #555;border-width:30px 3px 4px 4px;border-radius:3px 3px 0 0;color:#fff;position:relative}.code.bash:before,.code.cli:before{background-color:#777;border-radius:50%;box-shadow:0 0 0 3px #777,24px 0 0 3px #777,48px 0 0 3px #777;content:"";display:block;height:7px;left:14px;position:absolute;top:-18px;width:7px}.code.bash pre,.code.bash span,.code.cli pre,.code.cli span{color:#fff;font-style:normal}.code.bash .hljs-comment,.code.cli .hljs-comment{color:#8a8a8a}.code.bash pre,.code.cli pre{background:transparent;margin:0}.admonition code,.admonition pre{background:hsla(0,0%,100%,.3)!important}.admonition .code.bash pre,.admonition .code.cli pre{background:#1e2125!important}.configuration-block .code,.configuration-block .code pre{margin-top:0}.configuration-block .nav-link{border-radius:2px;color:#24292e;font-size:13px;padding:5px 10px;text-decoration:none}.configuration-block .nav-tabs{border-bottom:1px solid #998}.configuration-block .nav-tabs .nav-link:hover{border-color:transparent}.configuration-block .nav-link.active,.configuration-block .nav-link.active:hover{border-color:#998 #998 #fff;font-weight:700}.exercise{background:#f7f7f7;margin-bottom:30px;padding:15px}.exercise .title{font-weight:700}.property.css th{min-width:130px}.example{background:#f7f7f7;border:1px solid #dee0e2;font-family:SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:13px;font-size-adjust:.5;margin:1em 0;overflow:auto;padding:.5em}.example table{margin:.25em}.example table td,.example table th{border:1px solid #998;font-size:13px}.example .box,.example .innerbox{background:rgba(3,88,216,.1);border:2px solid rgba(3,88,216,.6);margin:5px;min-height:50px;padding:5px;width:300px}.example .innerbox{background:hsla(8,61%,60%,.15);border-color:hsla(8,61%,60%,.6);height:40px;margin:3px;width:200px}.example .wide{width:400px}.example .innerwide{width:350px}.example .color1{color:#268822}#banner-gdpr{background:#24292e;bottom:0;color:#998;font-size:13px;padding:4px 0;position:fixed;text-align:center;width:100%;z-index:10000}#banner-gdpr a{color:#998}#banner-gdpr button{background:#6f777b;border:0;border-radius:2px;color:#dee0e2;cursor:pointer;font-size:12px;font-weight:700;margin-left:5px;padding:1px 5px}@media (min-width:768px){.container{max-width:96%}.h1,h1{font-size:32px}.h2,h2{font-size:28px}.h3,h3{font-size:24px}.h4,h4{font-size:21px}.h5,.h6,h5,h6{font-size:18px}ul{padding-left:2em}.list--complex{column-count:2;column-gap:45px}.menu{background:#f7f7f7;border-bottom:1px solid #dee0e2;position:static;transition:box-shadow .28s cubic-bezier(.4,0,.2,1);width:100%;z-index:10000}.menu ul{align-items:center;height:32px;list-style:none;padding:0}.menu li{font-size:12px;font-weight:700;margin-right:28px;text-transform:uppercase}.menu a{color:#003580;line-height:1;text-decoration:none}.menu .active a{background:#003580;border-radius:2px;color:#fff;padding:3px 8px}.menu.scrolling{background:#003580;border-bottom:0;box-shadow:0 2px 5px rgba(0,0,0,.3);position:fixed;top:0}.menu.scrolling a{color:#fff}.menu.scrolling .active a{background:#fff;color:#003580}.toc--full{column-count:2;column-gap:45px}.toc--level-2{margin-left:30px}aside section{font-size:14px;margin-bottom:30px}aside section h3{font-size:21px;margin-top:0}aside .book__toc{column-count:2;column-gap:30px}.headline{margin:30px 0;padding-bottom:30px}.headline .title{font-size:36px}.headline .pretitle,.headline .subtitle,.headline .title{padding-right:90px}}@media (min-width:992px){.container{max-width:960px}.list--complex{column-count:3}aside{margin-top:0}aside .book__toc{column-count:1}.headline{margin:45px 0;padding-bottom:45px}.headline .title{font-size:48px}.headline .pretitle,.headline .subtitle,.headline .title{padding-right:135px}.headline .pretitle,.headline .subtitle{font-size:18px}}@media (min-width:1200px){.container{max-width:1060px}.headline .pretitle,.headline .subtitle,.headline .title{padding-right:251px}}
+
+/*! purgecss end ignore */
+            </style>
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt" type="84e64fa8f59d33455e98ce7b-text/javascript"></script>
+<script type="84e64fa8f59d33455e98ce7b-text/javascript">
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1491000300253750",
+        enable_page_level_ads: true
+    });
+</script>
+<script type="84e64fa8f59d33455e98ce7b-text/javascript">
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-82842-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+<script async src="../../../www.google-analytics.com/analytics.js" type="84e64fa8f59d33455e98ce7b-text/javascript"></script>
+<meta name="apple-mobile-web-app-title" content="uniwebsidad">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABHklEQVR4Ae1WTarCMBDO27/N43kLl5qsqht7o15gKmhFKO3SO+minsWfVUEzUIwMOjU4WRTywYA6mO9nMhAVETE8jOGX7QWFgZWawlFNYKQokuJPaTjYfhmOXMMNy4kg5K5fSpNv8WBSzUOEzjPax/9IOydFktBQvOiXIZy3b5L4sZ8rkSQY55Uyy5ntnagIsSQY5zW67Ga+sN+vIZLgyc3635IkndO0R0TtI4KPHQ90q4akaSdibuvMjGPDjcOf3P0uKYIRYGD3JGDverwIfhRUgLAIH3L/S4gHIwEVgVuBwAuKF9WRi25C9ZEIf3K/jWDGcUERfrHLJ9F+5VxgPXudCyaRZ9hySUg755Nogj9IGBGN/JNM/lEaETEc3AGvyvRlkzpRJQAAAABJRU5ErkJggg==" rel="shortcut icon" type="image/png">
+<link rel="search" type="application/opensearchdescription+xml" href="../../../external.html?link=https://uniwebsidad.com/opensearch.xml" title="uniwebsidad">
+<link rel="manifest" href="../../../external.html?link=https://uniwebsidad.com/manifest.webmanifest">
+<link rel="preconnect" href="../../../external.html?link=https://ajax.cloudflare.com/">
+<link rel="preconnect" href="../../../external.html?link=https://www.google-analytics.com/">
+<link rel="dns-prefetch" href="../../../external.html?link=https://stats.g.doubleclick.net/">
+<link rel="dns-prefetch" href="../../../external.html?link=https://www.google.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Propiedad display (Referencia de CSS 2.1)">
+<meta name="msapplication-TileColor" content="#003580">
+<meta name="application-name" content="uniwebsidad">
+<meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebSite","name":"uniwebsidad","url":"https:\/\/uniwebsidad.com","potentialAction":{"@type":"SearchAction","target":"https:\/\/uniwebsidad.com\/buscar?q={query}","query-input":"required name=query"}}</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/uniwebsidad.com","name":"uniwebsidad","logo":"https:\/\/uniwebsidad.com\/logo.svg","contactPoint":{"@type":"ContactPoint","email":"contacto@uniwebsidad.com","url":"https:\/\/uniwebsidad.com\/sitio\/contacto","contactType":"customer service","availableLanguage":["Spanish"]}}</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"\/","name":"Inicio"}},{"@type":"ListItem","position":2,"item":{"@id":"\/libros","name":"Libros"}},{"@type":"ListItem","position":3,"item":{"@id":"\/libros\/referencia-css2","name":"Referencia de CSS 2.1"}},{"@type":"ListItem","position":4,"item":{"@id":"\/libros\/referencia-css2\/display","name":"display"}}]}</script>
+<header role="banner" itemscope itemtype="https://schema.org/WPHeader">
+<div class="brand">
+<div class="container">
+<a href="../../../external.html?link=https://uniwebsidad.com/" itemprop="name" title="uniwebsidad - Los mejores recursos para aprender diseño y programación web">
+<svg xmlns="http://www.w3.org/2000/svg" width="246.152" height="41.349" viewBox="0 0 230.76784 38.764998"><title>uniwebsidad</title><g stroke-width=".5" stroke-linejoin="round"><path stroke="#fff" fill="#fff" d="M69.816 14.329V30.74h-4.128v-1.69h-.065q-.585.813-1.722 1.43-1.138.585-2.568.585-2.665 0-4.192-1.657-1.495-1.658-1.495-4.16v-10.92h4.16v9.88q0 1.495.747 2.307.748.78 2.015.78 1.333 0 2.178-.942.877-.975.877-2.568V14.33h4.193zm3.114 16.412V14.33h4.062v1.69h.065q.585-.78 1.755-1.398 1.203-.617 2.633-.617 2.697 0 4.16 1.56 1.495 1.56 1.495 4.062v11.115h-4.16v-9.88q0-1.495-.748-2.242-.747-.78-2.015-.78-1.332 0-2.21.942-.845.91-.845 2.503v9.457H72.93zm17.09 0V14.33h4.193v16.41h-4.192zm3.836-18.947q-.715.715-1.723.715-1.007 0-1.755-.715-.747-.715-.747-1.69 0-1.008.715-1.723.747-.715 1.787-.715 1.008 0 1.723.715.747.715.747 1.723 0 .975-.747 1.69z" /><path stroke="#d1ddef" fill="#d1ddef" d="M110.89 30.741l-2.6-11.342h-.065l-2.6 11.342h-5.232l-4.42-16.412h4.387l2.698 12.057h.065l2.827-12.057h4.68l2.925 12.057h.065l2.73-12.057h4.16l-4.42 16.412h-5.2zm9.99-8.027q0-3.9 2.21-6.305 2.243-2.405 5.558-2.405 3.412 0 5.46 2.34 2.047 2.307 2.047 5.947v1.43H125.17q.163 1.788 1.333 2.73 1.202.943 2.795.943 2.177 0 3.77-1.593l2.405 2.86q-2.6 2.405-6.5 2.405-3.413 0-5.753-2.275-2.34-2.275-2.34-6.077zm4.323-1.82h6.825q-.13-1.56-1.073-2.47-.91-.943-2.307-.943-1.3 0-2.275.943-.975.942-1.17 2.47zm21.688 10.172q-1.462 0-2.632-.552-1.138-.585-1.788-1.43h-.065v1.657h-4.16V7.991h4.193v7.995h.065q1.495-1.982 4.387-1.982 3.218 0 5.2 2.437 1.983 2.405 1.983 6.078 0 3.672-1.983 6.11-1.982 2.437-5.2 2.437zm2.958-8.547q0-2.178-1.008-3.51-1.007-1.365-2.86-1.365-1.722 0-2.665 1.137-.91 1.138-.91 2.925v1.658q0 1.787.91 2.925.943 1.137 2.665 1.137 1.82 0 2.828-1.332 1.04-1.365 1.04-3.575z" /><path stroke="#fff" fill="#fff" d="M162.302 31.066q-2.21 0-4.16-.747-1.95-.748-3.088-2.048l2.763-2.697q1.917 2.112 4.615 2.112 1.137 0 1.755-.455.617-.487.617-1.137 0-1.235-1.852-1.593l-3.088-.617q-1.982-.39-3.12-1.593-1.137-1.235-1.137-3.185 0-2.015 1.755-3.542 1.787-1.56 4.777-1.56 4.128 0 6.565 2.177l-2.762 2.6q-1.625-1.397-3.868-1.397-1.007 0-1.625.422-.617.39-.617 1.008 0 1.17 1.56 1.462l2.762.553q4.908.975 4.908 4.81 0 2.307-1.82 3.867t-4.94 1.56zm8.729-.325V14.33h4.193v16.41h-4.193zm3.835-18.947q-.715.715-1.722.715-1.008 0-1.755-.715-.748-.715-.748-1.69 0-1.008.715-1.723.748-.715 1.788-.715 1.007 0 1.722.715.748.715.748 1.723 0 .975-.748 1.69zm14.174 4.192V7.991h4.193v22.75h-4.192v-1.657h-.065q-.65.845-1.82 1.43-1.138.552-2.6.552-3.218 0-5.2-2.437-1.95-2.438-1.95-6.11 0-3.673 1.95-6.078 1.982-2.437 5.2-2.437 2.892 0 4.387 1.982h.098zm-3.574 11.44q1.722 0 2.632-1.137.943-1.138.943-2.925v-1.658q0-1.787-.943-2.925-.91-1.137-2.632-1.137-1.82 0-2.828 1.365-1.007 1.332-1.007 3.51 0 2.21 1.007 3.575 1.008 1.332 2.828 1.332zm12.097-8.58l-1.885-3.12q3.51-1.722 7.312-1.722 2.665 0 4.29 1.332 1.658 1.3 1.658 3.77v7.053q0 1.657 1.592 2.047l-1.755 2.893q-2.275-.033-3.25-1.983h-.065q-1.462 1.95-4.387 1.95-2.568 0-4.225-1.527-1.625-1.56-1.625-3.738 0-2.015 1.43-3.412 1.43-1.398 4.062-1.658l4.063-.39v-.552q0-1.04-.65-1.593-.618-.552-1.723-.552-1.885 0-4.842 1.202zm7.215 4.55l-3.023.39q-2.307.293-2.307 1.983 0 .845.65 1.462.65.585 1.82.585 1.235 0 2.047-.747.813-.78.813-1.983v-1.69zm18.254-7.41V7.991h4.193v22.75h-4.193v-1.657h-.065q-.65.845-1.82 1.43-1.137.552-2.6.552-3.217 0-5.2-2.437-1.95-2.438-1.95-6.11 0-3.673 1.95-6.078 1.983-2.437 5.2-2.437 2.893 0 4.388 1.982h.097zm-3.575 11.44q1.723 0 2.633-1.137.942-1.138.942-2.925v-1.658q0-1.787-.942-2.925-.91-1.137-2.633-1.137-1.82 0-2.827 1.365-1.008 1.332-1.008 3.51 0 2.21 1.008 3.575 1.007 1.332 2.827 1.332z" /><path stroke="#d1ddef" fill="#d1ddef" d="M19.383 3.543l-15.84 15.84 15.84 15.84 3.959-3.961-11.88-11.88 7.92-7.92 1.972 1.972-.01.01 9.9 9.898.01-.01.008.01 3.96-3.96-15.84-15.839zm11.861 0l-3.959 3.96 11.88 11.88-7.92 7.92-1.972-1.973.008-.008-9.898-9.9-.01.01-.008-.01-3.96 3.96 15.84 15.84 15.839-15.84-15.84-15.839z" /></g></svg>
+</a>
+</div>
+</div>
+<nav class="d-none d-md-block menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<div class="container">
+ <ul class="m-b-0 d-flex">
+<li class="m-b-0 ">
+<a itemprop="url" href="../../../external.html?link=https://uniwebsidad.com/"><span itemprop="name">Inicio</span></a>
+</li>
+<li class="m-b-0 active">
+<a itemprop="url" href="../../../external.html?link=https://uniwebsidad.com/libros"><span itemprop="name">Libros</span></a>
+</li>
+<li class="m-b-0 ">
+<a itemprop="url" href="../../../external.html?link=https://uniwebsidad.com/tutoriales"><span itemprop="name">Tutoriales</span></a>
+</li>
+<li class="m-b-0 ">
+<a itemprop="url" href="../../../external.html?link=https://uniwebsidad.com/eventos"><span itemprop="name">Eventos</span></a>
+</li>
+<li class="m-b-0 ">
+<a itemprop="url" href="../../../external.html?link=https://uniwebsidad.com/foro/"><span itemprop="name">Foro</span></a>
+</li>
+<li class="m-b-0 ">
+<a itemprop="url" href="../../../external.html?link=https://uniwebsidad.com/buscar"><span itemprop="name">Buscar</span></a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<main>
+<div class="container">
+<div class="row">
+<div class="col-12">
+<section class="headline">
+<p class="pretitle"><a class="link-muted" href="../referencia-css2.html">Referencia de CSS</a></p>
+<h1 class="title "><span>Propiedad</span> display</h1>
+</section>
+</div>
+<div class="col-lg-9">
+<article>
+<div class="table" id="table-43-1">
+<table class="table property css" summary="Definición de la propiedad display de CSS">
+<tr><th>Definición</th><td>Establece el tipo de caja generada por un elemento</td></tr><tr><th>Valores <br /> permitidos</th><td>Uno y sólo uno de los siguientes valores:<ul><li style="float:left;width:25%;margin-right:5%">inline</li><li style="float:left;width:25%;margin-right:5%">block</li><li style="float:left;width:25%;margin-right:5%">list-item</li><li style="float:left;width:25%;margin-right:5%">run-in</li><li style="float:left;width:25%;margin-right:5%">inline-block</li><li style="float:left;width:25%;margin-right:5%">table</li><li style="float:left;width:25%;margin-right:5%">inline-table</li><li style="float:left;width:25%;margin-right:5%">table-row-group</li><li style="float:left;width:25%;margin-right:5%">table-header-group</li><li style="float:left;width:25%;margin-right:5%">table-footer-group</li><li style="float:left;width:25%;margin-right:5%">table-row</li><li style="float:left;width:25%;margin-right:5%">table-column-group</li><li style="float:left;width:25%;margin-right:5%">table-column</li><li style="float:left;width:25%;margin-right:5%">table-cell</li><li style="float:left;width:25%;margin-right:5%">table-caption</li><li style="float:left;width:25%;margin-right:5%">none</li><li style="float:left;width:25%;margin-right:5%"><a href="inherit.html">inherit</a></li></ul></td></tr><tr><th>Valor inicial</th><td>inline</td></tr><tr><th>Se aplica a</th><td>Todos los elementos</td></tr><tr><th>Válida en</th><td><a href="medios.html">todos los medios</a></td></tr><tr><th>Se hereda</th><td>no</td></tr><tr class="nobottom"><th>Definición en<br />el estándar</th><td><a href="../../../external.html?link=https://www.w3.org/TR/CSS21/visuren.html#propdef-display">w3.org/TR/CSS21/visuren.html#propdef-display</a></td></tr>
+</table>
+</div>
+<h2 id="ejemplos-de-uso-43">Ejemplos de uso</h2>
+<p>La propiedad <code>display</code> es una de las propiedades CSS más infrautilizadas. Aunque todos los diseñadores conocen esta propiedad y utilizan sus valores <code>inline</code>, <code>block</code> y <code>none</code>, las posibilidades de <code>display</code> son mucho más avanzadas.</p>
+<p>De hecho, la propiedad <code>display</code> es una de las más complejas de CSS 2.1, ya que establece el tipo de la caja que genera cada elemento. La propiedad <code>display</code> es tan compleja que casi ningún navegador es capaz de mostrar correctamente todos sus valores.</p>
+<p>El valor más sencillo de <code>display</code> es <code>none</code> que hace que el elemento no genere ninguna caja. El resultado es que el elemento desaparece por completo de la página y no ocupa sitio, por lo que los elementos adyacentes ocupan su lugar. Si se utiliza la propiedad <code>display: none</code> sobre un elemento, todos sus descendientes también desaparecen por completo de la página.</p>
+<p>Si se quiere hacer un elemento invisible, es decir, que no se vea pero que siga ocupando el mismo sitio, se debe utilizar la propiedad <a href="visibility.html">visibility</a>. La propiedad <code>display: none</code> se utiliza habitualmente en aplicaciones web dinámicas creadas con JavaScript y que muestran/ocultan contenidos cuando el usuario realiza alguna acción como pulsar un botón o un enlace.</p>
+<p>Los otros dos valores más utilizados son <code>block</code> e <code>inline</code> que hacen que la caja de un elemento sea de bloque o en línea respectivamente. El siguiente ejemplo muestra un párrafo y varios enlaces a los que se les ha añadido un borde para mostrar el espacio ocupado por cada caja:</p>
+<div class="example">
+<p style="border: 2px solid #000; padding: 3px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<a style="border: 2px dashed #C00; padding: 3px;" href="#">Lorem ipsum</a>
+<a style="border: 2px dashed #C00; padding: 3px;" href="#">Donec mollis nunc in leo</a>
+<a style="border: 2px dashed #C00; padding: 3px;" href="#">Vivamus fermentum</a>
+</div>
+<p>Como el párrafo es por defecto un elemento de bloque <em>"block element"</em>), ocupa todo el espacio disponible hasta el final de su línea, aunque sus contenidos no ocupen todo el sitio. Por su parte, los enlaces por defecto son elementos en línea <em>"inline element"</em>), por lo que su caja sólo ocupa el espacio necesario para mostrar sus contenidos.</p>
+<p>Si se aplica la propiedad <code>display: inline</code> al párrafo del ejemplo anterior, su caja se convierte en un elemento en línea y por tanto sólo ocupa el espacio necesario para mostrar sus contenidos:</p>
+<div class="example">
+<p style="border: 2px solid #000; display: inline; padding: 3px;"><strong>[display: inline]</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<a style="border: 2px dashed #C00; padding: 3px;" href="#">Lorem ipsum</a>
+<a style="border: 2px dashed #C00; padding: 3px;" href="#">Donec mollis nunc in leo</a>
+<a style="border: 2px dashed #C00; padding: 3px;" href="#">Vivamus fermentum</a>
+</div>
+<p>Para visualizar más claramente el cambio en el tipo de caja, el siguiente ejemplo muestra un mismo párrafo largo con <code>display: block</code> y <code>display: inline</code>:</p>
+<div class="example">
+<p style="border: 2px solid #000; display: block; padding: 3px;"><strong>[display: block]</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non sem quis tellus vulputate lobortis. Vivamus fermentum, tortor id ornare ultrices, ligula ipsum tincidunt pede, et blandit sem pede suscipit pede. Nulla cursus porta sem. Donec mollis nunc in leo.</p>
+<p style="border: 2px solid #000; display: inline; padding: 3px;"><strong>[display: inline]</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non sem quis tellus vulputate lobortis. Vivamus fermentum, tortor id ornare ultrices, ligula ipsum tincidunt pede, et blandit sem pede suscipit pede. Nulla cursus porta sem. Donec mollis nunc in leo.</p>
+</div>
+<p>De la misma forma, si en los enlaces del ejemplo anterior se emplea la propiedad <code>display: block</code> se transforman en elementos de bloque, por lo que siempre empiezan en una nueva línea y siempre ocupan todo el espacio disponible en la línea, aunque sus contenidos no ocupen todo el sitio:</p>
+<div class="example">
+<p style="border: 2px solid #000; padding: 3px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<a style="border: 2px dashed #C00; padding: 3px; margin: 3px 0; display: block;" href="#"><strong>[display: block]</strong> Lorem ipsum</a>
+<a style="border: 2px dashed #C00; padding: 3px; margin: 3px 0; display: block;" href="#"><strong>[display: block]</strong> Donec mollis nunc in leo</a>
+<a style="border: 2px dashed #C00; padding: 3px; margin: 3px 0; display: block;" href="#"><strong>[display: block]</strong> Vivamus fermentum</a>
+</div>
+<p>Uno de los valores más curiosos de <code>display</code> es <code>inline-block</code>, que crea cajas que son de bloque y en línea de forma simultánea. Una caja de tipo <code>inline-block</code> se comporta como si fuera de bloque, pero respecto a los elementos que la rodean es una caja en línea.</p>
+<p>El enlace del siguiente ejemplo es de tipo <code>inline-block</code>, lo que permite por ejemplo establecerle un tamaño mediante la propiedad <code>width</code>:</p>
+<div class="example">
+<p style="border: 2px solid #000; padding: 3px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non sem quis tellus vulputate lobortis. Vivamus fermentum, tortor id ornare ultrices, ligula ipsum tincidunt pede, et blandit sem pede suscipit pede. Nulla cursus porta sem. Donec mollis nunc in leo. <a href="#" style="display: inline-block; border: 2px dashed #C00; width: 25%; padding: 3px; margin: 5px;"><strong>[display: inline-block, width: 25%]</strong> Quisque semper, magna sed pharetra tincidunt, quam urna dapibus dolor, a dignissim sem neque id purus. Etiam luctus viverra nisi.</a> Integer lobortis accumsan felis. Cras venenatis. Morbi cursus, tellus vitae iaculis pulvinar, turpis nibh posuere nisl, sed vehicula massa orci at dui. Morbi pede ipsum, porta quis, venenatis et, ullamcorper in, metus. Nulla facilisi. Quisque laoreet molestie mi. Ut mollis elit eget urna.</p>
+</div>
+<p>Si tu navegador soporta el valor <code>inline-block</code>, el ejemplo anterior se debe visualizar tal y como muestra la siguiente imagen:</p>
+<div class="example">
+<img src="../../static/libros/imagenes/referencia-css2/display_1.png" />
+</div>
+<p>Otro de los valores definidos por la propiedad <code>display</code> es <code>list-item</code>, que hace que cualquier elemento de cualquier tipo se muestre como si fuera un elemento de una lista (elemento <code>&lt;li&gt;</code>). El siguiente ejemplo muestra tres párrafos que utilizan la propiedad <code>display: list-item</code> para simular que son una lista de elementos de tipo <code>&lt;ul&gt;</code>:</p>
+<div class="example">
+<p style="display: list-item; margin-left: 2em">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p style="display: list-item; margin-left: 2em">Sed non sem quis tellus vulputate lobortis.</p>
+<p style="display: list-item; margin-left: 2em">Vivamus fermentum, tortor id ornare ultrices, ligula ipsum tincidunt pede, et blandit sem pede suscipit pede.</p>
+</div>
+<p>A continuación se muestra el código HTML del ejemplo anterior:</p>
+<div class="code html"><pre class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: list-item; margin-left: 2em"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: list-item; margin-left: 2em"</span>&gt;</span>Sed non sem quis tellus vulputate lobortis.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: list-item; margin-left: 2em"</span>&gt;</span>Vivamus fermentum, tortor id ornare ultrices, ligula ipsum tincidunt pede, et blandit sem pede suscipit pede.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre></div>
+<p>Los elementos con la propiedad <code>display: list-item</code> son exactamente iguales que los elementos <code>&lt;li&gt;</code> a efectos de su visualización, por lo que se pueden utilizar las propiedades de listas como <a href="list-style-type.html">list-style-type</a>, <a href="list-style-image.html">list-style-image</a>, <a href="list-style-position.html">list-style-position</a> y <a href="list-style.html">list-style</a>.</p>
+<p>Uno de los valores más curiosos de la propiedad <code>display</code> es <code>run-in</code>, que genera una caja de bloque o una caja en línea dependiendo del contexto, es decir, dependiendo de sus elementos adyacentes. El comportamiento de las cajas de tipo <code>run-in</code> se rige por las siguientes reglas:
+* Si la caja <code>run-in</code> contiene una caja de bloque, la caja <code>run-in</code> se convierte en una caja de bloque.
+* Si después de la caja <code>run-in</code> se encuentra una caja de bloque (que no esté posicionada de forma absoluta y tampoco esté posicionada de forma flotante), la caja <code>run-in</code> se convierte en una caja en línea en el interior de la caja de bloque.
+* En cualquier otro caso, la caja <code>run-in</code> se convierte en una caja de bloque.</p>
+<p>El siguiente ejemplo muestra una misma caja de tipo <code>run-in</code> que se visualiza de forma muy diferente en función del tipo de caja que existe a continuación:</p>
+<div class="example">
+<p style="display: run-in; border: 2px dashed #C00; padding: 3px;"><strong>[display: run-in]</strong> Lorem ipsum</p>
+<p style="display: block; border: 2px solid #000; padding: 3px;"><strong>[display: block]</strong> dolor sit amet, consectetuer adipiscing elit.</p>
+<p style="display: run-in; border: 2px dashed #C00; padding: 3px;"><strong>[display: run-in]</strong> Lorem ipsum</p>
+<p style="display: inline; border: 2px solid #000; padding: 3px;"><strong>[display: inline]</strong> dolor sit amet, consectetuer adipiscing elit.</p>
+</div>
+<p>El código HTML y CSS del ejemplo anterior se muestra a continuación:</p>
+<div class="code html"><pre class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: run-in; border: 2px dashed #C00;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>[display: run-in]<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> Lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: block; border: 2px solid #000;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>[display: block]<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> dolor sit amet, consectetuer adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: run-in; border: 2px dashed #C00;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>[display: run-in]<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> Lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: inline; border: 2px solid #000;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>[display: inline]<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> dolor sit amet, consectetuer adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre></div>
+<p>En la actualidad sólo la última versión del navegador Opera es capaz de mostrar correctamente el ejemplo anterior, tal y como muestra la siguiente imagen:</p>
+<div class="example">
+<img src="../../static/libros/imagenes/referencia-css2/display_2.png" />
+</div>
+<p>El estándar CSS 2.1 incluye un ejemplo del posible uso del valor <code>run-in</code>. En este ejemplo, un título de sección <code>&lt;h3&gt;</code> crea una caja <code>run-in</code>, de forma que cuando va seguido de un párrafo, el titular <em>se mete</em> dentro del párrafo:</p>
+<div class="code html"><pre class="html"><span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: run-in"</span>&gt;</span>Lorem ipsum dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Sed non sem quis tellus vulputate lobortis. Vivamus fermentum, tortor id ornare ultrices, ligula ipsum tincidunt pede, et blandit sem pede suscipit pede. Nulla cursus porta sem. Donec mollis nunc in leo. Integer lobortis accumsan felis.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre></div>
+<p>El resto de valores de la propiedad <code>display</code> están relacionados con las tablas y hacen que un elemento se muestre como si fuera una parte de una tabla: fila, columna, celda o grupos de filas/columnas. Los valores definidos por la propiedad <code>display</code> son <code>inline-table</code>, <code>table-row-group</code>, <code>table-header-group</code>, <code>table-footer-group</code>, <code>table-row</code>, <code>table-column-group</code>, <code>table-column</code>, <code>table-cell</code>, <code>table-caption</code>.</p>
+<p>Aunque los valores relacionados con las tablas son los más avanzados, también son los que peor soportan los navegadores. A continuación se muestra un ejemplo con tres párrafos de texto que establecen la propiedad <code>display: table-cell</code>:</p>
+<div class="example">
+<p style="display: table-cell; padding: 5px;"><strong>[display: table-cell]</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas non tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed fermentum lorem a velit.</p>
+<p style="display: table-cell; padding: 5px;"><strong>[display: table-cell]</strong> In molestie suscipit libero. Cras sem. Nunc non tellus et urna mattis tempor. Nulla nec tellus a quam hendrerit venenatis. Suspendisse pellentesque odio et est. Morbi sed nisl sed dui consequat sodales.</p>
+<p style="display: table-cell; padding: 5px;"><strong>[display: table-cell]</strong> Morbi sed nisl sed dui consequat sodales. Vivamus ornare felis nec est. Phasellus massa justo, ornare sed, malesuada a, dignissim a, nibh. Vestibulum vitae nunc at lectus euismod feugiat. Nullam eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ut ipsum.</p>
+</div>
+<p>La propiedad <code>display: table-cell</code> hace que cualquier elemento se muestre como si fuera una celda de una tabla. Como en el ejemplo anterior los tres elementos <code>&lt;p&gt;</code> utilizan la propiedad <code>display: table-cell</code>, el resultado es visualmente idéntico a utilizar una tabla y tres elementos <code>&lt;td&gt;</code>.</p>
+<p>Si utilizas un navegador con soporte completo de CSS 2.1, el ejemplo anterior se visualiza tal y como muestra la siguiente imagen:</p>
+<div class="example">
+<img src="../../static/libros/imagenes/referencia-css2/display_3.png" />
+</div>
+<p>Como los valores relacionados con las tablas hacen que cualquier elemento que no sea una tabla se muestre y comporte como si lo fuera, se pueden utilizar para crear los <em>layouts</em> de las páginas. Hace años, la estructura de las páginas se definía mediante tablas, filas y columnas. Esta solución tiene innumerables desventajas y por eso todos los diseñadores web profesionales crean la estructura de sus páginas mediante CSS y elementos <code>&lt;div&gt;</code>.</p>
+<p>No obstante, las tablas tienen algunas ventajas en su comportamiento respecto a los elementos <code>&lt;div&gt;</code> posicionados de forma absoluta o flotante. La principal ventaja es que todas las celdas de una fila siempre tienen la misma altura, por lo que si se utilizan tablas no se sufre el problema de las columnas de página con diferente altura.</p>
+<p>Además, la estructura creada con una tabla nunca se rompe, ya que las celdas de datos nunca se visualizan una debajo de otra cuando la ventana del navegador se hace muy pequeña. Sin embargo, cuando se define la estructura mediante elementos <code>&lt;div&gt;</code> posicionados es posible que la página se rompa y alguna columna se muestre debajo de otros contenidos.</p>
+<p>Utilizando la propiedad <code>display</code> de forma avanzada es posible crear una estructura de página que sea semánticamente correcta, esté diseñada exclusivamente con CSS y que se comporte exactamente igual que como lo hacen las tablas.</p>
+<p>El siguiente código HTML corresponde a la estructura de una página con tres columnas:</p>
+<div class="code html"><pre class="html">...
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contenedor"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contenidos"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"secundario"</span>&gt;</span>
+      Curabitur rutrum...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"principal"</span>&gt;</span>
+      Lorem ipsum dolor sit amet...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"lateral"</span>&gt;</span>
+      Nam erat massa...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+...</pre></div>
+<p>Utilizando las siguientes reglas CSS y la propiedad <code>display</code> es posible hacer que los elementos <code>&lt;div&gt;</code> anteriores se comporten como si fueran elementos <code>&lt;tr&gt;</code> y <code>&lt;td&gt;</code>:</p>
+<div class="code css"><pre class="css"><span class="hljs-selector-id">#contenedor</span> {
+  <span class="hljs-attribute">display</span>: table;
+  <span class="hljs-attribute">border-spacing</span>: <span class="hljs-number">5px</span>;
+}
+<span class="hljs-selector-id">#contenidos</span> {
+  <span class="hljs-attribute">display</span>: table-row;
+}
+<span class="hljs-selector-id">#principal</span>, <span class="hljs-selector-id">#secundario</span>, <span class="hljs-selector-id">#lateral</span> {
+  <span class="hljs-attribute">display</span>: table-cell;
+}
+<span class="hljs-selector-id">#principal</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">60%</span>;
+}
+<span class="hljs-selector-id">#secundario</span>, <span class="hljs-selector-id">#lateral</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">20%</span>;
+}</pre></div>
+<p>El elemento <code>#contenedor</code> se visualiza como una tabla porque se le aplica la propiedad <code>display: table</code>. De esta forma, se pueden aplicar al elemento <code>#contenedor</code> propiedades exclusivas de las tablas como <code>border-spacing</code>. El elemento <code>#contenidos</code> se visualiza como si fuese una fila de tabla (etiqueta <code>&lt;tr&gt;</code>). En su interior se encuentran las tres columnas de la página que se visualizan como si fueran tres elementos <code>&lt;td&gt;</code> gracias a la propiedad <code>display: table-cell</code>.</p>
+<p>A continuación se muestra el resultado obtenido al aplicar estas reglas CSS al código HTML anterior:</p>
+<div class="example">
+<div id="contenedor" style="display: table; border-spacing: 5px; background: #CCC; width: 90%; margin: 10px auto; border: 1px solid #333;">
+<div id="contenidos" style="display: table-row; background: #FCFCFC;">
+<div id="secundario" style="width: 20%; display: table-cell; border: 1px solid #FFF; padding: .5em;">
+Curabitur rutrum eros a risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In molestie suscipit libero. Cras sem. Nunc non tellus et urna mattis tempor. Nulla nec tellus a quam hendrerit venenatis. Suspendisse pellentesque odio et est.
+</div>
+<div id="principal" style="width: 60%; display: table-cell; border: 1px solid #FFF; padding: .5em;">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas non tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed fermentum lorem a velit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin sodales, enim in volutpat vehicula, leo turpis vehicula magna, ut rutrum arcu lorem ac pede. Curabitur rutrum eros a risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In molestie suscipit libero. Cras sem. Nunc non tellus et urna mattis tempor. Nulla nec tellus a quam hendrerit venenatis. Suspendisse pellentesque odio et est. Morbi sed nisl sed dui consequat sodales. Donec porta porta ligula. Nam erat massa, blandit in, dapibus sit amet, vestibulum et, augue. Suspendisse ac risus. Duis semper fringilla sem. Praesent augue arcu, scelerisque nec, ornare malesuada, posuere a, neque. Nullam nulla nisi, ultrices quis, adipiscing non, varius ut, dui. Nulla viverra pellentesque sem.
+</div>
+<div id="lateral" style="width: 20%; display: table-cell; border: 1px solid #FFF; padding: .5em;">
+Nam erat massa, blandit in, dapibus sit amet, vestibulum et, augue. Suspendisse ac risus.
+</div>
+</div>
+</div>
+</div>
+<p>La estructura de la página del ejemplo anterior está diseñada exclusivamente con CSS pero se comporta como si fuera una tabla. Todas las columnas de la página tienen la misma altura sin necesidad de recurrir a ningún truco y la página nunca se rompe por muy pequeña que se haga la ventana del navegador.</p>
+<p>Si visualizas esta página con un navegador que soporte correctamente la propiedad <code>display</code> de CSS 2.1, el ejemplo anterior se ve tal y como muestra la siguiente imagen:</p>
+<div class="example">
+<img src="../../static/libros/imagenes/referencia-css2/display_4.png" />
+</div>
+<p>Por último, aunque el estándar CSS 2.1 establece que el valor por defecto de la propiedad <code>display</code> es <code>inline</code>, todos los navegadores obvian esta recomendación y asignan por defecto el valor <code>block</code> a los elementos de bloque y el valor <code>inline</code> a los elementos en línea.</p>
+</article>
+</div>
+<div class="col-lg-3">
+<aside role="complementary" itemscope itemtype="../../../external.html?link=https://schema.org/WPSideBar">
+<section class="module module-menu">
+<h3>Propiedades relacionadas</h3>
+<ul class="list--unstyled">
+<li class="">
+<a href="clip.html">
+clip
+</a>
+</li>
+<li class="active">
+<a href="display.html">
+display
+</a>
+</li>
+<li class="">
+<a href="overflow.html">
+overflow
+</a>
+</li>
+<li class="">
+<a href="visibility.html">
+visibility
+</a>
+</li>
+<li class="">
+<a href="white-space.html">
+white-space
+</a>
+</li>
+<li class="">
+<a href="z-index.html">
+z-index
+</a>
+</li>
+</ul>
+</section>
+</aside>
+</div>
+</div>
+</div>
+</main>
+<footer class="m-t-30" role="contentinfo" itemscope itemtype="../../../external.html?link=https://schema.org/WPFooter">
+<div class="container">
+<div class="row">
+<div class="col-sm m-b-30">
+&copy; <span itemprop="copyrightYear">2006-2019</span>
+<span itemprop="copyrightHolder" itemscope itemtype="../../../external.html?link=https://schema.org/Organization">
+<span itemprop="name">uniwebsidad</span>
+</span> <br>
+<a class="m-r-15" href="../../../external.html?link=https://uniwebsidad.com/sitio/contacto">Contacto</a>
+<a href="../../../external.html?link=https://uniwebsidad.com/sitio/aviso-legal">Aviso legal</a>
+</div>
+<div class="col-sm  m-b-30">
+Recursos sobre:
+<ul class="list--unstyled list--complex m-b-0">
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/css">css</a>
+</li>
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/diseño">diseño</a>
+</li>
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/drupal">drupal</a>
+</li>
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/javascript">JavaScript</a>
+</li>
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/php">PHP</a>
+</li>
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/programación">programación</a>
+</li>
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/python">Python</a>
+</li>
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/ruby">ruby</a>
+</li>
+<li class="m-b-0">
+<a class="text-nowrap" href="../../../external.html?link=https://uniwebsidad.com/symfony">Symfony</a>
+</li>
+</ul>
+</div>
+<div class="col-sm  m-b-30 text-sm-right">
+4.715 días online
+</div>
+</div>
+</div>
+</footer>
+<script type="84e64fa8f59d33455e98ce7b-text/javascript">
+            !function(n){function e(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return n[o].call(r.exports,r,r.exports,e),r.l=!0,r.exports}var t={};e.m=n,e.c=t,e.d=function(n,t,o){e.o(n,t)||Object.defineProperty(n,t,{configurable:!1,enumerable:!0,get:o})},e.n=function(n){var t=n&&n.__esModule?function(){return n.default}:function(){return n};return e.d(t,"a",t),t},e.o=function(n,e){return Object.prototype.hasOwnProperty.call(n,e)},e.p="../../../external.html?link=https://uniwebsidad.com/build/",e(e.s="ET/6")}({"ET/6":function(n,e,t){"use strict";function o(){var n=window.pageYOffset|document.body.scrollTop,e=document.querySelector("nav.menu");null!=e&&(n>52?e.classList.add("scrolling"):e.classList.remove("scrolling"))}Object.defineProperty(e,"__esModule",{value:!0});var r=t("u/NC");t.n(r);window.addEventListener("scroll",function(){o()}),window.addEventListener("load",function(){o()})},"u/NC":function(n,e){}});
+        </script>
+<script type="84e64fa8f59d33455e98ce7b-text/javascript">
+    function getQueryStringValue(key) {
+        return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+    }
+
+    if ('librosweb' == getQueryStringValue("from")) {
+        var banner = document.createElement('div');
+        banner.style.cssText = 'background: #fffbdd; border-bottom: 1px solid rgba(27,31,35,0.15); font-size: 14px; padding: 4px 0;';
+        banner.innerHTML = '<div class="container"><b style="color: #cc1414">librosweb.es</b> ahora se llama <b style="color: #003580">uniwebsidad.com</b>. <a href="/sitio/adios-librosweb-hola-uniwebsidad">¿Por qué cambiamos de nombre?</a></div>';
+        document.body.insertBefore(banner, document.body.firstChild);
+    }
+</script>
+<div id="banner-gdpr" class="d-none">
+Este sitio utiliza cookies <span class="d-none d-md-inline">propias y de terceros</span>.
+Sigue navegando para aceptar nuestra
+<a href="../../../external.html?link=https://uniwebsidad.com/sitio/cookies">Política de Cookies</a>
+<span class="d-none d-md-inline">o <a href="../../../external.html?link=https://uniwebsidad.com/sitio/cookies#configuracion">ajusta tu configuración</a>.</span>
+<button onclick="if (!window.__cfRLUnblockHandlers) return false; localStorage.setItem('gdpr', 'accepted'); document.getElementById('banner-gdpr').classList.add('d-none')" data-cf-modified-84e64fa8f59d33455e98ce7b-="">ACEPTAR</button>
+</div>
+<script type="84e64fa8f59d33455e98ce7b-text/javascript">
+    if (localStorage.getItem('gdpr') != 'accepted') {
+        document.getElementById('banner-gdpr').classList.remove('d-none');
+    }
+</script>
+<script src="../../../ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="84e64fa8f59d33455e98ce7b-|49" defer=""></script></body>
+
+<!-- Mirrored from uniwebsidad.com/libros/referencia-css2/display by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Nov 2019 14:54:07 GMT -->
+</html>

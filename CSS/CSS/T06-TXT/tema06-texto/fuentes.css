@@ -1,0 +1,23 @@
+/* fuentes nuevas instaladas en sistema */
+
+section:nth-of-type(1) p {
+    font-family: "Humor Sans", "Kaushan Script", serif;
+}
+
+/* fuentes en fichero en mi sitio web */
+@font-face {
+    font-family: Mona; /* nombre que le doy a la fuente */
+    src: url(fuentes/Mona\ Shark.otf);
+}
+
+section:nth-of-type(2) p {
+    font-family: Mona, serif;
+}
+
+/* fuentes "en la web" */
+
+
+section:nth-of-type(3) p {
+    font-family: Neonderthaw, Ole, cursive;
+}
+

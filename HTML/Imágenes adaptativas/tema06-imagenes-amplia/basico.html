@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img.css {
+            width: 100%;
+            height: auto;
+        }
+        img.max {
+            max-width: 460px;
+            min-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>img y aplicación de CSS width</h1> 
+    <p>Ejemplo de uso sobre una imagen de las propiedades CSS: </p>
+    <ul>
+        <li><code>width</code></li>
+        <li><code>max-width</code> y <code>min-width</code></li>
+    </ul>
+
+    <figure>
+        <img src="dog/dog_c_scale,w_200.jpg" alt="Pero corriendo en pradera" width="200" height="133">
+        <figcaption>img sin aplicar CSS</figcaption>
+    </figure>
+    <figure>
+        <img class="css" src="dog/dog_c_scale,w_200.jpg" alt="Pero corriendo en pradera" width="200" height="133">
+        <figcaption>img con width 100%</figcaption>
+    </figure>
+    <figure>
+        <img class="css max" src="dog/dog_c_scale,w_200.jpg" alt="Pero corriendo en pradera" width="200" height="133">
+        <figcaption>img con width 100% y con max/min with aplicados</figcaption>
+    </figure>
+
+
+</body>
+</html>

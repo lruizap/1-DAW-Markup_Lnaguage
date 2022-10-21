@@ -1,0 +1,33 @@
+p{
+    /* background-image: url(figuras/pensando.png);
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-color: yellow;  */
+
+    background: url(figuras/facebook.jpg) repeat-x right top,
+                url(figuras/twitter.jpg) repeat-y right top,
+             yellow;
+    
+
+    /* border: 2px red solid;
+    padding: 64px; */
+    border-radius: 10px 20px 30px 50px;
+    box-shadow: 20px 10px 5px red;
+    width: 80%;
+    height: 80px; /* --> cuidado con la altura ya que puede significar solape*/
+    overflow: auto; /* --> para que el texto que sobre con la altura puedas eliminarlo, poner un scroll ...*/
+    margin: 3em auto;
+    border: black 3px solid;
+    padding: 2em;
+}
+
+section {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-shadow: 5px 5px 10px red ;
+    background-color: black;
+    color: wheat;
+}

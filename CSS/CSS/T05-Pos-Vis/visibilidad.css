@@ -1,0 +1,18 @@
+h1, h2 {
+    /* display: none; */
+    /* visibility: hidden; */
+    display: inline;
+}
+
+strong {
+    display: block;
+}
+
+li a{
+    display: block;
+}
+
+article p {
+    height: 50px;
+    overflow: auto;
+}

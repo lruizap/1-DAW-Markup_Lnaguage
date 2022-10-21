@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tablon SYSTEM "tablon.dtd">
+
+<tablon>
+    <localiza>Lorem ipsum dolor sit.</localiza>
+    <anuncio id="A123" idioma="ES">
+
+        <fecha>11-11-2011</fecha>
+        <asunto>Venta 1</asunto>
+        <texto>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, animi.</texto>
+        <precio>200€</precio>
+        <contacto>
+            
+            <nombre>Paco</nombre>
+            <tel>646345635</tel>
+
+        </contacto>
+        <fecha_limite>25-02-2012</fecha_limite>
+        <autor email="paco-gmail.com"/>
+
+    </anuncio>
+    <anuncio id="B123" idioma="EN">
+
+        <fecha>01-12-2021</fecha>
+        <asunto>Venta 2</asunto>
+        <precio>100€</precio>
+        <contacto>
+            <nombre>Hernesto</nombre>
+            <tel>456665656</tel>
+        </contacto>
+
+    </anuncio>
+    <anuncio id="C123" idioma="FR">
+
+        <fecha>25-02-2002</fecha>
+        <asunto>Venta 3</asunto>
+        <texto>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, animi.</texto>
+        <precio>5000€</precio>
+        <contacto>
+            <nombre>Luis</nombre>
+            <tel>64555454</tel>
+        </contacto>
+        <fecha_limite>1-08-205</fecha_limite>
+
+    </anuncio>
+</tablon>

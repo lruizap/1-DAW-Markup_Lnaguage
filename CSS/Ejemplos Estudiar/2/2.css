@@ -1,0 +1,488 @@
+/* Selectores  */
+
+/* Selector universal */
+
+* {
+  margin: 0.5em;
+  padding: 0.15em;
+}
+
+/* Selector del tipo etiqueta */
+
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: yellow;
+  text-align: center;
+}
+
+p,
+h1 {
+  border: 2px solid red;
+  margin: 0.75em auto;
+  padding: 0.75em;
+}
+
+/* Selector Descendente */
+
+div h1 {
+  border-radius: 100% 100% 100% 100%;
+}
+
+/* Selector de clase */
+
+.SelectoresDeClase {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* Selectores de ID */
+
+#SelectoresDeID {
+  font-style: italic;
+  text-decoration: underline green;
+}
+
+/* Selectores Avanzados */
+
+/* Selector de hijos */
+
+p > em {
+  text-decoration: overline yellow;
+}
+
+/* Selector Adyacente (justo a continuación) */
+
+h3 + p {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* Selector de Atributos */
+
+a[href="http://www.ejemplo.com"]
+{
+  color: green;
+}
+
+/* Moddelo de cajas */
+
+/* Anchura (width) */
+
+h1 {
+  width: 40%;
+}
+
+/* Altura (height) */
+
+h1 + h2 {
+  height: 3em;
+}
+
+/* Margen (margin) y relleno (padding) */
+
+#MBoxModel {
+  margin: 4em 4em 4em 4em; /* top right bottom left*/
+}
+
+.PBoxModel {
+  padding: 2em; /* top right bottom left*/
+}
+
+/* Bordes */
+
+a[href$=".boxmodel"] {
+  border: 5px aquamarine solid;
+  border-width: 0.5em;
+  border-bottom-style: groove;
+  border-top-style: none;
+}
+
+/* Fondos */
+
+h1 {
+  background-color: black;
+}
+
+a[href$=".zip"] {
+  background-image: url(../../ejercicios_tipo_examen_DAW/ejemplo-05/apellidos_alumno/fotos/zip.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 22px; /* PONER SIEMPRE EL TAMAÑO DE LA IMÁGEN */
+}
+
+/* Posicionamiento */
+
+nav {
+  border: 2px solid #ccc;
+  padding: 1em;
+  margin: 1em 4em 1em 4em;
+
+  /* position: relative;
+    left: 9em; */
+
+  /* position: absolute;
+    top: 90em;
+    left: 2em; */
+
+  /* float: right; */
+
+  /* display: block; */
+
+  /* display: grid; */
+
+  /* overflow: auto ; */
+}
+
+div#contenedor {
+  margin: 1em;
+  padding: 0.3em;
+  border: 2px solid #555;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  align-content: center;
+  align-items: center;
+}
+
+div#contenedor > div {
+  height: 120px;
+  font-size: 100%;
+}
+
+/* TEXTO */
+
+p.texto2 {
+  font-weight: bolder;
+  text-align: center;
+}
+
+p#texto1 {
+  text-decoration: overline;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+p.texto2::first-letter {
+  color: red;
+  font-size: 2em;
+  text-transform: lowercase;
+}
+
+/* Enlaces */
+
+li > a {
+  text-decoration: none;
+  color: green;
+  border-bottom: thick solid;
+}
+
+a:link {
+  color: aquamarine;
+}
+
+a:visited {
+  color: yellow;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: pink;
+}
+
+a:active {
+  text-decoration: overline red;
+  color: blue;
+}
+
+/* Ejemplos uniwebsidad enlaces */
+
+.simple {
+  text-decoration: underline;
+}
+.color {
+  border-bottom: medium solid #cc0000;
+}
+.ancho {
+  border-bottom: thick solid;
+}
+.separado {
+  border-bottom: 1px solid;
+  padding-bottom: 0.6em;
+}
+.discontinuo {
+  border-bottom: thin dashed;
+}
+
+.rss {
+  color: #e37529;
+  padding: 0 0 0 32px;
+  background: #fff url(./figure/rss_icon-icons.com_66676.png) no-repeat left
+    center;
+}
+
+.pdf {
+  padding: 0 0 0 32px;
+  background: #fff url(./figure/file_type_pdf_icon_130274.png) no-repeat left
+    center;
+}
+
+/* Enlaces como si fueran botones */
+
+a.boton {
+  text-decoration: none;
+  background: #eee;
+  color: #222;
+  border: 1px outset #ccc;
+  padding: 0.1em 0.5em;
+}
+a.boton:hover {
+  background: #ccb;
+}
+a.boton:active {
+  border: 1px inset #000;
+}
+
+/* Listas */
+
+div#listas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#ol1 {
+  list-style: upper-roman;
+  border: #555 solid 4px;
+  padding: 0 0 0 1.5em;
+}
+
+#ul1 {
+  list-style-type: square;
+  border: #555 solid 4px;
+  padding: 0 0 0 1.5em;
+}
+
+#ol2 {
+  list-style-image: url(./figure/list.png);
+  border: #555 solid 4px;
+  padding: 0 0 0 32px;
+}
+
+#ul2 {
+  border: #555 solid 4px;
+  padding: 0 0 0 1.5em;
+}
+
+#ul2 :nth-child(1) {
+  color: blue;
+}
+
+#ul2 :nth-last-child(1) {
+  color: red;
+}
+
+#ul2 :nth-child(odd) {
+  text-decoration: underline yellow;
+}
+
+#ul2 :nth-child(even) {
+  text-decoration: overline red;
+  padding: 1em 0 1em 0;
+}
+/* File: posicionales.css */
+
+/* :nth-child()  */
+
+/* :nth-child(an+b) */
+/* ul :nth-child(4n+3) {
+  background-color: yellow;
+} */
+
+/* a partir de  */
+/* ul :nth-child(n+5) {
+text-decoration: underline;
+} */
+
+/* hasta el  */
+/* ul :nth-child(-n+5) {
+  font-style: italic;
+} */
+
+/* pares/impares: nth-child(2n+1) /* even|odd */ /*
+
+ol :nth-child(odd) { 
+  color:red;
+}
+
+section p:nth-of-type(even) {
+  color:darkblue; 
+}
+
+*/
+
+/* atajos */
+
+/* section :first-child {
+  font-weight: bold;
+}
+
+section :last-child {
+  font-weight: bold;
+}
+
+section p:last-of-type {
+  font-weight: bold;
+}
+
+section p:first-of-type {
+  text-align: center;
+} */
+
+/* Menu vertical */
+
+.menuvertical {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menuvertical li {
+  list-style-type: none;
+  position: relative;
+  width: 120px;
+}
+
+.menuvertical li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  width: 120px;
+  height: 30px;
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+}
+
+.menuvertical li a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.menuvertical li ul {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 120px;
+}
+
+.menuvertical li:hover ul {
+  display: block;
+}
+
+/* Menu horizontal */
+
+
+.menuhorizontal ul {
+  border: 4px darkblue solid;
+  background-color: gray;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menuhorizontal > ul li {
+  border: 4px darkblue solid;
+  text-align: center;
+  padding: .10em;
+}
+
+.menuhorizontal > ul li a {
+  text-decoration: none;
+  display: block;
+}
+
+.menuhorizontal ul li a:hover {
+  color: red;
+}
+
+.menuhorizontal > ul li:hover {
+  background-color: black;
+}
+
+.menuhorizontal > ul{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* menuniweb */
+
+ul.menuniweb {
+  background: #F4F4F4;
+  border: 4px solid #7C7C7C;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.menuniweb li a {
+  border-left: 4px solid #FFF;
+  border-right: 4px solid #7C7C7C;
+  color: #333;
+  display: block;
+  padding: .3em;
+  text-decoration: none;
+}
+
+/* Tablas */
+
+th, td {
+  border: 2px solid #000;
+  border-collapse: collapse;
+  /* border-spacing: 2em; */
+  empty-cells:hide;
+}
+
+caption {
+  caption-side:bottom;
+}
+
+/* Formularios */
+
+.enlace {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  color: blue;
+  border-bottom: 1px solid blue;
+}
+
+label {
+  display: block;
+  margin: .5em 0 0 0;
+}
+
+.btn {
+  display: block;
+  margin: 1em 0;
+}
+
+form div {
+  margin: .4em 0;
+}
+
+form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 48%;
+}
+
+/* Input activado para escribir */
+
+input:focus {
+  border: 10px solid blue;
+  background: red;
+}
+
+/* Layout */
+
+

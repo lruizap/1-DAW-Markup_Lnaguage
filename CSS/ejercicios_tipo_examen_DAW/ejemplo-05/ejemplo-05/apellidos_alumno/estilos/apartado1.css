@@ -1,0 +1,122 @@
+/* apartado1.css */
+
+a[href$=".zip"] {
+  background-image: url(../fotos/zip.png);
+  background-repeat: no-repeat;
+  padding-left: 22px;
+}
+
+
+section abbr::after {
+    content: " (Significado:  -" attr(title) ") ";
+    font-style: italic;
+    color: silver;
+}
+
+
+p.relleno {
+    color: grey;
+    font-style: italic;
+}
+
+p.relleno::before {
+    content: " --- Prueba ---- ";
+    background-color:yellow;
+}
+p.relleno::after {
+    content: " --- Prueba ---- ";
+    background-color:yellow;
+}
+
+aside {
+    font-family: serif;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: orange;
+}
+
+h1 {
+    text-align: center;
+}
+
+aside img {
+    float: right;
+}
+
+aside h2 {
+    text-align: center;
+}
+
+/* nav => botonera horizontal */
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    padding-left: 0;
+    list-style-type: none;
+    border: 1px solid purple;
+}
+nav ul li {
+    text-align: center;
+    border: 1px solid purple
+}
+nav ul li a {
+    text-decoration: none;
+    color: purple;
+    display: block;
+}
+nav h2 {
+    display: none;
+}
+
+section#principal h2 {
+   text-align: center;
+   color: white;
+   background-color: purple;
+   width: 70%;
+   margin: auto;
+   padding: 0.5em;
+   box-shadow: 20px 10px 5px pink;
+}
+
+/* párrafos de color con imagen de fondo */
+/* según enunciado en papel el selector sería:
+       section h2 ~ p 
+*/
+section#principal >  p {
+    background-color:white;
+    background-image: url(../fotos/agua.png);
+    background-repeat: repeat-x;
+    padding-bottom: 64px;
+    background-position: bottom left;
+}
+
+/* estilos de las secciones */
+section section {
+    padding:1em;
+    margin: 3em;
+    border-bottom: 2px dashed red;
+    border-right: 2px dashed red;
+}
+
+/* aside de tecnología */
+aside#tecnologia {
+    text-align: center;
+}
+
+aside#tecnologia ol {
+    list-style-type: lower-alpha;
+   
+}
+
+aside#tecnologia ol li:nth-child(3n+2) {
+    color:red;
+}
+aside#tecnologia ol li:nth-child(3n+3) {
+    text-decoration: line-through;
+}
+
+

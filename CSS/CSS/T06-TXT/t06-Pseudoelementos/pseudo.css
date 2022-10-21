@@ -1,0 +1,19 @@
+/* pseudo.css */
+
+h1::before {
+  content: "Título: ";
+  font-style: italic;
+  text-decoration: underline red;
+}
+
+p:nth-of-type(even):after {
+  content: " (fin párrafo) ";
+  font-size: 20px;
+}
+
+/* attr() */
+
+abbr::after {
+  content: " (" attr(title) ") ";
+  font-style: italic;
+}

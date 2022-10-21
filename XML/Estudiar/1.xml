@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- esto hay que ponerlo siempre -->
+
+<!-- Primer ejemplo -->
+
+<estudiar1>
+    <note>
+        <!-- El elemento nota esta compuesto por los siguientes elementos -->
+        <to nombreAtributo="valor Atributo">Tove</to>
+        <!-- Pueden tener atributos que al igual que las etiquetas creas tu mismo dandole el valor que creas conveniente -->
+        <from>Jani</from>
+        <heading>Reminder</heading>
+        <body>Don't forget me this week!</body>
+    </note>
+    
+    <!-- Un archivo xml solo puede tener un elemento que sea el "tronco del arbol".
+        A partir de dicho elemento, se va creando la estructura del arbol de forma que engan sus subelementos compuestos por elementos y estos tengan atributos propios etc.-->
+    
+    <!-- Solo se puede tener un único elemento raíz por documento -->
+    
+    <bookstore>
+        <book category="COOKING" priority="1" local="almacen1">>
+            <title lang="en">Everyday Italian</title>
+            <author>Giada De Laurentiis</author>
+            <year>2005</year>
+            <price>30.00</price>
+        </book>
+    
+        <!-- "book" es un contenedor de elementos mientras que "author" es solo contenido -->
+    
+        <book category="CHILDREN" local="almacen2">
+            <title lang="en">Harry Potter</title>
+            <author>J K. Rowling</author>
+            <year>2005</year>
+            <price>29.99</price>
+        </book>
+    </bookstore>
+
+    <!-- Si el valor del atributo contiene dobles comillas, usar: -->
+
+    <mafia>
+        <gangster name='George "Shotgun" Ziegler' />
+
+        <gangster name="George &quot;Shotgun&quot; Ziegler" />
+    </mafia>
+
+</estudiar1>

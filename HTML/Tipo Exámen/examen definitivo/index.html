@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>  Página para el examen</title>
+	<button onclick="alert('YEPA!!')">Botón Alerta</button>
+</head>
+<body>
+	<nav>
+		<h2>Zona de navegación de nuesta web.</h2>
+		<ol>
+			<li>
+				<a href="index.html">Página inicial</a>
+			</li>
+			<li>
+				<a href="info/tecnologia/blog.html">Nuestro blog</a>
+			</li>
+			<li>
+				<a href="sat/resultados.html">Resultados</a>
+			</li>
+			<li>
+				<a href="docs/html5-cheat-sheet.png">Ayuda HTML</a>
+			</li>
+		</ol>
+	</nav>
+	<h1>Encuesta alumnado</h1>
+	    <form action="/server/procesa.php" method="post" enctype="multipart/form-data">
+	    	<fieldset>
+	    		<legend>Datos iniciales</legend>
+	    		<p>
+	    		 Seleccione a continuación cuales son los temas de su interés: <br><br>
+          			<label>
+          				<input type="checkbox" name="intereses" value="html" />HTML
+          			</label><br>
+          			<label>
+          				<input type="checkbox" name="intereses" value="css">Estilos CSS
+          			</label><br>
+          			<label>
+          				<input type="checkbox" name="intereses" value="java"> El lenguaje JaVAsCRIPT
+          			</label>
+	    		</p>
+	    		<p>
+	    			<label>indique la fecha de incorporación al curso (que debe ser posterior al 15 de septiembre de 2019) <br>
+	    				<input type="date" name="date" min="2019-09-15">
+	    			</label>
+	    		</p>
+	    		<p>
+	    			
+	    			<label>Adjunta dos fotos, una tipo DNI y otra de cuerpo entero <br>
+	    				<input type="file" name="archivo"  multiple>
+	    			</label>
+	    		</p>
+	    		<p>
+	    			 
+	    			 <label>Vamos a pintar la clase: selecione el color preferido (por defecto rojo)
+	    			 	 <input type="color" name="color"  value="#FF0000" >
+	    			 </label>
+	    		</p>
+	    		<p>
+	    			
+	    			<label>Indique si dispone de ella, su página web:
+	    				<input type="url" name="direccion" >
+	    			</label>
+	    			
+	    		</p>
+	    		<p>
+	    			<label>Indique su código de alumno:
+	    				<input type="text" pattern="[A-Z]{3}[0-9]{1,2}" placeholder="ver patron">Formato: tres mayusculas seguidas de 1 o 2 dígitos.
+	    			</label>        			
+	    		</p>
+	    		<p>
+	    			 Seleccione zona donde víve: <br>
+	    			 <label >
+	    			 	<input type="radio" name="zona" value="jerez"  checked>
+	    			 	Jerez (* Valor por defecto)
+	    			 </label><br>
+	    			 <label >
+	    			 	<input type="radio" name="zona" value="pedanias" >
+	    			 	Pedanías: Cuartillos, Estella, etc.. 
+	    			 </label><br>
+	    			 <label >
+	    			 	<input type="radio" name="zona" value="fuera">
+	    			 	Fuera de Jerez: El Puerto, Chipiona ,etc..
+	    			 </label>
+	    		</p>
+	    		<p>
+	    			<label>
+	    				<input type="checkbox" name="terminos" value="acepta
+	    				"required>
+	    				Acepto recibir noticaciones del estado de la encuesta (campo obligatorio)
+	    			</label>
+	    		</p>
+	    	</fieldset>
+	  <input type="submit" value="Enviar" />
+      <input type="reset" value="Limpiar" />
+	    </form>
+		<button onclick="alert('alerta');">
+			No presionar
+		  </button>
+</body>
+</html>
+
+        
+        
+        
+         
+      
+
+
+      
+        
+          
+          
+        
+      
+    
+    
+      
+      
+    
+  
+
+

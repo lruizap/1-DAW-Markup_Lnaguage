@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive HTML images demo</title>
+    <style>
+      img {
+        width: 320px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Ejemplo de srcset con diferentes dpi</h1>
+
+
+    <img
+      srcset="
+        figuras/elva-fairy-320w.jpg,
+        figuras/elva-fairy-480w.jpg 1.5x,
+        figuras/elva-fairy-640w.jpg 2x,
+        figuras/elva-fairy-800w.jpg 3x
+      "
+      src="figuras/elva-fairy-640w.jpg"
+      alt="Elva dressed as a fairy"
+    />
+
+    <p>Para probar este ejemplo abra en el navegador las herramientas de depuración y acceda a la pestaña Network para ver los ficheros que se descargan</p>
+    <p>A continuación active la opción de dispositivos móviles,  modifique el DPR (Device pixel ratio), recargue la página y osbserve como se cargan las dististas imágenes en función del DPR.</p>
+
+  </body>
+</html>

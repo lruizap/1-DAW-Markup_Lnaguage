@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title></title>
+	
+	<link rel="stylesheet" href="css/ejercicio02.css" type="text/css" media="screen" />
+</head>
+<body>
+
+<p> Menú inicial</p>
+<ol>
+<li><a href="/libros/">libros</a></li>
+<li><a href="/tutoriales/">tutoriales</a></li>
+<li><a href="/eventos/">eventos</a></li>
+<li><a href="/foro/">foro</a></li>
+</ol>
+
+<h1>1.3.Fundamentos de <em>Git</em></h1>
+
+
+<p>Entonces, ¿qué es <em>Git</em> en pocas palabras? Es muy importante asimilar esta sección, porque si entiendes lo que es <em>Git</em> y los fundamentos de cómo funciona, probablemente te sea mucho más fácil usar <em>Git</em> de manera eficaz. A medida que aprendas <em>Git</em>, intenta olvidar todo lo que puedas saber sobre otros VCSs, como Subversion y Perforce; hacerlo te ayudará a evitar confusiones sutiles a la hora de utilizar la herramienta. <em>Git</em> almacena y modela la información de forma muy diferente a esos otros sistemas, a pesar de que su interfaz sea bastante similar; comprender esas diferencias ayudará a evitar que te confundas a la hora de usarlo.</p>
+
+<h2>1.3.1. Instantáneas, no diferencias</h2>
+
+<p>La principal diferencia entre <em>Git</em> y cualquier otro VCS (Subversion y compañía incluidos) es cómo <em>Git</em> modela sus datos. Conceptualmente, la mayoría de los demás sistemas almacenan la información como una lista de cambios en los archivos. Estos sistemas (CVS, Subversion, Perforce, Bazaar, etc.) modelan la información que almacenan como un conjunto de archivos y las modificaciones hechas sobre cada uno de ellos a lo largo del tiempo, como ilustra la Figura 1-4.</p>
+
+<p><em>Git</em> no modela ni almacena sus datos de este modo. En cambio, <em>Git</em> modela sus datos más como un conjunto de instantáneas de un mini sistema de archivos. Cada vez que confirmas un cambio, o guardas el estado de tu proyecto en <em>Git</em>, él básicamente hace una foto del aspecto de todos tus archivos en ese momento, y guarda una referencia a esa instantánea. Para ser eficiente, si los archivos no se han modificado, <em>Git</em> no almacena el archivo de nuevo — sólo un enlace al archivo anterior idéntico que ya tiene almacenado —. <em>Git</em> modela sus datos más como en la Figura 1-5.</p>
+
+
+<h2>1.3.2. Casi cualquier operación es local</h2>
+
+<p>La mayoría de las operaciones en <em>Git</em> sólo necesitan archivos y recursos locales para operar — por lo general no se necesita información de ningún otro ordenador de tu red —. Si estás acostumbrado a un CVCS donde la mayoría de las operaciones tienen esa sobrecarga del retardo de la red, este aspecto de <em>Git</em> te va a hacer pensar que los dioses de la velocidad han bendecido <em>Git</em> con poderes sobrenaturales. Como tienes toda la historia del proyecto ahí mismo, en tu disco local, la mayoría de las operaciones parecen prácticamente inmediatas.</p>
+
+<p>Por ejemplo, para navegar por la historia del proyecto, <em>Git</em> no necesita acceder al servidor para obtener la historia y mostrártela — simplemente la lee directamente de tu base de datos local —. Esto significa que ves la historia del proyecto casi al instante. Si quieres ver los cambios introducidos entre la versión actual de un archivo y ese archivo hace un mes, <em>Git</em> puede buscar el archivo hace un mes y hacer un cálculo de diferencias localmente, en lugar de tener que pedirle a un servidor remoto que lo haga, u obtener una versión antigua del archivo del servidor remoto y hacerlo de manera local.</p>
+
+<img src="fig/local-op.png" alt="" />
+<p>Esto también significa que hay muy poco que no puedas hacer si estás desconectado o sin VPN. Si te subes a un avión o a un tren y quieres trabajar un poco, puedes hacer tus cambios sin problemas hasta que consigas una conexión de red para subirlos. Si te vas a casa y no consigues que tu cliente VPN funcione correctamente, puedes seguir trabajando. En muchos otros sistemas, esto es imposible o muy costoso. En Perforce, por ejemplo, no puedes hacer mucho cuando no estás conectado al servidor; y en Subversion y CVS, puedes editar archivos, pero no puedes subir los cambios a tu base de datos (porque tu base de datos no tiene conexión). Esto puede no parecer gran cosa, pero te sorprendería la diferencia que puede suponer.</p>
+
+<h2>1.3.3. <em>Git</em> tiene integridad</h2>
+
+<p>Todo en <em>Git</em> es verificado mediante una suma de comprobación antes de ser almacenado, y es identificado a partir de ese momento mediante dicha suma (<em>checksum</em> en inglés). Esto significa que es imposible cambiar los contenidos de cualquier archivo o directorio sin que <em>Git</em> lo sepa. Esta funcionalidad está integrada en <em>Git</em> al más bajo nivel y es parte integral de su filosofía. No puedes perder información durante su transmisión o sufrir corrupción de archivos sin que <em>Git</em> sea capaz de detectarlo.</p>		
+
+
+
+<h2>1.3.5. Los tres estados</h2>
+
+<p>Ahora presta atención. Esto es lo más importante a recordar acerca de Git si quieres que el resto de tu proceso de aprendizaje prosiga sin problemas. Git tiene tres estados principales en los que se pueden encontrar tus archivos: confirmado (<em>committed</em>), modificado (<em>modified</em>), y preparado (<em>staged</em>). Confirmado significa que los datos están almacenados de manera segura en tu base de datos local. Modificado significa que has modificado el archivo pero todavía no lo has confirmado a tu base de datos. Preparado significa que has marcado un archivo modificado en su versión actual para que vaya en tu próxima confirmación.</p>
+
+<img src="fig/check-01.png" alt="" />
+<p>Esto nos lleva a las tres secciones principales de un proyecto de Git: el directorio de Git (<em>Git directory</em>), el directorio de trabajo (<em>working directory</em>), y el área de preparación (<em>staging area</em>).</p>
+<p>El directorio de Git es donde Git almacena los metadatos y la base de datos de objetos para tu proyecto. Es la parte más importante de Git, y es lo que se copia cuando clonas un repositorio desde otro ordenador.</p>
+
+<p>El directorio de trabajo es una copia de una versión del proyecto. Estos archivos se sacan de la base de datos comprimida en el directorio de Git, y se colocan en disco para que los puedas usar o modificar.</p>
+
+<img src="fig/check-02.png" alt="" />
+<p>El área de preparación es un sencillo archivo, generalmente contenido en tu directorio de Git, que almacena información acerca de lo que va a ir en tu próxima confirmación. A veces se denomina el índice, pero se está convirtiendo en estándar el referirse a ello como el área de preparación.</p>
+
+<p>El flujo de trabajo básico en Git es algo así:</p>
+
+<ol>
+<li>Modificas una serie de archivos en tu directorio de trabajo.</li>
+<li>Preparas los archivos, añadiendo instantáneas de ellos a tu área de preparación.</li>
+<li>Confirmas los cambios, lo que toma los archivos tal y como están en el área de preparación, y almacena esa instantánea de manera permanente en tu directorio de Git.</li>
+</ol>	
+
+
+
+
+<h2>Compartir</h2>
+<ul>
+    <li><a href="#" title="Compartir en Twitter">TW</a></li>
+    <li><a href="#" title="Compartir en Facebook">FB</a></li>
+    <li><a href="#" title="Compartir en Google+">G+</a></li>
+</ul>
+
+<div>
+
+<table>
+  <caption>Planing de Clases</caption>
+    <tr>
+      <th></th>
+      <th>Lunes</th>
+      <th>Martes</th>
+      <th>Miercoles</th>
+      <th>Jueves</th>
+      <th>Viernes</th>
+    </tr>
+    <tr>
+      <th>15:00</th>
+      <td>Informática</td>
+      <td colspan="4"></td>
+    </tr>
+    <tr>
+      <th>16:00</th>
+      <td>Matemáticas</td>
+      <td>Matemáticas</td>
+      <td>Inglés</td>
+      <td>Lenguaje</td>
+      <td>Informática</td>
+    </tr>
+    <tr>
+      <th>17:00</th>
+      <td>Inglés</td>
+      <td>Química</td>
+      <td>Lenguaje</td>
+      <td>Matemáticas</td>
+      <td>Informática</td>
+    </tr>
+    <tr>
+      <th>18:00</th>
+      <td colspan="5">Descanso</td>
+    </tr>
+    <tr>
+      <th>18:30</th>
+      <td>Dibujo</td>
+      <td>Inglés</td>
+      <td>Química</td>
+      <td>Física</td>
+      <td>Física</td>
+    </tr>
+    <tr>
+      <th>19:30</th>
+      <td>Filosofía</td>
+      <td>Dibujo</td>
+      <td>Física</td>
+      <td>Filosofía</td>
+      <td>Filosofía</td>
+    </tr>
+    <tr>
+      <th>20:00</th>
+      <td></td>
+      <td></td>
+      <td>Dibujo</td>
+      <td>Dibujo</td>
+      <td></td>
+    </tr>
+</table>
+
+
+</div>
+
+
+</body>
+</html>

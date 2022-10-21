@@ -1,0 +1,116 @@
+/* apartado2.css */
+
+
+
+@media screen and (min-width: 640px) {
+  #contenedor {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header {
+    grid-column: 1 / span 2;
+    text-align: center;
+  } 
+ 
+  nav ul {
+
+  display: grid;
+  grid-template-columns: 1fr;
+}
+   
+  /* nav ul
+  {
+    border: 1px solid #7C7C7C;
+    border-bottom: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+  }
+  ul li
+  {
+    background: #F4F4F4;
+    border-bottom: 1px solid #7C7C7C;
+    border-top: 1px solid #FFF;
+  
+  }
+
+  ul li a
+  {
+    color: #333;
+  display: block;
+  padding: .2em 0 .2em .5em;
+  text-decoration: none;
+
+  } */
+
+
+
+  aside#tecnologia {
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+  }
+
+  header + aside {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+  }
+
+  section#principal {
+    grid-row-start: 3;
+    grid-column: 1 / span 2;
+  }
+  
+}
+
+@media screen and (min-width: 960px) {
+  #contenedor {
+    background-color: lightgray;
+  }
+
+  section#principal {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  section#principal > h2 {
+    grid-column: 1 / span 2;
+  }
+
+  section#principal > p {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #contenedor {
+    background-color: lightblue;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  header {
+    grid-column-end: 2;
+  }
+
+  nav {
+      grid-row: 1;
+      grid-column: 2/ span 2;
+  }
+
+  aside#tecnologia {
+      grid-row: 4;
+      grid-column: 3 / 3;
+  }
+  header + aside {
+    grid-column: 1 / span 2;
+  }
+  section#principal {
+
+    grid-column: 1 / span 3;
+  }
+}

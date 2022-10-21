@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_4/bordes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>4.3. Bordes (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="margen_y_relleno.html" />
+        <link rel="next" href="margen_relleno_bordes_y_modelo_de_cajas.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="4.3. Bordes (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_4.html" itemprop="url">
+                    <span itemprop="title">Capítulo 4. Modelo de cajas</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>4.3. Bordes</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="bordes" class="title">
+        <span>4.3.</span> Bordes
+    </h1>
+
+    
+
+<p>CSS permite modificar el aspecto de cada uno de los cuatro bordes de la caja de un elemento. Para cada borde se puede establecer su anchura o grosor, su color y su estilo, por lo que en total CSS define 20 propiedades relacionadas con los bordes.</p>
+
+<h3 id="anchura_2">4.3.1. Anchura</h3>
+
+<p>La anchura de los bordes se controla con las cuatro propiedades siguientes:</p>
+
+<div class="table" id="table_4_7">
+
+    <table class="property" summary="Definición de la propiedad border-top-width, border-right-width, border-bottom-width, border-left-width de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedades</th>
+            <td><strong class="title"><strong>border-top-width</strong>, <strong>border-right-width</strong>, <strong>border-bottom-width</strong>, <strong>border-left-width</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( <a href="http://librosweb.es/referencia/css/unidades_de_medida.html">unidad de medida</a> | thin | medium | thick ) | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece la anchura de cada uno de los cuatro bordes de los elementos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>La anchura de los bordes se indica mediante una medida (en cualquier unidad de medida absoluta o relativa) o mediante las palabras clave <code>thin</code> (borde delgado), <code>medium</code> (borde normal) y <code>thick</code> (borde ancho).</p>
+
+<p>La unidad de medida más habitual para establecer el grosor de los bordes es el píxel, ya que es la que permite un control más preciso sobre el grosor. Las palabras clave apenas se utilizan, ya que el estándar CSS no indica explícitamente el grosor al que equivale cada palabra clave, por lo que pueden producirse diferencias visuales entre navegadores. Así por ejemplo, el grosor <code>medium</code> equivale a <code>4px</code> en algunas versiones de Internet Explorer y a <code>3px</code> en el resto de navegadores.</p>
+
+<p>El siguiente ejemplo muestra un elemento con cuatro anchuras diferentes de borde:</p>
+
+<div class="figure" id="figure_4_11">
+    <img src="../../img/css/f0410.gif" alt="Ejemplo de propiedad border-width" />
+
+    <p class="caption"><strong>Figura 4.11</strong> Ejemplo de propiedad border-width</p>
+</div>
+
+
+<p>Las reglas CSS utilizadas se muestran a continuación:</p>
+
+<div class="code css">
+<pre class="css">div <span class="br0">&#123;</span>
+  <span class="kw1">border-top-width</span><span class="sy0">:</span> <span class="re3">10px</span><span class="sy0">;</span>
+  <span class="kw1">border-right-width</span><span class="sy0">:</span> <span class="re3">1em</span><span class="sy0">;</span>
+  <span class="kw1">border-bottom-width</span><span class="sy0">:</span> <span class="kw2">thick</span><span class="sy0">;</span>
+  <span class="kw1">border-left-width</span><span class="sy0">:</span> <span class="kw2">thin</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Si se quiere establecer de forma simultánea la anchura de todos los bordes de una caja, es necesario utilizar una propiedad <em>"shorthand"</em> llamada <code>border-width</code>:</p>
+
+<div class="table" id="table_4_8">
+
+    <table class="property" summary="Definición de la propiedad border-width de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>border-width</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( <a href="http://librosweb.es/referencia/css/unidades_de_medida.html">unidad de medida</a> | thin | medium | thick ) {1, 4} | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece la anchura de todos los bordes del elemento</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>La propiedad <code>border-width</code> permite indicar entre uno y cuatro valores. El significado de cada caso es el habitual de las propiedades <em>"shorthand"</em>:</p>
+
+<div class="code css">
+<pre class="css">p <span class="br0">&#123;</span> <span class="kw1">border-width</span><span class="sy0">:</span> <span class="kw2">thin</span> <span class="br0">&#125;</span>                   <span class="coMULTI">/* thin thin thin thin */</span>
+p <span class="br0">&#123;</span> <span class="kw1">border-width</span><span class="sy0">:</span> <span class="kw2">thin</span> <span class="kw2">thick</span> <span class="br0">&#125;</span>             <span class="coMULTI">/* thin thick thin thick */</span>
+p <span class="br0">&#123;</span> <span class="kw1">border-width</span><span class="sy0">:</span> <span class="kw2">thin</span> <span class="kw2">thick</span> <span class="kw2">medium</span> <span class="br0">&#125;</span>      <span class="coMULTI">/* thin thick medium thick */</span>
+p <span class="br0">&#123;</span> <span class="kw1">border-width</span><span class="sy0">:</span> <span class="kw2">thin</span> <span class="kw2">thick</span> <span class="kw2">medium</span> <span class="kw2">thin</span> <span class="br0">&#125;</span> <span class="coMULTI">/* thin thick medium thin */</span></pre>
+</div>
+
+<p>Si se indica un solo valor, se aplica a los cuatro bordes. Si se indican dos valores, el primero se aplica al borde superior e inferior y el segundo valor se aplica al borde izquierdo y derecho.</p>
+
+<p>Si se indican tres valores, el primero se aplica al borde superior, el segundo se aplica al borde izquierdo y derecho y el tercer valor se aplica al borde inferior. Si se indican los cuatro valores, el orden de aplicación es superior, derecho, inferior e izquierdo.</p>
+
+<h3 id="color">4.3.2. Color</h3>
+
+<p>El color de los bordes se controla con las cuatro propiedades siguientes:</p>
+
+<div class="table" id="table_4_9">
+
+    <table class="property" summary="Definición de la propiedad border-top-color, border-right-color, border-bottom-color, border-left-color de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedades</th>
+            <td><strong class="title"><strong>border-top-color</strong>, <strong>border-right-color</strong>, <strong>border-bottom-color</strong>, <strong>border-left-color</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td><a href="http://librosweb.es/referencia/css/colores.html">color</a> | transparent | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el color de cada uno de los cuatro bordes de los elementos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El ejemplo anterior se puede modificar para mostrar cada uno de los bordes de un color diferente:</p>
+
+<div class="figure" id="figure_4_12">
+    <img src="../../img/css/f0411.gif" alt="Ejemplo de propiedad border-color" />
+
+    <p class="caption"><strong>Figura 4.12</strong> Ejemplo de propiedad border-color</p>
+</div>
+
+
+<p>Las reglas CSS necesarias para mostrar los colores anteriores son las siguientes:</p>
+
+<div class="code css">
+<pre class="css">div <span class="br0">&#123;</span>
+  <span class="kw1">border-top-color</span><span class="sy0">:</span> <span class="re0">#CC0000</span><span class="sy0">;</span>
+  <span class="kw1">border-right-color</span><span class="sy0">:</span> <span class="kw1">blue</span><span class="sy0">;</span>
+  <span class="kw1">border-bottom-color</span><span class="sy0">:</span> <span class="re0">#00FF00</span><span class="sy0">;</span>
+  <span class="kw1">border-left-color</span><span class="sy0">:</span> <span class="re0">#CCC</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>CSS incluye una propiedad <em>"shorthand"</em> llamada <code>border-color</code> para establecer de forma simultánea el color de todos los bordes de una caja:</p>
+
+<div class="table" id="table_4_10">
+
+    <table class="property" summary="Definición de la propiedad border-color de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>border-color</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( <a href="http://librosweb.es/referencia/css/colores.html">color</a> | transparent ) {1, 4} | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el color de todos los bordes del elemento</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>En este caso, al igual que sucede con la propiedad <code>border-width</code>, es posible indicar de uno a cuatro valores y las reglas de aplicación son idénticas a las de la propiedad <code>border-width</code>.</p>
+
+<h3 id="estilo">4.3.3. Estilo</h3>
+
+<p>Por último, CSS permite establecer el estilo de cada uno de los bordes mediante las siguientes propiedades:</p>
+
+<div class="table" id="table_4_11">
+
+    <table class="property" summary="Definición de la propiedad border-top-style, border-right-style, border-bottom-style, border-left-style de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedades</th>
+            <td><strong class="title"><strong>border-top-style</strong>, <strong>border-right-style</strong>, <strong>border-bottom-style</strong>, <strong>border-left-style</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>none</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el estilo de cada uno de los cuatro bordes de los elementos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El estilo de los bordes sólo se puede indicar mediante alguna de las palabras reservadas definidas por CSS. Como el valor por defecto de esta propiedad es <code>none</code>, los elementos no muestran ningún borde visible a menos que se establezca explícitamente un estilo de borde.</p>
+
+<p>Siguiendo el ejemplo anterior, se puede modificar el estilo de cada uno de los bordes:</p>
+
+<div class="figure" id="figure_4_13">
+    <img src="../../img/css/f0412.gif" alt="Ejemplo de propiedad border-style" />
+
+    <p class="caption"><strong>Figura 4.13</strong> Ejemplo de propiedad border-style</p>
+</div>
+
+
+<p>Las reglas CSS necesarias para mostrar los estilos anteriores son las siguientes:</p>
+
+<div class="code css">
+<pre class="css">div <span class="br0">&#123;</span>
+  <span class="kw1">border-top-style</span><span class="sy0">:</span> <span class="kw2">dashed</span><span class="sy0">;</span>
+  <span class="kw1">border-right-style</span><span class="sy0">:</span> <span class="kw2">double</span><span class="sy0">;</span>
+  <span class="kw1">border-bottom-style</span><span class="sy0">:</span> <span class="kw2">dotted</span><span class="sy0">;</span>
+  <span class="kw1">border-left-style</span><span class="sy0">:</span> <span class="kw2">solid</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>El aspecto con el que los navegadores muestran los diferentes tipos de borde se muestra a continuación:</p>
+
+<div class="figure" id="figure_4_14">
+    <img src="../../img/css/f0413.gif" alt="Tipos de bordes definidos por CSS" />
+
+    <p class="caption"><strong>Figura 4.14</strong> Tipos de bordes definidos por CSS</p>
+</div>
+
+
+<p>Los bordes más utilizados son <code>solid</code> y <code>dashed</code>, seguidos de <code>double</code> y <code>dotted</code>. Los estilos <code>none</code> y <code>hidden</code> son idénticos visualmente, pero se diferencian en la forma que los navegadores resuelven los conflictos entre los bordes de las celdas adyacentes en las tablas.</p>
+
+<p>Para establecer de forma simultánea los estilos de todos los bordes de una caja, es necesario utilizar la propiedad <em>"shorthand"</em> llamada <code>border-style</code>:</p>
+
+<div class="table" id="table_4_12">
+
+    <table class="property" summary="Definición de la propiedad border-style de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>border-style</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>(none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset ) {1, 4} | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el estilo de todos los bordes del elemento</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Como es habitual, la propiedad permite indicar de uno a cuatro valores diferentes y las reglas de aplicación son las habituales de las propiedades <em>"shorthand"</em>.</p>
+
+<h3 id="propiedades_shorthand">4.3.4. Propiedades shorthand</h3>
+
+<p>Como sucede con los márgenes y los rellenos, CSS define una serie de propiedades de tipo <em>"shorthand"</em> que permiten establecer todos los atributos de los bordes de forma simultánea. CSS incluye una propiedad <em>"shorthand"</em> para cada uno de los cuatro bordes y una propiedad <em>"shorthand"</em> global.</p>
+
+<div class="table" id="table_4_13">
+
+    <table class="property" summary="Definición de la propiedad border-top, border-right, border-bottom, border-left de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedades</th>
+            <td><strong class="title"><strong>border-top</strong>, <strong>border-right</strong>, <strong>border-bottom</strong>, <strong>border-left</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( <a href="http://librosweb.es/referencia/css/unidades_de_medida.html">unidad de medida</a>_borde || <a href="http://librosweb.es/referencia/css/colores.html">color</a>_borde || estilo_borde ) | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el estilo completo de cada uno de los cuatro bordes de los elementos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El significado de cada uno de los valores especiales es el siguiente:</p>
+
+<ul>
+<li><code>&lt;medida_borde&gt;</code>: una <a href="http://librosweb.es/referencia/css/unidades_de_medida.html">medida CSS</a> o alguna de las siguientes palabras clave: <code>thin</code>, <code>medium</code>, <code>thick</code>.</li>
+<li><code>&lt;color_borde&gt;</code>: un <a href="http://librosweb.es/referencia/css/colores.html">color de CSS</a> o la palabra clave <code>transparent</code></li>
+<li><code>&lt;estilo_borde&gt;</code>: una de las siguientes palabras clave: <code>none</code>, <code>hidden</code>, <code>dotted</code>, <code>dashed</code>, <code>solid</code>, <code>double</code>, <code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>.</li>
+</ul>
+
+<p>Las propiedades <em>"shorthand"</em> permiten establecer alguno o todos los atributos de cada borde. El siguiente ejemplo establece el color y el tipo del borde inferior, pero no su anchura:</p>
+
+<div class="code css">
+<pre class="css">h1 <span class="br0">&#123;</span>
+  <span class="kw1">border-bottom</span><span class="sy0">:</span> <span class="kw2">solid</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>En el ejemplo anterior, la anchura del borde será la correspondiente al valor por defecto (<code>medium</code>). Este otro ejemplo muestra la forma habitual utilizada para establecer el estilo de cada borde:</p>
+
+<div class="code css">
+<pre class="css">div <span class="br0">&#123;</span>
+  <span class="kw1">border-top</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="re0">#369</span><span class="sy0">;</span>
+  <span class="kw1">border-bottom</span><span class="sy0">:</span> <span class="re3">3px</span> <span class="kw2">double</span> <span class="re0">#369</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Por ultimo, CSS define una propiedad de tipo <em>"shorthand"</em> global para establecer el valor de todos los atributos de todos los bordes de forma directa:</p>
+
+<div class="table" id="table_4_14">
+
+    <table class="property" summary="Definición de la propiedad border de CSS">
+    <thead>
+        <tr>
+            <th scope="row">Propiedad</th>
+            <td><strong class="title"><strong>border</strong></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Valores</th>
+            <td>( <a href="http://librosweb.es/referencia/css/unidades_de_medida.html">unidad de medida</a>_borde || <a href="http://librosweb.es/referencia/css/colores.html">color</a>_borde || estilo_borde ) | <a href="http://librosweb.es/referencia/css/el_valor_inherit.html">inherit</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Se aplica a</th>
+            <td>Todos los elementos</td>
+        </tr>
+        <tr>
+            <th scope="row">Valor inicial</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Establece el estilo completo de todos los bordes de los elementos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>Las siguientes reglas CSS son equivalentes:</p>
+
+<div class="code css">
+<pre class="css">div <span class="br0">&#123;</span>
+  <span class="kw1">border-top</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="kw2">red</span><span class="sy0">;</span>
+  <span class="kw1">border-right</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="kw2">red</span><span class="sy0">;</span>
+  <span class="kw1">border-bottom</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="kw2">red</span><span class="sy0">;</span>
+  <span class="kw1">border-left</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+div <span class="br0">&#123;</span> <span class="kw1">border</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="kw2">solid</span> <span class="kw2">red</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Como el valor por defecto de la propiedad <code>border-style</code> es <code>none</code>, si una propiedad <em>shorthand</em> no establece explícitamente el estilo de un borde, el elemento no muestra ese borde:</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/* Sólo se establece el color, por lo que el estilo es 
+    &quot;none&quot; y el borde no se muestra */</span>
+div <span class="br0">&#123;</span> <span class="kw1">border</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Se establece el grosor y el color del borde, pero no
+   su estilo, por lo que es &quot;none&quot; y el borde no se muestra */</span>
+div <span class="br0">&#123;</span> <span class="kw1">border-bottom</span><span class="sy0">:</span> <span class="re3">5px</span> <span class="kw1">blue</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Cuando los cuatro bordes no son idénticos pero sí muy parecidos, se puede utilizar la propiedad <code>border</code> para establecer de forma directa los atributos comunes de todos los bordes y posteriormente especificar para cada uno de los cuatro bordes sus propiedades particulares:</p>
+
+<div class="code css">
+<pre class="css">h1 <span class="br0">&#123;</span>
+  <span class="kw1">border</span><span class="sy0">:</span> <span class="kw2">solid</span> <span class="re0">#000</span><span class="sy0">;</span>
+  <span class="kw1">border-top-width</span><span class="sy0">:</span> <span class="re3">6px</span><span class="sy0">;</span>
+  <span class="kw1">border-left-width</span><span class="sy0">:</span> <span class="re3">8px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p><div class="exercise"><p class="title">Ejercicio 4</p> <p><a href="../capitulo_15/ejercicio_4.html">Ver enunciado</a></p></div></p>
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="margen_y_relleno.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>4.2. Margen y relleno</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="margen_relleno_bordes_y_modelo_de_cajas.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>4.4. Margen, relleno, bordes y modelo de cajas</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Bordes%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1 ">
+                <a href="../capitulo_4.html">
+                    <span>Capítulo 4.</span> Modelo de cajas
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="anchura_y_altura.html">
+                    <span>4.1.</span> Anchura y altura
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="margen_y_relleno.html">
+                    <span>4.2.</span> Margen y relleno
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="bordes.html">
+                    <span>4.3.</span> Bordes
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="margen_relleno_bordes_y_modelo_de_cajas.html">
+                    <span>4.4.</span> Margen, relleno, bordes y modelo de cajas
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="fondos.html">
+                    <span>4.5.</span> Fondos
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Posicionamiento y visualización</a>
+            </li>
+                                                                                                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Otros</a>
+            </li>
+                                                                                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_4/bordes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:16 GMT -->
+</html>

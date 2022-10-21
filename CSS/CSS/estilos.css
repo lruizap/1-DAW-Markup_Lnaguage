@@ -1,0 +1,11 @@
+h1
+{
+    color: blue;
+    text-decoration: underline;
+    border: 2px red dotted;
+    /* comentar */
+}
+
+h2{
+    color: rgb(43, 196, 29)
+}

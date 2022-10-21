@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<clase>
+
+    <alumno>
+
+        <nombre>Ana Muñoz</nombre>
+        <Fecha_Nac>12/12/1998</Fecha_Nac>
+        <email visible="No">ana@local.com</email>
+        <modulo>
+            <nombre>
+                BD
+            </nombre>
+            <nota tipo="1ev">
+                2
+            </nota>
+        </modulo>
+
+    </alumno>
+    <alumno>
+
+        <nombre>Julian García</nombre>
+        <Fecha_Nac>27/06/1999</Fecha_Nac>
+        <email visible="Si">julian@local.com</email>
+        <modulo>
+            <nombre>
+                BD
+            </nombre>
+            <nota>
+                <PrimEv>
+                    7
+                </PrimEv>
+            </nota>
+        </modulo>
+
+    </alumno>
+
+</clase> 

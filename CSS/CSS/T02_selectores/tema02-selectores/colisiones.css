@@ -1,0 +1,32 @@
+/* file: colores. css */
+
+
+/* ejemplo uso herencia */
+section {
+  color: blue;           /* se hereda */
+  border: 2px solid red; /* no se hereda */
+}
+
+/* para ver colisiones en el artículo */
+.revisar {
+  color: silver;
+}
+
+article h2 + p {
+  color: red;
+} 
+
+article p {
+  color: green;     /* esta propiedas colisiona */
+  font-style: italic; /* esta propiedas NO colisiona */
+}
+
+/* para ver colisiones en footer y "desempate" */
+
+footer p {
+  color: tomato;
+}
+footer > p {
+  color: green;
+}
+

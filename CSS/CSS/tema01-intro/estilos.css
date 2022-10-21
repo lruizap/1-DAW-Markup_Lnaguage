@@ -1,0 +1,9 @@
+h1 {
+  color: palevioletred;
+  text-decoration: underline;
+  border: 2px red dotted;
+}
+
+h2 {
+    color: blue;
+}

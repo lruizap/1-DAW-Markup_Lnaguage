@@ -1,0 +1,106 @@
+/* Estilos.css */
+
+h1  {
+    font-family: monospace;
+    text-shadow: 5px 2px red;   
+    text-align: center;
+}
+
+header img {
+    float: right;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+h3 {
+    border-bottom: 1px dashed black;
+}
+
+/* txt insertado */
+
+ins {
+    font-variant: small-caps;
+    text-decoration: none;
+    background-color: yellow;
+}
+
+ins[datetime]::after {  /* Si tiene este atributo [atributo] lo muestra, si no no */
+    content: " [" attr(datetime) "] ";
+    font-style: italic;
+    font-size: 60%;
+    vertical-align: top; /* Para ponerlo arriba */
+}
+
+/* NAV */
+
+nav ul{
+    list-style-type: circle;
+}
+
+nav ul li:hover {
+    list-style-image: url(../figuras/plus.png);
+}
+
+/* aside botonera horizontal */
+
+aside ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 0;
+}
+
+aside ul li {
+    border: 1px solid black;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+aside ul li:hover{
+    background-color: red;
+}
+
+/* section */
+
+section > p {
+    color: blue;
+    text-transform: uppercase;
+}
+
+h3 + p {
+    text-align: right;
+    font-style: italic;
+    color:brown;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+}
+
+footer h2 {
+    border-bottom: none;
+    width: 70%;
+    margin:auto;
+    border: red double 4px;
+    border-radius: 10px;
+    box-shadow: red 20px 10px 10px;
+}
+
+footer form {
+    margin: 2em;
+}
+
+input[type="search"]:focus {
+    border: 5px solid red;
+}

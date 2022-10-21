@@ -1,0 +1,62 @@
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section h2 {
+    grid-column: 1/3;
+}
+
+h2 {
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/* BoxModel */
+
+figure {
+    border: dotted black 2px;
+    padding: 1.5em;
+    background-color: yellow;
+    background-image: url(../figuras/logo-css-64.png);
+    background-repeat: repeat-y;
+    background-position: right bottom;
+}
+
+/* Colores */
+
+figure:nth-of-type(4n+2), figure:nth-of-type(4n+3){
+    background-color: orange;
+}
+
+/* Contadores */
+
+h1 {
+    counter-reset: n1;
+}
+
+h2 {
+    counter-increment: n1;
+    counter-reset: n2;
+}
+
+h2::after {
+    content: "número " counter(n1);
+    color: red;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+figure{
+    counter-increment: n2;
+}
+
+figcaption::before {
+    content: counter(n1) "." counter(n2) " ";
+    color: red;
+    font-style: italic;
+    font-weight: bolder;
+}

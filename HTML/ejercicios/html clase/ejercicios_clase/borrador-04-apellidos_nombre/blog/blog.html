@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=º, initial-scale=1.0">
+    <title>blog.html</title>
+</head>
+
+<body>
+    <nav>
+        <h2>Recorra nuestro sitio web</h2>
+        <ul>
+            <li><a href="../index.html">Página inicial</a></li>
+            <li><a href="../bd/sql/recogeDatos.html">Recogida de datos</a></li>
+            <li><a href="../bd/resultados.html">Tabla de resultados</a></li>
+            <li><a href="blog.html"> Nuestro blog</a></li>
+        </ul>
+    </nav>
+
+    <h1>Blog Lorem, ipsum dolor.</h1>
+    <nav>
+        <h2>Indice del blog</h2>
+        <ul>
+            <li><a href="#html">Bloque HTML</a>
+                <ol>
+                    <li><a href="#cerrar">Cerrar etiquetas</a></li>
+                    <li><a href="#evitar">Evitar estilos inline</a></li>
+                </ol>
+            </li>
+            <li> Bloque CSS
+                <ul>
+                    <li>Jerarquía</li>
+                    <li>Fuentes
+                        <ul>
+                            <li> Text Shadow </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section>
+        <h2 id="html">Bloque HTML</h2>
+        <article>
+            <h3 id="cerrar">Artículo 1: Cerrar las etiquetas</h3>
+            <p>Back in the day, it wasn't uncommon to see things like this:</p>
+            <pre>
+                <code>
+                    &lt;li>Some text here.
+                    &lt;li>Some new text here.
+                    &lt;li>You get the idea.
+                </code>
+            </pre>
+            <p>Notice how the wrapping UL/OL tag was omitted. Additionally, many chose to leave off the closing LI tags as well. By today's standards, this is simply bad practice and should be 100% avoided. Always, always close your tags. Otherwise, you'll encounter validation and glitch issues at every turn.</p>
+
+        </article>
+        <article id="evitar">
+            <h3>Evitar estilos inline</h3>
+            <p>When you're hard at work on your markup, sometimes it can be tempting to take the easy route and sneak in a bit of styling. 1</p>
+            <pre><code>
+                &lt;p style="color: red;">I'm going to make this text red so that it really stands out and makes people take notice! &lt;/p>
+            </code></pre>
+            <p>Sure --it looks harmless enough. However, this points to an error in your coding practices.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Bloque CSS</h2>
+        <article>
+            <h3>Jerarquia</h3>
+
+            <img src="../figuras/typography_hiearchy-1_vab7fy.jpg" alt="jerarquía ... " width="822" height="354">
+        </article>
+        <article>
+            <h3>Fuentes</h3>
+            <img src="../figuras/googlefonts.gif" alt="fuentes google" width="640" height="477">
+
+            <h4>Text Shadow</h4>
+            <img src="../figuras/css-text-shadow.png" alt="CSS shadow example" width="334" height="102">
+        </article>
+    </section>
+
+
+</body>
+
+</html>

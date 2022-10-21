@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="tablon" type="Ttablon" />
+    <xs:complexType name="Ttablon">
+        <xs:sequence>
+            <xs:element name="anuncio" type="Tanuncio" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="categoria" type="xs:string"/>
+    </xs:complexType>
+
+    <!-- <xs:element name="anuncio" type="Tanuncio" /> -->
+    <xs:complexType name="Tanuncio">
+        <xs:sequence>
+            <xs:element name="fecha" type="xs:date" />
+            <xs:element name="asunto" type="Tasunto" />
+            <xs:element name="texto" type="Ttexto" />
+            <xs:element name="precio" type="TTprecio" />
+            <xs:element name="contacto" type="Tcontacto" minOccurs="2" maxOccurs="unbounded" />
+            <xs:element name="sindatos" type="Tvacio" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="fechaLimite" type="xs:date" use="required"/>
+        <xs:attribute name="duracion" type="xs:duration"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="Tvacio">
+        <xs:attribute name="fuente" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Tcontacto">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="tipo" type="Ttipo" use="required"/>
+        </xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Ttipo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="correo|tel|sms"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tasunto">
+
+        <xs:restriction base="xs:string">
+            <xs:minLength value="4" />
+            <xs:maxLength value="30" />
+        </xs:restriction>
+
+    </xs:simpleType>
+
+    <xs:simpleType name="Ttexto">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([\w\s\p{P}])*" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tprecio">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="TTprecio">
+        <xs:simpleContent>
+            <xs:extension base="Tprecio">
+                <xs:attribute name="moneda" type="xs:string" use="required" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

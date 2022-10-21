@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t08: Formulario inicial</title>
+</head>
+
+<body>
+  <h1>Formulario 02</h1>
+  <p>
+    <button onclick="alert('hola')">Botón fuera form</button>
+  </p>
+
+  <form action="/reclama.php" method="get" enctype="multipart/form-data">
+
+    <fieldset>
+      <legend>otros elementos de formulario</legend>
+      <p>
+        <label for="reclama">texto reclamación</label> <br>
+        <textarea placeholder="texto inicial" name="reclama" id="reclama" cols="80" rows="10" maxlength="100"></textarea>
+      </p>
+
+      <p>
+        <label for="sistema">Seleccione SO</label> <br>
+        <select name="sistema" id="sistema" multiple size="7">
+          <optgroup label="Sistemas Operativos">
+            <option value="Linux">Linux</option>
+            <option selected value="WIN">Windows</option>
+            <option value="IOS">IOS de Mac</option>
+          </optgroup>
+          <optgroup label="Navegadores">
+            <option value="Chrome">Chrome</option>
+            <option value="Moz">Firefox</option>
+          </optgroup>
+        </select>
+      </p>
+
+    </fieldset>
+
+
+
+
+    <fieldset>
+      <legend>Datos iniciales</legend>
+      <p>
+        <input type="button" value="input boton" name="testing">
+      </p>
+      <input type="hidden" name="url_previa" value="/articulo/primero.html" />
+      <p>
+        <!-- label forma 1 -->
+        <label for="nombre">Nombre</label><br>
+        <input required placeholder="Anónimo" name="nombre" type="text" id="nombre">
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Ficheros adjuntos</legend>
+      <p>
+        <label for="cv">Adjuntar su CV</label>
+        <input type="file" name="cv" id="cv">
+      </p>
+      <p>
+        <label for="foto">Adjuntar su foto</label>
+        <input type="file" name="foto" id="foto">
+      </p>
+    </fieldset>
+
+    <p>
+      <input type="image" src="facebook.jpg" alt="logo facebook">
+      <input type="submit" value="Enviar datos">
+      <input type="reset" value="Borrar el formulario">
+    </p>
+  </form>
+</body>
+
+</html>

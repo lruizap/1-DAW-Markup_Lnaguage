@@ -1,0 +1,132 @@
+/* apartado1.css */
+
+section + aside {
+    text-align: center;
+    /* width: fit-content;
+    margin: auto; */
+}
+
+section + aside ol {
+    list-style-type:lower-alpha;
+    list-style-position: inside;
+}
+
+ol li:nth-child(3n+2) {
+    color: red;
+}
+
+ol li:nth-child(3n+3) {
+    text-decoration: line-through;
+}
+
+section section {
+    border-bottom: 5px dashed red;
+    border-right: 5px dashed red;
+    padding: 1.5em;
+    margin: 1em;
+}
+
+h3 abbr::after {
+    content: " (Significado: "  attr(title) ") ";
+    font-style: italic;    
+    color: darkslategray;
+}
+
+p.relleno::before {
+    content: "Inicio ";
+    background-color: yellow;
+    font-style: italic;
+}
+
+p.relleno::after {
+    content: " Final";
+    background-color: yellow;
+    font-style: italic;
+}
+
+p.relleno {
+    font-style: italic;
+    color: grey;
+}
+
+/* ZIP */
+
+a[href$=".zip"]{
+    background-image: url(../fotos/zip.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 22px; /* PONER SIEMPRE EL TAMAÑO DE LA IMÁGEN */
+}
+
+/* grifos */
+
+/* section#principal > p */
+section h2 ~ p { 
+    background-image: url(../fotos/agua.png);
+    background-color: khaki;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    padding-bottom: 64px; /* ALtura de la IMÁGEN */
+}
+
+/* Sombra */
+
+#principal > h2 {
+    font-weight: 400;
+    font-variant: small-caps;
+    background-color: purple;
+    color: white;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: .5em;
+    box-shadow: 20px 10px 5px pink;
+}
+
+aside img {
+    float: right;
+}
+
+h1, aside {
+    text-align: center;
+}
+
+nav h2 {
+    display: none;
+}
+
+nav ul {
+    border: 1px mediumvioletred solid;
+    background-color: beige;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    border: 1px mediumvioletred solid;
+    text-align: center;
+    padding: .2em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: beige;
+}
+
+nav ul li:hover {
+    background-color: black;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+aside {
+    font-family: serif;
+}
+

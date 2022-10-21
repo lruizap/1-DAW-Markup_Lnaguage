@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Ejemplo de picture con distintos tipos de archivos</h1>
+
+    <p>En el momento de la prueba el navegador no soporta los dos primeros formatos y se carga el tercero. Si se comenta esa línea se carga el quinto, ya que el cuarto falla por no estar bien especificado el valor del atributo<code>type</code>.  El elemento <code>img</code>  final se usa si no se soporta ninguno de los anteriores (o el navegador no soportara el elemento <code>picture</code> ).
+    </p>
+
+    
+    <picture>
+        <source srcset="figuras/photo.jxl" type="image/jxl">
+        <source srcset="figuras/photo.wp2" type="image/wp2">
+        <source srcset="figuras/photo.webp" type="image/webp" width="100%">
+        <source srcset="figuras/photo.avif" type="image/akkk" width="100%">
+        <source srcset="figuras/photo.avif" type="image/avif" width="100%"> 
+        <img src="figuras/photo.jpg" alt="Descripción de la foto" width="100%">
+    </picture>
+</body>
+</html>

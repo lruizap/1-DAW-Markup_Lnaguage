@@ -1,0 +1,22 @@
+#contenedor{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+header {
+    grid-column: 1 / span 3;
+}
+
+footer {
+    grid-column: 1 / span 3;
+}
+
+div{
+    grid-column: 1/ span 3;
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+}
+
+aside {
+    grid-column: 1/span 3;
+}

@@ -1,0 +1,9 @@
+header, aside, footer, nav {
+    display: none;
+}
+
+article h2 {
+    width: 70px;
+    margin: auto;
+    border: 1px solid black;
+}

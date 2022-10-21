@@ -1,0 +1,64 @@
+/* grid.css */
+
+/* https://www.quackit.com/css/grid/tutorial/ */
+
+#contenedor {
+  display: grid;
+  /*grid-template-columns: 20% 50% 30%;*/
+  grid-template-columns: 2fr 5fr 3fr;
+  /*grid-template-rows: auto;*/
+}
+
+/* Al definir la rejilla (grid) con el display y el template 
+    se forma una cuadricula de líneas que se numeran a partir de 1.
+    A ellas nos podemos referir  en la propiedades siguientes para definir
+   - donde comienza o termina, 
+   - o donde comienza y a cuantas cuadriculas se expanden
+
+  Si hemos definido 3 columnas, las lineas van de 1 a 4
+
+    1             2                3            4
+  1 ---------------------------------------------
+    |             |                |            |
+  2 ---------------------------------------------
+    |             |                |            |
+  3 ---------------------------------------------
+    |             |                |            |
+  4 ---------------------------------------------
+
+  Si no se indica nada un bloque ocupa una zona, y empieza
+  a continuación del anterior.
+    
+*/
+
+header {
+  grid-column: 1 / 4; 
+  /* equivale a 
+  grid-column-start: 1;
+  grid-column-end: 4; 
+  */
+}
+
+footer {
+  grid-column: 1 / span 3;  inicia en 1, se expande 3 
+}
+
+/* Comentar anterior y descomentar esta líneas para ver otro layout */
+/*header {
+  grid-column: 1;
+  grid-row: 2 ;
+}
+nav {
+  grid-row: 3 ;
+}
+footer {
+  grid-row: 1;
+  grid-column: 1 / span 3;
+}
+aside, article {
+  grid-row: 2 / span 2; 
+}
+*/
+
+
+

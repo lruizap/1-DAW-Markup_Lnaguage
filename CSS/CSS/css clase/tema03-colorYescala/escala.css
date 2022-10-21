@@ -1,0 +1,14 @@
+body {
+    font-size: 10px;
+    text-indent: 3em;
+}
+
+h1 {font-size: 4em;border: 1px solid red;}
+
+section {
+    width: 50%;
+}
+
+p {
+    width: 50%; 
+}

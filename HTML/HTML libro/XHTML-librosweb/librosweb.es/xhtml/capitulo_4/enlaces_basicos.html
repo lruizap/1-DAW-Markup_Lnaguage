@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/xhtml/capitulo_4/enlaces_basicos.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>4.3. Enlaces básicos (Introducción a XHTML)</title>
+        <link href="../../css/main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="enlaces_relativos_y_absolutos.html" />
+        <link rel="next" href="enlaces_avanzados.html" />
+        <link rel="start" href="http://librosweb.es/xhtml" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="4.3. Enlaces básicos (Introducción a XHTML)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page xhtml">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index-2.html" itemprop="url">
+                    <span itemprop="title">Introducción a XHTML</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_4.html" itemprop="url">
+                    <span itemprop="title">Capítulo 4. Enlaces</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>4.3. Enlaces básicos</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="enlaces_basicos" class="title">
+        <span>4.3.</span> Enlaces básicos
+    </h1>
+
+    
+
+<p>Los enlaces en HTML se crean mediante la etiqueta <code>&lt;a&gt;</code> (su nombre viene del inglés <em>"anchor"</em>, literalmente traducido como "ancla"). A continuación se muestra la definición simplificada de <code>&lt;a&gt;</code> y más adelante se muestra su definición completa:</p>
+
+<div class="table" id="table_4_11">
+
+    <table class="property" summary="Definición y propiedades de la etiqueta a de XHTML">
+    <thead>
+        <tr>
+            <th scope="row">Etiqueta</th>
+            <td><strong class="title"><span>&lt;</span>a<span>&gt;</span></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Atributos comunes</th>
+            <td><a href="../capitulo_2/etiquetas_y_atributos.html#atributos_basicos">básicos</a>, <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_para_internacionalizacion">internacionalización</a>, <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_de_eventos">eventos</a> y <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_de_foco">foco</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Atributos propios</th>
+            <td><ul><li><p><code>name = "texto"</code> - Permite nombrar al enlace para que se pueda acceder desde otros enlaces</p></li><li><p><code>href = "url"</code> - Indica la URL del recurso que se quiere enlazar</p></li></ul></td>
+        </tr>
+        <tr>
+            <th scope="row">Tipo de elemento</th>
+            <td>En línea</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Se emplea para enlazar todo tipo de recursos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<p>El atributo más importante de la etiqueta <code>&lt;a&gt;</code> es <code>href</code>, que se utiliza para indicar la URL a la que apunta el enlace. Cuando el usuario pincha sobre un enlace, el navegador se dirige a la URL del recurso indicado mediante <code>href</code>. Las URL de los enlaces pueden ser absolutas, relativas, internas y externas.</p>
+
+<p>Con la definición anterior, para crear un enlace que apunte a la página principal de Google solamente habría que incluir lo siguiente en un documento HTML:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.google.com&quot;</span>&gt;</span>Página principal de Google<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre>
+</div>
+
+<p>Como el atributo <code>href</code> indica una URL, un enlace puede apuntar a cualquier tipo de recurso al que pueda acceder el navegador. El siguiente enlace apunta a una imagen, que se mostrará en el navegador cuando el usuario pinche sobre el enlace:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.ejemplo.com/fondo_escritorio.jpg&quot;</span>&gt;</span>Imagen interesante para un fondo de escritorio<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre>
+</div>
+
+<p>De la misma forma, los enlaces pueden apuntar directamente a documentos PDF, Word, etc.</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.ejemplo.com/informe.pdf&quot;</span>&gt;</span>Descargar informe completo [PDF]<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.ejemplo.com/informe.doc&quot;</span>&gt;</span>Descargar informe completo [DOC]<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre>
+</div>
+
+<p>Un truco muy útil con los enlaces es el uso de URL relativas para poder volver al inicio del sitio web desde cualquier página web interior:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;/&quot;</span>&gt;</span>Volver al inicio<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre>
+</div>
+
+<p>El enlace anterior utiliza una URL relativa con una ruta que apunta directamente a la raíz del servidor. Para obtener la URL absoluta, el navegador añade el mismo protocolo y el mismo nombre de servidor de la página en la que se encuentra el enlace. El resultado es que cuando se pincha ese enlace, siempre se vuelve al inicio del sitio web, independientemende de la página en la que se incluya el enlace.</p>
+
+<p>El otro atributo básico de la etiqueta <code>&lt;a&gt;</code> es <code>name</code>, que permite definir enlaces dentro de una misma página web. Si una página es muy larga, puede ser útil mostrar enlaces de tipo "<code>Saltar hasta la segunda sección</code>", "<code>Volver al principio de la página</code>", etc.</p>
+
+<p>Este tipo de enlaces son especiales, ya que la URL de la página siempre es la misma para todas las secciones y por tanto, debe añadirse otra parte a las URL para identificar cada sección.</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;primera_seccion&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris id ligula eu felis adipiscing ultrices. Duis gravida leo ut lectus. Praesent condimentum mattis ligula.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+...
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;segunda_seccion&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Pellentesque malesuada. In in lacus. Phasellus erat erat, lacinia a, convallis eu, nonummy et, odio. Aenean urna elit, ultrices id, placerat varius, facilisis eget, dolor.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+...</pre>
+</div>
+
+<p>El atributo <code>name</code> permite crear "enlaces vacíos" que hacen referencia a secciones dentro de una misma página. Una vez definidos los "enlaces vacíos", es posible crear un enlace que apunte directamente a una sección concreta de una página:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc-1">&lt;!-- Enlace normal a la página --&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.ejemplo.com/pagina1.html&quot;</span>&gt;</span>Enlace a la página 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+&nbsp;
+<span class="sc-1">&lt;!-- Enlace directo a la segunda sección de la página --&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.ejemplo.com/pagina1.html#segunda_seccion&quot;</span>&gt;</span>Enlace a la sección 2 de la página 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre>
+</div>
+
+<p>La sintaxis que se utiliza con estos enlaces es la misma que con los enlaces normales, salvo que se añade el símbolo <code>#</code> seguido del nombre de la sección a la que se apunta. Cuando el usuario pincha sobre uno de estos enlaces, el navegador accede a la página apuntada por la URL y baja directamente a la sección cuyo nombre se indica después del símbolo <code>#</code>.</p>
+
+<p>También es posible utilizar este tipo de enlaces con URL relativas en una misma página. El siguiente ejemplo añade enlaces de tipo "<code>Volver al inicio de la página</code>" en varias secciones:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;inicio&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris id ligula eu felis adipiscing ultrices. Duis gravida leo ut lectus. Praesent condimentum mattis ligula.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#inicio&quot;</span>&gt;</span>Volver al inicio de la página<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+...
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Pellentesque malesuada. In in lacus. Phasellus erat erat, lacinia a, convallis eu, nonummy et, odio. Aenean urna elit, ultrices id, placerat varius, facilisis eget, dolor.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#inicio&quot;</span>&gt;</span>Volver al inicio de la página<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+...</pre>
+</div>
+
+<p>Los enlaces directos a secciones también funcionan con el atributo <code>id</code> de cualquier elemento. El siguiente ejemplo es equivalente al ejemplo anterior:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">h1</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;inicio&quot;</span>&gt;</span>Título de la página<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris id ligula eu felis adipiscing ultrices. Duis gravida leo ut lectus. Praesent condimentum mattis ligula.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#inicio&quot;</span>&gt;</span>Volver al inicio de la página<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+...
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Pellentesque malesuada. In in lacus. Phasellus erat erat, lacinia a, convallis eu, nonummy et, odio. Aenean urna elit, ultrices id, placerat varius, facilisis eget, dolor.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#inicio&quot;</span>&gt;</span>Volver al inicio de la página<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+...</pre>
+</div>
+
+<p>El nombre de la sección que se indica después del símbolo <code>#</code> puede utilizar el valor de los atributos <code>id</code> de cualquier elemento. De hecho, se recomienda utilizar los atributos <code>id</code> de los elementos ya existentes en la página en vez de crear "enlaces vacíos" de tipo <code>&lt;a name="nombre_seccion"&gt;&lt;/a&gt;</code>.</p>
+
+<p><div class="exercise"><p class="title">Ejercicio 6</p> <p>A partir de la estructura de directorios y archivos indicada en la siguiente imagen:</p>
+
+<div class="figure" id="figure_4_2">
+    <img src="../../img/xhtml/e0601.gif" alt="Estructura de archivos y directorios de un sitio web de ejemplo" />
+
+    <p class="caption"><strong>Figura 4.2</strong> Estructura de archivos y directorios de un sitio web de ejemplo</p>
+</div>
+
+
+<p>1) Crear la siguiente página llamada <code>indice.html</code> que sirva como página principal del sitio:</p>
+
+<div class="figure" id="figure_4_3">
+    <img src="../../img/xhtml/e0602.gif" alt="Página principal del sitio web de ejemplo" />
+
+    <p class="caption"><strong>Figura 4.3</strong> Página principal del sitio web de ejemplo</p>
+</div>
+
+
+<p>2) Crear la página de índice del portfolio:</p>
+
+<div class="figure" id="figure_4_4">
+    <img src="../../img/xhtml/e0603.gif" alt="Página con la información sobre los proyectos realizados" />
+
+    <p class="caption"><strong>Figura 4.4</strong> Página con la información sobre los proyectos realizados</p>
+</div>
+
+
+<p><a href="http://librosweb.es/ejercicios/xhtml/ejercicio6/imagenes.zip">Descargar ZIP con las imágenes</a></p>
+
+<p><a href="../capitulo_15/ejercicio_6.html">Ver solución</a></p></div></p>
+
+
+
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="enlaces_relativos_y_absolutos.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>4.2. Enlaces relativos y absolutos</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="enlaces_avanzados.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>4.4. Enlaces avanzados</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Enlaces%20b%C3%A1sicos%20%28Introducci%C3%B3n%20a%20XHTML%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Características básicas</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Texto</a>
+            </li>
+                                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_4.html">
+                    <span>Capítulo 4.</span> Enlaces
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="url.html">
+                    <span>4.1.</span> URL
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="enlaces_relativos_y_absolutos.html">
+                    <span>4.2.</span> Enlaces relativos y absolutos
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="enlaces_basicos.html">
+                    <span>4.3.</span> Enlaces básicos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="enlaces_avanzados.html">
+                    <span>4.4.</span> Enlaces avanzados
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="otros_tipos_de_enlaces.html">
+                    <span>4.5.</span> Otros tipos de enlaces
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="ejemplos_de_enlaces_habituales.html">
+                    <span>4.6.</span> Ejemplos de enlaces habituales
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Listas</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Imágenes y objetos</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Formularios</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Estructura y layout</a>
+            </li>
+                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Metainformación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Otras etiquetas importantes</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Accesibilidad</a>
+            </li>
+                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Validación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Fragmentos de código</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.900 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/xhtml/capitulo_4/enlaces_basicos.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:33 GMT -->
+</html>

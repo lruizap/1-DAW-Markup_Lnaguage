@@ -1,0 +1,13 @@
+header, nav {
+    float: right;
+    width: 75%;
+}
+
+nav {
+    width: 25%;
+}
+
+article {
+    float: right;
+    width: 50%;
+}

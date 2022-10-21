@@ -1,0 +1,55 @@
+/* Convertir lista en "botonera" */
+nav ul {
+    padding-left: 0;
+    list-style-type: none;
+    border: 1px solid #000000;
+    background-color: beige;
+}
+
+nav ul li {
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 0.3em;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+}
+
+
+
+/* en vertical */
+nav.vertical  {
+    width: 25%;
+}
+
+/* en horizontal con grid */
+nav.grid ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*  en horizontal con float */
+nav.float ul li {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+}
+nav.float ul {
+    overflow: auto;
+}
+
+/*  en horizontal con flex */
+nav.flex ul {
+    display: flex;
+}
+nav.flex ul li {
+    flex: 1;
+}
+
+/* decorativo para presentación */
+nav[class]::before {
+    content: "Tipo: " attr(class);
+    font-style: italic;
+}

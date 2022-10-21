@@ -1,0 +1,18 @@
+<?xml version="1.0"?> <!-- File: ejemplo.xsd -->
+
+<?xml-model href="4.xsd"
+        type="application/xml" 
+        schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<!-- <nota>
+<de>Tove</de>
+</nota> -->
+
+<nota>
+    <de>Tove</de>
+    <para>Raquelita123@gmail.com</para>
+    <tema>Reminder</tema>
+    <texto>Don't forget me this weekend!</texto>
+    <fecha>2022-04-21</fecha>
+    <prioridad>0</prioridad>
+</nota>

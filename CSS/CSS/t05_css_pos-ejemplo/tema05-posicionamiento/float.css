@@ -1,0 +1,12 @@
+/* float.css */
+img {
+    float: left;
+    padding: 1em;
+    border: 1px red solid;
+    margin: 1em;
+}
+
+img:nth-of-type(even) {
+  float: right;
+}
+

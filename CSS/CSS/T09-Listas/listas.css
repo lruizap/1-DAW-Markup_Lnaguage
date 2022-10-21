@@ -1,0 +1,20 @@
+ol {
+    list-style: inside url(./facbook-icon.png) upper-roman; /* Si no existe la imágen coge el siguiente */
+}
+
+ul {
+    /* list-style-type: square; */
+    /* padding-left: inherit; */
+    /* list-style-position: outside; */
+    list-style-image: url(./facebook-icon.png);
+}
+
+ol li:hover {
+    list-style-image: url(/T07-Enlaces/Adobe-PDF-Creator-icon.png) ;
+    background-color: yellow;
+    margin-left: 0.5em;
+}
+
+ul li:nth-child(even) {
+    list-style-image: url(/T04-BOX-MDEL/figuras/facebook.jpg);
+}

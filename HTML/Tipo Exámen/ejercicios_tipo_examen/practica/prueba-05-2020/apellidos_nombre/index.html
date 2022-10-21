@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- <h2> zona de navgación de nuestra web</h2> aqui no-->
+
+  <nav>
+    <h2>Zona de navegación de nuestra web</h2>
+    <ul>
+      <li><a href="index.html">Página inicial</a></li>
+      <li><a href="info/tecnologia/blog.html">Nuestro blog</a></li>
+      <li><a href="sat/resultados.html">Resultados</a></li>
+      <li><a href="docs/html5-cheat-sheet.png">Ayuda HTML</a></li>
+    </ul>
+    </nav>
+
+  <h1>  Encuesta alumando </h1>
+
+  <form action="server/procesa.php" method="POST" enctype="multipart/form-data">
+  
+    <fieldset>
+      <legend> Datos iniciales</legend>
+    
+    <p>
+      Seleccione continuacion cuales son los temas de su interés
+      <input type="checkbox" name="interes" id="HTML" value="HTML">
+      <label for="HTML">HTML</label>
+      <input type="checkbox" name="interes" id="CSS" value="CSS">
+      <label for="CSS">CSS</label>
+      <input type="checkbox" name="interes" id="JaVAsCRIPT" value="JaVAsCRIPT">
+      <label for="JaVAsCRIPT">JaVAsCRIPT</label>
+
+    </p>
+    
+    <label for="fecha">Fecha posterior a ...</label>
+    <input type="date" name="fecha" id="fecha" min="2021-10-02" max="2022-01-01">
+  
+    <p>
+      <label for="fotos">fotos</label>
+      <input multiple type="file" name="fotos" id="fotos">
+    </p>
+  
+    <p>
+      <label for="color"></label>
+      <input type="color" name="color" id="color" value="#ff0000">
+    </p>
+
+    <p>
+      <label for="web">Página web</label>
+      <input type="url" name="web" id="web">
+    </p>
+  
+    <p>
+      <label for="alumno">Código de alumno</label>
+      <input type="text" name="alumno" id="alumno" pattern="[A-Z]{3}[0-9]{1,2}">
+    </p>
+
+    <p>
+      Seleccione zona donde vive <br>
+      <label><input checked type="radio" name="zona" value="Jerez">Jerez</label> <br>
+      <label><input type="radio" name="zona" value="Pedania">Pedanias</label> <br>
+      <label><input type="radio" name="zona" value="Fuera">Fuera de Jerez</label> <br>
+
+    </p>
+
+    <p>
+      <input type="checkbox" name="Encuesta" id="Encuesta" required value="SI">
+      <label for="Encuesta">Condiciones Legales (CAMPO OBLIGATORIO)</label>
+    </p>
+
+    </fieldset>
+
+    <p>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar">
+    </p>
+
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+/* fuentes nuevas instaladas */
+
+section:nth-of-type(1) p {
+  font-family: "Humor Sans", "Kaushan Script", serif;
+}
+
+@font-face {
+  font-family: Mona Shark; /*Nombre que le doy a la fuente*/
+  src: url(/t06_css_webfonts/mona_shark/Mona\ Shark.otf);
+}
+
+section:nth-of-type(2) p {
+  font-family: "Mona Shark", serif;
+}
+
+section:nth-of-type(3) p {
+  font-family: "Ole", cursive;
+  font-size: 30px; /*Porque es muy pequeña para leerla*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Neonderthaw&display=swap');
+
+section:nth-of-type(4) p {
+    font-family: Neonderthaw, Dongle, serif;
+}
+
+h1 {
+    font-family: Dongle;
+}

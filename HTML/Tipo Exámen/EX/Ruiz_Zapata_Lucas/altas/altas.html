@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altas</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
+</head>
+
+<body>
+    <nav>
+        <h2>Índice</h2>
+        <ol>
+            <li><a href="../index.html">Página principal</a></li>
+            <li><a href="altas.html">Altas</a></li>
+            <li><a href="empresa/listado.html">Listado empresas</a></li>
+            <li><a href="../docs/cursos/recursos/recursos.html">Recursos</a></li>
+        </ol>
+    </nav>
+
+    <h1>Formulario de altas</h1>
+    <form action="../admin/altas.php" method="get"> 
+        <!-- ES GET PQ NO PASA ARCHIVOS o pq no dice nada el enunciado -->
+        <fieldset>
+            <legend>Altas proveedores</legend>
+            <p>
+                <label for="CIF">CIF (formato: cadena “ES-” seguida de 4 dígitos)</label><br>
+                <input value="" type="text" maxlength="7" name="CIF" id="CIF" pattern="ES-[0-9]{4}">
+            </p>
+
+            <p>
+                <label for="meses">Meses de alta (entre 1 y 24) <br></label>
+                <input type="number" id="meses" min="1" value="12" max="24">
+            </p>
+        </fieldset>
+        <fieldset>
+
+            <legend>Altas clientes</legend>
+
+            <p>
+                <label for="correo">Correo Electrónico <br>
+                    <input type="email" name="correo" id="correo">
+                </label>
+            </p>
+
+            <p>
+                Tipo de clientes <br>
+                <label><input checked type="radio" name="clientes" value="Local">Local</label> <br>
+                <label><input type="radio" name="clientes" value="Regional">Regional</label> <br>
+                <label><input type="radio" name="clientes" value="Nacional">Nacional</label> <br>
+
+            </p>
+
+            <p>
+                Información extra :
+                <br>
+                <label for="clientes"><textarea name="clientes" id="clientes" cols="50" rows="9" minlength="50" maxlength="400" required></textarea></label>
+            </p>
+
+            <p>
+                  <label for="programa">Programa seleccionado</label> <br/>
+                  <select id="programa" name="programa">
+                    <optgroup label="Sistemas Operativos">
+                      <option value="Windows" selected="selected">Windows</option>
+                      <option value="Mac">Mac</option>
+                      <option value="Linux">Linux</option>
+                      <option value="Other">Otro</option>
+                    </optgroup>
+                    <optgroup label="Navegadores">
+                      <option value="Internet Explorer" selected="selected">Internet Explorer</option>
+                      <option value="Firefox">Firefox</option>
+                      <option value="Safari">Safari</option>
+                      <option value="Opera">Opera</option>
+                      <option value="Other">Otro</option>
+                    </optgroup>
+                  </select>
+              </p>
+
+        </fieldset>
+        <fieldset>
+
+            <legend>Datos comunes</legend>
+
+            <label for="rango">Indique su satisfacción con la atención recibida <br> <span>1</span>
+                <input type="range" min="1" max="5" value="3" id="rango" name="rango"></input>
+                <span>5</span>
+            </label>
+            
+            <p>
+                <input type="checkbox" name="registro" id="Encuesta" required value="si">
+                <label for="Encuesta">Acepta condiciones de registro (obligatorio)</label>
+              </p>
+
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+          </p>
+    </form>
+
+</body>
+
+</html>

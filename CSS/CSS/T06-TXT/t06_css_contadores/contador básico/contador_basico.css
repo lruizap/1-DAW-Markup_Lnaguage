@@ -1,0 +1,17 @@
+/* section {
+  modificar section/article para ver la diferencia 
+  counter-reset: np;
+}
+section p::before {
+  content: "(" counter(np) ") - ";
+  counter-increment: np;
+} */
+
+section {
+    counter-reset: nump;
+}
+
+p::before {
+    content: " - " counter(nump) " - ";
+    counter-increment: nump;
+}

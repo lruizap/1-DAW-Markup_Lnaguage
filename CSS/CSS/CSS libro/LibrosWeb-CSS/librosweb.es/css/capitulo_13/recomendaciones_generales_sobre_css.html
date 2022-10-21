@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/css/capitulo_13/recomendaciones_generales_sobre_css.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>13.7. Recomendaciones generales sobre CSS (Introducción a CSS)</title>
+        <link href="../main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="validador.html" />
+        <link rel="next" href="../capitulo_14.html" />
+        <link rel="start" href="http://librosweb.es/css" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="13.7. Recomendaciones generales sobre CSS (Introducción a CSS)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page css">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index.html" itemprop="url">
+                    <span itemprop="title">Introducción a CSS</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_13.html" itemprop="url">
+                    <span itemprop="title">Capítulo 13. Otros</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>13.7. Recomendaciones generales sobre CSS</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="recomendaciones_generales_sobre_css" class="title">
+        <span>13.7.</span> Recomendaciones generales sobre CSS
+    </h1>
+
+    
+
+<h3 id="atributos_id_y_class">13.7.1. Atributos ID y class</h3>
+
+<p>El atributo <code>id</code> se emplea para identificar a cada elemento HTML, por lo que los identificadores deben ser únicos en una misma página. En otras palabras, dos elementos HTML diferentes de una misma página no pueden tener un mismo valor en el atributo <code>id</code>.</p>
+
+<p>Por otra parte, el atributo <code>class</code> se emplea para indicar la clase o clases a las que pertenece el elemento. Una misma clase se puede aplicar a varios elementos diferentes y un único elemento puede tener asignadas varias clases (se indican separadas por espacios en blanco).</p>
+
+<p>Aunque los dos atributos tienen muchos otros propósitos (sobre todo el atributo <code>id</code>), CSS los emplea principalmente con los selectores para indicar los elementos sobre los que se aplican los diferentes estilos.</p>
+
+<p>En el siguiente ejemplo, las dos listas están formadas por un mismo elemento HTML <code>&lt;ul&gt;</code>, pero sus atributos <code>id</code> las distinguen de forma adecuada:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">ul</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;menu&quot;</span>&gt;</span>
+  ...
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">ul</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;enlaces&quot;</span>&gt;</span>
+  ...
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></pre>
+</div>
+
+<p>Una de las principales recomendaciones del diseño de páginas XHTML y hojas de estilos CSS está relacionada con los valores asignados a los atributos <code>id</code> y <code>class</code>. Siempre que sea posible, estos atributos se deben utilizar para mejorar la semántica del documento, es decir, para añadir significado a cada elemento de la página.</p>
+
+<p>Por este motivo, se recomienda que los valores asignados a <code>id</code> y <code>class</code> indiquen la función del elemento y no estén relacionados con su aspecto o su posición:</p>
+
+<div class="table" id="table_13_9">
+
+    <table>
+<thead>
+<tr>
+  <th>Valores no recomendados</th>
+  <th>Valores recomendados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>negrita</td>
+  <td>importante</td>
+</tr>
+<tr>
+  <td>arial15</td>
+  <td>titular</td>
+</tr>
+<tr>
+  <td>verdanaPequena</td>
+  <td>normal</td>
+</tr>
+<tr>
+  <td>menuIzquierdo</td>
+  <td>menuSecundario</td>
+</tr>
+<tr>
+  <td>letraRoja</td>
+  <td>error</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Elegir el valor adecuado para los atributos <code>id</code> o <code>class</code> es sencillo: si el aspecto de un elemento cambia, el valor de <code>id</code> o <code>class</code> debe seguir siendo adecuado. Por tanto, evita utilizar valores relacionados con su posición (<code>izquierdo</code>, <code>derecho</code>, <code>primero</code>, <code>segundo</code>, <code>superior</code>, etc.), color (<code>textoRojo</code>, <code>subrayadoGrisClaro</code>, etc.) o tipo de letra (<code>verdana10</code>, <code>arial15px</code>, etc.)</p>
+
+<p>Técnicamente, los valores de los atributos <code>id</code> y <code>class</code> deben cumplir las siguientes restricciones:</p>
+
+<ul>
+<li>Sólo pueden empezar por un guión medio (<code>-</code>), un guión bajo (<code>_</code>) o una letra.</li>
+<li>El resto de caracteres, pueden ser números, guiones medios (<code>-</code>), guiones bajos (<code>_</code>) y letras.</li>
+<li>Los navegadores distinguen entre mayúsculas y minúsculas.</li>
+<li>Aunque es posible utilizar letras como <code>ñ</code> y acentos, no se recomienda hacerlo porque no es seguro que funcione correctamente en todas las versiones de todos los navegadores.</li>
+</ul>
+
+<h3 id="classitis_y_divitis">13.7.2. CLASSitis y DIVitis</h3>
+
+<p>Un error común al comenzar a desarrollar páginas con estilos CSS es la utilización excesiva de etiquetas <code>&lt;div&gt;</code> y atributos <code>class</code>.</p>
+
+<p>Ejemplo de <em>divitis</em> y <em>classitis</em>:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;menu&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">ul</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;menu&quot;</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;elemento_menu&quot;</span>&gt;&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;texto_elemento_menu&quot;</span>&gt;</span>...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;elemento_menu&quot;</span>&gt;&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;texto_elemento_menu&quot;</span>&gt;</span>...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;elemento_menu&quot;</span>&gt;&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;texto_elemento_menu&quot;</span>&gt;</span>...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">li</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;elemento_menu&quot;</span>&gt;&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;texto_elemento_menu&quot;</span>&gt;</span>...<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></pre>
+</div>
+
+<p>Los selectores de CSS permiten prescindir de la mayoría de etiquetas <code>&lt;div&gt;</code> y atributos <code>id</code> y <code>class</code>. Diseñar páginas con exceso de etiquetas <code>&lt;div&gt;</code> no mejora la semántica del documento y sólo consigue complicar el código HTML.</p>
+
+<h3 id="estructuracion_del_codigo_css">13.7.3. Estructuración del código CSS</h3>
+
+<p>La posibilidad de incluir todo el código CSS en archivos externos exclusivamente dedicados a contener las reglas CSS, permite ordenar de forma lógica las reglas, mejorando su legibilidad y facilitando su actualización.</p>
+
+<p>Las reglas CSS de las hojas de estilos complejas se suelen agrupar según su funcionalidad y se suelen incluir en el siguiente orden:</p>
+
+<ul>
+<li>Estilos básicos (<code>&lt;body&gt;</code>, tipo de letra por defecto, márgenes de <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> y <code>&lt;li&gt;</code>, etc.)</li>
+<li>Estilos de la estructura o layout (anchura, altura y posición de la cabecera, pie de página, zonas de contenidos, menús de navegación, etc.)</li>
+<li>Enlaces (estilos normales, estilos <code>:hover</code>, etc.)</li>
+<li>Estilos de cada una de las zonas (elementos de la cabecera, titulares y texto de la zona de contenidos, enlaces, listas e imágenes de las zonas laterales, etc.)</li>
+</ul>
+
+<p>Otra característica común de los mejores sitios web es el uso de comentarios CSS para mejorar la estructura de las hojas de estilos muy largas.</p>
+
+<p>Ejemplo de código CSS estructurado de http://veerle.duoh.com/</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/* Veerle's blog Main stylesheet
+------------------------------------------------------------------*/</span>
+&nbsp;
+<span class="coMULTI">/* Wide browser windows
+------------------------------------------------------------------*/</span>
+<span class="re0">#wrap</span> <span class="br0">&#123;</span>
+  <span class="kw1">width</span><span class="sy0">:</span><span class="re3">995px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+&nbsp;
+<span class="coMULTI">/* Global
+------------------------------------------------------------------*/</span>
+html<span class="sy0">,</span> body<span class="sy0">,</span> form<span class="sy0">,</span> h1<span class="sy0">,</span> h2<span class="sy0">,</span> h3<span class="sy0">,</span> h4<span class="sy0">,</span> h5<span class="sy0">,</span> h6<span class="sy0">,</span> p<span class="sy0">,</span> pre<span class="sy0">,</span> blockquote<span class="sy0">,</span> ul<span class="sy0">,</span> ol<span class="sy0">,</span> dl <span class="br0">&#123;</span>
+  <span class="kw1">margin</span><span class="sy0">:</span><span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw1">padding</span><span class="sy0">:</span><span class="nu0">0</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+ul<span class="sy0">,</span>li <span class="br0">&#123;</span>
+  <span class="kw1">list-style-type</span><span class="sy0">:</span><span class="kw2">none</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+...
+&nbsp;
+<span class="coMULTI">/* Wide layout
+------------------------------------------------------------------*/</span>
+<span class="re1">.wide</span> <span class="re0">#wrap-main</span> <span class="br0">&#123;</span>
+  ...
+<span class="br0">&#125;</span>
+...
+&nbsp;
+<span class="coMULTI">/* Links
+------------------------------------------------------------------*/</span>
+a<span class="re2">:link</span><span class="sy0">,</span>
+a<span class="re2">:visited </span><span class="br0">&#123;</span>
+  <span class="kw1">text-decoration</span><span class="sy0">:</span><span class="kw2">none</span><span class="sy0">;</span>
+  <span class="kw1">color</span><span class="sy0">:</span><span class="re0">#e45a49</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="coMULTI">/* Header
+------------------------------------------------------------------*/</span>  
+<span class="re0">#header</span> <span class="br0">&#123;</span>
+  ...
+<span class="br0">&#125;</span>
+...
+&nbsp;
+<span class="coMULTI">/* Main navigation
+------------------------------------------------------------------*/</span>
+ul<span class="re0">#nav</span> <span class="br0">&#123;</span>
+  ...
+<span class="br0">&#125;</span>
+...</pre>
+</div>
+
+<p>Ejemplo de código CSS estructurado de http://www.uxmag.com/</p>
+
+<div class="code css">
+<pre class="css"><span class="coMULTI">/*    -------------------------------------------------------------
+    UX Magazine
+    Design | Technology | Strategy | Common Sense
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Description:    Base setup styles
+    Filename:        uxm.base.css
+    Version:        1.9
+    Date:            Feb 9, 2006
+    -------------------------------------------------------------    */</span>
+&nbsp;
+<span class="coMULTI">/*    -------------------------------------------------------------
+    Base Body Styles
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */</span>
+&nbsp;
+<span class="coMULTI">/*    -------------------------------------------------------------
+    Print Styles
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */</span>
+&nbsp;
+<span class="coMULTI">/*    -------------------------------------------------------------
+    Top Bar Styles
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */</span>
+&nbsp;
+<span class="coMULTI">/*    Slogan
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */</span>
+<span class="coMULTI">/*    Search Form
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */</span>
+<span class="coMULTI">/*    Channels
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */</span></pre>
+</div>
+
+<h3 id="division_de_los_estilos_en_varios_archivos_css">13.7.4. División de los estilos en varios archivos CSS</h3>
+
+<p>Normalmente, los estilos de una página compleja se dividen en varios archivos CSS diferentes para hacerlos más manejables. En primer lugar, se suele utilizar un archivo común que contiene todos los estilos básicos de las páginas HTML del sitio web.</p>
+
+<p>Además, si existe alguna sección especial del sitio web que requiera nuevos estilos, se crea un archivo CSS con todos esos estilos. También es habitual preparar una hoja de estilos específica para impresora y otra preparada para los dispositivos móviles.</p>
+
+<p>Una vez creados los archivos CSS, existen dos estrategias para enlazar varios archivos CSS en las páginas HTML:</p>
+
+<p>Si se puede modificar fácilmente la cabecera del documento (por ejemplo porque las páginas se generan dinámicamente) lo habitual es incluir tantos elementos <code>&lt;link&gt;</code> como archivos CSS se enlazan:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+  ...
+  <span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;/css/basico.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;screen&quot;</span> <span class="sy0">/</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;/css/seccion.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;screen&quot;</span> <span class="sy0">/</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;/css/impresora.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;print&quot;</span> <span class="sy0">/</span>&gt;</span>
+  <span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;/css/movil.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;handheld&quot;</span> <span class="sy0">/</span>&gt;</span>
+  ...
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span></pre>
+</div>
+
+<p>Si no se puede modificar de forma sencilla la cabecera de los documentos para añadir, eliminar y modificar los archivos CSS que se enlazan, lo habitual es enlazar un único archivo CSS que se encarga de importar todos los demás:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+  ...
+  <span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;/css/estilos.css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;all&quot;</span> <span class="sy0">/</span>&gt;</span>
+  ...
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span></pre>
+</div>
+
+<p>El contenido del archivo <code>estilos.css</code> debería ser el siguiente para ser equivalente al ejemplo anterior:</p>
+
+<div class="code css">
+<pre class="css"><span class="co1">@import url(&quot;basico.css&quot;) screen;</span>
+<span class="co1">@import url(&quot;seccion.css&quot;) screen;</span>
+<span class="co1">@import url(&quot;impresora.css&quot;) print;</span>
+<span class="co1">@import url(&quot;movil.css&quot;) handheld;</span></pre>
+</div>
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="validador.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>13.6. Validador</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="../capitulo_14.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>Capítulo 14. Recursos útiles</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Recomendaciones%20generales%20sobre%20CSS%20%28Introducci%C3%B3n%20a%20CSS%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Selectores</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Unidades de medida y colores</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>4.</span> <a href="../capitulo_4.html"> Modelo de cajas</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Posicionamiento y visualización</a>
+            </li>
+                                                                                                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Texto</a>
+            </li>
+                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Enlaces</a>
+            </li>
+                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Imágenes</a>
+            </li>
+                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Listas</a>
+            </li>
+                                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Tablas</a>
+            </li>
+                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Formularios</a>
+            </li>
+                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Layout</a>
+            </li>
+                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_13.html">
+                    <span>Capítulo 13.</span> Otros
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="version_para_imprimir.html">
+                    <span>13.2.</span> Versión para imprimir
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="personalizar_el_cursor.html">
+                    <span>13.3.</span> Personalizar el cursor
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="hacks_y_filtros.html">
+                    <span>13.4.</span> Hacks y filtros
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="prioridad_de_las_declaraciones_css.html">
+                    <span>13.5.</span> Prioridad de las declaraciones CSS
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="validador.html">
+                    <span>13.6.</span> Validador
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="recomendaciones_generales_sobre_css.html">
+                    <span>13.7.</span> Recomendaciones generales sobre CSS
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Recursos útiles</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios</a>
+            </li>
+                                                                                                                                                                                                                                                            <li class="level-1">
+                <span>16.</span> <a href="../capitulo_16.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.921 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/css/capitulo_13/recomendaciones_generales_sobre_css.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Dec 2014 09:40:33 GMT -->
+</html>

@@ -1,0 +1,40 @@
+li a {
+    color: red;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+    border-bottom: green 2px dotted;
+    background-color: yellow;
+}
+
+a[href$=".pdf"] {
+    color: green;
+    background-image: url(/T07-Enlaces/Adobe-PDF-Creator-icon.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 18px;
+    /* 
+       padding-right: 18px;
+       background-position: right center; 
+
+
+       background: green url(/T07-Enlaces/Adobe-PDF-Creator-icon.png) no-repeat left center; 
+    */
+}
+
+p a:visited {
+    color: lime;
+}
+
+p a:hover {
+    background: cyan;
+}
+
+p a:active {
+    border: 2px solid red;
+}
+
+h1:hover {
+    background: red;
+}
+

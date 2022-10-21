@@ -1,0 +1,58 @@
+/*:nth-child()*/
+
+ol :nth-child(2) {
+  color: blue;
+}
+
+ol :nth-last-child(2) {
+  color: blue;
+}
+
+/* :nth-child(an+b)*/
+
+ol :nth-child(3n + 1) {
+  background-color: yellow;
+}
+
+ol :nth-child(-n + 5) { 
+  font-style: italic;
+  color: green;
+}
+
+ul :nth-child(2n + 1) {
+  /*even -> par | odd -> impar*/
+  color: red;
+  background-color: yellow;
+}
+
+ul :nth-child(2n + 2) {
+  color: yellow;
+  background-color: red;
+}
+
+section p:nth-of-type(odd) {
+  color: darkblue;
+}
+
+/*Atajos*/
+
+/* :first-child
+:last-child */
+
+section :first-child {
+  font-weight: bold;
+}
+
+section :last-child {
+  font-weight: bold;
+}
+
+section p:last-of-type {
+  background-color: darkgreen;
+  text-align: center;
+}
+
+section p:first-of-type {
+  background-color: darkgreen;
+  text-align: center;
+}

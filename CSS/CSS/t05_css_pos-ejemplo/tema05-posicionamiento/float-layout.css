@@ -1,0 +1,20 @@
+/* float-layout.css */
+
+
+
+section {
+    float: right;
+    width: 70%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+nav {
+    float: right;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+footer {
+    clear: both;
+}

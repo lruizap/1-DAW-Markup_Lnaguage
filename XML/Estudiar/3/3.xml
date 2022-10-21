@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- Los prefijos se usan cuando queremos distinguir elementos con el mismo nombre.
+En este ejemplo, la table del html y table de mueble tienen los dos el mismo nombre, y para distinguirlos, el autor ha decidido poner el prefijo h al elemento html y f al mueble -->
+
+<elemento_raiz
+xmlns:h="http://www.w3.org/TR/html4/"
+xmlns:f="http://www.w3schools.com/furniture">
+
+<h:table> <!-- Prefijamos el html con h: -->
+    <h:tr>
+        <h:td>Apples</h:td>
+        <h:td>Bananas</h:td>
+    </h:tr>
+</h:table>
+
+<f:table> <!-- Y los muebles con f: -->
+    <f:name>African Coffee Table</f:name>
+    <f:width>80</f:width>
+    <f:length>120</f:length>
+</f:table>
+
+</elemento_raiz>

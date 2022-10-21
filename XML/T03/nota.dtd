@@ -1,0 +1,13 @@
+<!ELEMENT nota (de, para+, asunto, tema, (test? | test2))>
+<!ELEMENT de (#PCDATA)>
+<!ELEMENT para (#PCDATA)>
+<!ELEMENT asunto (#PCDATA)>
+<!ELEMENT tema (#PCDATA)>
+
+<!ELEMENT test ANY>
+<!ELEMENT test2 ANY>
+
+<!-- ? opcional - 1 o ninguno -->
+<!-- + 1 o más -->
+<!-- * ninguno o más -->
+<!-- | uno u otro -->

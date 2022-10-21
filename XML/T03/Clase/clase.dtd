@@ -1,0 +1,10 @@
+<!ELEMENT clase (modulos, alumnado)>
+<!ELEMENT modulos (nombre+)>
+
+    <!ELEMENT nombre (#PCDATA)>
+    <!ATTLIST nombre id ID #REQUIRED>
+
+<!ELEMENT alumnado (Datos+)>
+
+    <!ELEMENT Datos (#PCDATA)>
+    <!ATTLIST Datos modulos IDREF #REQUIRED>

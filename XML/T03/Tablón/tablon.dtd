@@ -1,0 +1,36 @@
+<!ELEMENT tablon (localiza,anuncio+)>
+<!ELEMENT localiza (#PCDATA)>
+<!ELEMENT anuncio (fecha, asunto, texto?, precio, contacto+, fecha_limite?, autor?)>
+
+<!ATTLIST anuncio id ID #REQUIRED>
+
+<!-- 
+    #REQUIRED -> REQUERIDO
+    #FIXED -> FIJO
+    #IMPLIED -> ENUMERADO Y OPCIONAL
+-->
+
+<!ATTLIST anuncio idioma (ES|EN|FR) #IMPLIED>
+
+<!-- 
+    <!ATTLIST anuncio id CDATA #REQUIRED
+                    idioma CDATA #FIXED "ES"> 
+--> 
+
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT texto (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT contacto (nombre, tel)>
+
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT tel (#PCDATA)>
+
+    <!ELEMENT fecha_limite (#PCDATA)>
+    <!ELEMENT autor EMPTY>
+    <!ATTLIST autor email NMTOKEN #IMPLIED>
+
+    <!--
+        NMTOKEN -> LETRAS, DÍGITOS Y . , -, _ Y : 
+        NMTOKENS -> NMTOKEN + ESPACIO EN BLANCO Y TAB
+    -->

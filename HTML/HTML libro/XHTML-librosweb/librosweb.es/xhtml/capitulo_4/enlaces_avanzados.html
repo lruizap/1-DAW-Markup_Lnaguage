@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/xhtml/capitulo_4/enlaces_avanzados.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>4.4. Enlaces avanzados (Introducción a XHTML)</title>
+        <link href="../../css/main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="enlaces_basicos.html" />
+        <link rel="next" href="otros_tipos_de_enlaces.html" />
+        <link rel="start" href="http://librosweb.es/xhtml" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="4.4. Enlaces avanzados (Introducción a XHTML)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page xhtml">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index-2.html" itemprop="url">
+                    <span itemprop="title">Introducción a XHTML</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_4.html" itemprop="url">
+                    <span itemprop="title">Capítulo 4. Enlaces</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>4.4. Enlaces avanzados</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="enlaces_avanzados" class="title">
+        <span>4.4.</span> Enlaces avanzados
+    </h1>
+
+    
+
+<p>Incluir enlaces básicos mediante la etiqueta <code>&lt;a&gt;</code> es muy sencillo. Sin embargo, la definición completa de <code>&lt;a&gt;</code> es muy compleja, ya que dispone de varios atributos específicos importantes. A continuación se muestra la definición completa de <code>&lt;a&gt;</code>:</p>
+
+<div class="table" id="table_4_12">
+
+    <table class="property" summary="Definición y propiedades de la etiqueta a de XHTML">
+    <thead>
+        <tr>
+            <th scope="row">Etiqueta</th>
+            <td><strong class="title"><span>&lt;</span>a<span>&gt;</span></strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Atributos comunes</th>
+            <td><a href="../capitulo_2/etiquetas_y_atributos.html#atributos_basicos">básicos</a>, <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_para_internacionalizacion">internacionalización</a>, <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_de_eventos">eventos</a> y <a href="../capitulo_2/etiquetas_y_atributos.html#atributos_de_foco">foco</a></td>
+        </tr>
+        <tr>
+            <th scope="row">Atributos propios</th>
+            <td><ul><li><p><code>name = "texto"</code> - Permite nombrar al enlace para que se pueda acceder desde otros enlaces</p></li><li><p><code>href = "url"</code> - Indica la URL del recurso que se quiere enlazar</p></li><li><p><code>hreflang = "codigo_idioma"</code> - Idioma del recurso enlazado</p></li><li><p><code>type = "tipo_de_contenido"</code> - Permite "avisar" al navegador sobre el tipo de contenido que se enlaza (imágenes, archivos, etc.) para que pueda preparase en caso de que no entienda ese contenido</p></li><li><p><code>rel = "tipo_de_relacion"</code> - Describe la relación del documento actual con el recurso enlazado</p></li><li><p><code>rev = "tipo_de_relacion"</code> - Describe la relación del recurso enlazado con el documento actual</p></li><li><p><code>charset = "tipo_de_charset"</code> - Describe la codificación del recurso enlazado</p></li></ul></td>
+        </tr>
+        <tr>
+            <th scope="row">Tipo de elemento</th>
+            <td>En línea</td>
+        </tr>
+        <tr>
+            <th scope="row">Descripción</th>
+            <td>Se emplea para enlazar todo tipo de recursos</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<h3 id="idioma_del_enlace_hreflang">4.4.1. Idioma del enlace (hreflang)</h3>
+
+<p>El enlace puede indicar al navegador el idioma del recurso que se enlaza. Para establecer el valor del idioma, se utiliza un código estandarizado de dos letras. Además del idioma genérico, también se puede indicar una variación idiomática. Ejemplo de códigos de idioma más utilizados:</p>
+
+<div class="table" id="table_4_13">
+
+    <table>
+<thead>
+<tr>
+  <th>Código</th>
+  <th>Idioma</th>
+  <th>Variación idiomática</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>en</code></td>
+  <td>Inglés</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td><code>en-AU</code></td>
+  <td>Inglés</td>
+  <td>Australia</td>
+</tr>
+<tr>
+  <td><code>en-US</code></td>
+  <td>Inglés</td>
+  <td>Estados Unidos</td>
+</tr>
+<tr>
+  <td><code>es</code></td>
+  <td>Español</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td><code>es-AR</code></td>
+  <td>Español</td>
+  <td>Argentina</td>
+</tr>
+<tr>
+  <td><code>es-ES</code></td>
+  <td>Español</td>
+  <td>España</td>
+</tr>
+<tr>
+  <td><code>es-MX</code></td>
+  <td>Español</td>
+  <td>México</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Otros códigos utilizados son: <code>fr</code> (francés), <code>de</code> (alemán), <code>it</code> (italiano), <code>nl</code> (holandés), <code>el</code> (griego), <code>pt</code> (portugués), <code>ar</code> (árabe), <code>he</code> (hebreo), <code>ru</code> (ruso), <code>zh</code> (chino), <code>ja</code> (japonés).</p>
+
+<p>La lista completa de códigos de idioma está definida en <a href="http://xml.coverpages.org/iso639a.html">el estándar ISO 639</a>.</p>
+
+<h3 id="tipo_de_contenido_type">4.4.2. Tipo de contenido (type)</h3>
+
+<p>Se utiliza para notificar al navegador sobre el tipo de contenido que se enlaza. Se indica mediante una cadena de texto cuyos posibles valores también están estandarizados. Los valores de los contenidos más utilizados son los siguientes: <code>"text/html"</code> (páginas HTML), <code>"image/png"</code> (imágenes con formato PNG), <code>"image/gif"</code> (imágenes con formato GIF), <code>"text/css"</code> (hojas de estilo CSS), <code>"application/rss+xml"</code> (archivos RSS).</p>
+
+<p>La lista completa de tipos de contenido se define en <a href="http://www.iana.org/assignments/media-types/">los estándares RFC 2045 y RFC 2046</a>.</p>
+
+<h3 id="tipo_de_relacion_rel_y_rev">4.4.3. Tipo de relación (rel y rev)</h3>
+
+<p>Los enlaces pueden proporcionar información adicional muy útil para los navegadores y para los motores de búsqueda como Google. Los atributos <code>rel</code> y <code>rev</code> permiten indicar la relación que la página actual tiene con la página a la que se enlaza (atributo <code>rel</code>) y la relación que tiene la página enlazada con la página actual (atributo <code>rev</code>).</p>
+
+<p>Los tipos de relación definidos son los siguientes:</p>
+
+<ul>
+<li><code>alternate</code> – Indica que es una versión alternativa al documento actual (puede ser una versión en otro idioma o una versión preparada para otro medio, como una impresora o un dispositivo móvil)</li>
+<li><code>stylesheet</code> – Indica que se ha enlazado una hoja de estilos</li>
+<li><code>start</code> – Indica que se trata del primer documento de una colección de documentos (por ejemplo el primer capítulo de un libro)</li>
+<li><code>next</code> – Indica que es el documento que sigue al actual dentro de una secuencia lógica de documentos (por ejemplo, los capítulos de un libro)</li>
+<li><code>prev</code> - Indica que es el documento que precede al actual dentro de una secuencia lógica de documentos (por ejemplo, los capítulos de un libro)</li>
+<li><code>contents</code> – Indica que el recurso enlazado es el documento que contiene la tabla de contenidos de la colección de documentos (por ejemplo, el índice de un libro).</li>
+<li><code>bookmark</code> – Establece el enlace actual como un "marcador" o "favorito". Un marcador es un enlace que constituye un punto de entrada muy importante dentro del documento.</li>
+</ul>
+
+<p>La especificación oficial de HTML define la <a href="http://www.w3.org/TR/1999/REC-html401-19991224/types.html#type-links">lista completa de tipos de relaciones</a> que se pueden utilizar.</p>
+
+<h3 id="codificacion_de_caracteres_charset">4.4.4. Codificación de caracteres (charset)</h3>
+
+<p>Además del idioma, tipo de contenido y relación del recurso que se enlaza, los enlaces también pueden indicar la codificación de caracteres que utiliza la página web enlazada.</p>
+
+<p>Los valores que se pueden utilizar también están estandarizados y las codificaciones más utilizadas son <code>UTF-8</code> y <code>ISO-8859-1</code>, aunque existen decenas de códigos definidos (<code>ISO-10646-UCS-2</code>, <code>IBM852</code>, <code>Big5-HKSCS</code>, <code>windows-1252</code>, <code>HZ-GB-2312</code>).</p>
+
+<p>El organismo IANA publica la <a href="http://www.iana.org/assignments/character-sets">lista completa de codificaciones de caracteres disponibles</a>.</p>
+
+<p>Los ejemplos anteriores de enlaces básicos se pueden rehacer utilizando algunos de los atributos definidos por la etiqueta <code>&lt;a&gt;</code>:</p>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.google.com&quot;</span> <span class="kw3">hreflang</span><span class="sy0">=</span><span class="st0">&quot;en&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/html&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;UTF-8&quot;</span>&gt;</span>Página principal de Google<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre>
+</div>
+
+<div class="code html5">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.ejemplo.com/fondo_escritorio.jpg&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;image/jpg&quot;</span>&gt;</span>Imagen interesante para un fondo de escritorio<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre>
+</div>
+
+
+
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="enlaces_basicos.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>4.3. Enlaces básicos</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="otros_tipos_de_enlaces.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>4.5. Otros tipos de enlaces</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Enlaces%20avanzados%20%28Introducci%C3%B3n%20a%20XHTML%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Características básicas</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Texto</a>
+            </li>
+                                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_4.html">
+                    <span>Capítulo 4.</span> Enlaces
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="url.html">
+                    <span>4.1.</span> URL
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="enlaces_relativos_y_absolutos.html">
+                    <span>4.2.</span> Enlaces relativos y absolutos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="enlaces_basicos.html">
+                    <span>4.3.</span> Enlaces básicos
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="enlaces_avanzados.html">
+                    <span>4.4.</span> Enlaces avanzados
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="otros_tipos_de_enlaces.html">
+                    <span>4.5.</span> Otros tipos de enlaces
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="ejemplos_de_enlaces_habituales.html">
+                    <span>4.6.</span> Ejemplos de enlaces habituales
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Listas</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Imágenes y objetos</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Formularios</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Estructura y layout</a>
+            </li>
+                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Metainformación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Otras etiquetas importantes</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Accesibilidad</a>
+            </li>
+                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Validación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Fragmentos de código</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.900 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/xhtml/capitulo_4/enlaces_avanzados.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:34 GMT -->
+</html>

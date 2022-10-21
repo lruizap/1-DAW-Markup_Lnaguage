@@ -1,0 +1,75 @@
+/* descendente */
+
+h2 strong{
+    background-color: yellow;
+}
+
+header h1 strong{
+    color: orangered;
+}
+
+header > p{
+    color: black
+}
+
+p > a{
+    color: red
+}
+
+/* agrupado */
+
+h1, h2{
+    color: darkblue;
+    border-bottom: 2px solid black;
+}
+
+/* Normal */
+
+h1{
+    text-align: center;
+}
+
+p{
+    color: gray;
+    margin: auto;
+    margin-left: 20px;
+}
+
+/* selector de clase */
+
+p.google.error {
+    margin-right: auto;
+    font-style: italic;
+    color: rgb(114, 14, 14)
+
+}
+
+article section h3.error.revisar{
+    font-style: italic;
+}
+
+p.google {
+    color: orangered;
+}
+
+/* selector único, de id */
+
+#resumen {
+    border: 3px red solid;
+    font-style: oblique;
+    margin-bottom: auto;
+    margin-top: 20px;
+}
+
+h1#resumen2 {
+    color: rgb(114, 14, 14);
+}
+
+h1 ~ h2{
+    text-align: center;
+}
+
+h2 ~ h3 {
+    text-shadow: 12px 2px 5px red ;
+    text-align: center;
+}

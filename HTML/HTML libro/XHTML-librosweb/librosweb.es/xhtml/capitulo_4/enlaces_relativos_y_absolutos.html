@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+    
+<!-- Mirrored from librosweb.es/xhtml/capitulo_4/enlaces_relativos_y_absolutos.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>4.2. Enlaces relativos y absolutos (Introducción a XHTML)</title>
+        <link href="../../css/main_b507273.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82842-2', 'librosweb.es');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <link rel="apple-touch-icon" type="image/png" href="../../apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../../apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="LibrosWeb">
+        <link rel="shortcut icon" type="image/png" href="../../favicon.png">
+        <meta name="site-version" content="b507273">
+        <link rel="publisher" href="http://plus.google.com/112008023125011571577">
+        <link rel="prev" href="url.html" />
+        <link rel="next" href="enlaces_basicos.html" />
+        <link rel="start" href="http://librosweb.es/xhtml" />
+        <meta name="twitter:site" content="@librosweb">
+        <link rel="search" type="application/opensearchdescription+xml" href="http://librosweb.es/opensearch/documentation.xml" title="LibrosWeb">
+        <meta property="fb:page_id" content="437758756273955">
+        <meta property="fb:app_id" content="437758756273955">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="4.2. Enlaces relativos y absolutos (Introducción a XHTML)">
+        <meta property="og:image" content="http://www.gravatar.com/avatar/9f219b4dfaa677bfd0f47753c02d5126.png?s=200">
+        <meta name="msapplication-TileColor" content="#CC1414">
+        <meta name="application-name" content="LibrosWeb">
+        <meta name="msapplication-tooltip" content="Libros y tutoriales sobre HTML, CSS, JavaScript, PHP y otras tecnologías web.">
+    </head>
+
+    <body id="p-1-2" class="books book_page xhtml">
+    <div id="wrapper" class="container">
+                    <div id="header" class="col-lg-2">
+                <div id="header-contents" class="row">
+                    <div id="header-logo" class="col-xs-6 col-md-2 col-lg-12">
+                        <a href="http://librosweb.es/" title="LibrosWeb.es">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 132 32" preserveAspectRatio="xMinYMin meet">
+<g fill="#CC1414" transform="translate(-21.738 -21.148)">
+<path d="m24.062 23.486v28h9.64v-5h-4.04v-23h-5.6"/>
+<path d="m40.796 23.486h-5.6v28h5.6v-28"/>
+<path d="m53.932 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32 1-1 1h-1.32v-6.64h1.32c0.68 0 1 0.32 1 1m-2.32 10.32h1.4c0.68 0 1 0.32 1 1v5.08c0 0.68-0.32 1-1 1h-1.4v-7.08"/>
+<path d="m69.284 38.246c1.52-0.56 2.4-1.76 2.4-4.16v-5.4c0-3.48-1.72-5.2-5.2-5.2h-8.36v28h5.6v-10.6h1.4c0.68 0 1 0.32 1 1v9.6h5.6v-9.64c0-2.04-0.72-3.12-2.44-3.6m-3.2-8.88v5.76c0 0.68-0.32 1-1 1h-1.36v-7.76h1.36c0.68 0 1 0.32 1 1"/>
+<path d="m87.513 46.526v-18.08c0-3.48-1.72-5.2-5.2-5.2h-3.6c-3.48 0-5.2 1.72-5.2 5.2v18.08c0 3.48 1.72 5.2 5.2 5.2h3.6c3.48 0 5.2-1.72 5.2-5.2m-5.6-17.48v16.88c0 0.68-0.32 1-1 1h-0.8c-0.68 0-1-0.32-1-1v-16.88c0-0.68 0.32-1 1-1h0.8c0.68 0 1 0.32 1 1"/>
+<path d="m100.57 36.966-4.8-3.56c-0.68-0.48-0.96-0.92-0.96-1.8v-2.64c0-0.68 0.32-1 1-1h0.44c0.68 0 1 0.32 1 1v4.6h5.48v-5.12c0-3.48-1.72-5.2-5.2-5.2h-3.04c-3.48 0-5.2 1.72-5.2 5.2v4.44c0 2 0.52 3.16 2.24 4.4l4.8 3.56c0.68 0.48 0.96 0.92 0.96 1.8v3.36c0 0.68-0.32 1-1 1h-0.52c-0.68 0-1-0.32-1-1v-5.44h-5.48v5.96c0 3.48 1.72 5.2 5.2 5.2h3.12c3.48 0 5.2-1.72 5.2-5.2v-5.16c0-2.08-0.52001-3.16-2.24-4.4"/>
+<path d="m106.98 51.486h6.16l1.44-12.72 1.44 12.72h6.16l3.4-28h-4.96l-1.44 14.88-1.6-14.88h-5.28l-1.6 14.92-1.44-14.92h-5.68l3.4 28"/>
+<path d="m126.87 23.486v28h10.48v-5h-4.88v-6.72h4.6v-5h-4.6v-6.28h4.8v-5h-10.4"/>
+<path d="m150.26 37.006c1.48-0.56 2.32-1.76 2.32-4.16v-4.16c0-3.48-1.72-5.2-5.2-5.2h-8.24v28h8.32c3.48 0 5.2-1.72 5.2-5.2v-5.68c0-2.04-0.72001-3.12-2.4-3.6m-3.24-7.72v4.64c0 0.68-0.32001 1-1 1h-1.32v-6.64h1.32c0.67999 0 1 0.32 1 1m-2.32 10.32h1.4c0.67999 0 1 0.32 1 1v5.08c0 0.68-0.32001 1-1 1h-1.4v-7.08"/>
+</g>
+</svg>
+                            <span>LibrosWeb</span>
+                        </a>
+                    </div>
+
+                    <div id="header-nav" class="col-xs-12 col-md-10 col-lg-12">
+                        <div class="visible-xs visible-sm">
+                            <a href="#header-menu" class="header-nav-open">
+                                <i class="fa fa-menu"></i>
+                            </a>
+                        </div>
+
+                                                                            <ul id="header-menu">
+                                                        <li class="">
+                                <a href="http://librosweb.es/">
+                                    <i class="fa fa-home"></i> Inicio
+                                </a>
+                            </li>
+                                                        <li class="active">
+                                <a href="http://librosweb.es/libros/">
+                                    <i class="fa fa-book"></i> Libros
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/tutoriales/">
+                                    <i class="fa fa-doc-text"></i> Tutoriales
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/eventos/">
+                                    <i class="fa fa-globe"></i> Eventos
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/foro/">
+                                    <i class="fa fa-chat"></i> Foro
+                                </a>
+                            </li>
+                                                        <li class="">
+                                <a href="http://librosweb.es/buscar">
+                                    <i class="fa fa-search"></i> Buscar
+                                </a>
+                            </li>
+                                                        <li class="visible-xs visible-sm header-nav-close">
+                                <a href="#header">Cerrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="content" class="col-lg-10 col-lg-offset-2">
+
+                            <div class="row">
+                    <div id="main" class="col-md-9">
+                        
+
+
+
+    <div id="book-toc-anchor" class="well visible-xs">
+        <a href="#indice">
+            Índice de contenidos del libro &rarr;
+        </a>
+    </div>
+
+    <div id="breadcrumb" class="hidden-xs">
+        <ol>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="http://librosweb.es/" itemprop="url">
+                    <span itemprop="title">Inicio</span>
+                </a>
+            </li>
+
+                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../index-2.html" itemprop="url">
+                    <span itemprop="title">Introducción a XHTML</span>
+                </a>
+            </li>
+        
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="../capitulo_4.html" itemprop="url">
+                    <span itemprop="title">Capítulo 4. Enlaces</span>
+                </a>
+            </li>
+        
+            <li class="active">
+                <span>4.2. Enlaces relativos y absolutos</span>
+            </li>
+        </ol>
+    </div>
+
+    <h1 id="enlaces_relativos_y_absolutos" class="title">
+        <span>4.2.</span> Enlaces relativos y absolutos
+    </h1>
+
+    
+
+<p>Las páginas web habituales suelen contener decenas de enlaces de diferentes tipos. La siguiente imagen muestra algunos de los tipos de enlaces de la página principal del sitio web www.thinkvitamin.com:</p>
+
+<div class="figure" id="figure_4_1">
+    <img src="../../img/xhtml/ejemplo_tipos_enlaces.gif" alt="Ejemplo de diferentes tipos de enlaces en la página 456BereaStreet.com" />
+
+    <p class="caption"><strong>Figura 4.1</strong> Ejemplo de diferentes tipos de enlaces en la página 456BereaStreet.com</p>
+</div>
+
+
+<p>En esa página, cuando se pincha sobre algunos enlaces, el navegador abandona el sitio web para acceder a páginas que se encuentran en otros sitios. Estos enlaces se conocen como "enlaces externos". Sin embargo, la mayoría de enlaces de un sitio web apuntan a páginas del propio sitio web, por lo que se denominan "enlaces internos".</p>
+
+<p>Además de internos/externos, la otra característica que diferencia a los enlaces (y por tanto, también a las URL) es si el enlace es absoluto o relativo. Las <strong>URL absolutas</strong> incluyen todas las partes de la URL (protocolo, servidor y ruta) por lo que no se necesita más información para obtener el recurso enlazado.</p>
+
+<p>Las <strong>URL relativas</strong> prescinden de algunas partes de las URL para hacerlas más breves. Como se trata de URL incompletas, es necesario disponer de información adicional para obtener el recurso enlazado. En concreto, para que una URL relativa sea útil es imprescindible conocer la URL del origen del enlace.</p>
+
+<p>Las URL relativas se construyen a partir de las URL absolutas y prescinden de la parte del protocolo, del nombre del servidor e incluso de parte o toda la ruta del recurso enlazado. Aunque las URL relativas pueden ser difíciles de entender para los que comienzan con HTML, son tan útiles que todos los sitios web las utilizan.</p>
+
+<p>Imagina que dispones de una página publicada en http://www.ejemplo.com/ruta1/ruta2/pagina1.html y quieres incluir en ella un enlace a otra página que se encuentra en http://www.ejemplo.com/ruta1/ruta2/pagina2.html. Como las URL identifican de forma única a los recursos de Internet y proporcionan la información necesaria para llegar hasta ellos, el enlace debería utilizar la URL completa de la segunda página.</p>
+
+<p>Las URL completas también se llaman URL absolutas, ya que el navegador no necesita disponer de información adicional para localizar el recurso enlazado. Si se utilizan siempre las URL absolutas, los enlaces están completamente definidos.</p>
+
+<p>Sin embargo, escribir siempre las URL completas es bastante aburrido, cuesta mucho tiempo y hace imposible cambiar la ubicación de los contenidos de un sitio web. Por ese motivo, casi todos los sitios web de Internet utilizan URL relativas siempre que es posible.</p>
+
+<p>Una URL relativa es una versión abreviada de una URL absoluta. Su objetivo es eliminar todas las partes de la URL absoluta que se pueden <em>adivinar</em> a partir de la información de contexto de la página web. En otras palabras, las URL relativas aprovechan la <em>inteligencia</em> de los navegadores para crear URL incompletas que los navegadores pueden completar deduciendo la información que falta.</p>
+
+<p>Considerando de nuevo el ejemplo anterior, la URL a la que se quiere enlazar utiliza el mismo protocolo y se encuentra en el mismo servidor que la página origen, por lo que la URL relativa puede prescindir de esas partes:</p>
+
+<div class="code html5">
+<pre class="html5">URL absoluta: http://www.ejemplo.com/ruta1/ruta2/pagina2.html
+URL relativa: /ruta1/ruta2/pagina2.html</pre>
+</div>
+
+<p>En el ejemplo anterior, las dos URL son equivalentes porque cuando no se indica el protocolo y el servidor de una URL, los navegadores suponen que son los mismos que los de la página origen. Por lo tanto, cuando el navegador encuentra la URL <code>/ruta1/ruta2/pagina2.html</code>, realiza el siguiente proceso:</p>
+
+<ol>
+<li>La URL no es absoluta, por lo que se debe determinar la URL absoluta a partir de la URL relativa para poder cargar el recurso enlazado.</li>
+<li>A la URL relativa le falta el protocolo y el servidor, por lo que se supone que son los mismos que los de la página origen (<code>http://</code> y <code>www.ejemplo.com</code>).</li>
+<li>Se añaden las partes que faltan a la URL relativa para obtener la URL absoluta: <code>http://</code> + <code>www.ejemplo.com</code> + <code>/ruta1/ruta2/pagina2.html</code> = http://www.ejemplo.com/ruta1/ruta2/pagina2.html.</li>
+</ol>
+
+<p>Aunque el ejemplo mostrado es el caso más sencillo de URL relativa, existen otros casos más avanzados en los que se prescinde de parte o toda la ruta del recurso que se enlaza. A continuación se muestran los cuatro tipos diferentes de URL relativas:</p>
+
+<p>1) <strong>El origen y el destino del enlace se encuentran en el mismo directorio</strong></p>
+
+<p>Si desde una página web se quiere enlazar un recurso que se encuentra en el mismo directorio del servidor, la URL relativa puede prescindir de todas las partes de la URL absoluta salvo el nombre del recurso enlazado.</p>
+
+<div class="table" id="table_4_3">
+
+    <table>
+<thead>
+<tr>
+  <th>Elemento</th>
+  <th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Página origen</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html</code></td>
+</tr>
+<tr>
+  <td>Página enlazada</td>
+  <td>Página web llamada <code>pagina2.html</code> y que se encuentra en el mismo directorio</td>
+</tr>
+<tr>
+  <td>URL absoluta</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina2.html</code></td>
+</tr>
+<tr>
+  <td>URL relativa</td>
+  <td><code>pagina2.html</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Cuando el navegador encuentra una URL relativa que sólo consiste en el nombre de un recurso, supone que el protocolo, servidor y directorio del recurso enlazado son los mismos que los del origen del enlace.</p>
+
+<p>2) <strong>El destino del enlace se encuentra cerca de su origen y en un nivel superior</strong></p>
+
+<p>En este caso, el recurso que se enlaza no está en el mismo directorio que el origen del enlace pero sí que está <em>cerca</em> y en algún directorio superior. La URL relativa debe indicar de alguna manera que es necesario <em>subir</em> un nivel en la jerarquía de directorios para llegar hasta el recurso.</p>
+
+<p>Para indicar al navegador que debe subir un nivel, se incluyen dos puntos y una barra (<code>../</code>) en la ruta del recurso enlazado. De esta forma, cada vez que aparece <code>../</code> en una URL relativa, significa que se debe subir un nivel.</p>
+
+<div class="table" id="table_4_4">
+
+    <table>
+<thead>
+<tr>
+  <th>Elemento</th>
+  <th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Página origen</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html</code></td>
+</tr>
+<tr>
+  <td>Página enlazada</td>
+  <td>Página web llamada <code>pagina2.html</code> y que se encuentra en el directorio superior llamado <code>ruta2</code></td>
+</tr>
+<tr>
+  <td>URL absoluta</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/pagina2.html</code></td>
+</tr>
+<tr>
+  <td>URL relativa</td>
+  <td><code>../pagina2.html</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Cuando el navegador encuentra la URL relativa <code>../pagina2.html</code>, sabe que para encontrar el recurso enlazado (<code>pagina2.html</code>) tiene que subir un nivel desde el lugar en el que se encuentra esa URL relativa. La página que incluye esa URL se encuentra en el directorio <code>ruta1/ruta2/ruta3</code>, por lo que subir un nivel equivale entrar en el directorio <code>ruta1/ruta2</code>.</p>
+
+<p>De la misma forma, si el destino se encuentra un par de niveles por encima, se debe incluir <code>../</code> dos veces seguidas:</p>
+
+<div class="table" id="table_4_5">
+
+    <table>
+<thead>
+<tr>
+  <th>Elemento</th>
+  <th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Página origen</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html</code></td>
+</tr>
+<tr>
+  <td>Página enlazada</td>
+  <td>Página web llamada <code>pagina2.html</code> y que se encuentra en el directorio superior llamado <code>ruta1</code></td>
+</tr>
+<tr>
+  <td>URL absoluta</td>
+  <td><code>http://www.ejemplo.com/ruta1/pagina2.html</code></td>
+</tr>
+<tr>
+  <td>URL relativa</td>
+  <td><code>../../pagina2.html</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Además de subir niveles, también se puede entrar en otros directorios para obtener los recursos:</p>
+
+<div class="table" id="table_4_6">
+
+    <table>
+<thead>
+<tr>
+  <th>Elemento</th>
+  <th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Página origen</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html</code></td>
+</tr>
+<tr>
+  <td>Página enlazada</td>
+  <td>Página web llamada <code>pagina2.html</code> y que se encuentra en un directorio llamado <code>ruta4</code> que se encuentra en la raíz del servidor</td>
+</tr>
+<tr>
+  <td>URL absoluta</td>
+  <td><code>http://www.ejemplo.com/ruta4/pagina2.html</code></td>
+</tr>
+<tr>
+  <td>URL relativa</td>
+  <td><code>../../../ruta4/pagina2.html</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Si se intentan subir más niveles de los que es posible, el navegador ignora todos los <code>../</code> sobrantes. Si la página que tiene el enlace es http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html y la URL relativa que se incluye es <code>../../../../../pagina2.html</code>, el navegador realmente la interpreta como <code>../../../pagina2.html</code>.</p>
+
+<p>Como el objetivo de las URL relativas es crear URL más cortas y sencillas que las URL absolutas, este método sólo se puede utilizar cuando el origen y el destino se encuentran cerca, porque de otro modo la URL relativa se complica demasiado.</p>
+
+<p>3) <strong>El destino del enlace se encuentra cerca de su origen y en un nivel inferior</strong></p>
+
+<p>Este caso es muy similar al anterior, pero más sencillo. Si el recurso enlazado se encuentra en algún directorio inferior al que se encuentra el origen, sólo es necesario indicar el nombre de los directorios a los que debe entrar el navegador.</p>
+
+<div class="table" id="table_4_7">
+
+    <table>
+<thead>
+<tr>
+  <th>Elemento</th>
+  <th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Página origen</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html</code></td>
+</tr>
+<tr>
+  <td>Página enlazada</td>
+  <td>Página web llamada <code>pagina2.html</code> y que se encuentra en un directorio inferior llamado <code>ruta4</code></td>
+</tr>
+<tr>
+  <td>URL absoluta</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/ruta4/pagina2.html</code></td>
+</tr>
+<tr>
+  <td>URL relativa</td>
+  <td><code>ruta4/pagina2.html</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>De la misma forma, se pueden indicar varios directorios seguidos para que el navegador descienda jerárquicamente por la estructura de directorios:</p>
+
+<div class="table" id="table_4_8">
+
+    <table>
+<thead>
+<tr>
+  <th>Elemento</th>
+  <th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Página origen</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html</code></td>
+</tr>
+<tr>
+  <td>Página enlazada</td>
+  <td>Página web llamada <code>pagina2.html</code> y que se encuentra en un directorio inferior llamado <code>ruta6</code> que está dentro del directorio <code>ruta5</code> y que a su vez está dentro del directorio <code>ruta4</code></td>
+</tr>
+<tr>
+  <td>URL absoluta</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/ruta4/ruta5/ruta6/pagina2.html</code></td>
+</tr>
+<tr>
+  <td>URL relativa</td>
+  <td><code>ruta4/ruta5/ruta6/pagina2.html</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>4) <strong>El origen y el destino del enlace se encuentran muy alejados</strong></p>
+
+<p>Cuando el origen y el destino de un enlace se encuentran muy alejados (pero en el mismo servidor) las URL relativas se pueden complicar en exceso. Aunque es posible utilizar <code>../</code> para subir por la jerarquía de directorios y se puede entrar en cualquier directorio indicando su nombre, las URL relativas que se obtienen son demasiado largas y complicadas.</p>
+
+<p>En estos casos, lo más sencillo es indicar la ruta completa hasta el recurso enlazado comenzando desde la raíz del servidor web. Por lo tanto, estas URL relativas sólo omiten el protocolo y el nombre del servidor.</p>
+
+<div class="table" id="table_4_9">
+
+    <table>
+<thead>
+<tr>
+  <th>Elemento</th>
+  <th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Página origen</td>
+  <td><code>http://www.ejemplo.com/ruta1/ruta2/ruta3/pagina1.html</code></td>
+</tr>
+<tr>
+  <td>Página enlazada</td>
+  <td>Página web llamada <code>pagina2.html</code> y que se guarda en un directorio llamado <code>ruta7</code> que se encuentra en la raíz del servidor</td>
+</tr>
+<tr>
+  <td>URL absoluta</td>
+  <td><code>http://www.ejemplo.com/ruta7/pagina2.html</code></td>
+</tr>
+<tr>
+  <td>URL relativa</td>
+  <td><code>/ruta7/pagina2.html</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Cuando la URL relativa comienza por <code>/</code>, el navegador considera que es la ruta completa comenzando desde la raíz del servidor, por lo que sólo le añade el protocolo y el nombre del servidor origen.</p>
+
+<p>A continuación se resumen los cuatro posibles casos de URL relativas y el procedimiento que sigue el navegador para convertirlas en URL absolutas:</p>
+
+<div class="table" id="table_4_10">
+
+    <table>
+<thead>
+<tr>
+  <th>Si la URL relativa...</th>
+  <th>El navegador la transforma en URL absoluta...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>...sólo consiste en el nombre de un recurso</td>
+  <td>...añadiendo el protocolo, servidor y ruta completa del origen del enlace</td>
+</tr>
+<tr>
+  <td>...comienza por <code>../</code></td>
+  <td>...añadiendo el protocolo y servidor del origen del enlace, subiendo un nivel en la jerarquía de directorios y añadiendo el resto de la ruta incluida en la URL relativa</td>
+</tr>
+<tr>
+  <td>...comienza por <code>/</code></td>
+  <td>...añadiendo el protocolo y servidor del origen del enlace</td>
+</tr>
+<tr>
+  <td>En cualquier otro caso</td>
+  <td>...añadiendo el protocolo, servidor y ruta completa del origen del enlace, a la que se añade la ruta incluida en la URL relativa</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+    <div class="module module-ad module-ad-responsive module-ad-bottom">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+    <div id="book-pager">
+        <ul class="row pager">
+            <li class="col-xs-6 previous ">
+                                    <a href="url.html">
+                        <strong>&larr; Anterior</strong>
+                        <small>4.1. URL</small>
+                    </a>
+                            </li>
+
+            <li class="col-xs-6 next ">
+                                    <a href="enlaces_basicos.html">
+                        <strong>Siguiente &rarr;</strong>
+                        <small>4.3. Enlaces básicos</small>
+                    </a>
+                            </li>
+        </ul>
+    </div>
+
+                    </div>
+
+                    <div id="sidebar" class="col-md-3">
+                        
+    <div class="module module-share">
+        <h3>Compartir</h3>
+    <ul>
+    <li><a id="share_twitter" href="#" title="Compartir en Twitter">Twitter</a></li>
+    <li><a id="share_facebook" href="#" title="Compartir en Facebook">Facebook</a></li>
+    <li><a id="share_google" href="#" title="Compartir en Google+">Google+</a></li>
+</ul>
+
+<script type="text/javascript">
+var title    = 'Enlaces%20relativos%20y%20absolutos%20%28Introducci%C3%B3n%20a%20XHTML%29';
+var page_url = encodeURIComponent(window.location);
+var options  = 'menubar=no,toolbar=no,resizable=yes,scrollbars=no,width=640,height=350';
+var services = {
+    share_twitter:  'https://twitter.com/share?text=' + title + '&lang=es',
+    share_facebook: 'http://www.facebook.com/sharer.php?u=' + page_url + '&t=' + title,
+    share_google:   'https://plus.google.com/share?url=' + page_url + '&hl=es'
+};
+
+for (var id in services) {
+    if (services.hasOwnProperty(id)) {
+        document.getElementById(id).href = services[id];
+        document.getElementById(id).onclick = function(a) {
+            a = a || window.event;
+            a = a.target || a.srcElement;
+
+            ga('send', 'social', {
+                'socialNetwork' : a.id.substr(6),
+                'socialAction'  : 'share',
+                'socialTarget'  : window.location
+            });
+
+            window.open(services[a.id], a.title, options);
+
+            return false;
+        };
+    }
+}
+</script>
+
+    </div>
+
+    
+            <div class="module module-ad module-ad-responsive">
+            <div class="module module-ad module-ad-responsive module-ad-top">
+    <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1491000300253750"
+         data-ad-slot="3770792827"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        </div>
+        
+
+    <div id="book-toc" class="module">
+        <a id="indice"></a>
+
+        <h3>Indice de contenidos</h3>
+        <ul class="toc text-links">
+                                            <li class="level-1">
+                <span>1.</span> <a href="../capitulo_1.html"> Introducción</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>2.</span> <a href="../capitulo_2.html"> Características básicas</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>3.</span> <a href="../capitulo_3.html"> Texto</a>
+            </li>
+                                                                                                                                            <li class="level-1 ">
+                <a href="../capitulo_4.html">
+                    <span>Capítulo 4.</span> Enlaces
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="url.html">
+                    <span>4.1.</span> URL
+                </a>
+            </li>
+                                            <li class="level-2 active">
+                <a href="enlaces_relativos_y_absolutos.html">
+                    <span>4.2.</span> Enlaces relativos y absolutos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="enlaces_basicos.html">
+                    <span>4.3.</span> Enlaces básicos
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="enlaces_avanzados.html">
+                    <span>4.4.</span> Enlaces avanzados
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="otros_tipos_de_enlaces.html">
+                    <span>4.5.</span> Otros tipos de enlaces
+                </a>
+            </li>
+                                            <li class="level-2 ">
+                <a href="ejemplos_de_enlaces_habituales.html">
+                    <span>4.6.</span> Ejemplos de enlaces habituales
+                </a>
+            </li>
+                                            <li class="level-1">
+                <span>5.</span> <a href="../capitulo_5.html"> Listas</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>6.</span> <a href="../capitulo_6.html"> Imágenes y objetos</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>7.</span> <a href="../capitulo_7.html"> Tablas</a>
+            </li>
+                                                                            <li class="level-1">
+                <span>8.</span> <a href="../capitulo_8.html"> Formularios</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>9.</span> <a href="../capitulo_9.html"> Estructura y layout</a>
+            </li>
+                                            <li class="level-1">
+                <span>10.</span> <a href="../capitulo_10.html"> Metainformación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>11.</span> <a href="../capitulo_11.html"> Otras etiquetas importantes</a>
+            </li>
+                                                                                                                            <li class="level-1">
+                <span>12.</span> <a href="../capitulo_12.html"> Accesibilidad</a>
+            </li>
+                                                            <li class="level-1">
+                <span>13.</span> <a href="../capitulo_13.html"> Validación</a>
+            </li>
+                                                                                            <li class="level-1">
+                <span>14.</span> <a href="../capitulo_14.html"> Fragmentos de código</a>
+            </li>
+                                                                                                            <li class="level-1">
+                <span>15.</span> <a href="../capitulo_15.html"> Ejercicios resueltos</a>
+            </li>
+                                                                                                                                                                                                                                                                                        </ul>
+    </div>
+
+                    </div>
+                </div>
+            
+                            <div id="footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            &copy; 2014 LibrosWeb.es
+                            <a href="http://librosweb.es/sitio/contacto">Contacto</a>
+                            <a href="https://plus.google.com/+librosweb">Novedades</a>
+                            <a href="http://librosweb.es/sitio/condiciones">Condiciones</a>
+                            <a href="http://librosweb.es/sitio/privacidad">Privacidad</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 counter">
+                            2.900 días online
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </body>
+
+<!-- Mirrored from librosweb.es/xhtml/capitulo_4/enlaces_relativos_y_absolutos.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2014 16:51:32 GMT -->
+</html>
